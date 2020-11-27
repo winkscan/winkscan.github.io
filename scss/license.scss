@@ -1,0 +1,114 @@
+.license {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 0;
+
+    h5 {
+        display: flex;
+        margin-bottom: 5px;
+        height: 36px;
+        width: calc(100% - 20px);
+        padding: 0 10px;
+        align-items: center;
+        font-size: $font-size-md;
+        font-weight: 600;
+        color: $white-color;
+        text-transform: uppercase;
+
+        .games {
+            padding-left: 4px;
+            font-weight: normal;
+            color: $text-color;
+            font-size: $font-size-md;
+        }
+
+        .wnk-icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            color: $red-color;
+        }
+    }
+
+    .license {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(25% - 20px);
+        height: 160px;
+        border-radius: 3px;
+        background: $bg-light-color;
+
+        .pic {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 120px;
+            align-items: center;
+            justify-content: center;
+
+            &.curacao {
+                img {
+                    height: 59px;
+                }
+            }
+
+            &.costa-rica {
+                img {
+                    height: 80px;
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .attention {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: calc(50% - 100px);
+        padding: 0 80px 0 0;
+
+        label {
+            display: block;
+            font-size: $font-size-md;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: $red-color;
+        }
+
+        p {
+            display: block;
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .license {
+            width: calc(50% - 20px);
+        }
+
+        .attention {
+            width: calc(100% - 20px);
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        margin: 15px 0;
+        
+        .license {
+            width: calc(100% - 20px);
+        }
+    }
+}

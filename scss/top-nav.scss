@@ -1,0 +1,830 @@
+.top-nav {
+    position: fixed;
+    z-index: 11;
+    left: 90px;
+    top: 0;
+    display: flex;
+    width: calc(100% - 120px);
+    padding: 26px 15px;
+    height: 36px;
+    background: $bg-color;
+    border-bottom: 2px solid $bg-light-color;
+
+    .useful-links {
+        display: flex;
+        align-items: center;
+        width: 300px;
+
+        .link {
+            display: flex;
+            align-items: center;
+            font-size: $font-size-md;
+            font-weight: 600;
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .wnk-icon {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+
+            &:hover, &.active {
+                color: $white-color;
+                transition: 0.3s color ease-in-out;
+
+                .wnk-icon {
+                    color: $orange-color;
+                    transition: 0.3s color ease-in-out;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        width: calc(100% - 300px);
+
+        .btn-notification {
+            display: flex;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            outline: none;
+            border-radius: 18px;
+            cursor: pointer;
+            border: 1px solid $text-color;
+
+            .wnk-icon {
+                width: 16px;
+                height: 16px;
+                color: $white-color;
+                font-size: 16px;
+            }
+        }
+
+        .group {
+            position: relative;
+            display: flex;
+            margin-left: 10px;
+
+            .wallet {
+                display: flex;
+                flex-wrap: wrap;
+                width: 120px;
+                align-items: center;
+                line-height: 1;
+                cursor: pointer;
+                
+                .title {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 2px 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                    .arrow {
+                        position: relative;
+                        display: flex;
+                        width: 6px;
+                        height: 8px;
+                        margin-left: 10px;
+
+                        &:after, &:before {
+                            position: absolute;
+                            display: block;
+                            top: 0;
+                            width: 1px;
+                            height: 7px;
+                            content:'';
+                            background: $text-color;
+                        }
+
+                        &:after {
+                            right: 0;
+                            transform: rotate(45deg);
+                        }
+
+                        &:before {
+                            left: 0;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                &.show {
+                    .title {
+                        color: $orange-color;
+                        transition: 0.3s color ease-in-out;
+                        
+                        .arrow {
+                            transform: rotate(180deg);
+                            transition: 0.3s transform ease-in-out;
+                        }
+                    }
+                }
+    
+                .amount {
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 3px 0;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    color: $white-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+
+            .btn-deposit {
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                border-radius: 18px;
+
+                .wnk-icon {
+                    font-size: 20px;
+                    color: $bg-color;
+                }
+            }
+
+            .dropdown {
+                position: absolute;
+                top: 46px;
+                display: none;
+                right: 0;
+                width: 210px;
+                padding: 10px;
+                border-radius: 3px;
+                opacity: 0;
+                background: $bg-light-color;
+
+                .btn-back {
+                    display: none;
+                }
+
+                &:after {
+                    position: absolute;
+                    content:'';
+                    top: -5px;
+                    right: 12px;
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid $bg-light-color;
+                }
+
+                &.tw-currency:after, &.lw-currency:after {
+                    left: calc(50% - 3px);
+                }
+
+                &.withdraw-drop {
+                    right: 5px;
+
+                    &:after {
+                        right: 35px;
+                    }
+                }
+
+                &.show {
+                    display: flex;
+                    flex-wrap: wrap;
+                    opacity: 1;
+                    transition: 0.3s opacity ease-in-out;
+                }
+
+                &.tw-currency, &.lw-currency {
+                    ul {
+                        li {
+                            .currency {
+                                display: flex;
+                                align-items: center;
+                                width: 190px;
+                                height: 30px;
+                                padding: 0 10px;
+                                border-radius: 3px;
+
+                                .amount {
+                                    padding-right: 6px;
+                                }
+        
+                                &:hover {
+                                    color: $white-color;
+                                    background: $btn-hover-color;
+                                    transition: 0.3s ease-in-out;
+                                    transition-property: color, background-color;
+
+                                    .amount {
+                                        color: $orange-color;
+                                        transition: 0.3s color ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.deposit-to-tronwallet, &.logout {
+                    flex-direction: column;
+                    text-align: center;
+
+                    .title {
+                        padding: 5px 0;
+                        color: $white-color;
+                        font-size: $font-size-md;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        padding: 9px 0;
+                        line-height: 16px;
+                    }
+
+                    .qr {
+                        margin: 10px auto;
+                        width: 80px;
+                        height: 80px;
+                        padding: 10px;
+                        background: $white-color;
+                        border-radius: 4px;
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+
+                    .copy-addr {
+                        padding: 5px 0;
+                        color: $white-color;
+                        cursor: pointer;
+
+                        .wnk-icon {
+                            margin-left: 6px;
+                            font-size: 16px;
+                            color: $white-color;
+                        }
+
+                        &:active {
+                            color: $orange-color;
+                            transition: 0.3s color ease-in-out;
+
+                            .wnk-icon {
+                                color: $orange-color;
+                                transition: 0.3s color ease-in-out;
+                            }
+                        }
+                    }
+
+                    .sign-out {
+                        display: flex;
+                        margin: 10px auto;
+                        width: 100px;
+                        height: 34px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        color: $white-color;
+                        border-radius: 18px;
+                        background: none;
+                        outline: none;
+                        cursor: pointer;
+                        border: 1px solid $text-color;
+            
+                        &:hover {
+                            background: $text-color;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+            
+                        &.hide {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.deposit-to-live-wallet, &.withdraw-drop {
+                    .title {
+                        padding: 5px;
+                        color: $white-color;
+                        font-size: $font-size-md;
+                        font-weight: 600;
+                    }
+
+                    .col {
+                        margin: 5px;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        label {
+                            display: flex;
+                            width: 100%;
+                            height: 24px;
+                            white-space: nowrap;
+                            align-items: center;
+                        }
+                    }
+
+                    .token, .btn-col {
+                        width: 80px;
+
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 36px;
+                            height: 36px;
+                            cursor: pointer;
+                            background: $text-color;
+                            border-radius: 3px;
+
+                            &.active {
+                                &.trx {
+                                    background: $red-color;
+                                }
+
+                                &.usdt {
+                                    background: $green-color;
+                                }
+                            }
+
+                            &.trx {
+                                margin-right: 8px;
+                            }
+
+                            .wnk-icon {
+                                color: $white-color;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .balance {
+                        .amount {
+                            display: block;
+                            width: 115px;
+                            height: 30px;
+                            padding-top: 6px;
+                            font-size: $font-size-md;
+                            font-weight: 600;
+                            color: $white-color;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    .amount-col {
+                        input {
+                            display: block;
+                            width: calc(100% - 10px);
+                            height: 34px;
+                            padding-left: 10px;
+                            font-size: $font-size-md;
+                            color: $white-color;
+                            font-weight: 600;
+                            background: $bg-color;
+                            border-radius: 3px;
+                            border: none;
+                            outline: none;
+                        }
+                    }
+
+                    .balance, .amount-col {
+                        width: 110px;
+                    }
+
+                    .btn-col {
+                        padding-top: 24px;
+
+                        .btn {
+                            width: 100%;
+                            height: 36px;
+                            text-align: center;
+                            color: $white-color;
+                            border-radius: 18px;
+                            border: none;
+                            outline: none;
+
+                            &.btn-deposit {
+                                color: $bg-color;
+                                background: $orange-color;
+
+                                &:hover {
+                                    background: $green-color;
+                                    transition: 0.3s background-color ease-in-out;
+                                }
+                            }
+
+                            &.btn-withdraw {
+                                background: $red-color;
+
+                                &:hover {
+                                    background: $red-light-color;
+                                    transition: 0.3s background-color ease-in-out;
+                                }
+                            }
+                        } 
+                    }
+
+                    .note {
+                        position: relative;
+                        width: calc(100% - 30px);
+                        padding: 4px 0 5px 30px;
+                        font-style: italic;
+
+                        .wnk-icon {
+                            position: absolute;
+                            left: 5px;
+                            top: 4px;
+                            font-size: 16px;
+                            color: $red-color;
+                        }
+                    }
+                }
+
+                &.language {
+                    width: 110px;
+                    
+                    .set-lng {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        width: 64px;
+                        height: 30px;
+                        padding: 0 10px 0 36px;
+                        border-radius: 3px;
+
+                        &:after {
+                            position: absolute;
+                            left: 10px;
+                            top: 7px;
+                            content: '';
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        &.us:after {
+                            background: url('../img/flag-us.svg') no-repeat;
+                            background-size: 16px;
+                        }
+
+                        &.uae:after {
+                            background: url('../img/flag-uae.svg') no-repeat;
+                            background-size: 16px;
+                        }
+
+                        .amount {
+                            padding-right: 6px;
+                        }
+
+                        &:hover {
+                            color: $white-color;
+                            background: $btn-hover-color;
+                            transition: 0.3s ease-in-out;
+                            transition-property: color, background-color;
+
+                            .amount {
+                                color: $orange-color;
+                                transition: 0.3s color ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.tronlink {
+                .btn-deposit {
+                    background: $text-color;
+
+                    &:hover {
+                        background: $green-color;
+                        transition: 0.3s background-color ease-in-out;
+                    }
+                }
+            }
+
+            &.live-wallet {
+                .btn-deposit {
+                    background: $orange-color;
+
+                    &:hover {
+                        background: $green-color;
+                        transition: 0.3s background-color ease-in-out;
+                    }
+                }
+            }
+
+            .btn-withdraw {
+                margin-right: 5px;
+                width: 80px;
+                height: 36px;
+                border-radius: 18px;
+                border: none;
+                outline: none;
+                color: $white-color;
+                background: $red-color;
+                cursor: pointer;
+
+                &:hover {
+                    background: $red-light-color;
+                    transition: 0.3s background-color ease-in-out;
+                }
+            }
+
+            .avatar, .flag {
+                display: flex;
+                width: 34px;
+                height: 34px;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $text-color;
+                border-radius: 18px;
+                cursor: pointer;
+
+                .wnk-icon {
+                    font-size: 18px;
+                    color: $orange-color;
+                    cursor: pointer;
+                }
+            }
+
+            .flag {
+                &.us {
+                    background: url('../img/flag-us.svg') no-repeat center;
+                    background-size: 18px;
+                }
+
+                &.uae {
+                    background: url('../img/flag-uae.svg') no-repeat center;
+                    background-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .useful-links {
+            width: 60px;
+
+            .link {
+                .wnk-icon {
+                    margin-right: 0;
+                }
+                
+                .title {
+                    display: none;
+                }
+            }
+        }
+
+        .navigation {
+            width: calc(100% - 60px);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .useful-links {
+            display: none;
+        }
+
+        .navigation {
+            width: 100%;
+
+            .group {
+                .wallet {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .navigation {
+            .group {
+                .wallet {
+                    width: 70px;
+
+                    .title {
+                        .arrow {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        display: none;
+        top: -100%;
+        opacity: 0;
+        flex-wrap: wrap;
+
+        &.show {
+            display: flex;
+            top: 60px;
+            left: 0;
+            width: calc(100% - 30px);
+            padding: 15px;
+            height: calc(100% - 90px);
+            opacity: 1;
+            animation-name: slidedown;
+            animation-duration: 1s;
+
+            @keyframes slidedown {
+                from {top: -100%;}
+                to {top: 60px;}
+            }
+        }
+
+        .useful-links {
+            display: flex;
+            order: 2;
+            width: 100%;
+            padding-bottom: 20px;
+            align-items: flex-end;
+
+            .link {
+                margin-right: 15px;
+
+                .title {
+                    display: block;
+                }
+
+                .wnk-icon {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .navigation {
+            order: 1;
+            display: flex;
+            flex-wrap: wrap;
+            height: 216px;
+            
+            .notification, .user, .set-language {
+                margin: 0 0 10px 10px;
+            }
+
+            .notification {
+                order: 1;
+            }
+
+            .user {
+                order: 2;
+            }
+
+            .set-language {
+                order: 3;
+            }
+
+            .tronlink {
+                margin: 0;
+                order: 4;
+            }
+
+            .live-wallet {
+                margin: 0;
+                order: 5;
+            }
+
+            .tronlink, .live-wallet {
+                width: 100%;
+                height: 36px;
+                padding: 10px 0;
+                border-bottom: 1px solid $bg-light-color;
+
+                .wallet {
+                    width: calc(100% - 36px);
+                }
+            }
+
+            .withdraw {
+                margin: 10px 0;
+                order: 6;
+                width: 100%;
+
+                .btn-withdraw {
+                    width: 100%;
+                }
+            }
+
+            .group {
+                .dropdown {
+                    top: -100%;
+                    opacity: 0;
+                    background: $bg-color;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    .btn-back {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        display: flex;
+                        width: 36px;
+                        height: 36px;
+                        align-items: center;
+                        justify-content: center;
+
+                        .arrow {
+                            position: relative;
+                            display: block;
+                            width: 20px;
+                            height: 2px;
+                            background: $white-color;
+                            border-radius: 1px;
+
+                            &:after, &:before {
+                                position: absolute;
+                                content:'';
+                                display: block;
+                                width: 10px;
+                                height: 2px;
+                                background: $white-color;
+                                border-radius: 1px;
+                            }
+
+                            &:after {
+                                top: 4px;
+                                transform: rotate(45deg);
+                            }
+
+                            &:before {
+                                top: -4px;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+
+                    &.language {
+                        .set-lng {
+                            width: calc(100% - 46px);
+                        }
+                    }
+
+                    &.deposit-to-live-wallet, &.withdraw-drop, &.language {
+                        align-content: flex-start;
+                    }
+
+                    &.deposit-to-live-wallet, &.withdraw-drop {
+                        .title {
+                            width: 100%;
+                        }
+
+                        .balance, .amount-col {
+                            width: calc(100% - 100px);
+                        }
+
+                        .balance {
+                            .amount {
+                                width: 100%;
+                            }
+                        }
+
+                        .amount-col {
+                            input {
+                                background: $bg-light-color;
+                            }
+                        }
+                    }
+                    
+                    &.show {
+                        position: fixed;
+                        z-index: 10;
+                        top: 60px;
+                        right: 0;
+                        width: calc(100% - 20px);
+                        height: calc(100% - 116px);
+                        padding: 46px 10px 10px 10px;
+                        border-radius: 0;
+                        opacity: 1;
+                        animation-name: dropdown;
+                        animation-duration: 1s;
+
+                        @keyframes dropdown {
+                            from {top: -100%;}
+                            to {top: 60px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,269 @@
+.side-nav {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    flex-flow: column nowrap;
+    width: 90px;
+    height: 100%;
+    min-height: 576px;
+    background: $bg-light-color;
+
+    .wink-logo {
+        display: flex;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
+        background: url('../img/wink-logo.svg') no-repeat center;
+        background-size: 50px auto;
+    }
+
+    .btn-group {
+        position: relative;
+        margin: 0 10px 10px 10px;
+        display: flex;
+        width: 70px;
+        height: 70px;
+        
+        .btn {
+            width: 70px;
+            height: 23px;
+            padding: 47px 0 0 0;
+            text-align: center;
+            font-size: $font-size-xs;
+            color: $text-color;
+            border-radius: 3px;
+    
+            .wnk-icon {
+                position: absolute;
+                top: 7px;
+                left: 17px;
+                width: 36px;
+                height: 36px;
+                font-size: 36px;
+            }
+    
+            &:hover, &.active {
+                color: $white-color;
+                background: $btn-hover-color;
+                transition: 0.3s ease-in-out;
+                transition-property: color, background-color;
+
+                .wnk-icon {
+                    color: $orange-color;
+                    transition: 0.3s color ease-in-out;
+                }
+            }
+        }
+
+        &.blink {
+            margin-top: auto;
+            
+            .btn {
+                height: 63px;
+                padding: 7px 0 0 0;
+
+                .wnk-icon {
+                    top: 30px;
+                    left: 10px;
+                    width: 50px;
+                    height: 30px;
+                    font-size: 30px;
+                }
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: 10px;
+            display: none;
+            flex-wrap: wrap;
+            left: 70px;
+            width: 120px;
+            padding-left: 20px;
+            border-radius: 3px;
+
+            li {
+                width: 100%;
+
+                a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: first-start;
+                    padding: 0 10px;
+                    height: 30px;
+                    font-size: $font-size-xs;
+                    color: $text-color;
+                    background: $bg-light-color;
+
+                    &:first-child {
+                        border: 3px 3px 0 0;
+                    }
+    
+                    &:last-child {
+                        border: 0 0 3px 3px;
+                    }
+
+                    &:hover {
+                        color: $white-color;
+                        background: $btn-hover-color;
+                        transition: 0.3s all ease-in-out;
+
+                        &:after {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            height: 1px;
+                            width: 100%;
+                            content: '';
+                            background-image: linear-gradient(to right, $red-color , $orange-color);
+                        }
+                    }
+
+                }
+            }
+
+            &:after {
+                position: absolute;
+                content:'';
+                left: 15px;
+                top: 10px;
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right:5px solid $bg-light-color;
+            }
+        }
+
+        &:hover {
+            ul {
+                display: flex;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    @media screen and (max-width: 576px) {
+        top: 0;
+        width: 100%;
+        height: 60px;
+        min-height: 60px;
+        flex-flow: inherit;
+
+        .blink {
+            display:  none;
+        }
+
+        .wink-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0;
+            background: url('../img/wink-logo.svg') no-repeat center;
+            background-size: 40px auto;
+        }
+
+        .group-nav {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: calc(100% - 120px);
+            height: 60px;
+
+            .btn-group {
+                margin: 5px;
+                width: 50px;
+                height: 50px;
+
+                .btn {
+                    width: 50px;
+                    height: 18px;
+                    padding: 32px 0 0 0;
+
+                    .wnk-icon {
+                        top: 5px;
+                        left: 13px;
+                        width: 24px;
+                        height: 24px;
+                        font-size: 24px;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .burger {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+
+            .bar {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-color;
+                border-radius: 1px;
+
+                &:after, &:before {
+                    position: absolute;
+                    content:'';
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: $white-color;
+                    border-radius: 1px;
+                }
+
+                &:after {
+                    top: -8px;
+                }
+
+                &:before {
+                    top: 8px;
+                }
+            }
+
+            &.expand {
+                .bar {
+                    transition: all 0.3s ease-in-out;
+                    background: rgba(255,255,255,0);
+                    
+                    &:before, &:after {
+                        top: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .group-nav {
+            .btn-group {
+                margin: 5px 0;
+            }
+        }
+    }
+}

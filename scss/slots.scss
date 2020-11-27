@@ -1,0 +1,203 @@
+.slots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    h2, h3, h4 {
+        display: flex;
+        margin-bottom: 5px;
+        height: 36px;
+        width: calc(50% - 10px);
+        padding-left: 10px;
+        align-items: center;
+        font-size: $font-size-md;
+        font-weight: 600;
+        color: $white-color;
+        text-transform: uppercase;
+
+        .games {
+            padding-left: 4px;
+            font-weight: normal;
+            color: $text-color;
+            font-size: $font-size-md;
+        }
+
+        .wnk-icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            color: $red-color;
+        }
+    }
+
+    .btn {
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: flex-end;
+        width: calc(50% - 10px);
+        padding-right: 10px;
+
+        .btn-show {
+            display: flex;
+            min-width: 40px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            color: $white-color;
+            border-radius: 18px;
+            border: 1px solid $text-color;
+
+            &:hover {
+                background: $text-color;
+                transition: 0.3s background-color ease-in-out;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    .slot {
+        margin: 10px;
+        width: calc(25% - 20px);
+        height: 190px;
+
+        .pic {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 160px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+
+            .icon-dice, .icon-poker, .icon-sports, .icon-binarium {
+                position: absolute;
+                z-index: 2;
+                display: block;
+                top: 30px;
+            }
+
+            .icon-dice {
+                width: 112px;
+                height: 120px;
+                background: url('../img/icon-dice.png') no-repeat;
+                background-size: 112px 120px;
+            }
+
+            .icon-poker {
+                width: 106px;
+                height: 120px;
+                background: url('../img/icon-poker.png') no-repeat;
+                background-size: 106px 120px;
+            }
+
+            .icon-sports {
+                width: 110px;
+                height: 110px;
+                background: url('../img/icon-sports.png') no-repeat;
+                background-size: 110px 110px;
+            }
+
+            .icon-binarium {
+                width: 120px;
+                height: 108px;
+                background: url('../img/icon-binarium.png') no-repeat;
+                background-size: 120px 108px;
+            }
+
+            img {
+                position: relative;
+                z-index: 1;
+                height: 160px;
+            }
+        }
+
+        .title {
+            display: flex;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.new {
+            .pic:after {
+                position: absolute;
+                z-index: 3;
+                top: 6px;
+                right: 6px;
+                content:'NEW';
+                display: block;
+                font-weight: 500;
+                padding: 2px 4px;
+                font-size: $font-size-sm;
+                color: $white-color;
+                background-image: linear-gradient(to right, $orange-dark-color , $red-color);
+                border-radius: 3px;
+                box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+            }
+        }
+
+        &:hover {
+            .pic {
+                -ms-transform: scale(1.04);
+                transform: scale(1.04);
+                transition: 0.3s all ease-in-out;
+                
+                .icon-dice, .icon-poker, .icon-sports, .icon-binarium {
+                    -ms-transform: translate(0,-6px);
+                    transform: translate(0,-6px);
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+
+            .title {
+                color: $white-color;
+                transition: 0.3s color ease-in-out;
+            }
+        }        
+    }
+
+    @media screen and (max-width: 992px) {
+        .slot {
+            width: calc(50% - 20px);
+
+            .pic {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .slot {
+            .pic {
+                img {
+                    width: auto;
+                    height: 160px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .slot {
+            width: calc(100% - 20px);
+            
+            .pic {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

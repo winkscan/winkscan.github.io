@@ -1,0 +1,89 @@
+.windrops-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 20px 10px;
+    width: calc(100% - 20px);
+    padding-bottom: 14px;
+    border-bottom: 2px solid $bg-light-color;
+
+    h1 {
+        display: flex;
+        width: 25%;
+        align-items: center;
+        font-size: $font-size-md;
+        font-weight: 600;
+        color: $white-color;
+        text-transform: uppercase;
+
+        .wnk-icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            color: $white-color;
+        }
+    }
+
+    .amount {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-lg;
+        font-weight: 600;
+        letter-spacing: -1px;
+        background: linear-gradient(0deg,$orange-dark-color,$orange-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: flex-end;
+        width: 25%;
+
+        .btn-show {
+            display: flex;
+            min-width: 40px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            color: $white-color;
+            border-radius: 18px;
+            border: 1px solid $text-color;
+
+            &:hover {
+                background: $text-color;
+                transition: 0.3s background-color ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        h1 {
+            order: 1;
+            width: 50%;
+        }
+
+        .btn {
+            order: 2;
+            width: 50%;
+        }
+
+        .amount {
+            order: 3;
+            width: 100%;
+            padding-top: 10px;
+            font-size: 36px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .amount {
+            padding-top: 10px;
+            font-size: $font-size-lg;
+        }
+    }
+}

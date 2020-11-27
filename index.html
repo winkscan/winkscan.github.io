@@ -3,134 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHK</title>
+    <title>WINk</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/fontawesome/brands.css">
-    <script async="" src="js/main.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="slideshow-container">
-        <div id="mobile-header" class="header">
-            <button onclick="myFunction()" class="burger">
-                <span class="bars"></span>
-            </button>
-            <a href="/" class="mhk-logo-mob"></a>
-            <div class="content">
+    
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
                 <div class="btn-group">
-                    <a href="/" class="btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="/" class="btn" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="/" class="btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
                 </div>
-                <ul class="nav">
-                    <li><a href="/" class="link">Shop</a></li>
-                    <li><a href="/" class="link">Plan My Kitchen</a></li>
-                    <li><a href="/" class="mhk-logo"></a></li>
-                    <li><a href="/" class="link">About Us</a></li>
-                    <li><a href="/" class="link">Gallery</a></li>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="">Casino</a></li>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" onclick="toogleHamburger()" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider-img">
+                    <a href="/"><img src="img/slider.png" /></a>
+                </div>
+                <div class="slider-nav">
+                    <a href="/" class="active"></a>
+                    <a href="/"></a>
+                    <a href="/"></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="windrops-bar">
+                    <h1><i class="wnk-icon icon-windrops">&#xe81b;</i>Windrops</h1>
+                    <span class="amount">6,635,234.99 TRX</span>
+                    <span class="btn">
+                        <a href="/" class="btn-show">Show</a>
+                    </span>
+                </div>
+                <div class="slots">
+                    <h2><i class="wnk-icon icon-star">&#xe80a;</i>Main<span class="games">Games</span></h2>
+                    <span class="btn">
+                        <a href="/" class="btn-show hide">See All</a>
+                    </span>
+                    <a href="/" class="slot">
+                        <span class="pic"><i class="icon-dice"></i><img src="img/game-dice.png" /></span>
+                        <span class="title">Dice</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><i class="icon-poker"></i><img src="img/game-poker.png" /></span>
+                        <span class="title">Poker</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><i class="icon-sports"></i><img src="img/game-sports.png" /></span>
+                        <span class="title">Sports</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><i class="icon-binarium"></i><img src="img/game-binarium.png" /></span>
+                        <span class="title">Binarium</span>
+                    </a>
+                </div>
+                <div class="slots">
+                    <h3><i class="wnk-icon icon-trophy">&#xe825;</i>Top<span class="games">Games</span></h3>
+                    <span class="btn">
+                        <a href="/" class="btn-show">See All</a>
+                    </span>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/slot-hades.png" /></span>
+                        <span class="title">Hades Gigablox</span>
+                    </a>
+                    <a href="/" class="slot new">
+                        <span class="pic"><img src="img/slot-kraken.png" /></span>
+                        <span class="title">Release the Kraken</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/game-crazytime.png" /></span>
+                        <span class="title">Crazy Time</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/game-monopoly.png" /></span>
+                        <span class="title">Monopoly Live</span>
+                    </a>
+                </div>
+                <div class="slots">
+                    <h4><i class="wnk-icon icon-new">&#xe803;</i>New<span class="games">Games</span></h4>
+                    <span class="btn">
+                        <a href="/" class="btn-show">See All</a>
+                    </span>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/slot-three-star-fortune.png" /></span>
+                        <span class="title">Three Star Fortune</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/slot-game-rocks.png" /></span>
+                        <span class="title">Gem Rocks</span>
+                    </a>
+                    <a href="/" class="slot new">
+                        <span class="pic"><img src="img/slot-lucha-maniacs.png" /></span>
+                        <span class="title">Lucha Maniacs</span>
+                    </a>
+                    <a href="/" class="slot">
+                        <span class="pic"><img src="img/slot-almighty-aztec.png" /></span>
+                        <span class="title">Almighty Aztec</span>
+                    </a>
+                </div>
+                <div class="license">
+                    <h5><i class="wnk-icon icon-license">&#xe802;</i>Gaming<span class="games">License</span></h5>
+                    <a href="http://www.gaming-curacao.com/" target="_blank" class="license">
+                        <span class="pic curacao"><img src="img/license-curacao.png" /></span>
+                        <span class="title">Gaming Curacao</span>
+                    </a>
+                    <a href="https://medium.com/@winkfoundation/wink-win-has-obtained-the-costa-rica-commercial-patent-certificate-d010a9043ea8" target="_blank" class="license">
+                        <span class="pic costa-rica"><img src="img/license-costa-rica.png" /></span>
+                        <span class="title">Costa Rica</span>
+                    </a>
+                    <span class="attention">
+                        <label>Attention</label>
+                        <p>WINk only provide service for adult users who are over 21 years old and we strictly conform to the local laws and regulations. Please make sure that you play our games with consent from your local laws and regulations. For users in China, Japan and France, we don't offer relevant service temporarily, please keep eyes on subsequent website notice. Thank you.</p>
+                    </span>
+                </div>
+                <ul class="suppliers">
+                    <li><i class="wnk-icon icon-supplier-evolution">&#xe80e;</i></li>
+                    <li><i class="wnk-icon icon-supplier-pragmatic">&#xe815;</i></li>
+                    <li><i class="wnk-icon icon-supplier-yggdrasil">&#xe818;</i></li>
+                    <li><i class="wnk-icon icon-supplier-netent">&#xe813;</i></li>
+                    <li><i class="supplier push-gaming"></i></li>
+                    <li><i class="wnk-icon icon-supplier-microgaming">&#xe812;</i></li>
+                    <li><i class="supplier nolimit"></i></li>
+                    <li><i class="wnk-icon icon-supplier-betsoft">&#xe80b;</i></li>
+                    <li><i class="wnk-icon icon-supplier-kalamba">&#xe811;</i></li>
+                    <li><i class="wnk-icon icon-supplier-wazdan">&#xe817;</i></li>
+                    <li><i class="wnk-icon icon-supplier-gameart">&#xe80f;</i></li>
+                    <li><i class="wnk-icon icon-supplier-onetouch">&#xe814;</i></li>
+                    <li><i class="wnk-icon icon-supplier-bongo">&#xe80c;</i></li>
+                    <li><i class="wnk-icon icon-supplier-caleta">&#xe80d;</i></li>
+                    <li><i class="wnk-icon icon-supplier-goldenhero">&#xe810;</i></li>
+                    <li><i class="supplier playson"></i></li>
+                    <li><i class="wnk-icon icon-supplier-spribe">&#xe816;</i></li>
                 </ul>
-                <button class="btn-order"><span class="title">My Order</span><i class="fas fa-shopping-cart"></i></button>
+                <ul class="suppliers">
+                    <li><i class="wnk-icon icon-crypto-btc">&#xe822;</i></li>
+                    <li><i class="supplier ltc"></i></li>
+                    <li><i class="supplier bch"></i></li>
+                    <li><i class="supplier eth"></i></li>
+                    <li><i class="wnk-icon icon-crypto-bnb">&#xe821;</i></li>
+                    <li><i class="wnk-icon icon-crypto-trx">&#xe823;</i></li>
+                </ul>
             </div>
-        </div>
-        <div class="slides slide1 fade">
-            <div class="dd">
-                <label>Design and order your new kitchen online today</label>
-                <h1>Bespoke & made to measure handmade kitchen design</h1>
-                <button class="btn">order now</button>
-            </div>
-        </div>
-        <div class="slides slide2 fade">
-            <div class="dd">
-                <label>Design and order your new kitchen online today</label>
-                <h1>Bespoke & made to measure handmade kitchen design</h1>
-                <button class="btn">Order Now</button>
-            </div>
-        </div>
-        <div class="slide-bars">
-            <span class="bar" onclick="currentSlide(1)"></span>
-            <span class="bar" onclick="currentSlide(2)"></span>
-        </div>
-    </div>
-    <div class="intro-container">
-        <div class="pic"></div>
-        <div class="dd">
-            <label>Quality Craftmanship from build to delivery</label>
-            <h2>Discover the beauty of a handmade kitchen</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
-            <button class="btn">About Us</button>
-        </div>
-    </div>
-    <div class="feedback-container">
-        <div class="feedback fade">
-            <label>What Our Customers Say</label>
-            <h3>Over 35 years experience designing handmade kitchens</h3>
-            <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
-            <span class="by">Jane, Dundee</span>
-            <button class="btn">Frequently Asked Questions</button>
-        </div>
-        <div class="feedback fade">
-            <label>What Our Customers Say</label>
-            <h3>Over 70 years experience designing handmade kitchens</h3>
-            <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
-            <span class="by">Jane, Dundee</span>
-            <button class="btn">Frequently Asked Questions</button>
-        </div>
-        <button class="btn-prev" onclick="plusFeedback(-1, 1)"></button>
-        <button class="btn-next" onclick="plusFeedback(1, 1)"></button>
-    </div>
-    <div class="gallery-preview">
-        <h4>Customer Gallery</h4>
-        <ul>
-            <li><a href="/" class="gallery-pic"><img src="img/gallery_pic1.jpg" /></a></li>
-            <li><a href="/" class="gallery-pic"><img src="img/gallery_pic2.jpg" /></a></li>
-            <li><a href="/" class="gallery-pic"><img src="img/gallery_pic3.jpg" /></a></li>
-            <li><a href="/" class="gallery-pic"><img src="img/gallery_pic4.jpg" /></a></li>
-        </ul>
-        <button class="btn">View More</button>
-    </div>
-    <div class="footer">
-        <div class="content">
-            <div class="mhk-logo"></div>
-            <div class="nav">
-                <div class="col">
-                    <h5>About</h5>
-                    <ul>
-                        <li><a href="/">Shop</a></li>
-                        <li><a href="/">Plan My Kitchen</a></li>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5>Service</h5>
-                    <ul>
-                        <li><a href="/">FAQ</a></li>
-                        <li><a href="/">Contact</a></li>
-                        <li><a href="/">How to Buy</a></li>
-                        <li><a href="/">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5>Info</h5>
-                    <ul>
-                        <li><a href="/">Delivery</a></li>
-                        <li><a href="/">Terms</a></li>
-                        <li><a href="/">Privacy</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5>Follow</h5>
-                    <ul class="social">
-                        <li><a href="/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
+            <div class="footer">
+                <div class="ft-content">
+                    <div class="col">
+                        <label>WINK.org information</label>
+                        <p>Copyright © 2020 WINk.org is operated by Windfall Win N.V., a company registered and established under the laws of Curaçao.</p>
+                        <p>Windfall Win N.V.'s registration number is 150598 and its registered address is Abraham de Veerstraat 9, Curaçao.</p>
+                    </div>
+                    <div class="col">
+                        <label>About Us</label>
+                        <ul>
+                            <li><a href="https://tron.wink.org/docs/whitepaper_en.pdf" target="_blank">White Paper</a></li>
+                            <li><a href="https://tron.wink.org/docs/WINk_Roadmap_2020.pdf" target="_blank">Roadmap</a></li>
+                            <li><a href="https://medium.com/@winkfoundation" target="_blank">Blog</a></li>
+                            <li><a href="mailto:support@wink.org" target="_blank">Contact Us</a></li>
+                            <li><a href="https://xorbin.com/tools/sha256-hash-calculator" target="_blank">Hash Calculator</a></li>
+                            <li><a href="https://tron.wink.org/help" target="_blank">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <label>Gaming License</label>
+                        <ul>
+                            <li><a href="https://medium.com/@winkfoundation/wink-win-has-obtained-the-costa-rica-commercial-patent-certificate-d010a9043ea8" target="_blank">Costa Rica</a></li>
+                            <li><a href="http://www.gaming-curacao.com/" target="_blank">Curacao</a></li>
+                        </ul>
+                        <label>Information</label>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1XNASQtdlWF071ZF2HVAMQCLd4pREK6yM/view" target="_blank">Terms of Service</a></li>
+                            <li>Wink Poloniex User Guide (<a href="https://tron.wink.org/docs/wink-poloniex-user-guide.pdf" target="_blank">PDF</a>, <a href="https://tron.wink.org/docs/wink-poloniex-user-guide.docx" target="_blank">Docx</a>)</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <label>Follow Us</label>
+                        <a href="https://twitter.com/WINkorg777" target="_blank" class="btn-social"><i class="wnk-icon icon-social-twitter">&#xe809;</i></a>
+                        <a href="https://t.me/WINk_org_official" target="_blank" class="btn-social"><i class="wnk-icon icon-social-telegram">&#xe808;</i></a>
+                        <a href="https://winkfoundation.medium.com/" target="_blank" class="btn-social"><i class="wnk-icon icon-social-medium">&#xe807;</i></a>
+                    </div>
                 </div>
             </div>
-            <div class="copyrights">
-                <p>Copyright Online MTC Home Kitchens 2018 - All rights reserved.</p>
-                <p>Responsive website design, Development & Hosting by mtc.</p>
-            </div>
         </div>
     </div>
+
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+    </script>
+
 </body>
 </html>
