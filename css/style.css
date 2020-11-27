@@ -1248,6 +1248,21 @@ body, html {
           body .wrap .container .content, html .wrap .container .content {
             margin: 0 5px;
             width: calc(100% - 10px); } }
+      body .wrap .container .zendesk, html .wrap .container .zendesk {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: #99CE29;
+        border-radius: 25px;
+        z-index: 8; }
+        body .wrap .container .zendesk .wnk-icon, html .wrap .container .zendesk .wnk-icon {
+          font-size: 28px;
+          color: #FFF; }
     @media screen and (max-width: 576px) {
       body .wrap, html .wrap {
         width: 100%;

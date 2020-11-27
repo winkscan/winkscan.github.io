@@ -55,6 +55,25 @@ body, html {
                     width: calc(100% - 10px);
                 }
             }
+
+            .zendesk {
+                position: fixed;
+                bottom: 15px;
+                right: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                background: $green-color;
+                border-radius: 25px;
+                z-index: 8;
+
+                .wnk-icon {
+                    font-size: 28px;
+                    color: $white-color;
+                }
+            }
         }
 
         @media screen and (max-width: 576px) {
