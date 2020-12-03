@@ -1,0 +1,253 @@
+.popup-wrapper {
+    position: fixed;
+    z-index: 20;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+
+    .popup {
+        margin: 125px auto auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 700px;
+        min-width: 280px;
+        background: $bg-light-color;
+        border-radius: 3px;
+
+        .popup-header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 45px);
+            min-height: 30px;
+            padding: 5px 30px 5px 15px;
+            color: $white-color;
+            font-size: $font-size-md;
+            font-weight: 600;
+            border-radius: 3px 3px 0 0;
+            background: $bg-color;
+
+            .close-popup {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+
+                &:after, &:before {
+                    position: absolute;
+                    top: 5px;
+                    display: block;
+                    content:'';
+                    width: 2px;
+                    height: 20px;
+                    background: $text-color;
+                }
+
+                &:after {
+                    left: 14px;
+                    transform: rotate(45deg);
+                }
+
+                &:before {
+                    right: 14px;
+                    transform: rotate(-45deg);
+                }
+
+                &:hover {
+                    &:after, &:before {
+                        background: $white-color;
+                        transition: 0.3s background-color ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .popup-body {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 20px);
+            padding: 10px;
+
+            .sign-col {
+                margin: 30px 0;
+                display: flex;
+                width: calc(50% - 20px);
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                
+                .icon {
+                    display: flex;
+                    width: 90px;
+                    height: 90px;
+                    overflow: hidden;
+                    border-radius: 6px;
+
+                    .wnk-icon {
+                        color: $white-color;
+                    }
+                }
+
+                label {
+                    padding: 10px 0 20px 0;
+                    font-size: $font-size-md;
+                    color: $white-color;
+                    font-weight: 600;
+                }
+
+                .btn-sign {
+                    margin: 10px auto;
+                    display: flex;
+                    min-width: 160px;
+                    height: 34px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 24px;
+                    color: $white-color;
+                    border-radius: 18px;
+                    cursor: pointer;
+                    background: transparent;
+                    border: 1px solid $text-color;
+        
+                    &:hover {
+                        background: $text-color;
+                        transition: 0.3s background-color ease-in-out;
+                    }
+        
+                    &.hide {
+                        display: none;
+                    }
+                }
+
+                p {
+                    padding: 3px 0;
+                    line-height: 16px;
+
+                    .link {
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $orange-color;
+                            transition: 0.3s color ease-in-out;
+                        }
+                    }
+                }
+                
+                &.polo {
+                    padding: 25px 14px 25px 5px;
+                    border-right: 1px solid $bg-color;
+
+                    .icon {
+                        align-items: center;
+                        justify-content: center;
+                        background: $poloniex-color;
+
+                        .wnk-icon {
+                            font-size: 60px;
+                        }
+                    }
+                }
+
+                &.tronlink {
+                    padding: 25px 5px 25px 14px;
+                    border-left: 1px solid $bg-color;
+
+                    .icon {
+                        background: $tronlink-color;
+
+                        .wnk-icon {
+                            margin: 17px 0 0 7px;
+                            font-size: 130px;
+                        }
+                    }
+                }
+            }
+
+            .notification {
+                padding: 5px;
+
+                label {
+                    display: block;
+                    font-size: $font-size-md;
+                    color: $orange-color;
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    padding: 10px 0;
+
+                    a {
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $orange-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+            margin: 15px 15px auto 15px;
+            width: calc(100% - 30px);
+        }
+
+        @media screen and (max-width: 576px) {
+            .popup-body {
+                .sign-col {
+                    &.polo, &.tronlink {
+                        margin: 0;
+                        width: calc(100% - 10px);
+                        padding: 25px 5px 25px;
+                    }
+                    
+                    &.polo {
+                        border-right: none;
+                        border-bottom: 1px solid $bg-color;
+                    }
+    
+                    &.tronlink {
+                        border-left: none;
+                        border-top: 1px solid $bg-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        display: flex;
+        background: rgba(0,0,0,0.6);
+        animation-name: showpopupbg;
+        animation-duration: 0.3s;
+
+        @keyframes showpopupbg {
+            from {background: rgba(0,0,0,0);}
+            to {background: rgba(0,0,0,0.6);}
+        }
+
+        .popup {
+            animation-name: showpopup;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-out;
+
+            @keyframes showpopup {
+                from {margin: -100% auto auto auto;}
+                to {margin: 125px auto auto auto;}
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+            .popup {
+                @keyframes showpopup {
+                    from {margin: -100% auto auto auto;}
+                    to {margin: 15px auto auto auto;}
+                }
+            }
+        }
+    }
+}

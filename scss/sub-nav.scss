@@ -1,0 +1,116 @@
+.sub-nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: $sub-nav-bg;
+
+    &.stick-to-top {
+        position: fixed;
+        z-index: 5;
+        left: 90px;
+        top: 90px;
+        width: calc(100% - 90px);
+    }
+
+    .group {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0 15px;
+
+        label {
+            display: flex;
+            width: 90px;
+            align-items: center;
+            font-size: $font-size-md;
+            color: $white-color;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            .icon {
+                display: inline-block;
+                margin-right: 6px;
+                width: 16px;
+                height: 16px;
+
+                &.dice {
+                    background: url('../img/icon-dice.svg') no-repeat;
+                    background-size: 16px;
+                }
+
+                &.live {
+                    background: url('../img/icon-live.svg') no-repeat;
+                    background-size: 16px;
+                }
+
+                &.rake {
+                    background: url('../img/icon-rake.svg') no-repeat;
+                    background-size: 16px;
+                }
+            }
+        }
+
+        .link {
+            display: flex;
+            padding: 0 10px;
+            align-items: center;
+            height: 49px;
+            border-bottom: 1px solid rgba(0,0,0,0);
+
+            &.active, &:hover {
+                color: $white-color;
+                transition: 0.3s all ease-in-out ;
+            }
+        }
+
+        &.dice-platform {
+            .link {
+                &.active, &:hover {
+                    border-color: $green-color;
+                    transition: 0.3s all ease-in-out ;
+                }
+            }
+        }
+
+        &.live-platform {
+            .link {
+                &.active, &:hover {
+                    border-color: $red-color;
+                    transition: 0.3s all ease-in-out ;
+                }
+            }
+        }
+
+        &.rake-platform {
+            .link {
+                &.active, &:hover {
+                    border-color: $rake-color;
+                    transition: 0.3s all ease-in-out ;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        margin-top: -15px;
+        margin-bottom: 0;
+        height: 40px;
+
+        .group {
+            label {
+                width: 70px;
+            }
+
+            .link {
+                height: 39px;
+            }
+        }
+
+        &.stick-to-top {
+            left: 0;
+            top: 75px;
+            width: 100%;
+        }
+    }
+}

@@ -32,11 +32,14 @@
             }
 
             &:hover, &.active {
-                color: $white-color;
-                transition: 0.3s color ease-in-out;
-
+                
                 .wnk-icon {
                     color: $orange-color;
+                    transition: 0.3s color ease-in-out;
+                }
+
+                .title {
+                    color: $white-color;
                     transition: 0.3s color ease-in-out;
                 }
             }
@@ -161,6 +164,7 @@
 
             .dropdown {
                 position: absolute;
+                z-index: 0;
                 top: 46px;
                 display: none;
                 right: 0;
@@ -179,6 +183,7 @@
                     content:'';
                     top: -5px;
                     right: 12px;
+                    z-index: 2;
                     width: 0;
                     height: 0;
                     border-left: 5px solid transparent;
@@ -510,7 +515,7 @@
                     background: $text-color;
 
                     &:hover {
-                        background: $green-color;
+                        background: $orange-light-color;
                         transition: 0.3s background-color ease-in-out;
                     }
                 }
@@ -521,13 +526,13 @@
                     background: $orange-color;
 
                     &:hover {
-                        background: $green-color;
+                        background: $orange-light-color;
                         transition: 0.3s background-color ease-in-out;
                     }
                 }
             }
 
-            .btn-withdraw {
+            .btn-withdraw, .btn-signin {
                 margin-right: 5px;
                 width: 80px;
                 height: 36px;
@@ -541,6 +546,16 @@
                 &:hover {
                     background: $red-light-color;
                     transition: 0.3s background-color ease-in-out;
+                }
+                
+                &.btn-signin {
+                    color: $bg-color;
+                    background: $orange-color;
+
+                    &:hover {
+                        background: $orange-light-color;
+                        transition: 0.3s all ease-in-out;
+                    }
                 }
             }
 
