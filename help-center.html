@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINk - Best Blockchain Gambling Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div class="popup-wrapper notofication-popup">
+        <div class="popup">
+            <div class="popup-header">
+                WINk’s New POker (Alpha) is online now!<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <label>Dear WINksters!</label>
+                    <p>We are happy to announce that New Poker (Alpha) is now officially launched. If you have any suggestions on our New Poker (Alpha), feel free to let us know.</p>
+                    <p>There is a feedback entry that you can submit to let us know what you think about it and advise on New Poker (Alpha).</p>
+                    <p>Good luck WINksters and we look forward to your feedback.</p>
+                    <p>Team WINk.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="mainpage.html" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="live-casino.html" class="btn active">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="live-casino.html">Casino</a></li>
+                        <li><a href="sports-binarium.html">Sports</a></li>
+                        <li><a href="sports-binarium.html">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="https://blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" onclick="toogleHamburger()" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <a href="https://winkonline.zendesk.com/hc/zh-tw/restricted?return_to=https%3A%2F%2Fwinkonline.zendesk.com%2Fhc%2Fzh-tw" target="_blank" class="zendesk"><i class="wnk-icon icon-info">&#xe801;</i></a>
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="help-center">
+                    <h1>We are here <span class="for-you">for you!</span></h1>
+                    <ul class="videos">
+                        <li class="video">
+                            <iframe width="100%" height="140" src="https://www.youtube.com/embed/_xk2ENUAimA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtu.be/_xk2ENUAimA" target="_blank" class="link">How to WINk.org</a>
+                        </li>
+                        <li class="video">
+                            <iframe width="100%" height="140" src="https://www.youtube.com/embed/hKBtOPtz5io" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtu.be/hKBtOPtz5io" target="_blank" class="link">Introduction to WINk & WIN IEO</a>
+                        </li>
+                        <li class="video">
+                            <iframe width="100%" height="140" src="https://www.youtube.com/embed/1qmWrdWj6lY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtu.be/1qmWrdWj6lY" target="_blank" class="link">How to open a TronLink Wallet</a>
+                        </li>
+                        <li class="video">
+                            <iframe width="100%" height="140" src="https://www.youtube.com/embed/e6cINIA1BSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtu.be/e6cINIA1BSw" target="_blank" class="link">How to get WIN</a>
+                        </li>
+                        <li class="video">
+                            <iframe width="100%" height="140" src="https://www.youtube.com/embed/VxpvGDGBFOw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtu.be/VxpvGDGBFOw" target="_blank" class="link">WINdrops and other drops</a>
+                        </li>
+                    </ul>
+                    <div class="faq">
+                        <div class="faq-nav">
+                            <div class="tab active">Basics</div>
+                            <div class="tab">DICE and DICEdrops</div>
+                            <div class="tab">How to play WINk Games</div>
+                            <div class="tab">Fairness</div>
+                        </div>
+                        <div class="faq-content">
+                            <div class="topic">
+                                <div class="question">1. WINk Platform Introduction<span class="arrow"></span></div>
+                                <div class="faq-body">
+                                    <p>WINk is a decentralized DApp platform, with team members from all around the world. With a wealth of experience in game and platform development, the WINk team has been able to revolutionize what Dapps can do for the wider community. Our 3 core principles are Transparency, Fariness, and Wealth Distribution. We strive to become the industry leader in DApp development, revolutionizing a new model to benefit all stakehodlers. WINk is mainly bsaed on the development of TRON's main net, and will later expand to other blockchains, at the same time cooperating with other developers to enrich the platform as a whole.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <div class="question">2. Game Languages<span class="arrow"></span></div>
+                                <div class="faq-body">
+                                    <p>WINk currently supports English and Simplified Chinese.</p>
+                                </div>
+                            </div>
+                            <div class="topic opened">
+                                <div class="question">3. Supported Tokens<span class="arrow"></span></div>
+                                <div class="faq-body">
+                                    <p>The platform currently supports TRX, DICE (TRC20), and BTT (TRC10) to be used on the platform, with other tokens coming soon.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <div class="question">4. Level and Avatar<span class="arrow"></span></div>
+                                <div class="faq-body">
+                                    <p>The maximum level achievable is currently set at Lv. 99. This may be adjusted in the future, with new level specific features to be added.<br/>
+                                        Experience points are tied to a 1:1 TRX ratio depending on how much you play. You can go to the profile page to find out what level you are. The currently level features include the following:<br/>
+                                        Lv. 3: Chat function unlocked<br/>
+                                        Lv.15: Daily Tasks unlocked<br/>
+                                        Lv.25: Screen name turns green, and a new avatar can be selected<br/>
+                                        Lv.50: Screen name turns blue, and a new avatar can be selected<br/>
+                                        Lv.75: Screen name turns purple, and a new avatar can be selected<br/>
+                                        Lv.99: Screen name turns gold and the WINk team designs a custom avatar for you.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <div class="question">5. Community<span class="arrow"></span></div>
+                                <div class="faq-body">
+                                    <p>Telegram: <a href="https://t.me/WINk_org_official">https://t.me/WINk_org_official</a></p>
+                                    <p>You can also follow us on Twitter: <a href="https://twitter.com/WINkorg">https://twitter.com/WINkorg</a> for the most up-to-date news.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="ft-content">
+                    <div class="col">
+                        <label>WINK.org information</label>
+                        <p>Copyright © 2020 WINk.org is operated by Windfall Win N.V., a company registered and established under the laws of Curaçao.</p>
+                        <p>Windfall Win N.V.'s registration number is 150598 and its registered address is Abraham de Veerstraat 9, Curaçao.</p>
+                    </div>
+                    <div class="col">
+                        <label>About Us</label>
+                        <ul>
+                            <li><a href="https://tron.wink.org/docs/whitepaper_en.pdf" target="_blank">White Paper</a></li>
+                            <li><a href="https://tron.wink.org/docs/WINk_Roadmap_2020.pdf" target="_blank">Roadmap</a></li>
+                            <li><a href="https://medium.com/@winkfoundation" target="_blank">Blog</a></li>
+                            <li><a href="mailto:support@wink.org" target="_blank">Contact Us</a></li>
+                            <li><a href="https://xorbin.com/tools/sha256-hash-calculator" target="_blank">Hash Calculator</a></li>
+                            <li><a href="https://tron.wink.org/help" target="_blank">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <label>Gaming License</label>
+                        <ul>
+                            <li><a href="https://medium.com/@winkfoundation/wink-win-has-obtained-the-costa-rica-commercial-patent-certificate-d010a9043ea8" target="_blank">Costa Rica</a></li>
+                            <li><a href="http://www.gaming-curacao.com/" target="_blank">Curacao</a></li>
+                        </ul>
+                        <label>Information</label>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1XNASQtdlWF071ZF2HVAMQCLd4pREK6yM/view" target="_blank">Terms of Service</a></li>
+                            <li>Wink Poloniex User Guide (<a href="https://tron.wink.org/docs/wink-poloniex-user-guide.pdf" target="_blank">PDF</a>, <a href="https://tron.wink.org/docs/wink-poloniex-user-guide.docx" target="_blank">Docx</a>)</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <label>Follow Us</label>
+                        <a href="https://twitter.com/WINkorg777" target="_blank" class="btn-social"><i class="wnk-icon icon-social-twitter">&#xe809;</i></a>
+                        <a href="https://t.me/WINk_org_official" target="_blank" class="btn-social"><i class="wnk-icon icon-social-telegram">&#xe808;</i></a>
+                        <a href="https://winkfoundation.medium.com/" target="_blank" class="btn-social"><i class="wnk-icon icon-social-medium">&#xe807;</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+        $('.btn-notification').click( function() {
+            $(".notofication-popup").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 0) {
+                $('.sub-nav').addClass('stick-to-top');
+            } else {
+                $('.sub-nav').removeClass('stick-to-top');
+            }
+        });
+    </script>
+
+</body>
+</html>
