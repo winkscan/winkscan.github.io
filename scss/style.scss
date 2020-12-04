@@ -28,6 +28,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 }
 
 body, html {
+    min-width: 320px;
     height: 100%;
     background: $bg-color;
 
@@ -87,7 +88,8 @@ body, html {
 
         @media screen and (max-width: 576px) {
             width: 100%;
-            padding: 75px 0 0 0;
+            height: calc(100% - 60px);
+            padding: 60px 0 0 0;
         }
     }
 }
