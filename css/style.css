@@ -1380,7 +1380,8 @@
         right: 10px;
         z-index: 2;
         width: 14px;
-        height: 14px; }
+        height: 14px;
+        cursor: pointer; }
         .slots-filter .btn-group .select .btn-search:before {
           position: absolute;
           left: 0;
@@ -1852,6 +1853,427 @@
   @media screen and (max-width: 375px) {
     .help-center .videos .video {
       width: calc(100% - 20px); } }
+
+.slot-game {
+  display: flex;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  padding: 5px;
+  overflow: hidden;
+  position: relative; }
+  .slot-game .slot-body {
+    margin: 10px;
+    width: calc(100% - 340px);
+    height: calc(100% - 20px);
+    background: #0A142E;
+    border-radius: 3px; }
+    .slot-game .slot-body .slot-header {
+      display: flex;
+      height: 36px; }
+      .slot-game .slot-body .slot-header label {
+        display: flex;
+        width: calc(100% - 138px);
+        height: 36px;
+        padding: 0 15px;
+        align-items: center;
+        color: #FFF;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-weight: 600; }
+      .slot-game .slot-body .slot-header .slot-nav {
+        display: flex;
+        width: 108px;
+        height: 36px;
+        justify-content: flex-end; }
+        .slot-game .slot-body .slot-header .slot-nav .btn {
+          display: flex;
+          height: 36px;
+          width: 36px;
+          align-items: center;
+          cursor: pointer;
+          justify-content: center; }
+          .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat, .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat-mobile {
+            display: none; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat .wnk-icon, .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat-mobile .wnk-icon {
+              font-size: 18px;
+              color: #FFF; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat:hover .wnk-icon, .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat-mobile:hover .wnk-icon {
+              color: #FBC509;
+              transition: 0.3s color ease-in-out; }
+          .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat-mobile {
+            display: none; }
+          .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen {
+            margin: 9px;
+            position: relative;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #FFF; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen .icon-fullscreen {
+              top: -2px;
+              right: -2px;
+              display: block;
+              position: absolute;
+              width: 4px;
+              height: 4px;
+              border-top: 2px solid #FFF;
+              border-right: 2px solid #FFF;
+              border-bottom: 4px solid #0A142E;
+              border-left: 4px solid #0A142E; }
+              .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen .icon-fullscreen:after {
+                display: block;
+                position: absolute;
+                top: -2px;
+                right: 2px;
+                width: 2px;
+                height: 10px;
+                content: '';
+                transform: rotate(45deg);
+                background: #FFF; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen:hover {
+              border-color: #FBC509;
+              transition: 0.3s border-color ease-in-out; }
+              .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen:hover .icon-fullscreen {
+                border-top: 2px solid #FBC509;
+                border-right: 2px solid #FBC509;
+                transition: 0.3s border-color ease-in-out; }
+                .slot-game .slot-body .slot-header .slot-nav .btn.btn-fullscreen:hover .icon-fullscreen:after {
+                  background: #FBC509;
+                  transition: 0.3s border-color ease-in-out; }
+          .slot-game .slot-body .slot-header .slot-nav .btn.btn-close .icon-close {
+            position: relative;
+            width: 18px;
+            height: 18px; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-close .icon-close:after, .slot-game .slot-body .slot-header .slot-nav .btn.btn-close .icon-close:before {
+              position: absolute;
+              top: -3px;
+              display: block;
+              content: '';
+              width: 2px;
+              height: 23px;
+              background: #FFF; }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-close .icon-close:after {
+              left: 8px;
+              transform: rotate(45deg); }
+            .slot-game .slot-body .slot-header .slot-nav .btn.btn-close .icon-close:before {
+              right: 8px;
+              transform: rotate(-45deg); }
+          .slot-game .slot-body .slot-header .slot-nav .btn.btn-close:hover .icon-close:after, .slot-game .slot-body .slot-header .slot-nav .btn.btn-close:hover .icon-close:before {
+            background: #FBC509;
+            transition: 0.3s all ease-in-out; }
+    .slot-game .slot-body .slot-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      height: calc(100% - 92px); }
+      .slot-game .slot-body .slot-container:after {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        content: '\e806';
+        font-family: "fontello";
+        font-size: 320px;
+        align-items: center;
+        justify-content: center; }
+    .slot-game .slot-body .slot-footer {
+      position: relative;
+      z-index: 3;
+      display: flex; }
+      .slot-game .slot-body .slot-footer .slot-sub-nav {
+        display: flex;
+        width: calc(100% - 220px);
+        height: 56px; }
+        .slot-game .slot-body .slot-footer .slot-sub-nav .link {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding: 0 15px;
+          cursor: pointer; }
+          .slot-game .slot-body .slot-footer .slot-sub-nav .link.active, .slot-game .slot-body .slot-footer .slot-sub-nav .link:hover {
+            color: #FFF;
+            transition: 0.3s color ease-in-out; }
+      .slot-game .slot-body .slot-footer .search-by-name {
+        width: 200px;
+        height: 36px;
+        padding: 10px; }
+        .slot-game .slot-body .slot-footer .search-by-name .select {
+          display: flex;
+          position: relative;
+          width: 100%;
+          height: 36px;
+          background: #060E22;
+          border-radius: 3px; }
+          .slot-game .slot-body .slot-footer .search-by-name .select input {
+            position: relative;
+            z-index: 1;
+            width: calc(100% - 30px);
+            padding: 0 20px 0 10px;
+            font-size: 13px;
+            color: #344E72;
+            background: transparent;
+            border: none;
+            outline: none; }
+            .slot-game .slot-body .slot-footer .search-by-name .select input:focus {
+              color: #FFF; }
+          .slot-game .slot-body .slot-footer .search-by-name .select .btn-search {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+            width: 14px;
+            height: 14px;
+            cursor: pointer; }
+            .slot-game .slot-body .slot-footer .search-by-name .select .btn-search:before {
+              position: absolute;
+              left: 0;
+              top: 0;
+              content: '';
+              width: 8px;
+              height: 8px;
+              border: 2px solid #FFF;
+              border-radius: 8px; }
+            .slot-game .slot-body .slot-footer .search-by-name .select .btn-search:after {
+              position: absolute;
+              display: block;
+              width: 2px;
+              height: 6px;
+              content: '';
+              bottom: 0;
+              right: 2px;
+              background: #FFF;
+              transform: rotate(-45deg); }
+      .slot-game .slot-body .slot-footer .games-list {
+        position: absolute;
+        top: -97px;
+        left: 0;
+        display: flex;
+        width: calc(100% - 10px);
+        height: 77px;
+        align-items: center;
+        padding: 10px 5px;
+        overflow: auto;
+        background: rgba(4, 9, 22, 0.8); }
+        .slot-game .slot-body .slot-footer .games-list .game {
+          margin: 0 5px;
+          display: flex;
+          width: 80px;
+          min-width: 80px;
+          height: 60px;
+          overflow: hidden;
+          justify-content: center;
+          border-radius: 3px; }
+          .slot-game .slot-body .slot-footer .games-list .game img {
+            height: 60px; }
+    .slot-game .slot-body.wide {
+      width: 100%;
+      animation-name: wideslot;
+      animation-duration: 0.3s; }
+
+@keyframes wideslot {
+  from {
+    width: calc(100% - 340px); }
+  to {
+    width: 100%; } }
+      .slot-game .slot-body.wide .slot-header .slot-nav .btn-chat {
+        display: flex; }
+  .slot-game .side-col {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: calc(100% - 30px);
+    background: #0A142E;
+    border-radius: 3px; }
+    .slot-game .side-col.hide {
+      right: -310px;
+      animation-name: hidecol;
+      animation-duration: 0.3s; }
+
+@keyframes hidecol {
+  from {
+    right: 15px; }
+  to {
+    right: -310px; } }
+    .slot-game .side-col .side-col-nav {
+      display: flex;
+      width: 100%;
+      height: 36px; }
+      .slot-game .side-col .side-col-nav .btn-rankings, .slot-game .side-col .side-col-nav .btn-chat-room {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        height: 35px;
+        color: #344E72;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+        border-bottom: 1px solid #040916; }
+        .slot-game .side-col .side-col-nav .btn-rankings:hover, .slot-game .side-col .side-col-nav .btn-rankings.active, .slot-game .side-col .side-col-nav .btn-chat-room:hover, .slot-game .side-col .side-col-nav .btn-chat-room.active {
+          color: #FFF;
+          border-color: #FBC509;
+          transition: 0.3s all ease-in-out; }
+      .slot-game .side-col .side-col-nav .btn-close-chat, .slot-game .side-col .side-col-nav .btn-close-chat-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        min-width: 36px;
+        height: 35px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-bottom: 1px solid #040916; }
+        .slot-game .side-col .side-col-nav .btn-close-chat .icon-close, .slot-game .side-col .side-col-nav .btn-close-chat-mobile .icon-close {
+          position: relative;
+          display: block;
+          width: 18px;
+          height: 18px; }
+          .slot-game .side-col .side-col-nav .btn-close-chat .icon-close:after, .slot-game .side-col .side-col-nav .btn-close-chat .icon-close:before, .slot-game .side-col .side-col-nav .btn-close-chat-mobile .icon-close:after, .slot-game .side-col .side-col-nav .btn-close-chat-mobile .icon-close:before {
+            position: absolute;
+            top: -2px;
+            display: block;
+            content: '';
+            width: 2px;
+            height: 23px;
+            background: #FFF; }
+          .slot-game .side-col .side-col-nav .btn-close-chat .icon-close:after, .slot-game .side-col .side-col-nav .btn-close-chat-mobile .icon-close:after {
+            left: 8px;
+            transform: rotate(45deg); }
+          .slot-game .side-col .side-col-nav .btn-close-chat .icon-close:before, .slot-game .side-col .side-col-nav .btn-close-chat-mobile .icon-close:before {
+            right: 8px;
+            transform: rotate(-45deg); }
+        .slot-game .side-col .side-col-nav .btn-close-chat:hover .icon-close:after, .slot-game .side-col .side-col-nav .btn-close-chat:hover .icon-close:before, .slot-game .side-col .side-col-nav .btn-close-chat-mobile:hover .icon-close:after, .slot-game .side-col .side-col-nav .btn-close-chat-mobile:hover .icon-close:before {
+          background: #FBC509;
+          transition: 0.3s all ease-in-out; }
+      .slot-game .side-col .side-col-nav .btn-close-chat-mobile {
+        display: none; }
+    .slot-game .side-col .side-col-body {
+      display: flex;
+      width: 100%;
+      height: calc(100% - 36px); }
+      .slot-game .side-col .side-col-body .rankings, .slot-game .side-col .side-col-body .chat {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 3px 3px; }
+      .slot-game .side-col .side-col-body .rankings {
+        display: flex;
+        flex-direction: column; }
+        .slot-game .side-col .side-col-body .rankings .btn-group {
+          display: flex;
+          width: 100%;
+          padding: 15px 0;
+          height: 36px; }
+          .slot-game .side-col .side-col-body .rankings .btn-group .btn {
+            margin: 0 15px;
+            display: flex;
+            width: calc(50% - 30px);
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            border-radius: 18px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #344E72; }
+            .slot-game .side-col .side-col-body .rankings .btn-group .btn:hover {
+              background: #344E72;
+              transition: 0.3s background-color ease-in-out; }
+            .slot-game .side-col .side-col-body .rankings .btn-group .btn.active {
+              color: #060E22;
+              background: #FBC509;
+              border: none; }
+        .slot-game .side-col .side-col-body .rankings .timer {
+          display: flex;
+          width: 100%;
+          height: 44px;
+          justify-content: center;
+          align-items: flex-start;
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          background: linear-gradient(0deg, #FB6009, #FBC509);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .slot-game .side-col .side-col-body .rankings .table-responsive {
+          width: 100%;
+          height: calc(100% - 110px);
+          overflow: auto;
+          border-radius: 0 0 3px 3px; }
+          .slot-game .side-col .side-col-body .rankings .table-responsive table {
+            width: 100%;
+            text-align: left;
+            border-spacing: 0; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table thead th {
+              height: 50px;
+              padding-left: 10px;
+              font-weight: normal;
+              vertical-align: middle;
+              background: #101E41; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(even) {
+              background: #101E41; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(1) {
+              background: #D80027; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(2) {
+              background: #BC0022; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(3) {
+              background: #9A001C; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(1) td, .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(2) td, .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr:nth-child(3) td {
+              color: #FFF;
+              font-weight: 600; }
+            .slot-game .side-col .side-col-body .rankings .table-responsive table tbody tr td {
+              height: 36px;
+              padding-left: 10px;
+              font-weight: normal;
+              vertical-align: middle; }
+      .slot-game .side-col .side-col-body .chat {
+        display: none; }
+  @media screen and (max-width: 1260px) {
+    .slot-game .slot-body {
+      width: calc(100% - 20px); }
+      .slot-game .slot-body.hide {
+        opacity: 0;
+        animation-name: hidegame;
+        animation-duration: 0.3s; }
+    @keyframes hidegame {
+      from {
+        opacity: 1; }
+      to {
+        opacity: 0; } }
+      .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat {
+        display: none; }
+      .slot-game .slot-body .slot-header .slot-nav .btn.btn-chat-mobile {
+        display: flex; }
+    .slot-game .side-col {
+      right: -310px; }
+      .slot-game .side-col.wide {
+        right: 15px;
+        width: calc(100% - 30px);
+        animation-name: showchat;
+        animation-duration: 0.3s; }
+    @keyframes showchat {
+      from {
+        right: -310px;
+        width: 300px; }
+      to {
+        right: 15px;
+        width: calc(100% - 30px); } }
+      .slot-game .side-col .side-col-nav .btn-close-chat {
+        display: none; }
+      .slot-game .side-col .side-col-nav .btn-close-chat-mobile {
+        display: flex; } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
