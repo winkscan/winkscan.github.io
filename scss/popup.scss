@@ -189,11 +189,284 @@
                     }
                 }
             }
+
+            &.burn-body {
+                width: 100%;
+                padding: 0;
+
+                .total-burned {
+                    margin-top: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    font-weight: 600;
+                    color: $white-color;
+                    font-size: $font-size-lg;
+
+                    .wnk-icon {
+                        color: $red-color;
+                        font-size: 20px;
+                    }
+                }
+
+                .total {
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    font-weight: normal;
+                    font-size: $font-size-xs;
+                    color: $text-color; 
+                }
+
+                .table-responsive {
+                    width: 100%;
+                    max-height: 300px;
+                    overflow: auto;
+                    border-radius: 0 0 3px 3px;
+
+                    table {
+                        width: 100%;
+                        text-align: left;
+                        border-spacing: 0;
+
+                        thead {
+                            th {
+                                height: 50px;
+                                padding-left: 10px;
+                                font-weight: normal;
+                                vertical-align: middle;
+                                background: $btn-hover-color;
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                &:nth-child(even) {
+                                    background: $btn-hover-color;
+                                }
+
+                                td {
+                                    height: 36px;
+                                    padding-left: 10px;
+                                    font-weight: normal;
+                                    vertical-align: middle;
+
+                                    &.amount {
+                                        color: $white-color;
+                                    }
+
+                                    a {
+                                        color: $red-color;
+                                        text-decoration: underline;
+
+                                        &:hover {
+                                            color: $red-light-color;
+                                            transition: 0.3s all ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .total-pool {
+                margin: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(40% - 10px);
+                flex-direction: column;
+
+                .amount {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    font-size: 30px;
+                    color: $orange-color;
+                    font-weight: 600;
+                    letter-spacing: -1px;
+
+                    .icon {
+                        display: flex;
+                        margin-right: 6px;
+                        align-items: center;
+                        justify-content: center;
+                        width: 22px;
+                        height: 22px;
+                        background: #212121;
+                        border-radius: 11px;
+
+                        .wnk-icon {
+                            font-size: 14px;
+                            color: $orange-color;
+                        }
+                    }
+                }
+
+                .receive {
+                    width: calc(100% - 28px);
+                    padding-left: 28px;
+                    color: $white-color;
+
+                    .bnb-amount {
+                        padding-left: 6px;
+                        font-weight: 600;
+                        color: $orange-color;
+                    }
+                }
+            }
+
+            .countdown {
+                margin: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(60% - 10px);
+                min-height: 56px;
+
+                label, .counter {
+                    width: 50%;
+                    padding-top: 4px;
+                }
+
+                .counter {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-weight: 600;
+                    color: $white-color;
+                }
+
+                .progress-bar {
+                    width: 100%;
+                    height: 6px;
+                    overflow: hidden;
+                    background: $bg-color;
+                    border-radius: 3px;
+
+                    .filled {
+                        display: block;
+                        height: 6px;
+                        border-radius: 0 3px 3px 0;
+                        background: linear-gradient(90deg, $btn-hover-color 0%, $text-color 100%);
+                    }
+                }
+
+                .note {
+                    width: 100%;
+                    line-height: 1.2;
+                    font-style: italic;
+
+                    .fee {
+                        color: $red-color;
+                    }
+                }
+            }
+
+            .drops-col {
+                margin: 5px;
+                width: calc(33.33% - 10px);
+                background: $btn-hover-color;
+                border-radius: 3px;
+
+                .drops-header {
+                    display: flex;
+                    width: calc(100% - 30px);
+                    height: 49px;
+                    padding: 0 15px;
+                    align-items: center;
+                    border-bottom: 1px solid $bg-color;
+
+                    .icon {
+                        margin-right: 10px;
+                        width: 16px;
+                        height: 16px;
+
+                        &.icon-win {
+                            background: url('../img/wink-logo.svg') no-repeat center;
+                            background-size: 16px auto;
+                        }
+
+                        &.icon-dice {
+                            background: url('../img/icon-dice.svg') no-repeat center;
+                            background-size: 16px;
+                        }
+
+                        &.icon-live {
+                            background: url('../img/icon-live.svg') no-repeat center;
+                            background-size: 16px;
+                        }
+                    }
+
+                    label {
+                        width: calc(100% - 60px);
+                        font-weight: 600;
+                        color: $white-color;
+
+                        .share {
+                            padding-left: 6px;
+                            font-weight: normal;
+                            color: $text-color;
+                        }
+                    }
+
+                    .percent {
+                        width: 36px;
+                        font-weight: 600;
+                        color: $white-color;
+                        text-align: right;
+                    }
+                }
+
+                .amount {
+                    display: flex;
+                    height: 60px;
+                    justify-content: center;
+                    align-items: center;
+                    color: $orange-color;
+                    font-weight: 600;
+                    font-size: $font-size-lg;
+
+                    .icon {
+                        display: flex;
+                        margin-right: 6px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 16px;
+                        height: 16px;
+                        background: #212121;
+                        border-radius: 8px;
+
+                        .wnk-icon {
+                            font-size: 12px;
+                            color: $orange-color;
+                        }
+                    }
+                }
+            }
         }
 
         @media screen and (max-width: 730px) {
             margin: 15px 15px auto 15px;
             width: calc(100% - 30px);
+
+            .popup-body {
+                .total-pool, .countdown, .drops-col {
+                    width: calc(100% - 10px);
+                }
+
+                .countdown {
+                    label, .counter {
+                        padding-bottom: 10px;
+                    }
+                    
+                    .note {
+                        padding-top: 10px;
+                    }
+                }
+            }
         }
 
         @media screen and (max-width: 576px) {
@@ -215,6 +488,91 @@
                         border-top: 1px solid $bg-color;
                     }
                 }
+            }
+        }
+    }
+
+    &.freeze-popup {
+        .popup {
+            width: 290px;
+            min-width: 280px;
+
+            .popup-body {
+                .freeze-body {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: calc(100% - 10px);
+                    padding: 5px;
+
+                    .available {
+                        width: 100%;
+                        padding-bottom: 10px;
+
+                        .amount {
+                            display: block;
+                            font-weight: 600;
+                            color: $white-color;
+                        }
+                    }
+
+                    .input {
+                        width: calc(100% - 150px);
+                        height: 36px;
+                        padding: 0 10px;
+                        overflow: hidden;
+                        background: $bg-color;
+                        border-radius: 3px 0 0 3px;
+                        border: none;
+                        outline: none;
+                        font-size: $font-size-xs;
+                        color: $text-color;
+                        border: none;
+                        outline: none;
+
+                        &:focus {
+                            color: $white-color;
+                        }
+                    }
+
+                    .max {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 36px;
+                        color: $white-color;
+                        text-transform: uppercase;
+                        background: $text-color;
+                        border-radius: 0 3px 3px 0;
+                    }
+
+                    .btn-confirm {
+                        display: flex;
+                        margin-left: 10px;
+                        width: 80px;
+                        height: 36px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        border-radius: 18px;
+                        cursor: pointer;
+                        outline: none;
+                        color: $bg-color;
+                        background: $orange-color;
+                        border: none;
+
+                        &:hover {
+                            background: $orange-light-color;
+                            transition: 0.3s all ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+            .popup {
+                width: calc(100% - 30px);
             }
         }
     }
