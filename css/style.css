@@ -1561,7 +1561,7 @@
           .popup-wrapper .popup .popup-body .sign-col.polo .icon {
             align-items: center;
             justify-content: center;
-            background: #068485; }
+            background: #045758; }
             .popup-wrapper .popup .popup-body .sign-col.polo .icon .wnk-icon {
               font-size: 60px; }
         .popup-wrapper .popup .popup-body .sign-col.tronlink {
@@ -1815,15 +1815,16 @@
         .popup-wrapper.freeze-popup .popup .popup-body .freeze-body .input:focus {
           color: #FFF; }
       .popup-wrapper.freeze-popup .popup .popup-body .freeze-body .max {
+        margin-left: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
+        width: 36px;
         height: 36px;
         color: #FFF;
         text-transform: uppercase;
         background: #344E72;
-        border-radius: 0 3px 3px 0; }
+        border-radius: 3px; }
       .popup-wrapper.freeze-popup .popup .popup-body .freeze-body .btn-confirm {
         display: flex;
         margin-left: 10px;
@@ -1844,6 +1845,170 @@
   @media screen and (max-width: 730px) {
     .popup-wrapper.freeze-popup .popup {
       width: calc(100% - 30px); } }
+  .popup-wrapper.forbidden-popup .popup .popup-body label {
+    color: #D80027;
+    text-align: center; }
+  .popup-wrapper.forbidden-popup .popup .popup-body p {
+    text-align: center; }
+  .popup-wrapper.forbidden-popup .popup .popup-body .forbidden {
+    margin: 0 auto;
+    display: flex;
+    width: 380px; }
+  .popup-wrapper.forbidden-popup .popup .popup-body .btn-sign-out {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 36px;
+    border-radius: 18px;
+    color: #FFF;
+    outline: none;
+    cursor: pointer;
+    background: #344E72;
+    border: none; }
+    .popup-wrapper.forbidden-popup .popup .popup-body .btn-sign-out:hover {
+      background: #446492;
+      transition: 0.3s all ease-in-out; }
+  .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col {
+      margin: 5px;
+      width: calc(50% - 50px);
+      background: #101E41;
+      border-radius: 3px; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .transfer-header {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 30px);
+        height: 50px;
+        padding: 0 15px;
+        border-bottom: 1px solid #040916; }
+        .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .transfer-header label {
+          width: calc(100% - 16px);
+          font-size: 16px;
+          color: #FFF;
+          font-weight: 600; }
+        .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .transfer-header .icon {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          border-radius: 2px; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .available {
+        display: flex;
+        width: calc(100% - 30px);
+        padding: 15px;
+        align-items: center; }
+        .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .available label {
+          width: 50%;
+          font-size: 13px;
+          color: #FFF; }
+        .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .available .amount {
+          width: 50%;
+          font-size: 13px;
+          font-weight: 600; }
+          .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col .available .amount .usd-value {
+            display: block;
+            font-weight: normal; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col.polo-col .transfer-header .icon {
+        background: #045758; }
+        .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col.polo-col .transfer-header .icon:after {
+          font-family: 'fontello';
+          content: '\e826';
+          font-size: 12px;
+          color: #FFF;
+          font-style: normal; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col.polo-col .available .amount {
+        color: #3DC1C2; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col.wink-col .transfer-header .icon {
+        background: url("../img/wink-logo.svg") no-repeat center #060E22;
+        background-size: 14px auto; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col.wink-col .available .amount {
+        color: #FBC509; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .btn-swap {
+      margin: 35px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      border-radius: 18px;
+      background: #344E72; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .btn-swap .wnk-icon {
+        color: #FFF;
+        font-size: 20px; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .btn-swap:hover {
+        background: #446492;
+        transform: rotate(30deg);
+        transition: 0.3s all ease-in-out; }
+  .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin: 15px 0; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .max-value {
+      position: absolute;
+      top: 0;
+      right: 15px; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .input {
+      margin: 0 5px;
+      width: calc(50% - 70px);
+      height: 36px;
+      padding: 0 10px;
+      overflow: hidden;
+      background: #060E22;
+      border-radius: 3px 0 0 3px;
+      border: none;
+      outline: none;
+      font-size: 13px;
+      color: #344E72;
+      border: none;
+      outline: none; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .input:focus {
+        color: #FFF; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .btn-percent {
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(8% - 4px);
+      height: 36px;
+      color: #FFF;
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #344E72;
+      cursor: pointer;
+      outline: none;
+      border-radius: 3px;
+      border: none; }
+    .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .btn-confirm {
+      display: flex;
+      margin-left: 10px;
+      width: calc(18% - 10px);
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-radius: 18px;
+      cursor: pointer;
+      outline: none;
+      color: #060E22;
+      background: #FBC509;
+      border: none; }
+      .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .btn-confirm:hover {
+        background: #FFCF29;
+        transition: 0.3s all ease-in-out; }
   .popup-wrapper.show {
     display: flex;
     background: rgba(0, 0, 0, 0.6);
@@ -1870,7 +2035,20 @@
         from {
           margin: -100% auto auto auto; }
         to {
-          margin: 15px auto auto auto; } } }
+          margin: 15px auto auto auto; } }
+      .popup-wrapper.show.forbidden-popup .popup .popup-body .forbidden {
+        width: 250px; }
+      .popup-wrapper.show.transfer-funds-popup .popup .popup-body .transfer-block .transfer-col {
+        width: calc(100% - 10px); }
+      .popup-wrapper.show.transfer-funds-popup .popup .popup-body .transfer-block .btn-swap {
+        margin: 15px auto; }
+      .popup-wrapper.show.transfer-funds-popup .popup .popup-body .transfer-amount .input {
+        width: calc(100% - 10px);
+        margin-bottom: 15px; }
+      .popup-wrapper.show.transfer-funds-popup .popup .popup-body .transfer-amount .btn-percent {
+        width: calc(16% - 10px); }
+      .popup-wrapper.show.transfer-funds-popup .popup .popup-body .transfer-amount .btn-confirm {
+        width: calc(36% - 10px); } }
 
 .quick-notification {
   position: absolute;
@@ -3079,6 +3257,341 @@
       font-size: 18px; }
       .windrops .win-token .drops .amounts .other .currency .wnk-icon {
         font-size: 16px; } }
+
+.polo-wallet .estimated-value {
+  margin: 0 15px 20px 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 30px);
+  background: linear-gradient(180deg, #068485 0%, #3EC1C2 100%);
+  border-radius: 3px; }
+  .polo-wallet .estimated-value:after {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-top: 162px;
+    content: '\e826';
+    font-size: 435px;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'fontello';
+    overflow: hidden;
+    border-radius: 3px; }
+  .polo-wallet .estimated-value .polo-header, .polo-wallet .estimated-value .value, .polo-wallet .estimated-value .wallets {
+    position: relative;
+    z-index: 2; }
+  .polo-wallet .estimated-value .polo-header {
+    display: flex;
+    width: calc(100% - 30px);
+    height: 60px;
+    padding: 0 15px;
+    align-items: center; }
+    .polo-wallet .estimated-value .polo-header h1 {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 125px);
+      font-size: 18px;
+      color: #FFF;
+      font-weight: 600; }
+    .polo-wallet .estimated-value .polo-header .btn-record {
+      display: flex;
+      width: 125px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      height: 30px;
+      color: #FFF;
+      font-size: 13px;
+      font-weight: normal;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: #045758;
+      border-radius: 15px; }
+  .polo-wallet .estimated-value .value {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0 50px 0; }
+    .polo-wallet .estimated-value .value .trx {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-weight: 600;
+      color: #FFF;
+      font-size: 52px;
+      letter-spacing: -1px; }
+      .polo-wallet .estimated-value .value .trx .wnk-icon {
+        margin-top: 16px;
+        margin-right: 10px;
+        width: 22px;
+        font-size: 22px;
+        color: #FFF; }
+    .polo-wallet .estimated-value .value .usd {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 0 0 0;
+      font-size: 14px;
+      color: #045758;
+      font-weight: 600; }
+  .polo-wallet .estimated-value .wallets {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); }
+    .polo-wallet .estimated-value .wallets:after {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      display: block;
+      width: 1px;
+      height: 100%;
+      content: '';
+      background: rgba(255, 255, 255, 0.3); }
+    .polo-wallet .estimated-value .wallets .wallet-col {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(50% - 30px);
+      padding: 10px 15px 15px 15px; }
+      .polo-wallet .estimated-value .wallets .wallet-col label {
+        width: 100%;
+        font-weight: 600;
+        color: #FFF;
+        font-size: 14px;
+        padding-bottom: 5px; }
+      .polo-wallet .estimated-value .wallets .wallet-col .amount {
+        width: 100%;
+        font-weight: 600;
+        color: #FFF;
+        font-size: 13px;
+        text-align: center; }
+      .polo-wallet .estimated-value .wallets .wallet-col .usd {
+        width: 100%;
+        color: #045758;
+        font-size: 13px;
+        text-align: center; }
+
+.polo-wallet .balances {
+  margin: 0 15px 20px 15px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 30px);
+  background: #0A142E;
+  border-radius: 3px; }
+  .polo-wallet .balances .balance-header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 3px 3px 0 0;
+    background: #040916; }
+    .polo-wallet .balances .balance-header label {
+      width: 100%;
+      font-size: 16px;
+      color: #FFF;
+      font-weight: 600; }
+    .polo-wallet .balances .balance-header .balance-nav {
+      display: flex;
+      width: 340px;
+      min-width: 340px; }
+      .polo-wallet .balances .balance-header .balance-nav .select {
+        display: flex;
+        position: relative;
+        width: 200px;
+        height: 36px;
+        padding: 0;
+        overflow: hidden;
+        background: #060E22;
+        border-radius: 3px; }
+        .polo-wallet .balances .balance-header .balance-nav .select input {
+          position: relative;
+          z-index: 1;
+          width: calc(100% - 40px);
+          height: 36px;
+          padding: 0 30px 0 10px;
+          font-size: 13px;
+          color: #344E72;
+          background: transparent;
+          border: none;
+          outline: none; }
+          .polo-wallet .balances .balance-header .balance-nav .select input:focus {
+            color: #FFF; }
+        .polo-wallet .balances .balance-header .balance-nav .select .btn-search {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          z-index: 2;
+          width: 14px;
+          height: 14px;
+          cursor: pointer; }
+          .polo-wallet .balances .balance-header .balance-nav .select .btn-search:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid #FFF;
+            border-radius: 8px; }
+          .polo-wallet .balances .balance-header .balance-nav .select .btn-search:after {
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 6px;
+            content: '';
+            bottom: 0;
+            right: 2px;
+            background: #FFF;
+            transform: rotate(-45deg); }
+      .polo-wallet .balances .balance-header .balance-nav .btn-refresh {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 36px;
+        border-radius: 18px;
+        color: #FFF;
+        outline: none;
+        cursor: pointer;
+        background: #344E72;
+        border: none; }
+        .polo-wallet .balances .balance-header .balance-nav .btn-refresh:hover {
+          background: #446492;
+          transition: 0.3s all ease-in-out; }
+  .polo-wallet .balances .table-responsive {
+    width: 100%;
+    overflow: auto;
+    border-radius: 0 0 3px 3px; }
+    .polo-wallet .balances .table-responsive table {
+      width: 100%;
+      text-align: left;
+      border-spacing: 0; }
+      .polo-wallet .balances .table-responsive table thead th {
+        height: 36px;
+        padding-left: 10px;
+        font-weight: normal;
+        vertical-align: middle;
+        border-bottom: 2px solid #101E41; }
+      .polo-wallet .balances .table-responsive table tbody tr:nth-child(even) {
+        background: #101E41; }
+      .polo-wallet .balances .table-responsive table tbody tr td {
+        height: 36px;
+        padding-left: 15px;
+        font-weight: normal;
+        white-space: nowrap;
+        vertical-align: middle; }
+        .polo-wallet .balances .table-responsive table tbody tr td .title {
+          display: block;
+          font-weight: 600;
+          color: #FFF; }
+        .polo-wallet .balances .table-responsive table tbody tr td.wink-col .title {
+          color: #FBC509; }
+        .polo-wallet .balances .table-responsive table tbody tr td.polo-col .title {
+          color: #3DC1C2; }
+        .polo-wallet .balances .table-responsive table tbody tr td.asset {
+          width: 60px;
+          font-weight: 600; }
+        .polo-wallet .balances .table-responsive table tbody tr td.amount {
+          color: #FFF; }
+        .polo-wallet .balances .table-responsive table tbody tr td a {
+          display: flex;
+          align-items: center;
+          height: 36px;
+          position: relative; }
+          .polo-wallet .balances .table-responsive table tbody tr td a .arrow {
+            position: absolute;
+            display: flex;
+            top: calc(50% - 4px);
+            right: 10px;
+            width: 6px;
+            height: 8px;
+            transform: rotate(-90deg); }
+            .polo-wallet .balances .table-responsive table tbody tr td a .arrow:after, .polo-wallet .balances .table-responsive table tbody tr td a .arrow:before {
+              position: absolute;
+              display: block;
+              top: 0;
+              width: 1px;
+              height: 7px;
+              content: '';
+              background: #344E72; }
+            .polo-wallet .balances .table-responsive table tbody tr td a .arrow:after {
+              right: 0;
+              transform: rotate(45deg); }
+            .polo-wallet .balances .table-responsive table tbody tr td a .arrow:before {
+              left: 0;
+              transform: rotate(-45deg); }
+          .polo-wallet .balances .table-responsive table tbody tr td a:hover {
+            color: #FFF;
+            transition: 0.3s color ease-in-out; }
+            .polo-wallet .balances .table-responsive table tbody tr td a:hover .arrow:after, .polo-wallet .balances .table-responsive table tbody tr td a:hover .arrow:before {
+              background: #FBC509;
+              transition: 0.3s background-color ease-in-out; }
+        .polo-wallet .balances .table-responsive table tbody tr td.nav-col {
+          width: 270px;
+          padding-right: 15px;
+          text-align: right; }
+          .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn {
+            margin-left: 10px;
+            width: 80px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            color: #FFF;
+            border-radius: 15px;
+            cursor: pointer;
+            background: transparent;
+            outline: none;
+            border: 1px solid #344E72; }
+            .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn:hover {
+              background: #344E72;
+              transition: 0.3s background-color ease-in-out; }
+            .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn.hide {
+              display: none; }
+    .polo-wallet .balances .table-responsive.my-balances table tbody tr td {
+      height: 50px; }
+
+@media screen and (max-width: 576px) {
+  .polo-wallet .estimated-value .value .trx {
+    font-size: 42px; }
+    .polo-wallet .estimated-value .value .trx .wnk-icon {
+      margin-top: 10px; }
+  .polo-wallet .balances .balance-header {
+    padding: 15px;
+    height: auto;
+    flex-wrap: wrap; }
+    .polo-wallet .balances .balance-header label {
+      margin-bottom: 10px; }
+    .polo-wallet .balances .balance-header .balance-nav {
+      width: 100%;
+      min-width: 100%; }
+      .polo-wallet .balances .balance-header .balance-nav .select {
+        width: calc(100% - 140px); } }
+
+@media screen and (max-width: 420px) {
+  .polo-wallet .estimated-value .value .trx {
+    font-size: 36px; }
+    .polo-wallet .estimated-value .value .trx .wnk-icon {
+      margin-top: 4px; } }
+
+@media screen and (max-width: 375px) {
+  .polo-wallet .estimated-value .value .trx {
+    font-size: 24px; }
+    .polo-wallet .estimated-value .value .trx .wnk-icon {
+      margin-top: 0;
+      font-size: 18px; } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

@@ -1,0 +1,488 @@
+.polo-wallet {
+    .estimated-value {
+        margin: 0 15px 20px 15px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% - 30px);
+        background: linear-gradient(180deg, #068485 0%, #3EC1C2 100%);
+        border-radius: 3px;
+
+        &:after {
+            position: absolute;
+            z-index: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            padding-top: 162px;
+            content: '\e826';
+            font-size: 435px;
+            color: rgba(255,255,255,0.15);
+            font-family: 'fontello';
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .polo-header, .value, .wallets {
+            position: relative;
+            z-index: 2;
+        }
+
+        .polo-header {
+            display: flex;
+            width: calc(100% - 30px);
+            height: 60px;
+            padding: 0 15px;
+            align-items: center;
+
+            h1 {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 125px);
+                font-size: 18px;
+                color: $white-color;
+                font-weight: 600;
+            }
+
+            .btn-record {
+                display: flex;
+                width: 125px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                height: 30px;
+                color: $white-color;
+                font-size: $font-size-xs;
+                font-weight: normal;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                background: $poloniex-color;
+                border-radius: 15px;
+            }
+        }
+
+        .value {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px 0 50px 0;
+
+            .trx {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-weight: 600;
+                color: $white-color;
+                font-size: 52px;
+                letter-spacing: -1px;
+
+                .wnk-icon {
+                    margin-top: 16px;
+                    margin-right: 10px;
+                    width: 22px;
+                    font-size: 22px;
+                    color: $white-color;
+                }
+            }
+
+            .usd {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 0 0 0 0;
+                font-size: $font-size-sm;
+                color: $poloniex-color;
+                font-weight: 600;
+            }
+        }
+
+        .wallets {
+            display: flex;
+            position: relative;
+            width: 100%;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,0.3);
+
+            &:after {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                display: block;
+                width: 1px;
+                height: 100%;
+                content:'';
+                background: rgba(255,255,255,0.3);
+            }
+
+            .wallet-col {
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(50% - 30px);
+                padding: 10px 15px 15px 15px;
+
+                label {
+                    width: 100%;
+                    font-weight: 600;
+                    color: $white-color;
+                    font-size: $font-size-sm;
+                    padding-bottom: 5px;
+                }
+
+                .amount {
+                    width: 100%;
+                    font-weight: 600;
+                    color: $white-color;
+                    font-size: $font-size-xs;
+                    text-align: center;
+                }
+
+                .usd {
+                    width: 100%;
+                    color: $poloniex-color;
+                    font-size: $font-size-xs;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .balances {
+        margin: 0 15px 20px 15px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% - 30px);
+        background: $bg-light-color;
+        border-radius: 3px;
+
+        .balance-header {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 30px);
+            height: 50px;
+            padding: 0 15px;
+            border-radius: 3px 3px 0 0;
+            background: $sub-nav-bg;
+
+            label {
+                width: 100%;
+                font-size: $font-size-md;
+                color: $white-color;
+                font-weight: 600;
+            }
+
+            .balance-nav {
+                display: flex;
+                width: 340px;
+                min-width: 340px;
+
+                .select {
+                    display: flex;
+                    position: relative;
+                    width: 200px;
+                    height: 36px;
+                    padding: 0;
+                    overflow: hidden;
+                    background: $bg-color;
+                    border-radius: 3px;
+        
+                    input {
+                        position: relative;
+                        z-index: 1;
+                        width: calc(100% - 40px);
+                        height: 36px;
+                        padding: 0 30px 0 10px;
+                        font-size: $font-size-xs;
+                        color: $text-color;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+        
+                        &:focus {
+                            color: $white-color;
+                        }
+                    }
+        
+                    .btn-search {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        z-index: 2;
+                        width: 14px;
+                        height: 14px;
+                        cursor: pointer;
+        
+                        &:before {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            content: '';
+                            width: 8px;
+                            height: 8px;
+                            border: 2px solid $white-color;
+                            border-radius: 8px;
+                        }
+        
+                        &:after {
+                            position: absolute;
+                            display: block;
+                            width: 2px;
+                            height: 6px;
+                            content: '';
+                            bottom: 0;
+                            right: 2px;
+                            background: $white-color;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                .btn-refresh {
+                    margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 130px;
+                    height: 36px;
+                    border-radius: 18px;
+                    color: $white-color;
+                    outline: none;
+                    cursor: pointer;
+                    background: $text-color;
+                    border: none;
+
+                    &:hover {
+                        background: #446492;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow: auto;
+            border-radius: 0 0 3px 3px;
+
+            table {
+                width: 100%;
+                text-align: left;
+                border-spacing: 0;
+
+                thead {
+                    th {
+                        height: 36px;
+                        padding-left: 10px;
+                        font-weight: normal;
+                        vertical-align: middle;
+                        border-bottom: 2px solid $btn-hover-color;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        &:nth-child(even) {
+                            background: $btn-hover-color;
+                        }
+
+                        td {
+                            height: 36px;
+                            padding-left: 15px;
+                            font-weight: normal;
+                            white-space: nowrap;
+                            vertical-align: middle;
+
+                            .title {
+                                display: block;
+                                font-weight: 600;
+                                color: $white-color;
+                            }
+
+                            &.wink-col {
+                                .title {
+                                    color: $orange-color;
+                                }
+                            }
+
+                            &.polo-col {
+                                .title {
+                                    color: $poloniex-light-color;
+                                }
+                            }
+
+                            &.asset {
+                                width: 60px;
+                                font-weight: 600;
+                            }
+
+                            &.amount {
+                                color: $white-color;
+                            }
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                height: 36px;
+                                position: relative;
+
+                                .arrow {
+                                    position: absolute;
+                                    display: flex;
+                                    top: calc(50% - 4px);
+                                    right: 10px;
+                                    width: 6px;
+                                    height: 8px;
+                                    transform: rotate(-90deg);
+            
+                                    &:after, &:before {
+                                        position: absolute;
+                                        display: block;
+                                        top: 0;
+                                        width: 1px;
+                                        height: 7px;
+                                        content:'';
+                                        background: $text-color;
+                                    }
+            
+                                    &:after {
+                                        right: 0;
+                                        transform: rotate(45deg);
+                                    }
+            
+                                    &:before {
+                                        left: 0;
+                                        transform: rotate(-45deg);
+                                    }
+                                }
+
+                                &:hover {
+                                    color: $white-color;
+                                    transition: 0.3s color ease-in-out;
+
+                                    .arrow {
+                                        &:after, &:before {
+                                            background: $orange-color;
+                                            transition: 0.3s background-color ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.nav-col {
+                                width: 270px;
+                                padding-right: 15px;
+                                text-align: right;
+
+                                .btn {
+                                    margin-left: 10px;
+                                    width: 80px;
+                                    height: 28px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0;
+                                    color: $white-color;
+                                    border-radius: 15px;
+                                    cursor: pointer;
+                                    background: transparent;
+                                    outline: none;
+                                    border: 1px solid $text-color;
+                        
+                                    &:hover {
+                                        background: $text-color;
+                                        transition: 0.3s background-color ease-in-out;
+                                    }
+                        
+                                    &.hide {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.my-balances {
+                table {
+                    tbody {
+                        tr {
+                            td {
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .estimated-value {
+            .value {
+                .trx {
+                    font-size: 42px;
+
+                    .wnk-icon {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        
+        .balances {
+            .balance-header {
+                padding: 15px;
+                height: auto;
+                flex-wrap: wrap;
+
+                label {
+                    margin-bottom: 10px;
+                }
+                
+                .balance-nav {
+                    width: 100%;
+                    min-width: 100%;
+    
+                    .select {
+                        width: calc(100% - 140px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .estimated-value {
+            .value {
+                .trx {
+                    font-size: 36px;
+
+                    .wnk-icon {
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .estimated-value {
+            .value {
+                .trx {
+                    font-size: $font-size-lg;
+
+                    .wnk-icon {
+                        margin-top: 0;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

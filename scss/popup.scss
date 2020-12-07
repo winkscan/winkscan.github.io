@@ -535,15 +535,16 @@
                     }
 
                     .max {
+                        margin-left: 4px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 40px;
+                        width: 36px;
                         height: 36px;
                         color: $white-color;
                         text-transform: uppercase;
                         background: $text-color;
-                        border-radius: 0 3px 3px 0;
+                        border-radius: 3px;
                     }
 
                     .btn-confirm {
@@ -577,6 +578,252 @@
         }
     }
 
+    &.forbidden-popup {
+        .popup {
+            .popup-body {
+                label {
+                    color: $red-color;
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .forbidden {
+                    margin: 0 auto;
+                    display: flex;
+                    width: 380px;
+                }
+
+                .btn-sign-out {
+                    margin: 10px auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 130px;
+                    height: 36px;
+                    border-radius: 18px;
+                    color: $white-color;
+                    outline: none;
+                    cursor: pointer;
+                    background: $text-color;
+                    border: none;
+
+                    &:hover {
+                        background: #446492;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    &.transfer-funds-popup {
+        .popup {
+            .popup-body {
+                .transfer-block {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    .transfer-col {
+                        margin: 5px;
+                        width: calc(50% - 50px);
+                        background: $btn-hover-color;
+                        border-radius: 3px;
+
+                        .transfer-header {
+                            display: flex;
+                            align-items: center;
+                            width: calc(100% - 30px);
+                            height: 50px;
+                            padding: 0 15px;
+                            border-bottom: 1px solid $sub-nav-bg;
+
+                            label {
+                                width: calc(100% - 16px);
+                                font-size: $font-size-md;
+                                color: $white-color;
+                                font-weight: 600;
+                            }
+
+                            .icon {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        .available {
+                            display: flex;
+                            width: calc(100% - 30px);
+                            padding: 15px;
+                            align-items: center;
+
+                            label {
+                                width: 50%;
+                                font-size: $font-size-xs;
+                                color: $white-color;
+                            }
+
+                            .amount {
+                                width: 50%;
+                                font-size: $font-size-xs;
+                                font-weight: 600;
+
+                                .usd-value {
+                                    display: block;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+
+                        &.polo-col {
+                            .transfer-header {
+                                .icon {
+                                    background: $poloniex-color;
+    
+                                    &:after {
+                                        font-family: 'fontello';
+                                        content: '\e826';
+                                        font-size: 12px;
+                                        color: $white-color;
+                                        font-style: normal;
+                                    }
+                                }
+                            }
+    
+                            .available {
+                                .amount {
+                                   color: $poloniex-light-color;
+                                }
+                            }
+                        }
+    
+                        &.wink-col {
+                            .transfer-header {
+                                .icon {
+                                    background: url('../img/wink-logo.svg') no-repeat center $bg-color;
+                                    background-size: 14px auto;
+                                }
+                            }
+    
+                            .available {
+                                .amount {
+                                   color: $orange-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn-swap {
+                        margin: 35px 17px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        border: 0;
+                        outline: none;
+                        cursor: pointer;
+                        border-radius: 18px;
+                        background: $text-color;
+
+                        .wnk-icon {
+                            color: $white-color;
+                            font-size: 20px;
+                        }
+
+                        &:hover {
+                            background: #446492;
+                            transform: rotate(30deg);
+                            transition: 0.3s all ease-in-out;
+                        }
+                    }
+                }
+
+                .transfer-amount {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    padding-top: 20px;
+                    margin: 15px 0;
+
+                    .max-value {
+                        position: absolute;
+                        top: 0;
+                        right: 15px;
+                    }
+
+                    .input {
+                        margin: 0 5px;
+                        width: calc(50% - 70px);
+                        height: 36px;
+                        padding: 0 10px;
+                        overflow: hidden;
+                        background: $bg-color;
+                        border-radius: 3px 0 0 3px;
+                        border: none;
+                        outline: none;
+                        font-size: $font-size-xs;
+                        color: $text-color;
+                        border: none;
+                        outline: none;
+
+                        &:focus {
+                            color: $white-color;
+                        }
+                    }
+
+                    .btn-percent {
+                        margin: 0 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: calc(8% - 4px);
+                        height: 36px;
+                        color: $white-color;
+                        font-size: $font-size-xs;
+                        text-transform: uppercase;
+                        background: $text-color;
+                        cursor: pointer;
+                        outline: none;
+                        border-radius: 3px;
+                        border: none;
+                    }
+
+                    .btn-confirm {
+                        display: flex;
+                        margin-left: 10px;
+                        width: calc(18% - 10px);
+                        height: 36px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        border-radius: 18px;
+                        cursor: pointer;
+                        outline: none;
+                        color: $bg-color;
+                        background: $orange-color;
+                        border: none;
+
+                        &:hover {
+                            background: $orange-light-color;
+                            transition: 0.3s all ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &.show {
         display: flex;
         background: rgba(0,0,0,0.6);
@@ -604,6 +851,47 @@
                 @keyframes showpopup {
                     from {margin: -100% auto auto auto;}
                     to {margin: 15px auto auto auto;}
+                }
+            }
+
+            &.forbidden-popup {
+                .popup {
+                    .popup-body {
+                        .forbidden {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+
+            &.transfer-funds-popup {
+                .popup {
+                    .popup-body {
+                        .transfer-block {
+                            .transfer-col {
+                                width: calc(100% - 10px);
+                            }
+        
+                            .btn-swap {
+                                margin: 15px auto;
+                            }
+                        }
+        
+                        .transfer-amount {
+                            .input {
+                                width: calc(100% - 10px);
+                                margin-bottom: 15px;
+                            }
+        
+                            .btn-percent {
+                                width: calc(16% - 10px);
+                            }
+        
+                            .btn-confirm {
+                                width: calc(36% - 10px);
+                            }
+                        }
+                    }
                 }
             }
         }
