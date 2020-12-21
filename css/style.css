@@ -268,9 +268,8 @@
           margin-bottom: 0; } }
 
 .slider {
-  margin: 15px;
   width: calc(100% - 30px);
-  min-height: 110px;
+  padding: 15px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -278,6 +277,7 @@
   .slider .slider-img {
     display: block;
     max-height: 490px;
+    min-height: 80px;
     border-radius: 3px; }
     .slider .slider-img a {
       display: block;
@@ -289,7 +289,7 @@
         max-height: 490px; }
   .slider .slider-nav {
     position: absolute;
-    bottom: 15px;
+    bottom: 30px;
     display: flex; }
     .slider .slider-nav a {
       display: flex;
