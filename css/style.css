@@ -328,6 +328,7 @@
   .windrops-bar h1 {
     display: flex;
     width: 25%;
+    height: 34px;
     align-items: center;
     font-size: 16px;
     font-weight: 600;
@@ -347,14 +348,12 @@
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -1px;
-    background: linear-gradient(0deg, #FB6009, #FBC509);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    color: #FBC509; }
   .windrops-bar .btn {
     display: flex;
     justify-content: flex-end;
-    width: 25%; }
+    width: 25%;
+    height: 34px; }
     .windrops-bar .btn .btn-show {
       display: flex;
       min-width: 40px;
@@ -382,8 +381,8 @@
       font-size: 36px; } }
   @media screen and (max-width: 375px) {
     .windrops-bar .amount {
-      padding-top: 10px;
-      font-size: 24px; } }
+      font-size: 24px;
+      background: green; } }
 
 .slots {
   display: flex;
