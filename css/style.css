@@ -272,15 +272,17 @@
   padding: 15px;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background: brown; }
+  background: blue; }
   .slider .slider-img {
     display: flex;
     max-width: 1800px;
     max-height: 490px;
     min-height: 80px;
     border-radius: 3px;
-    background: grey; }
+    background: grey;
+    padding: 0 0 10px 0; }
     .slider .slider-img a {
       display: flex;
       position: relative;
