@@ -93,9 +93,8 @@
     }
 
     @media screen and (max-width: 576px) {
-        margin-bottom: 40px;
+        position: relative;
         height: 40px;
-        background: green;
 
         .group {
             label {
