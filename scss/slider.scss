@@ -4,23 +4,19 @@
     position: relative;
     display: flex;
     justify-content: center;
-    min-height: 80px;
-    background: red;
+    max-height: auto;
+    background: green;
 
     .slider-img {
-        display: block;
-        max-height: 490px;
-        min-height: 80px;
         border-radius: 3px;
 
         a {
             display: block;
-            max-height: 490px;
+            max-width: 1800px;
 
             img {
                 display: block;
                 width: 100%;
-                max-width: 1800px;
                 max-height: 490px;
             }
         }
