@@ -274,6 +274,8 @@
   display: flex;
   justify-content: center; }
   .slider .slider-img {
+    display: block;
+    max-height: 490px;
     border-radius: 3px; }
     .slider .slider-img a {
       display: block;
