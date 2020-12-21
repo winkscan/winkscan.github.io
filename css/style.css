@@ -800,6 +800,9 @@
         outline: none;
         border-radius: 18px; }
         .top-nav .navigation .group .btn-deposit .wnk-icon {
+          width: 20px;
+          height: 20px;
+          background: red;
           font-size: 20px;
           color: #060E22; }
       .top-nav .navigation .group .dropdown {
