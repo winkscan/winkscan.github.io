@@ -278,6 +278,7 @@
   padding: 15px;
   position: relative;
   display: block;
+  text-align: center;
   background: red; }
   .slider .slider-img {
     display: block;
@@ -292,11 +293,15 @@
       padding-bottom: 10px;
       background: blue; }
       .slider .slider-img a img {
+        max-width: 1920px;
         width: 100%; }
   .slider .slider-nav {
     position: absolute;
     bottom: 30px;
-    display: flex; }
+    left: 15px;
+    display: flex;
+    width: calc(100% - 30px);
+    justify-content: center; }
     .slider .slider-nav a {
       display: flex;
       margin: 0 3px;

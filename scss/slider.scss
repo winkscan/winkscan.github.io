@@ -3,6 +3,7 @@
     padding: 15px;
     position: relative;
     display: block;
+    text-align: center;
     background: red;
 
     .slider-img {
@@ -20,6 +21,7 @@
             background: blue;
             
             img {
+                max-width: 1920px;
                 width: 100%;
             }
         }
@@ -28,7 +30,10 @@
     .slider-nav {
         position: absolute;
         bottom: 30px;
+        left: 15px;
         display: flex;
+        width: calc(100% - 30px);
+        justify-content: center;
 
         a {
             display: flex;
