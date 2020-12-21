@@ -4,16 +4,16 @@
     position: relative;
     display: flex;
     justify-content: center;
-    max-height: auto;
-    background: green;
+    background: blue;
 
     .slider-img {
+        display: flex;
+        max-width: 1800px;
         border-radius: 3px;
 
         a {
-            display: block;
-            max-width: 1800px;
-
+            display: flex;
+            
             img {
                 display: block;
                 width: 100%;

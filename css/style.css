@@ -273,13 +273,13 @@
   position: relative;
   display: flex;
   justify-content: center;
-  max-height: auto;
-  background: green; }
+  background: blue; }
   .slider .slider-img {
+    display: flex;
+    max-width: 1800px;
     border-radius: 3px; }
     .slider .slider-img a {
-      display: block;
-      max-width: 1800px; }
+      display: flex; }
       .slider .slider-img a img {
         display: block;
         width: 100%;
