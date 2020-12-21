@@ -1298,7 +1298,7 @@
     .sub-nav {
       margin-bottom: 0;
       height: 40px;
-      background: blue; }
+      background: green; }
       .sub-nav .group label {
         width: 70px; }
       .sub-nav .group .link {
@@ -3238,7 +3238,8 @@
       text-align: left;
       padding-bottom: 15px; }
       .windrops .win-token .drops .frozen .amount {
-        padding: 0 10px; } }
+        padding: 0 10px;
+        color: #FFF; } }
   @media screen and (max-width: 780px) {
     .windrops .win-token .btn-group {
       border-top: none; }
