@@ -1294,21 +1294,22 @@
     .sub-nav .group.rake-platform .link.active, .sub-nav .group.rake-platform .link:hover {
       border-color: #0099FF;
       transition: 0.3s all ease-in-out; }
-  @media screen and (max-width: 576px) {
-    .sub-nav {
-      position: relative;
-      z-index: 5;
-      height: 40px;
-      background: green; }
-      .sub-nav .group label {
-        width: 70px; }
-      .sub-nav .group .link {
-        height: 39px; }
-      .sub-nav.stick-to-top {
-        left: 0;
-        top: 60px;
-        width: 100%;
-        background: red; } }
+
+@media screen and (max-width: 576px) {
+  .sub-nav {
+    position: relative;
+    z-index: 5;
+    height: 40px;
+    background: green; }
+    .sub-nav .group label {
+      width: 70px; }
+    .sub-nav .group .link {
+      height: 39px; }
+    .sub-nav.stick-to-top {
+      left: 0;
+      top: 60px;
+      width: 100%;
+      background: red; } }
 
 .slots-filter {
   margin: 10px;
