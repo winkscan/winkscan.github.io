@@ -1,9 +1,11 @@
 .slider {
     margin: 15px;
     width: calc(100% - 30px);
+    min-height: 80px;
     position: relative;
     display: flex;
     justify-content: center;
+    background: red;
 
     .slider-img {
         display: block;

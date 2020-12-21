@@ -270,9 +270,11 @@
 .slider {
   margin: 15px;
   width: calc(100% - 30px);
+  min-height: 80px;
   position: relative;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background: red; }
   .slider .slider-img {
     display: block;
     max-height: 490px;
