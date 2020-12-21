@@ -27,6 +27,12 @@
                 font-weight: 600;
             }
 
+            iframe {
+                margin: 10px 0;
+                width: 150px;
+                height: 50px;
+            }
+
             p, a {
                 line-height: 24px;
             }
@@ -122,6 +128,10 @@
             padding: 0;
 
             .col {
+                &:last-child {
+                    width: calc(100% - 20px);
+                }
+                
                 p:last-child {
                     margin-bottom: 0;
                 }
