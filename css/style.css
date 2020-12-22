@@ -1350,16 +1350,16 @@
     .slots-filter .btn-group .select {
       display: flex;
       position: relative;
-      width: calc(100% - 12px);
-      height: 24px;
-      padding: 6px;
-      overflow: hidden;
+      width: calc(100% - 6px);
+      min-height: 30px;
+      padding: 3px;
+      flex-wrap: wrap;
       background: #060E22;
       border-radius: 3px; }
       .slots-filter .btn-group .select .remove {
         display: flex;
         align-items: center;
-        margin-right: 6px;
+        margin: 3px;
         height: 24px;
         padding: 0 5px;
         background: #FFF;
@@ -1389,7 +1389,9 @@
       .slots-filter .btn-group .select input {
         position: relative;
         z-index: 1;
-        width: 100%;
+        display: flex;
+        flex: 1;
+        margin: 3px;
         font-size: 13px;
         color: #344E72;
         background: transparent;
@@ -1428,10 +1430,10 @@
       position: absolute;
       z-index: 4;
       left: 0;
-      top: 66px;
+      bottom: -95px;
       display: block;
       width: 100%;
-      max-height: 135px;
+      height: 90px;
       overflow-y: auto;
       background: #060E22;
       border-radius: 3px; }
@@ -1465,7 +1467,9 @@
           height: 6px;
           transform: rotate(-45deg); }
     .slots-filter .btn-group.sm {
-      flex-wrap: wrap; }
+      align-self: flex-start;
+      flex-wrap: wrap;
+      flex-direction: column; }
   @media screen and (max-width: 576px) {
     .slots-filter {
       margin: 0 10px 10px 10px; }

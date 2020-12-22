@@ -50,17 +50,17 @@
         .select {
             display: flex;
             position: relative;
-            width: calc(100% - 12px);
-            height: 24px;
-            padding: 6px;
-            overflow: hidden;
+            width: calc(100% - 6px);
+            min-height: 30px;
+            padding: 3px;
+            flex-wrap: wrap;
             background: $bg-color;
             border-radius: 3px;
 
             .remove {
                 display: flex;
                 align-items: center;
-                margin-right: 6px;
+                margin: 3px;
                 height: 24px;
                 padding: 0 5px;
                 background: $white-color;
@@ -100,7 +100,9 @@
             input {
                 position: relative;
                 z-index: 1;
-                width: 100%;
+                display: flex;
+                flex: 1;
+                margin: 3px;
                 font-size: $font-size-xs;
                 color: $text-color;
                 background: transparent;
@@ -150,10 +152,10 @@
             position: absolute;
             z-index: 4;
             left: 0;
-            top: 66px;
+            bottom: -95px;
             display: block;
             width: 100%;
-            max-height: 135px;
+            height: 90px;
             overflow-y: auto;
             background: $bg-color;
             border-radius: 3px;
@@ -201,7 +203,9 @@
         }
 
         &.sm {
+            align-self: flex-start;
             flex-wrap: wrap;
+            flex-direction: column;
         }
     }
 
