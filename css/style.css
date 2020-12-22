@@ -1299,10 +1299,12 @@
   .sub-nav {
     display: block;
     height: 40px; }
-    .sub-nav .group label {
-      width: 70px; }
-    .sub-nav .group .link {
-      height: 39px; }
+    .sub-nav .group {
+      width: calc(100% - 30px); }
+      .sub-nav .group label {
+        width: 70px; }
+      .sub-nav .group .link {
+        height: 39px; }
     .sub-nav.stick-to-top {
       left: 0;
       top: 60px;

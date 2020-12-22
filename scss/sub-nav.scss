@@ -99,6 +99,8 @@
         height: 40px;
     
         .group {
+            width: calc(100% - 30px);
+            
             label {
                 width: 70px;
             }
