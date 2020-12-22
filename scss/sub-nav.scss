@@ -102,6 +102,9 @@
         background: red;
     
         .group {
+            width: calc(100% - 30px);
+            background: blue;
+            
             label {
                 width: 70px;
             }
