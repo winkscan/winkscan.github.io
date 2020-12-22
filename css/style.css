@@ -1300,7 +1300,8 @@
     position: relative;
     z-index: 5;
     height: 40px;
-    margin-top: 60px; }
+    margin-top: 60px;
+    background: red; }
     .sub-nav .group label {
       width: 70px; }
     .sub-nav .group .link {
@@ -1308,7 +1309,8 @@
     .sub-nav.stick-to-top {
       left: 0;
       top: 60px;
-      width: 100%; } }
+      width: 100%;
+      background: green; } }
 
 .slots-filter {
   margin: 10px;
