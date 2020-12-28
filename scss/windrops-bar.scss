@@ -17,11 +17,18 @@
         text-transform: uppercase;
 
         .wnk-icon {
-            margin-right: 10px;
             width: 20px;
             height: 20px;
             font-size: 20px;
             color: $white-color;
+
+            .en & {
+                margin-right: 10px;
+            }
+
+            .ar & {
+                margin-left: 10px;
+            }
         }
     }
 

@@ -21,20 +21,34 @@
             align-items: center;
             width: calc(100% - 45px);
             min-height: 30px;
-            padding: 5px 30px 5px 15px;
             color: $white-color;
             font-size: $font-size-md;
             font-weight: 600;
             border-radius: 3px 3px 0 0;
             background: $bg-color;
 
+            .en & {
+                padding: 5px 30px 5px 15px;
+            }
+
+            .ar & {
+                padding: 5px 15px 5px 30px;
+            }
+
             .close-popup {
                 position: absolute;
-                right: 5px;
                 top: 5px;
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
+
+                .en & {
+                    right: 5px;
+                }
+
+                .ar & {
+                    left: 5px;
+                }
 
                 &:after, &:before {
                     position: absolute;
@@ -294,13 +308,20 @@
 
                     .icon {
                         display: flex;
-                        margin-right: 6px;
                         align-items: center;
                         justify-content: center;
                         width: 22px;
                         height: 22px;
                         background: #212121;
                         border-radius: 11px;
+
+                        .en & {
+                            margin-right: 6px;
+                        }
+
+                        .ar & {
+                            margin-left: 6px;
+                        }
 
                         .wnk-icon {
                             font-size: 14px;
@@ -311,13 +332,28 @@
 
                 .receive {
                     width: calc(100% - 28px);
-                    padding-left: 28px;
                     color: $white-color;
+
+                    .en & {
+                        padding-left: 28px;
+                    }
+
+                    .ar & {
+                        padding-right: 28px;
+                    }
 
                     .bnb-amount {
                         padding-left: 6px;
                         font-weight: 600;
                         color: $orange-color;
+
+                        .en & {
+                            padding-left: 6px;
+                        }
+    
+                        .ar & {
+                            padding-right: 6px;
+                        }
                     }
                 }
             }
@@ -382,9 +418,16 @@
                     border-bottom: 1px solid $bg-color;
 
                     .icon {
-                        margin-right: 10px;
                         width: 16px;
                         height: 16px;
+
+                        .en & {
+                            margin-right: 10px;
+                        }
+    
+                        .ar & {
+                            margin-left: 10px;
+                        }
 
                         &.icon-win {
                             background: url('../img/wink-logo.svg') no-repeat center;
@@ -408,9 +451,16 @@
                         color: $white-color;
 
                         .share {
-                            padding-left: 6px;
                             font-weight: normal;
                             color: $text-color;
+
+                            .en & {
+                                padding-left: 6px;
+                            }
+        
+                            .ar & {
+                                padding-left: 6px;
+                            }
                         }
                     }
 
@@ -418,7 +468,14 @@
                         width: 36px;
                         font-weight: 600;
                         color: $white-color;
-                        text-align: right;
+                        
+                        .en & {
+                            text-align: right;
+                        }
+
+                        .ar & {
+                            text-align: left;
+                        }
                     }
                 }
 
@@ -433,13 +490,20 @@
 
                     .icon {
                         display: flex;
-                        margin-right: 6px;
                         justify-content: center;
                         align-items: center;
                         width: 16px;
                         height: 16px;
                         background: #212121;
                         border-radius: 8px;
+
+                        .en & {
+                            margin-right: 6px;
+                        }
+    
+                        .ar & {
+                            margin-left: 6px;
+                        }
 
                         .wnk-icon {
                             font-size: 12px;
@@ -537,7 +601,6 @@
                     }
 
                     .max {
-                        margin-left: 4px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -547,11 +610,18 @@
                         text-transform: uppercase;
                         background: $text-color;
                         border-radius: 3px;
+
+                        .en & {
+                            margin-left: 4px;
+                        }
+
+                        .ar & {
+                            margin-right: 4px;
+                        }
                     }
 
                     .btn-confirm {
                         display: flex;
-                        margin-left: 10px;
                         width: 80px;
                         height: 36px;
                         align-items: center;
@@ -563,6 +633,14 @@
                         color: $bg-color;
                         background: $orange-color;
                         border: none;
+
+                        .en & {
+                            margin-left: 10px;
+                        }
+
+                        .ar & {
+                            margin-right: 10px;
+                        }
 
                         &:hover {
                             background: $orange-light-color;
@@ -725,7 +803,7 @@
                     }
 
                     .btn-swap {
-                        margin: 35px 17px;
+                        margin: 35px 22px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -761,12 +839,19 @@
                     .max-value {
                         position: absolute;
                         top: 0;
-                        left: 5px;
+                        
+                        .en & {
+                            left: 5px;
+                        }
+
+                        .ar & {
+                            right: 5px;
+                        }
                     }
 
                     .input {
                         margin: 0 5px;
-                        width: calc(50% - 70px);
+                        width: calc(50% - 60px);
                         height: 36px;
                         padding: 0 10px;
                         overflow: hidden;
@@ -803,7 +888,6 @@
 
                     .btn-confirm {
                         display: flex;
-                        margin-left: 10px;
                         width: calc(18% - 10px);
                         height: 36px;
                         align-items: center;
@@ -815,6 +899,14 @@
                         color: $bg-color;
                         background: $orange-color;
                         border: none;
+
+                        .en & {
+                            margin-left: 10px;
+                        }
+
+                        .ar & {
+                            margin-right: 10px;
+                        }
 
                         &:hover {
                             background: $orange-light-color;

@@ -50,7 +50,6 @@
 
                 .btn-bscdrops {
                     display: flex;
-                    margin-left: 10px;
                     align-items: center;
                     padding: 0 10px;
                     height: 30px;
@@ -64,10 +63,25 @@
                     background: $windrops-text-color;
                     border-radius: 15px;
 
+                    .en & {
+                        margin-left: 10px;
+                    }
+
+                    .ar & {
+                        margin-right: 10px;
+                    }
+
                     .wnk-icon {
-                        margin-right: 6px;
                         font-size: 14px;
                         color: #B0A26E;
+
+                        .en & {
+                            margin-right: 6px;
+                        }
+    
+                        .ar & {
+                            margin-left: 6px;
+                        }
                     }
                 }
             }
@@ -76,8 +90,15 @@
                 width: 80px;
                 font-size: 18px;
                 font-weight: 600;
-                text-align: right;
                 color: $windrops-text-color;
+
+                .en & {
+                    text-align: right;
+                }
+
+                .ar & {
+                    text-align: left;
+                }
             }
         }
 
@@ -107,11 +128,18 @@
 
                     .wnk-icon {
                         margin-top: 28px;
-                        margin-right: 10px;
                         width: 22px;
                         font-size: 22px;
                         color: $white-color;
                         text-shadow: 0 1px 1px #FBB709;
+
+                        .en & {
+                            margin-right: 10px;
+                        }
+
+                        .ar & {
+                            margin-left: 10px;
+                        }
                     }
                 }
 
@@ -121,7 +149,6 @@
                     
                     .currency {
                         display: flex;
-                        margin-right: 20px;
                         align-items: center;
                         font-size: 30px;
                         color: $white-color;
@@ -129,12 +156,27 @@
                         letter-spacing: -1px;
                         text-shadow: 0 1px 1px #FBB709;
 
+                        .en & {
+                            margin-right: 20px;
+                        }
+
+                        .ar & {
+                            margin-left: 20px;
+                        }
+
                         .wnk-icon {
-                            margin-right: 10px;
                             width: 22px;
                             font-size: 22px;
                             color: $white-color;
                             text-shadow: 0 1px 1px #FBB709;
+
+                            .en & {
+                                margin-right: 10px;
+                            }
+    
+                            .ar & {
+                                margin-left: 10px;
+                            }
                         }
                     }
                 }
@@ -186,7 +228,14 @@
 
                 .info-col {
                     width: calc(100% - 170px);
-                    padding: 0 90px 0 0;
+                    
+                    .en & {
+                        padding: 0 90px 0 0;
+                    }
+
+                    .ar & {
+                        padding: 0 0 0 90px;
+                    }
                     
                     label {
                         color: $windrops-text-color;
@@ -203,7 +252,6 @@
                 .timer {
                     position: absolute;
                     top: 8px;
-                    right: 105px;
                     display: flex;
                     width: 80px;
                     height: 34px;
@@ -211,6 +259,14 @@
                     justify-content: flex-end;
                     white-space: nowrap;
                     color: $windrops-text-color;
+
+                    .en & {
+                        right: 105px;
+                    }
+
+                    .ar & {
+                        left: 105px;
+                    }
                 }
 
                 .btn {
@@ -309,6 +365,7 @@
                 .countdown {
                     width: 54px;
                     white-space: nowrap;
+                    color: $text-color;
                 }
             }
 
@@ -333,12 +390,19 @@
 
                         .icon {
                             display: flex;
-                            margin-right: 6px;
                             align-items: center;
                             justify-content: center;
                             width: 16px;
                             height: 16px;
                             border-radius: 8px;
+
+                            .en & {
+                                margin-right: 6px;
+                            }
+
+                            .ar & {
+                                margin-left: 6px;
+                            }
 
                             &.icon-btc {
                                 background: url('../img/icon-btc.svg') no-repeat;
@@ -406,12 +470,11 @@
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
-                padding: 15px 15px 0 15px;
                 height: 85px;
+                padding: 15px 15px 0 15px;
 
                 .burned {
                     position: absolute;
-                    right: 0;
                     top: 15px;
                     display: flex;
                     align-items: center;
@@ -419,8 +482,17 @@
                     width: 34px;
                     height: 30px;
                     cursor: pointer;
-                    border-radius: 3px 0 0 3px;
                     background: $red-color;
+
+                    .en & {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                    }
+
+                    .ar & {
+                        left: 0;
+                        border-radius: 0 3px 3px 0;
+                    }
 
                     .wnk-icon {
                         color: $white-color;
@@ -486,8 +558,17 @@
 
                     .info-col {
                         width: calc(100% - 170px);
-                        padding: 0 90px 0 0;
                         color: $text-color;
+
+                        .en & {
+                            padding: 0 90px 0 0;
+                            text-align: left;
+                        }
+
+                        .ar & {
+                            padding: 0 0 0 90px;
+                            text-align: right;
+                        }
 
                         .amount {
                             font-weight: 600;
@@ -499,7 +580,6 @@
                     .timer {
                         position: absolute;
                         top: 8px;
-                        right: 105px;
                         display: flex;
                         width: 80px;
                         height: 34px;
@@ -507,6 +587,14 @@
                         justify-content: flex-end;
                         white-space: nowrap;
                         color: $text-color;
+
+                        .en & {
+                            right: 105px;
+                        }
+
+                        .ar & {
+                            left: 105px;
+                        }
                     }
 
                     .btn {
@@ -671,7 +759,13 @@
                         border-bottom: none;
 
                         .icon {
-                            margin: 17px 6px 17px 17px;
+                            .en & {
+                                margin: 17px 6px 17px 17px;
+                            }
+
+                            .ar & {
+                                margin: 17px 17px 17px 6px;
+                            }
                         }
 
                         label, .countdown {
@@ -686,16 +780,31 @@
 
                             .drops {
                                 padding-top: 3px;        
-                                padding-left: 6px;
                                 color: $text-color;
                                 font-weight: normal;
+
+                                .en & {
+                                    padding-left: 6px;
+                                }
+
+                                .ar & {
+                                    padding-right: 6px;
+                                }
                             }
                         }
 
                         .countdown {
                             width: 85px;
-                            padding-right: 15px;
                             justify-content: flex-end;
+                            color: $text-color;
+
+                            .en & {
+                                padding-right: 15px;
+                            }
+
+                            .ar & {
+                                padding-left: 15px;
+                            }
                         }
                     }
                 }
@@ -762,8 +871,15 @@
                     order: 1;
                     width: 100%;
                     flex-direction: row;
-                    text-align: left;
                     padding-bottom: 15px;
+
+                    .en & {
+                        text-align: left;
+                    }
+
+                    .ar & {
+                        text-align: right;
+                    }
 
                     .amount {
                         padding: 0 10px;

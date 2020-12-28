@@ -8,61 +8,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-<body class="en">
-    <div class="popup-wrapper forbidden-popup">
-        <div class="popup">
-            <div class="popup-header">
-                Permission Forbidden<span class="close-popup"></span>
-            </div>
-            <div class="popup-body">
-                <div class="notification">
-                    <label>We don't have permission to do this.</label>
-                    <p>You can sign out and relogin poloniex, then check the 2 options like the photo show. So that we can provide you with better service.</p>
-                    <img src="img/polo-forbidden-wallet.png" class="forbidden" />
-                    <button class="btn-sign-out">Sign Out</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-wrapper transfer-funds-popup">
-        <div class="popup">
-            <div class="popup-header">
-                Transfer TRX<span class="close-popup"></span>
-            </div>
-            <div class="popup-body">
-                <div class="transfer-block">
-                    <div class="transfer-col polo-col">
-                        <div class="transfer-header">
-                            <label>From</label><i class="icon"></i>
-                        </div>
-                        <div class="available">
-                            <label>Poloniex</label>
-                            <div class="amount">31 USDT<span class="usd-value">$31.00</span></div>
-                        </div>
-                    </div>
-                    <button class="btn-swap"><i class="wnk-icon icon-swap">&#xe82c;</i></button>
-                    <div class="transfer-col wink-col">
-                        <div class="transfer-header">
-                            <label>To</label><i class="icon"></i>
-                        </div>
-                        <div class="available">
-                            <label>Wink Wallet</label>
-                            <div class="amount">10 USDT<span class="usd-value">$10.00</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="transfer-amount">
-                    <span class="max-value">Maximum: 31 USDT</span>
-                    <input type="text" value="0" class="input" />
-                    <button class="btn-percent">25%</button>
-                    <button class="btn-percent">50%</button>
-                    <button class="btn-percent">75%</button>
-                    <button class="btn-percent">100%</button>
-                    <button class="btn-confirm">Confirm</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body dir="rtl" class="ar">
     <div class="popup-wrapper notofication-popup">
         <div class="popup">
             <div class="popup-header">
@@ -79,6 +25,8 @@
             </div>
         </div>
     </div>
+    
+    
     <div class="popup-wrapper freeze-popup">
         <div class="popup">
             <div class="popup-header">
@@ -259,110 +207,77 @@
             </div>
             <div class="content">
                 <div class="polo-wallet">
-                    <div class="estimated-value">
-                        <div class="polo-header">
-                            <h1>Total Estimated Value</h1><a href="operation-record.html" class="btn-record">Operation Record</a>
-                        </div>
-                        <div class="value">
-                            <div class="trx"><i class="wnk-icon icon-trx">&#xe819;</i>623 576,4 TRX</div>
-                            <div class="usd">$142 435,00</div>
-                        </div>
-                        <div class="wallets">
-                            <div class="wallet-col">
-                                <label>Wink Wallet</label>
-                                <span class="amount">200 000 TRX</span>
-                                <span class="usd">$200,000</span>    
-                            </div>
-                            <div class="wallet-col">
-                                <label>Poloniex Wallet</label>
-                                <span class="amount">200 000 TRX</span>
-                                <span class="usd">$200,000</span>    
-                            </div>
-                        </div>
-                    </div>
                     <div class="balances">
                         <div class="balance-header">
-                            <label>My Balances</label>
-                            <div class="balance-nav">
-                                <span class="select">
-                                    <input type="text" value="Search Token" /><div class="btn-search"></div>
-                                </span>
-                                <button class="btn-refresh">Refresh Balance</button>
-                            </div>
-                        </div>
-                        <div class="table-responsive my-balances">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Asset</th>
-                                        <th>Wink Wallet</th>
-                                        <th>Poloniex Wallet</th>
-                                        <th>Total Balances</th>
-                                        <th></th>
-                                    </tr>    
-                                </thead>    
-                                <tbody>
-                                    <tr>
-                                        <td><span class="title">JST</span>Just</td>
-                                        <td class="wink-col"><span class="title">3 JST</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 JST</span>$0.00</td>
-                                        <td><span class="title">126 JST</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="title">TRX</span>Tron</td>
-                                        <td class="wink-col"><span class="title">3 TRX</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 TRX</span>$0.00</td>
-                                        <td><span class="title">126 TRX</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="title">USDT</span>Tether</td>
-                                        <td class="wink-col"><span class="title">3 USDT</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 USDT</span>$0.00</td>
-                                        <td><span class="title">126 USDT</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="balances">
-                        <div class="balance-header">
-                            <label>My Balances</label>
+                            <label>Operation Record</label>
                         </div>
                         <div class="table-responsive">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Asset</th>
-                                        <th></th>
+                                        <th>Transfer ID</th>
+                                        <th>Type</th>
+                                        <th>Currency</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
                                     </tr>    
                                 </thead>    
                                 <tbody>
                                     <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                     <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                     <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                     <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                     <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                     <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pla_305819611597728224909</td>
+                                        <td>Debit</td>
+                                        <td>TRX</td>
+                                        <td>7.5</td>
+                                        <td>2020-08-18 05:23:45</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -451,12 +366,6 @@
             $(".rake-drops").toggleClass("active");
             $(".live-drops").removeClass("active");
             $(".dice-drops").removeClass("active");
-        } );
-        $('.btn-deposit-polo').click( function() {
-            $(".forbidden-popup").toggleClass("show");
-        } );
-        $('.btn-transfer').click( function() {
-            $(".transfer-funds-popup").toggleClass("show");
         } );
     </script>
 

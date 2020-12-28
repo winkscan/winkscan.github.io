@@ -17,18 +17,32 @@
         text-transform: uppercase;
 
         .games {
-            padding-left: 4px;
             font-weight: normal;
             color: $text-color;
             font-size: $font-size-md;
+
+            .en & {
+                padding-left: 4px;
+            }
+
+            .ar & {
+                padding-right: 4px;
+            }
         }
 
         .wnk-icon {
-            margin-right: 10px;
             width: 20px;
             height: 20px;
             font-size: 20px;
             color: $red-color;
+
+            .en & {
+                margin-right: 10px;
+            }
+
+            .ar & {
+                margin-left: 10px;
+            }
         }
     }
 
@@ -51,12 +65,19 @@
 
             &.curacao {
                 display: block;
-                margin-left: calc(50% - 75px);
                 margin-top: 40px;
                 margin-bottom: 30px;
                 width: 150px;
                 height: 50px;
                 text-align: center;
+
+                .en & {
+                    margin-left: calc(50% - 75px);
+                }
+    
+                .ar & {
+                    margin-right: calc(50% - 75px);
+                }
 
                 iframe {
                     width: 150px;
@@ -87,7 +108,14 @@
         flex-wrap: wrap;
         align-items: center;
         width: calc(50% - 100px);
-        padding: 0 80px 0 0;
+
+        .en & {
+            padding: 0 80px 0 0;
+        }
+
+        .ar & {
+            padding: 0 0 0 80px;
+        }
 
         label {
             display: block;

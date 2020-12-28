@@ -218,12 +218,19 @@
                         position: relative;
                         z-index: 1;
                         width: calc(100% - 30px);
-                        padding: 0 20px 0 10px;
                         font-size: $font-size-xs;
                         color: $text-color;
                         background: transparent;
                         border: none;
                         outline: none;
+
+                        .en & {
+                            padding: 0 20px 0 10px;
+                        }
+
+                        .ar & {
+                            padding: 0 10px 0 20px;
+                        }
         
                         &:focus {
                             color: $white-color;
@@ -233,11 +240,18 @@
                     .btn-search {
                         position: absolute;
                         top: 10px;
-                        right: 10px;
                         z-index: 2;
                         width: 14px;
                         height: 14px;
                         cursor: pointer;
+
+                        .en & {
+                            right: 10px;
+                        }
+
+                        .ar & {
+                            left: 10px;
+                        }
         
                         &:before {
                             position: absolute;
@@ -317,7 +331,6 @@
     .side-col {
         position: absolute;
         top: 15px;
-        right: 15px;
         display: flex;
         flex-wrap: wrap;
         width: 300px;
@@ -325,14 +338,35 @@
         background: $bg-light-color;
         border-radius: 3px;
 
-        &.hide {
-            right: -310px;
-            animation-name: hidecol;
-            animation-duration: 0.3s;
+        .en & {
+            right: 15px;
+        }
 
-            @keyframes hidecol {
-                from {right: 15px;}
-                to {right: -310px;}
+        .ar & {
+            left: 15px;
+        }
+
+        &.hide {
+            .en & {
+                right: -310px;
+                animation-name: hidecolen;
+                animation-duration: 0.3s;
+
+                @keyframes hidecolen {
+                    from {right: 15px;}
+                    to {right: -310px;}
+                }
+            }
+    
+            .ar & {
+                left: -310px;
+                animation-name: hidecolar;
+                animation-duration: 0.3s;
+
+                @keyframes hidecolar {
+                    from {left: 15px;}
+                    to {left: -310px;}
+                }
             }
         }
 
@@ -496,10 +530,19 @@
                         thead {
                             th {
                                 height: 50px;
-                                padding-left: 10px;
                                 font-weight: normal;
                                 vertical-align: middle;
                                 background: $btn-hover-color;
+
+                                .en & {
+                                    padding-left: 10px;
+                                    text-align: left;
+                                }
+
+                                .ar & {
+                                    padding-right: 10px;
+                                    text-align: right;
+                                }
                             }
                         }
 
@@ -530,9 +573,18 @@
 
                                 td {
                                     height: 36px;
-                                    padding-left: 10px;
                                     font-weight: normal;
                                     vertical-align: middle;
+
+                                    .en & {
+                                        padding-left: 10px;
+                                        text-align: left;
+                                    }
+    
+                                    .ar & {
+                                        padding-right: 10px;
+                                        text-align: right;
+                                    }
                                 }
                             }
                         }
@@ -577,17 +629,37 @@
         }
 
         .side-col {
-            right: -310px;
+            .en & {
+                right: -310px;
+            }
+
+            .ar & {
+                left: -310px;
+            }
 
             &.wide {
-                right: 15px;
-                width: calc(100% - 30px);
-                animation-name: showchat;
-                animation-duration: 0.3s;
-    
-                @keyframes showchat {
-                    from {right: -310px; width: 300px;}
-                    to {right: 15px; width: calc(100% - 30px);}
+                .en & {
+                    right: 15px;
+                    width: calc(100% - 30px);
+                    animation-name: showchaten;
+                    animation-duration: 0.3s;
+        
+                    @keyframes showchat {
+                        from {right: -310px; width: 300px;}
+                        to {right: 15px; width: calc(100% - 30px);}
+                    }
+                }
+
+                .ar & {
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    animation-name: showchatar;
+                    animation-duration: 0.3s;
+        
+                    @keyframes showchat {
+                        from {left: -310px; width: 300px;}
+                        to {left: 15px; width: calc(100% - 30px);}
+                    }
                 }
             }
 
@@ -598,6 +670,41 @@
 
                 .btn-close-chat-mobile {
                     display: flex;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 660px) {
+        .slot-body {
+            .slot-footer {
+                .slot-sub-nav {
+                    width: calc(100% - 155px);
+    
+                    .link {
+                        padding: 0 5px;
+                    }
+                }
+    
+                .search-by-name {
+                    width: 135px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .slot-body {
+            .slot-footer {
+                .slot-sub-nav {
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .link {
+                        width: calc(33.3% - 10px);
+                        text-align: center;
+                        height: 28px;
+                    }
                 }
             }
         }

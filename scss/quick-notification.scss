@@ -2,12 +2,19 @@
     position: absolute;
     z-index: 15;
     top: 15px;
-    right: 15px;
     width: 340px;
     padding: 10px;
     background: $btn-hover-color;
     border-radius: 3px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+    .en & {
+        right: 15px;
+    }
+
+    .ar & {
+        left: 15px;
+    }
 
     label {
         display: flex;
@@ -18,19 +25,33 @@
 
         .icon {
             display: flex;
-            margin-right: 6px;
             justify-content: center;
             align-items: center;
             width: 16px;
             height: 16px;
             border-radius: 8px;
             color: $white-color;
+
+            .en & {
+                margin-right: 6px;
+            }
+
+            .ar & {
+                margin-left: 6px;
+            }
         }
     }
 
     p {
-        padding-left: 22px;
         color: $white-color;
+
+        .en & {
+            padding-left: 22px;
+        }
+
+        .ar & {
+            padding-right: 22px;
+        }
     }
 
     &.alert {

@@ -1,7 +1,6 @@
 .top-nav {
     position: fixed;
     z-index: 11;
-    left: 90px;
     top: 0;
     display: flex;
     width: calc(100% - 120px);
@@ -9,6 +8,14 @@
     height: 36px;
     background: $bg-color;
     border-bottom: 2px solid $bg-light-color;
+
+    .en & {
+        left: 90px;
+    }
+
+    .ar & {
+        right: 90px;
+    }
 
     .useful-links {
         display: flex;
@@ -20,16 +27,30 @@
             align-items: center;
             font-size: $font-size-md;
             font-weight: 600;
-            margin-right: 15px;
             color: $text-color;
+
+            .en & {
+                margin-right: 15px;
+            }
+
+            .ar & {
+                margin-left: 15px;
+            }
 
             &:last-child {
                 margin-right: 0;
             }
 
             .wnk-icon {
-                margin-right: 10px;
                 font-size: 20px;
+
+                .en & {
+                    margin-right: 10px;
+                }
+    
+                .ar & {
+                    margin-left: 10px;
+                }
             }
 
             &:hover, &.active {
@@ -76,7 +97,14 @@
         .group {
             position: relative;
             display: flex;
-            margin-left: 10px;
+
+            .en & {
+                margin-left: 10px;
+            }
+
+            .ar & {
+                margin-right: 10px;
+            }
 
             .wallet {
                 display: flex;
@@ -101,7 +129,14 @@
                         display: flex;
                         width: 6px;
                         height: 8px;
-                        margin-left: 10px;
+
+                        .en & {
+                            margin-left: 10px;
+                        }
+            
+                        .ar & {
+                            margin-right: 10px;
+                        }
 
                         &:after, &:before {
                             position: absolute;
@@ -172,12 +207,19 @@
                 z-index: 0;
                 top: 46px;
                 display: none;
-                right: 0;
                 width: 210px;
                 padding: 10px;
                 border-radius: 3px;
                 opacity: 0;
                 background: $bg-light-color;
+
+                .en & {
+                    right: 0;
+                }
+    
+                .ar & {
+                    left: 0;
+                }
 
                 .btn-back {
                     display: none;
@@ -187,13 +229,20 @@
                     position: absolute;
                     content:'';
                     top: -5px;
-                    right: 12px;
                     z-index: 2;
                     width: 0;
                     height: 0;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
                     border-bottom: 5px solid $bg-light-color;
+
+                    .en & {
+                        right: 12px;
+                    }
+        
+                    .ar & {
+                        left: 12px;
+                    }
                 }
 
                 &.tw-currency:after, &.lw-currency:after {
@@ -201,10 +250,22 @@
                 }
 
                 &.withdraw-drop {
-                    right: 5px;
+                    .en & {
+                        right: 5px;
+                    }
+
+                    .ar & {
+                        left: 5px;
+                    }
 
                     &:after {
-                        right: 35px;
+                        .en & {
+                            right: 35px;
+                        }
+    
+                        .ar & {
+                            left: 35px;
+                        }
                     }
                 }
 
@@ -284,9 +345,16 @@
                         cursor: pointer;
 
                         .wnk-icon {
-                            margin-left: 6px;
                             font-size: 16px;
                             color: $white-color;
+
+                            .en & {
+                                margin-left: 6px;
+                            }
+
+                            .ar & {
+                                margin-right: 6px;
+                            }
                         }
 
                         &:active {
@@ -373,7 +441,13 @@
                             }
 
                             &.trx {
-                                margin-right: 8px;
+                                .en & {
+                                    margin-right: 8px;
+                                }
+
+                                .ar & {
+                                    margin-left: 8px;
+                                }
                             }
 
                             .wnk-icon {
@@ -403,7 +477,6 @@
                             display: block;
                             width: calc(100% - 10px);
                             height: 34px;
-                            padding-left: 10px;
                             font-size: $font-size-md;
                             color: $white-color;
                             font-weight: 600;
@@ -411,6 +484,14 @@
                             border-radius: 3px;
                             border: none;
                             outline: none;
+
+                            .en & {
+                                padding-left: 10px;
+                            }
+
+                            .ar & {
+                                padding-right: 10px;
+                            }
                         }
                     }
 
@@ -454,16 +535,30 @@
                     .note {
                         position: relative;
                         width: calc(100% - 30px);
-                        padding: 4px 0 5px 30px;
                         font-style: italic;
                         color: $text-color;
 
+                        .en & {
+                            padding: 4px 0 5px 30px;
+                        }
+
+                        .ar & {
+                            padding: 4px 30px 5px 0;
+                        }
+
                         .wnk-icon {
                             position: absolute;
-                            left: 5px;
                             top: 4px;
                             font-size: 16px;
                             color: $red-color;
+
+                            .en & {
+                                left: 5px;
+                            }
+    
+                            .ar & {
+                                right: 5px;
+                            }
                         }
                     }
                 }
@@ -477,18 +572,32 @@
                         position: relative;
                         width: 64px;
                         height: 30px;
-                        padding: 0 10px 0 36px;
                         color: $text-color;
                         border-radius: 3px;
 
+                        .en & {
+                            padding: 0 10px 0 36px;
+                        }
+
+                        .ar & {
+                            padding: 0 36px 0 10px;
+                        }
+
                         &:after {
                             position: absolute;
-                            left: 10px;
                             top: 7px;
                             content: '';
                             display: block;
                             width: 16px;
                             height: 16px;
+
+                            .en & {
+                                left: 10px;
+                            }
+    
+                            .ar & {
+                                right: 10px;
+                            }
                         }
 
                         &.us:after {
@@ -543,7 +652,6 @@
             }
 
             .btn-withdraw, .btn-signin {
-                margin-right: 5px;
                 width: 80px;
                 height: 36px;
                 border-radius: 18px;
@@ -552,6 +660,14 @@
                 color: $white-color;
                 background: $red-color;
                 cursor: pointer;
+
+                .en & {
+                    margin-right: 5px;
+                }
+
+                .ar & {
+                    margin-left: 5px;
+                }
 
                 &:hover {
                     background: $red-light-color;
@@ -661,13 +777,20 @@
         &.show {
             display: flex;
             top: 60px;
-            left: 0;
             width: calc(100% - 30px);
             padding: 15px;
             height: calc(100% - 90px);
             opacity: 1;
             animation-name: slidedown;
             animation-duration: 1s;
+
+            .en & {
+                left: 0;
+            }
+
+            .ar & {
+                right: 0;
+            }
 
             @keyframes slidedown {
                 from {top: -100%;}
@@ -683,14 +806,21 @@
             align-items: flex-end;
 
             .link {
-                margin-right: 15px;
+                width: 50%;
+                justify-content: center;
 
                 .title {
                     display: block;
                 }
 
                 .wnk-icon {
-                    margin-right: 10px;
+                    .en & {
+                        margin-right: 10px;
+                    }
+        
+                    .ar & {
+                        margin-left: 10px;
+                    }
                 }
             }
         }
@@ -702,7 +832,13 @@
             height: 216px;
             
             .notification, .user, .set-language {
-                margin: 0 0 10px 10px;
+                .en & {
+                    margin: 0 0 10px 10px;
+                }
+
+                .ar & {
+                    margin: 0 10px 10px 0;
+                }
             }
 
             .notification {
@@ -761,12 +897,19 @@
                     .btn-back {
                         position: absolute;
                         top: 10px;
-                        right: 10px;
                         display: flex;
                         width: 36px;
                         height: 36px;
                         align-items: center;
                         justify-content: center;
+
+                        .en & {
+                            right: 10px;
+                        }
+
+                        .ar & {
+                            left: 10px;
+                        }
 
                         .arrow {
                             position: relative;
@@ -789,11 +932,26 @@
                             &:after {
                                 top: 4px;
                                 transform: rotate(45deg);
+
+                                .en & {
+                                    transform: rotate(45deg);
+                                }
+        
+                                .ar & {
+                                    transform: rotate(-45deg);
+                                }
                             }
 
                             &:before {
                                 top: -4px;
-                                transform: rotate(-45deg);
+
+                                .en & {
+                                    transform: rotate(-45deg);
+                                }
+        
+                                .ar & {
+                                    transform: rotate(45deg);
+                                }
                             }
                         }
                     }

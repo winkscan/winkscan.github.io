@@ -8,61 +8,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-<body class="en">
-    <div class="popup-wrapper forbidden-popup">
-        <div class="popup">
-            <div class="popup-header">
-                Permission Forbidden<span class="close-popup"></span>
-            </div>
-            <div class="popup-body">
-                <div class="notification">
-                    <label>We don't have permission to do this.</label>
-                    <p>You can sign out and relogin poloniex, then check the 2 options like the photo show. So that we can provide you with better service.</p>
-                    <img src="img/polo-forbidden-wallet.png" class="forbidden" />
-                    <button class="btn-sign-out">Sign Out</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-wrapper transfer-funds-popup">
-        <div class="popup">
-            <div class="popup-header">
-                Transfer TRX<span class="close-popup"></span>
-            </div>
-            <div class="popup-body">
-                <div class="transfer-block">
-                    <div class="transfer-col polo-col">
-                        <div class="transfer-header">
-                            <label>From</label><i class="icon"></i>
-                        </div>
-                        <div class="available">
-                            <label>Poloniex</label>
-                            <div class="amount">31 USDT<span class="usd-value">$31.00</span></div>
-                        </div>
-                    </div>
-                    <button class="btn-swap"><i class="wnk-icon icon-swap">&#xe82c;</i></button>
-                    <div class="transfer-col wink-col">
-                        <div class="transfer-header">
-                            <label>To</label><i class="icon"></i>
-                        </div>
-                        <div class="available">
-                            <label>Wink Wallet</label>
-                            <div class="amount">10 USDT<span class="usd-value">$10.00</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="transfer-amount">
-                    <span class="max-value">Maximum: 31 USDT</span>
-                    <input type="text" value="0" class="input" />
-                    <button class="btn-percent">25%</button>
-                    <button class="btn-percent">50%</button>
-                    <button class="btn-percent">75%</button>
-                    <button class="btn-percent">100%</button>
-                    <button class="btn-confirm">Confirm</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body dir="rtl" class="ar">
     <div class="popup-wrapper notofication-popup">
         <div class="popup">
             <div class="popup-header">
@@ -79,19 +25,17 @@
             </div>
         </div>
     </div>
-    <div class="popup-wrapper freeze-popup">
-        <div class="popup">
-            <div class="popup-header">
-                Freeze<span class="close-popup"></span>
-            </div>
-            <div class="popup-body">
-                <div class="freeze-body">
-                    <div class="available">Available<span class="amount">100,000,000 WIN</span></div>
-                    <input type="text" class="input" value="100"><div class="max">Max</div><button class="btn-confirm">Confirm</button>
-                </div>
-            </div>
-        </div>
+
+    <div class="quick-notification success">
+        <label><i class="icon"></i>Success!</label>
+        <p>Poloniex account authorization login sucessfully!</p>
     </div>
+
+    <!--<div class="quick-notification alert">
+        <label><i class="icon">!</i>Alert!</label>
+        <p>Alert message.</p>
+    </div>-->
+
     <div class="wrap">
         <div class="side-nav">
             <a href="wink.org" class="wink-logo"></a>
@@ -114,7 +58,7 @@
                     </ul>
                 </div>
                 <div class="btn-group">
-                    <a href="live-casino.html" class="btn">
+                    <a href="live-casino.html" class="btn active">
                         <i class="wnk-icon icon-live">&#xe806;</i>Live
                     </a>
                     <ul>
@@ -144,7 +88,7 @@
             <a href="https://winkonline.zendesk.com/hc/zh-tw/restricted?return_to=https%3A%2F%2Fwinkonline.zendesk.com%2Fhc%2Fzh-tw" target="_blank" class="zendesk"><i class="wnk-icon icon-info">&#xe801;</i></a>
             <div class="top-nav">
                 <div class="useful-links">
-                    <a href="/" class="link active"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
                     <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
                 </div>
                 <div class="navigation">
@@ -257,118 +201,32 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="polo-wallet">
-                    <div class="estimated-value">
-                        <div class="polo-header">
-                            <h1>Total Estimated Value</h1><a href="operation-record.html" class="btn-record">Operation Record</a>
-                        </div>
-                        <div class="value">
-                            <div class="trx"><i class="wnk-icon icon-trx">&#xe819;</i>623 576,4 TRX</div>
-                            <div class="usd">$142 435,00</div>
-                        </div>
-                        <div class="wallets">
-                            <div class="wallet-col">
-                                <label>Wink Wallet</label>
-                                <span class="amount">200 000 TRX</span>
-                                <span class="usd">$200,000</span>    
-                            </div>
-                            <div class="wallet-col">
-                                <label>Poloniex Wallet</label>
-                                <span class="amount">200 000 TRX</span>
-                                <span class="usd">$200,000</span>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="balances">
-                        <div class="balance-header">
-                            <label>My Balances</label>
-                            <div class="balance-nav">
-                                <span class="select">
-                                    <input type="text" value="Search Token" /><div class="btn-search"></div>
-                                </span>
-                                <button class="btn-refresh">Refresh Balance</button>
-                            </div>
-                        </div>
-                        <div class="table-responsive my-balances">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Asset</th>
-                                        <th>Wink Wallet</th>
-                                        <th>Poloniex Wallet</th>
-                                        <th>Total Balances</th>
-                                        <th></th>
-                                    </tr>    
-                                </thead>    
-                                <tbody>
-                                    <tr>
-                                        <td><span class="title">JST</span>Just</td>
-                                        <td class="wink-col"><span class="title">3 JST</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 JST</span>$0.00</td>
-                                        <td><span class="title">126 JST</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="title">TRX</span>Tron</td>
-                                        <td class="wink-col"><span class="title">3 TRX</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 TRX</span>$0.00</td>
-                                        <td><span class="title">126 TRX</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="title">USDT</span>Tether</td>
-                                        <td class="wink-col"><span class="title">3 USDT</span>$0.00</td>
-                                        <td class="polo-col"><span class="title">123 USDT</span>$0.00</td>
-                                        <td><span class="title">126 USDT</span>$0.00xxx</td>
-                                        <td class="nav-col"><button class="btn btn-deposit-polo">Deposit</button><button class="btn btn-transfer">Transfer</button><button class="btn">Withdraw</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="balances">
-                        <div class="balance-header">
-                            <label>My Balances</label>
-                        </div>
-                        <div class="table-responsive">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Asset</th>
-                                        <th></th>
-                                    </tr>    
-                                </thead>    
-                                <tbody>
-                                    <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="asset"><span class="title">ATOM</span></td>
-                                        <td><a href="" class="link">Cosmos<i class="arrow"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="asset"><span class="title">AVA</span></td>
-                                        <td><a href="" class="link">Travala.com<i class="arrow"></i></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+            <div class="sub-nav">
+                <!-- Dice menu
+                <div class="group dice-platform">
+                    <label><i class="icon dice"></i>Dice</label>
+                    <a href="" class="link">Dice</a>
+                    <a href="" class="link">Moon</a>
+                    <a href="" class="link">Ring</a>
+                    <a href="" class="link">Duel</a>
+                    <a href="" class="link">Mine</a>
+                </div>-->
+                <div class="group live-platform">
+                    <label><i class="icon live"></i>Live</label>
+                    <a href="live-casino.html" class="link">Casino</a>
+                    <a href="sports-binarium.html" class="link active">Sports</a>
+                    <a href="sports-binarium.html" class="link">Binarium</a>
                 </div>
+                <!-- Rake menu
+                <div class="group rake-platform">
+                    <label><i class="icon rake"></i>Rake</label>
+                    <a href="" class="link">Poker</a>
+                    <a href="" class="link">Poker Alpha</a>
+                </div>
+                -->
+            </div>
+            <div class="sports-container">
+                Sports and Binarium full size 100%
             </div>
         </div>
     </div>
@@ -418,46 +276,6 @@
                 $('.sub-nav').removeClass('stick-to-top');
             }
         });
-
-        $('.btn-freeze').click( function() {
-            $(".freeze-popup").toggleClass("show");
-        } );
-        $('.burned').click( function() {
-            $(".live-burnt-log").toggleClass("show");
-        } );
-        $('.btn-bscdrops').click( function() {
-            $(".bscdrops-popup").toggleClass("show");
-        } );
-        $('.tab-dice').click( function() {
-            $(".tab-dice").toggleClass("active");
-            $(".tab-live").removeClass("active");
-            $(".tab-rake").removeClass("active");
-            $(".dice-drops").toggleClass("active");
-            $(".live-drops").removeClass("active");
-            $(".rake-drops").removeClass("active");
-        } );
-        $('.tab-live').click( function() {
-            $(".tab-live").toggleClass("active");
-            $(".tab-dice").removeClass("active");
-            $(".tab-rake").removeClass("active");
-            $(".live-drops").toggleClass("active");
-            $(".dice-drops").removeClass("active");
-            $(".rake-drops").removeClass("active");
-        } );
-        $('.tab-rake').click( function() {
-            $(".tab-rake").toggleClass("active");
-            $(".tab-live").removeClass("active");
-            $(".tab-dice").removeClass("active");
-            $(".rake-drops").toggleClass("active");
-            $(".live-drops").removeClass("active");
-            $(".dice-drops").removeClass("active");
-        } );
-        $('.btn-deposit-polo').click( function() {
-            $(".forbidden-popup").toggleClass("show");
-        } );
-        $('.btn-transfer').click( function() {
-            $(".transfer-funds-popup").toggleClass("show");
-        } );
     </script>
 
 </body>

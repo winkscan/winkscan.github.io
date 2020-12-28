@@ -8,9 +8,16 @@
     &.stick-to-top {
         position: fixed;
         z-index: 5;
-        left: 90px;
         top: 90px;
         width: calc(100% - 90px);
+
+        .en & {
+            left: 90px;
+        }
+
+        .ar & {
+            right: 90px;
+        }
     }
 
     .group {
@@ -30,9 +37,16 @@
 
             .icon {
                 display: inline-block;
-                margin-right: 6px;
                 width: 16px;
                 height: 16px;
+
+                .en & {
+                    margin-right: 6px;
+                }
+        
+                .ar & {
+                    margin-left: 6px;
+                }
 
                 &.dice {
                     background: url('../img/icon-dice.svg') no-repeat;
@@ -112,9 +126,16 @@
         }
     
         &.stick-to-top {
-            left: 0;
             top: 60px;
             width: 100%;
+
+            .en & {
+                left: 0;
+            }
+    
+            .ar & {
+                right: 0;
+            }
         }
     }
 }

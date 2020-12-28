@@ -59,12 +59,19 @@
 
             .btn-social {
                 display: inline-block;
-                margin: 0 10px 10px 0;
                 width: 16px;
                 height: 16px;
                 padding: 7px;
                 border-radius: 15px;
                 background: $text-color;
+
+                .en & {
+                    margin: 0 10px 10px 0;
+                }
+
+                .ar & {
+                    margin: 0 0 10px 10px;
+                }
 
                 .wnk-icon {
                     display: block;
@@ -113,6 +120,10 @@
                     padding-right: 0;
                 }
             }
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 15px 0 65px 0;
         }
 
         @media screen and (max-width: 420px) {

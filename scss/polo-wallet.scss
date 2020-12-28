@@ -197,12 +197,19 @@
                         z-index: 1;
                         width: calc(100% - 40px);
                         height: 36px;
-                        padding: 0 30px 0 10px;
                         font-size: $font-size-xs;
                         color: $text-color;
                         background: transparent;
                         border: none;
                         outline: none;
+
+                        .en & {
+                            padding: 0 30px 0 10px;
+                        }
+
+                        .ar & {
+                            padding: 0 10px 0 30px;
+                        }
         
                         &:focus {
                             color: $white-color;
@@ -212,11 +219,18 @@
                     .btn-search {
                         position: absolute;
                         top: 10px;
-                        right: 10px;
                         z-index: 2;
                         width: 14px;
                         height: 14px;
                         cursor: pointer;
+
+                        .en & {
+                            right: 10px;
+                        }
+    
+                        .ar & {
+                            left: 10px;
+                        }
         
                         &:before {
                             position: absolute;
@@ -244,7 +258,6 @@
                 }
 
                 .btn-refresh {
-                    margin-left: 10px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -256,6 +269,14 @@
                     cursor: pointer;
                     background: $text-color;
                     border: none;
+
+                    .en & {
+                        margin-left: 10px;
+                    }
+
+                    .ar & {
+                        margin-right: 10px;
+                    }
 
                     &:hover {
                         background: #446492;
@@ -273,16 +294,30 @@
 
             table {
                 width: 100%;
-                text-align: left;
                 border-spacing: 0;
+
+                .en & {
+                    text-align: left;
+                }
+
+                .ar & {
+                    text-align: right;
+                }
 
                 thead {
                     th {
                         height: 36px;
-                        padding-left: 10px;
                         font-weight: normal;
                         vertical-align: middle;
                         border-bottom: 2px solid $btn-hover-color;
+
+                        .en & {
+                            padding-left: 15px;
+                        }
+        
+                        .ar & {
+                            padding-right: 15px;
+                        }
                     }
                 }
 
@@ -294,10 +329,17 @@
 
                         td {
                             height: 36px;
-                            padding-left: 15px;
                             font-weight: normal;
                             white-space: nowrap;
                             vertical-align: middle;
+
+                            .en & {
+                                padding-left: 15px;
+                            }
+            
+                            .ar & {
+                                padding-right: 15px;
+                            }
 
                             .title {
                                 display: block;
@@ -337,10 +379,17 @@
                                     position: absolute;
                                     display: flex;
                                     top: calc(50% - 4px);
-                                    right: 10px;
                                     width: 6px;
                                     height: 8px;
                                     transform: rotate(-90deg);
+
+                                    .en & {
+                                        right: 10px;
+                                    }
+
+                                    .ar & {
+                                        left: 10px;
+                                    }
             
                                     &:after, &:before {
                                         position: absolute;
@@ -353,13 +402,27 @@
                                     }
             
                                     &:after {
-                                        right: 0;
                                         transform: rotate(45deg);
+
+                                        .en & {
+                                            right: 0;
+                                        }
+    
+                                        .ar & {
+                                            left: 0;
+                                        }
                                     }
             
                                     &:before {
-                                        left: 0;
                                         transform: rotate(-45deg);
+
+                                        .en & {
+                                            left: 0;
+                                        }
+    
+                                        .ar & {
+                                            right: 0;
+                                        }
                                     }
                                 }
 
@@ -378,11 +441,17 @@
 
                             &.nav-col {
                                 width: 270px;
-                                padding-right: 15px;
                                 text-align: right;
 
+                                .en & {
+                                    padding-right: 15px;
+                                }
+                
+                                .ar & {
+                                    padding-left: 15px;
+                                }
+
                                 .btn {
-                                    margin-left: 10px;
                                     width: 80px;
                                     height: 28px;
                                     align-items: center;
@@ -394,6 +463,14 @@
                                     background: transparent;
                                     outline: none;
                                     border: 1px solid $text-color;
+
+                                    .en & {
+                                        margin-left: 10px;
+                                    }
+                    
+                                    .ar & {
+                                        margin-right: 10px;
+                                    }
                         
                                     &:hover {
                                         background: $text-color;

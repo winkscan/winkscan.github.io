@@ -15,9 +15,16 @@
         font-size: $font-size-lg;
 
         .for-you {
-            padding-left: 6px;
             color: $orange-color;
             font-size: $font-size-lg;
+
+            .en & {
+                padding-left: 6px;
+            }
+
+            .ar & {
+                padding-right: 6px;
+            }
         }
     }
 
@@ -64,22 +71,39 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            margin-left: 10px;
             width: 20%;
+
+            .en & {
+                margin-left: 10px;
+            }
+
+            .ar & {
+                margin-right: 10px;
+            }
 
             .tab {
                 display: flex;
                 width: calc(100% - 15px);
                 min-height: 36px;
-                padding-left: 13px;
                 align-items: center;
                 font-size: $font-size-sm;
                 font-weight: 600;
                 color: $text-color;
                 cursor: pointer;
-                border-left: 2px solid;
-                border-color: $bg-color;
-                border-radius: 3px 0 0 3px;
+
+                .en & {
+                    padding-left: 13px;
+                    border-left: 2px solid;
+                    border-color: $bg-color;
+                    border-radius: 3px 0 0 3px;
+                }
+    
+                .ar & {
+                    padding-right: 13px;
+                    border-right: 2px solid;
+                    border-color: $bg-color;
+                    border-radius: 0 3px 3px 0;
+                }
 
                 &.active, &:hover {
                     color: $white-color;
@@ -91,10 +115,17 @@
         }
 
         .faq-content {
-            margin-right: 10px;
             width: calc(80% - 20px);
             background: $bg-light-color;
             border-radius: 0 3px 3px 3px;
+
+            .en & {
+                margin-right: 10px;
+            }
+
+            .ar & {
+                margin-left: 10px;
+            }
 
             .topic {
                 overflow: hidden;
@@ -112,16 +143,30 @@
                     min-height: 26px;
                     color: $text-color;
                     cursor: pointer;
-                    padding: 5px 30px 5px 15px;
+
+                    .en & {
+                        padding: 5px 30px 5px 15px;
+                    }
+        
+                    .ar & {
+                        padding: 5px 15px 5px 30px;
+                    }
 
                     .arrow {
                         position: absolute;
                         display: flex;
                         top: 14px;
-                        right: 10px;
                         transform: rotate(-90deg);
                         width: 6px;
                         height: 8px;
+
+                        .en & {
+                            right: 10px;
+                        }
+            
+                        .ar & {
+                            left: 10px;
+                        }
 
                         &:after, &:before {
                             position: absolute;
