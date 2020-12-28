@@ -35,6 +35,7 @@
 
             p, a {
                 line-height: 24px;
+                color: $text-color;
             }
 
             p {
@@ -43,6 +44,8 @@
 
             ul {
                 li {
+                    color: $text-color;
+
                     a {
                         text-decoration: underline;
 

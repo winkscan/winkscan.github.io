@@ -213,14 +213,17 @@
         width: 150px;
         height: 50px; }
       .footer .ft-content .col p, .footer .ft-content .col a {
-        line-height: 24px; }
+        line-height: 24px;
+        color: #344E72; }
       .footer .ft-content .col p {
         margin-bottom: 24px; }
-      .footer .ft-content .col ul li a {
-        text-decoration: underline; }
-        .footer .ft-content .col ul li a:hover {
-          color: #FBC509;
-          transition: 0.3s color ease-in-out; }
+      .footer .ft-content .col ul li {
+        color: #344E72; }
+        .footer .ft-content .col ul li a {
+          text-decoration: underline; }
+          .footer .ft-content .col ul li a:hover {
+            color: #FBC509;
+            transition: 0.3s color ease-in-out; }
       .footer .ft-content .col .btn-social {
         display: inline-block;
         margin: 0 10px 10px 0;
@@ -471,7 +474,8 @@
       display: flex;
       height: 30px;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      color: #344E72; }
     .slots .slot.new .pic:after {
       position: absolute;
       z-index: 3;
@@ -574,7 +578,8 @@
       width: 100%;
       height: 40px;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      color: #344E72; }
   .license .attention {
     margin: 10px;
     display: flex;
@@ -590,7 +595,8 @@
       color: #D80027; }
     .license .attention p {
       display: block;
-      line-height: 22px; }
+      line-height: 22px;
+      color: #344E72; }
   @media screen and (max-width: 992px) {
     .license .license {
       width: calc(50% - 20px); }
@@ -614,7 +620,8 @@
     height: 30px;
     align-items: center;
     justify-content: center;
-    width: 16.66%; }
+    width: 16.66%;
+    color: #344E72; }
     .suppliers li .wnk-icon {
       font-size: 30px; }
       .suppliers li .wnk-icon.icon-supplier-gameart {
@@ -705,7 +712,8 @@
       align-items: center;
       font-size: 16px;
       font-weight: 600;
-      margin-right: 15px; }
+      margin-right: 15px;
+      color: #344E72; }
       .top-nav .useful-links .link:last-child {
         margin-right: 0; }
       .top-nav .useful-links .link .wnk-icon {
@@ -756,6 +764,7 @@
           padding: 2px 0;
           overflow: hidden;
           white-space: nowrap;
+          color: #344E72;
           text-overflow: ellipsis; }
           .top-nav .navigation .group .wallet .title .arrow {
             position: relative;
@@ -847,6 +856,7 @@
           width: 190px;
           height: 30px;
           padding: 0 10px;
+          color: #344E72;
           border-radius: 3px; }
           .top-nav .navigation .group .dropdown.tw-currency ul li .currency .amount, .top-nav .navigation .group .dropdown.lw-currency ul li .currency .amount {
             padding-right: 6px; }
@@ -868,7 +878,8 @@
             font-weight: 600; }
           .top-nav .navigation .group .dropdown.deposit-to-tronwallet p, .top-nav .navigation .group .dropdown.logout p {
             padding: 9px 0;
-            line-height: 16px; }
+            line-height: 16px;
+            color: #344E72; }
           .top-nav .navigation .group .dropdown.deposit-to-tronwallet .qr, .top-nav .navigation .group .dropdown.logout .qr {
             margin: 10px auto;
             width: 80px;
@@ -926,7 +937,8 @@
             width: 100%;
             height: 24px;
             white-space: nowrap;
-            align-items: center; }
+            align-items: center;
+            color: #344E72; }
         .top-nav .navigation .group .dropdown.deposit-to-live-wallet .token, .top-nav .navigation .group .dropdown.deposit-to-live-wallet .btn-col, .top-nav .navigation .group .dropdown.withdraw-drop .token, .top-nav .navigation .group .dropdown.withdraw-drop .btn-col {
           width: 80px; }
           .top-nav .navigation .group .dropdown.deposit-to-live-wallet .token .btn, .top-nav .navigation .group .dropdown.deposit-to-live-wallet .btn-col .btn, .top-nav .navigation .group .dropdown.withdraw-drop .token .btn, .top-nav .navigation .group .dropdown.withdraw-drop .btn-col .btn {
@@ -997,7 +1009,8 @@
           position: relative;
           width: calc(100% - 30px);
           padding: 4px 0 5px 30px;
-          font-style: italic; }
+          font-style: italic;
+          color: #344E72; }
           .top-nav .navigation .group .dropdown.deposit-to-live-wallet .note .wnk-icon, .top-nav .navigation .group .dropdown.withdraw-drop .note .wnk-icon {
             position: absolute;
             left: 5px;
@@ -1013,6 +1026,7 @@
             width: 64px;
             height: 30px;
             padding: 0 10px 0 36px;
+            color: #344E72;
             border-radius: 3px; }
             .top-nav .navigation .group .dropdown.language .set-lng:after {
               position: absolute;
@@ -1282,6 +1296,7 @@
       padding: 0 10px;
       align-items: center;
       height: 49px;
+      color: #344E72;
       border-bottom: 1px solid rgba(0, 0, 0, 0); }
       .sub-nav .group .link.active, .sub-nav .group .link:hover {
         color: #FFF;
@@ -1339,6 +1354,7 @@
       height: 39px;
       justify-content: center;
       cursor: pointer;
+      color: #344E72;
       align-items: center;
       border-bottom: 1px solid #060E22; }
       .slots-filter .btn-group .btn.active, .slots-filter .btn-group .btn:hover {
@@ -1347,7 +1363,8 @@
         transition: 0.3s all ease-in-out; }
     .slots-filter .btn-group .title {
       width: 100%;
-      padding: 5px 0; }
+      padding: 5px 0;
+      color: #344E72; }
     .slots-filter .btn-group .select {
       display: flex;
       position: relative;
@@ -1445,7 +1462,8 @@
         align-items: center;
         height: 30px;
         padding: 0 10px;
-        font-size: 13px; }
+        font-size: 13px;
+        color: #344E72; }
         .slots-filter .btn-group .suppliers-list .supplier:hover, .slots-filter .btn-group .suppliers-list .supplier.selected {
           color: #FFF;
           cursor: pointer;
@@ -1536,7 +1554,8 @@
       display: flex;
       flex-wrap: wrap;
       width: calc(100% - 20px);
-      padding: 10px; }
+      padding: 10px;
+      color: #344E72; }
       .popup-wrapper .popup .popup-body .sign-col {
         margin: 30px 0;
         display: flex;
@@ -1579,7 +1598,8 @@
           padding: 3px 0;
           line-height: 16px; }
           .popup-wrapper .popup .popup-body .sign-col p .link {
-            text-decoration: underline; }
+            text-decoration: underline;
+            color: #344E72; }
             .popup-wrapper .popup .popup-body .sign-col p .link:hover {
               color: #FBC509;
               transition: 0.3s color ease-in-out; }
@@ -1988,7 +2008,7 @@
     .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .max-value {
       position: absolute;
       top: 0;
-      right: 15px; }
+      left: 5px; }
     .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .input {
       margin: 0 5px;
       width: calc(50% - 70px);
@@ -2174,6 +2194,7 @@
         height: 30px;
         line-height: 1.2;
         align-items: center;
+        color: #344E72;
         justify-content: center;
         text-decoration: underline; }
         .help-center .videos .video .link:hover {
@@ -2224,6 +2245,7 @@
           align-items: center;
           width: calc(100% - 45px);
           min-height: 26px;
+          color: #344E72;
           cursor: pointer;
           padding: 5px 30px 5px 15px; }
           .help-center .faq .faq-content .topic .question .arrow {
@@ -2260,9 +2282,11 @@
           padding: 0 15px 10px 15px; }
           .help-center .faq .faq-content .topic .faq-body p {
             display: block;
-            padding: 5px 0; }
+            padding: 5px 0;
+            color: #344E72; }
             .help-center .faq .faq-content .topic .faq-body p a {
-              text-decoration: underline; }
+              text-decoration: underline;
+              color: #344E72; }
               .help-center .faq .faq-content .topic .faq-body p a:hover {
                 color: #FBC509;
                 transition: 0.3s color ease-in-out; }
@@ -2309,7 +2333,8 @@
   height: calc(100% - 10px);
   padding: 5px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  color: #344E72; }
   .slot-game .slot-body {
     margin: 10px;
     width: calc(100% - 340px);
@@ -2440,6 +2465,7 @@
           align-items: center;
           height: 56px;
           padding: 0 15px;
+          color: #344E72;
           cursor: pointer; }
           .slot-game .slot-body .slot-footer .slot-sub-nav .link.active, .slot-game .slot-body .slot-footer .slot-sub-nav .link:hover {
             color: #FFF;
@@ -2975,7 +3001,8 @@
           text-transform: uppercase; }
           .windrops .sub-tokens-group .sub-token .current-drops .row .current {
             display: flex;
-            width: 60%; }
+            width: 60%;
+            color: #344E72; }
             .windrops .sub-tokens-group .sub-token .current-drops .row .current .icon {
               display: flex;
               margin-right: 6px;
@@ -3044,7 +3071,8 @@
             color: #FFF;
             font-size: 16px; }
         .windrops .sub-tokens-group .sub-token .frozen .title {
-          height: 17px; }
+          height: 17px;
+          color: #344E72; }
         .windrops .sub-tokens-group .sub-token .frozen .total {
           width: 100%;
           height: 27px;
@@ -3069,7 +3097,8 @@
           align-items: center;
           width: 100%;
           height: 35px;
-          line-height: 1; }
+          line-height: 1;
+          color: #344E72; }
       .windrops .sub-tokens-group .sub-token .btn-group {
         display: flex;
         flex-direction: column;
@@ -3086,7 +3115,8 @@
           border-top: 1px solid #101E41; }
           .windrops .sub-tokens-group .sub-token .btn-group .token-nav .info-col {
             width: calc(100% - 170px);
-            padding: 0 90px 0 0; }
+            padding: 0 90px 0 0;
+            color: #344E72; }
             .windrops .sub-tokens-group .sub-token .btn-group .token-nav .info-col .amount {
               font-weight: 600;
               color: #FFF;
@@ -3100,7 +3130,8 @@
             height: 34px;
             align-items: center;
             justify-content: flex-end;
-            white-space: nowrap; }
+            white-space: nowrap;
+            color: #344E72; }
           .windrops .sub-tokens-group .sub-token .btn-group .token-nav .btn {
             display: flex;
             width: 80px;
@@ -3502,7 +3533,8 @@
   .polo-wallet .balances .table-responsive {
     width: 100%;
     overflow: auto;
-    border-radius: 0 0 3px 3px; }
+    border-radius: 0 0 3px 3px;
+    color: #344E72; }
     .polo-wallet .balances .table-responsive table {
       width: 100%;
       text-align: left;
@@ -3538,7 +3570,8 @@
           display: flex;
           align-items: center;
           height: 36px;
-          position: relative; }
+          position: relative;
+          color: #344E72; }
           .polo-wallet .balances .table-responsive table tbody tr td a .arrow {
             position: absolute;
             display: flex;
@@ -3632,7 +3665,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   list-style-type: none;
   text-decoration: none;
   outline: none;
-  color: #344E72;
   font-size: 13px; }
 
 body, html {
