@@ -36,6 +36,26 @@ body, html {
     min-width: 320px;
     height: 100%;
     background: $bg-color;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $sub-nav-bg; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $btn-hover-color; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $text-color; 
+    }
 }
 
 @font-face {

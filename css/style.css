@@ -4140,7 +4140,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body, html {
   min-width: 320px;
   height: 100%;
-  background: #060E22; }
+  background: #060E22;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    width: 10px; }
+  body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+    background: #040916; }
+  body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+    background: #101E41; }
+  body ::-webkit-scrollbar-thumb:hover, html ::-webkit-scrollbar-thumb:hover {
+    background: #344E72; }
 
 @font-face {
   font-family: 'fontello';
