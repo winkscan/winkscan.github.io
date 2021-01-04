@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINk - Best Blockchain Gambling Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body class="en">
+    
+    <div class="popup-wrapper notofication-popup">
+        <div class="popup">
+            <div class="popup-header">
+                WINk’s New POker (Alpha) is online now!<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <label>Dear WINksters!</label>
+                    <p>We are happy to announce that New Poker (Alpha) is now officially launched. If you have any suggestions on our New Poker (Alpha), feel free to let us know.</p>
+                    <p>There is a feedback entry that you can submit to let us know what you think about it and advise on New Poker (Alpha).</p>
+                    <p>Good luck WINksters and we look forward to your feedback.</p>
+                    <p>Team WINk.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="mainpage.html" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="live-casino.html" class="btn active">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="live-casino.html">Casino</a></li>
+                        <li><a href="sports-binarium.html">Sports</a></li>
+                        <li><a href="sports-binarium.html">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="https://blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" onclick="toogleHamburger()" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="windrops.html" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="help-center.html" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-nav">
+                <!-- Dice menu
+                <div class="group dice-platform">
+                    <label><i class="icon dice"></i>Dice</label>
+                    <a href="" class="link">Dice</a>
+                    <a href="" class="link">Moon</a>
+                    <a href="" class="link">Ring</a>
+                    <a href="" class="link">Duel</a>
+                    <a href="" class="link">Mine</a>
+                </div>-->
+                <div class="group live-platform">
+                    <label><i class="icon live"></i>Live</label>
+                    <a href="live-casino.html" class="link active">Casino</a>
+                    <a href="sports-binarium.html" class="link">Sports</a>
+                    <a href="sports-binarium.html" class="link">Binarium</a>
+                </div>
+                <!-- Rake menu
+                <div class="group rake-platform">
+                    <label><i class="icon rake"></i>Rake</label>
+                    <a href="" class="link">Poker</a>
+                    <a href="" class="link">Poker Alpha</a>
+                </div>
+                -->
+            </div>
+            <div class="slot-game">
+                <div class="slot-body">
+                    <div class="slot-header">
+                        <label>Slot Title</label>
+                        <div class="slot-nav">
+                            <div class="btn btn-chat"><i class="wnk-icon icon-trophy">&#xe825;</i></div>
+                            <div class="btn btn-chat-mobile"><i class="wnk-icon icon-trophy">&#xe825;</i></div>
+                            <div class="btn btn-fullscreen"><i class="icon-fullscreen"></i></div>
+                            <div class="btn btn-close"><i class="icon-close"></i></div>
+                        </div>
+                    </div>
+                    <div class="slot-container">
+                        Game here
+                    </div>
+                    <div class="slot-footer">
+                        <div class="games-list">
+                            <a href="/" class="game"><img src="img/slot-hades.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-kraken.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-game-rocks.png" /></a>
+                            <a href="/" class="game"><img src="img/game-crazytime.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-hades.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-kraken.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-game-rocks.png" /></a>
+                            <a href="/" class="game"><img src="img/game-crazytime.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-hades.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-kraken.png" /></a>
+                            <a href="/" class="game"><img src="img/slot-game-rocks.png" /></a>
+                            <a href="/" class="game"><img src="img/game-crazytime.png" /></a>
+                        </div>
+                        <div class="slot-sub-nav">
+                            <a href="/" class="link">All</a>
+                            <a href="/" class="link active">New</a>
+                            <a href="/" class="link">Top</a>
+                            <a href="/" class="link">Slots</a>
+                            <a href="/" class="link">Table</a>
+                            <a href="/" class="link">Live</a>
+                        </div>
+                        <div class="search-by-name">
+                            <span class="select">
+                                <input type="text" value="Find your game" /><div class="btn-search"></div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="side-col-nav">
+                        <button class="btn-rankings">Rankings</button>
+                        <button class="btn-chat-room active">Chat</button>
+                        <button class="btn-close-chat"><i class="icon-close"></i></button>
+                        <button class="btn-close-chat-mobile"><i class="icon-close"></i></button>
+                    </div>
+                    <div class="side-col-body">
+                        <!--
+                        <div class="rankings">
+                            <div class="btn-group">
+                                <button class="btn active">Betting Rank</button>
+                                <button class="btn">Profit Rank</button>
+                            </div>
+                            <div class="timer">94:10:00</div>
+                            <div class="table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Player</th>
+                                            <th>Total Played</th>
+                                            <th>Prize</th>
+                                        </tr>    
+                                    </thead>    
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>10,000 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>5,000 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>1,000 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>TKmcb...3UrJX</td>
+                                            <td>760,135 TRX</td>
+                                            <td>0 TRX</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        -->
+                        <div class="chat active">
+                            <div class="ant-list">
+                                <ul>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please</span>
+                                        </div>
+                                    </li>
+                                    <li class="ant-list-item styles_chatListItem__51qtW ">
+                                        <p class="styles_levelRow__3dW1u">LV.23&nbsp;&nbsp;KALAH_MULU_AJG</p>
+                                        <div class="styles_messageRow__1CsmD flex">
+                                            <span class="styles_avatar__3Vp8s bg-highlight w-30px h-30px rounded-full mt-5px flex-shrink-0"></span>
+                                            <span class="styles_messageText__1zpc9 p-10px ml-10px">cover me 500 trx for hit the gold please cover me 500 trx for hit the gold please bla bla bla</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> 
+                            <footer class="styles_footer__1pCc4 p-10px space-x-10px flex text-white">
+                                <input placeholder="Input something" class="ant-input flex-1  text-white rounded-full styles_input__-EEkk" maxlength="200" type="text" value="">
+                                <span role="img" aria-label="smile" tabindex="-1" class="anticon anticon-smile text-3xl pointer"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="smile" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M288 421a48 48 0 1096 0 48 48 0 10-96 0zm352 0a48 48 0 1096 0 48 48 0 10-96 0zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm263 711c-34.2 34.2-74 61-118.3 79.8C611 874.2 562.3 884 512 884c-50.3 0-99-9.8-144.8-29.2A370.4 370.4 0 01248.9 775c-34.2-34.2-61-74-79.8-118.3C149.8 611 140 562.3 140 512s9.8-99 29.2-144.8A370.4 370.4 0 01249 248.9c34.2-34.2 74-61 118.3-79.8C413 149.8 461.7 140 512 140c50.3 0 99 9.8 144.8 29.2A370.4 370.4 0 01775.1 249c34.2 34.2 61 74 79.8 118.3C874.2 413 884 461.7 884 512s-9.8 99-29.2 144.8A368.89 368.89 0 01775 775zM664 533h-48.1c-4.2 0-7.8 3.2-8.1 7.4C604 589.9 562.5 629 512 629s-92.1-39.1-95.8-88.6c-.3-4.2-3.9-7.4-8.1-7.4H360a8 8 0 00-8 8.4c4.4 84.3 74.5 151.6 160 151.6s155.6-67.3 160-151.6a8 8 0 00-8-8.4z"></path></svg></span>
+                                <span role="img" aria-label="send" tabindex="-1" class="anticon anticon-send text-3xl text-highlight pointer"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="send" width="1em" height="1em" fill="currentColor" aria-hidden="true"><defs><style></style></defs><path d="M931.4 498.9L94.9 79.5c-3.4-1.7-7.3-2.1-11-1.2a15.99 15.99 0 00-11.7 19.3l86.2 352.2c1.3 5.3 5.2 9.6 10.4 11.3l147.7 50.7-147.6 50.7c-5.2 1.8-9.1 6-10.3 11.3L72.2 926.5c-.9 3.7-.5 7.6 1.2 10.9 3.9 7.9 13.5 11.1 21.5 7.2l836.5-417c3.1-1.5 5.6-4.1 7.2-7.1 3.9-8 .7-17.6-7.2-21.6zM170.8 826.3l50.3-205.6 295.2-101.3c2.3-.8 4.2-2.6 5-5 1.4-4.2-.8-8.7-5-10.2L221.1 403 171 198.2l628 314.9-628.2 313.2z"></path></svg></span>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+        $('.btn-notification').click( function() {
+            $(".notofication-popup").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 0) {
+                $('.sub-nav').addClass('stick-to-top');
+            } else {
+                $('.sub-nav').removeClass('stick-to-top');
+            }
+        });
+
+        $('.btn-close-chat').click( function() {
+            $(".slot-body").toggleClass("wide");
+            $(".side-col").toggleClass("hide");
+        } );
+        $('.btn-chat').click( function() {
+            $(".slot-body").toggleClass("wide");
+            $(".side-col").toggleClass("hide");
+        } );
+        $('.btn-chat-mobile').click( function() {
+            $(".slot-body").toggleClass("hide");
+            $(".side-col").toggleClass("wide");
+        } );
+        $('.btn-close-chat-mobile').click( function() {
+            $(".slot-body").toggleClass("hide");
+            $(".side-col").toggleClass("wide");
+        } );
+    </script>
+
+</body>
+</html>

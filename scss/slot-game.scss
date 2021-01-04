@@ -594,6 +594,10 @@
 
             .chat {
                 display: none;
+
+                &.active {
+                    display: block;
+                }
             }
         }
     }
