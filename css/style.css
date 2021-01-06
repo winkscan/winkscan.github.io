@@ -768,6 +768,27 @@
       .top-nav .useful-links .link:hover .title, .top-nav .useful-links .link.active .title {
         color: #FFF;
         transition: 0.3s color ease-in-out; }
+    .top-nav .useful-links .btn-announcement {
+      display: flex;
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      outline: none;
+      border-radius: 18px;
+      cursor: pointer;
+      border: 1px solid #344E72; }
+      .top-nav .useful-links .btn-announcement .wnk-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        color: #FFF;
+        font-size: 16px; }
   .top-nav .navigation {
     display: flex;
     justify-content: flex-end;
@@ -1184,13 +1205,26 @@
         background-size: 18px; }
   @media screen and (max-width: 992px) {
     .top-nav .useful-links {
-      width: 60px; }
+      width: 80px; }
+      .en .top-nav .useful-links .link {
+        margin-right: 0; }
+      .ar .top-nav .useful-links .link {
+        margin-left: 0; }
       .top-nav .useful-links .link .wnk-icon {
         margin-right: 0; }
       .top-nav .useful-links .link .title {
         display: none; }
+      .top-nav .useful-links .btn-announcement {
+        width: 20px;
+        min-width: 20px;
+        height: 36px;
+        border-radius: 0;
+        border: none; }
+        .top-nav .useful-links .btn-announcement .wnk-icon {
+          color: #344E72;
+          font-size: 20px; }
     .top-nav .navigation {
-      width: calc(100% - 60px); } }
+      width: calc(100% - 80px); } }
   @media screen and (max-width: 768px) {
     .top-nav .useful-links {
       display: none; }
@@ -1234,14 +1268,23 @@
         padding-bottom: 20px;
         align-items: flex-end; }
         .top-nav .useful-links .link {
-          width: 50%;
-          justify-content: center; }
+          width: calc(50% - 18px);
+          height: 36px;
+          justify-content: flex-start; }
           .top-nav .useful-links .link .title {
             display: block; }
           .en .top-nav .useful-links .link .wnk-icon {
             margin-right: 10px; }
           .ar .top-nav .useful-links .link .wnk-icon {
             margin-left: 10px; }
+        .top-nav .useful-links .btn-announcement {
+          width: 36px;
+          min-width: 36px;
+          border-radius: 18px;
+          border: 1px solid #344E72; }
+          .top-nav .useful-links .btn-announcement .wnk-icon {
+            color: #FFF;
+            font-size: 16px; }
       .top-nav .navigation {
         order: 1;
         display: flex;

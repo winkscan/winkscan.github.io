@@ -66,6 +66,31 @@
                 }
             }
         }
+
+        .btn-announcement {
+            display: flex;
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            outline: none;
+            border-radius: 18px;
+            cursor: pointer;
+            border: 1px solid $text-color;
+
+            .wnk-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                color: $white-color;
+                font-size: 16px;
+            }
+        }
     }
 
     .navigation {
@@ -718,9 +743,17 @@
 
     @media screen and (max-width: 992px) {
         .useful-links {
-            width: 60px;
+            width: 80px;
 
             .link {
+                .en & {
+                    margin-right: 0;
+                }
+    
+                .ar & {
+                    margin-left: 0;
+                }
+
                 .wnk-icon {
                     margin-right: 0;
                 }
@@ -729,10 +762,23 @@
                     display: none;
                 }
             }
+
+            .btn-announcement {
+                width: 20px;
+                min-width: 20px;
+                height: 36px;
+                border-radius: 0;
+                border: none;
+    
+                .wnk-icon {
+                    color: $text-color;
+                    font-size: 20px;
+                }
+            }
         }
 
         .navigation {
-            width: calc(100% - 60px);
+            width: calc(100% - 80px);
         }
     }
 
@@ -806,8 +852,9 @@
             align-items: flex-end;
 
             .link {
-                width: 50%;
-                justify-content: center;
+                width: calc(50% - 18px);
+                height: 36px;
+                justify-content: flex-start;
 
                 .title {
                     display: block;
@@ -821,6 +868,18 @@
                     .ar & {
                         margin-left: 10px;
                     }
+                }
+            }
+
+            .btn-announcement {
+                width: 36px;
+                min-width: 36px;
+                border-radius: 18px;
+                border: 1px solid $text-color;
+
+                .wnk-icon {
+                    color: $white-color;
+                    font-size: 16px;
                 }
             }
         }
