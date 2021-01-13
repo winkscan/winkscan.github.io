@@ -9,6 +9,60 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body class="en">
+    
+    <div class="popup-wrapper win-burnt-log">
+        <div class="popup">
+            <div class="popup-header">
+                WIN Burnt Log<span class="close-popup"></span>
+            </div>
+            <div class="popup-body burn-body">
+                <label class="title">BURNdrops</label>
+                <div class="total-burned">
+                    <i class="wnk-icon icon-icon-burn">&#xe828;</i>86,606,466.11 WIN
+                </div>
+                <span class="total">WIN in burn pool is not entitled for WINdrops and will disappear forever after burnt. WIN burn will happen every 2 weeks.</span>
+                <label class="title">Burnt WIN</label>
+                <div class="total-burned">
+                    <i class="wnk-icon icon-icon-burn">&#xe828;</i>4,144,071,883.74 WIN
+                </div>
+                <span class="total">Every month, WINk team will use 50% of monthly profit to buy back WIN from the secondary market and burn.</span>
+                <label class="title">WIN Burnt Log</label>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>From</th>
+                                <th>Quantity</th>
+                                <th>Hash</th>
+                            </tr>    
+                        </thead>    
+                        <tbody>
+                            <tr>
+                                <td>2020-09-27</td>
+                                <td>Buyback</td>
+                                <td class="amount">1360499.6 WIN</td>
+                                <td><a href="https://tronscan.org/#/transaction/313b8f31c1b8d14706b3b392d55eaf7b96bdd83ea5936a9fe3694c9c2778418a" target="_blank">313b8f31c1...</a></td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-27</td>
+                                <td>Buyback</td>
+                                <td class="amount">1360499.6 WIN</td>
+                                <td><a href="https://tronscan.org/#/transaction/313b8f31c1b8d14706b3b392d55eaf7b96bdd83ea5936a9fe3694c9c2778418a" target="_blank">313b8f31c1...</a></td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-27</td>
+                                <td>Buyback</td>
+                                <td class="amount">1360499.6 WIN</td>
+                                <td><a href="https://tronscan.org/#/transaction/313b8f31c1b8d14706b3b392d55eaf7b96bdd83ea5936a9fe3694c9c2778418a" target="_blank">313b8f31c1...</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="popup-wrapper notofication-popup">
         <div class="popup">
             <div class="popup-header">
@@ -288,7 +342,12 @@
                 <div class="windrops">
                     <div class="win-token">
                         <div class="token-header">
-                            <h1>Windrops<button class="btn-bscdrops"><i class="wnk-icon icon-bnb">&#xe82b;</i>BSC Drops</button></h1><div class="countdown">06:34:58</div>
+                            <h1>
+                                Windrops
+                                <button class="btn-bscdrops"><i class="wnk-icon icon-bnb">&#xe82b;</i><span class="title">BSC Drops</span></button>
+                                <button class="btn-burned"><i class="wnk-icon icon-icon-burn">&#xe828;</i><span class="title">WIN Token Burn</span></button>
+                            </h1>
+                            <div class="countdown">06:34:58</div>
                         </div>
                         <div class="drops">
                             <div class="amounts">
@@ -298,7 +357,9 @@
                                 </span>
                                 <span class="you-will-receive">You wil receive:<span class="totals">0 TRX, 0 USDT, 0 BTT</span></span>
                             </div>
-                            <div class="frozen">Total frozen across network<span class="amount">138 393 736 725,791 WIN</span></div>
+                            <div class="frozen">
+                                Total frozen across network<span class="amount">138 393 736 725,791 WIN</span>
+                            </div>
                         </div>
                         <div class="btn-group">
                             <div class="token-nav">
@@ -563,6 +624,9 @@
         } );
         $('.btn-bscdrops').click( function() {
             $(".bscdrops-popup").toggleClass("show");
+        } );
+        $('.btn-burned').click( function() {
+            $(".win-burnt-log").toggleClass("show");
         } );
         $('.tab-dice').click( function() {
             $(".tab-dice").toggleClass("active");

@@ -48,20 +48,18 @@
                 font-weight: 600;
                 text-transform: uppercase;
 
-                .btn-bscdrops {
+                .btn-burned, .btn-bscdrops {
                     display: flex;
                     align-items: center;
-                    padding: 0 10px;
+                    justify-content: flex-start;
+                    width: 30px;
                     height: 30px;
-                    color: #B0A26E;
-                    font-size: $font-size-xs;
-                    font-weight: normal;
+                    padding: 0;
                     cursor: pointer;
-                    text-transform: normal;
+                    overflow: hidden;
+                    border-radius: 15px;
                     border: none;
                     outline: none;
-                    background: $windrops-text-color;
-                    border-radius: 15px;
 
                     .en & {
                         margin-left: 10px;
@@ -72,16 +70,57 @@
                     }
 
                     .wnk-icon {
-                        font-size: 14px;
-                        color: #B0A26E;
+                        display: flex;
+                        width: 30px;
+                        min-width: 30px;
+                        height: 30px;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white-color;
+                        font-size: 16px;
+                    }
 
-                        .en & {
-                            margin-right: 6px;
-                        }
-    
-                        .ar & {
-                            margin-left: 6px;
-                        }
+                    .title {
+                        white-space: nowrap;
+                        color: $white-color;
+                        font-size: $font-size-xs;
+                        font-weight: normal;
+                    }
+                }
+
+                .btn-burned {
+                    color: $white-color;
+                    background: $red-color;
+
+                    .title {
+                        width: 105px;
+                        min-width: 105px;
+                        text-align: left;
+                    }
+
+                    &:hover {
+                        width: 135px;
+                        transition: 0.3s width ease-in-out;
+                    }
+                }
+
+                .btn-bscdrops {
+                    color: #B0A26E;
+                    background: $windrops-text-color;
+
+                    .wnk-icon {
+                        color: #B0A26E;
+                    }
+
+                    .title {
+                        width: 75px;
+                        min-width: 75px;
+                        text-align: left;
+                    }
+
+                    &:hover {
+                        width: 105px;
+                        transition: 0.3s width ease-in-out;
                     }
                 }
             }
@@ -905,6 +944,30 @@
 
     @media screen and (max-width: 576px) {
         .win-token {
+            .token-header {
+                h1 {
+                    .btn-burned {
+                        .title {
+                            display: none;
+                        }
+    
+                        &:hover {
+                            width: 30px;
+                        }
+                    }
+    
+                    .btn-bscdrops {
+                        .title {
+                            display: none;
+                        }
+    
+                        &:hover {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+            
             .drops {
                 .amounts {
                     .trx {

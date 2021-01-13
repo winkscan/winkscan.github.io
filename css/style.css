@@ -1820,9 +1820,18 @@
               color: #FBC509; }
       .popup-wrapper .popup .popup-body.burn-body {
         width: 100%;
-        padding: 0; }
+        padding: 15px 0 0 0; }
+        .popup-wrapper .popup .popup-body.burn-body .title {
+          margin: 0 0 10px 0;
+          display: flex;
+          justify-content: center;
+          width: calc(100% - 30px);
+          padding: 0 15px;
+          font-weight: bold;
+          font-size: 16px;
+          color: #FBC509; }
         .popup-wrapper .popup .popup-body.burn-body .total-burned {
-          margin-top: 15px;
+          margin: 0 0 5px 0;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
@@ -1838,7 +1847,10 @@
           margin-bottom: 15px;
           display: flex;
           justify-content: center;
-          width: 100%;
+          align-items: center;
+          text-align: center;
+          width: calc(100% - 30px);
+          padding: 0 15px;
           font-weight: normal;
           font-size: 13px;
           color: #344E72; }
@@ -3100,31 +3112,58 @@
         color: #FFF;
         font-weight: 600;
         text-transform: uppercase; }
-        .windrops .win-token .token-header h1 .btn-bscdrops {
+        .windrops .win-token .token-header h1 .btn-burned, .windrops .win-token .token-header h1 .btn-bscdrops {
           display: flex;
           align-items: center;
-          padding: 0 10px;
+          justify-content: flex-start;
+          width: 30px;
           height: 30px;
-          color: #B0A26E;
-          font-size: 13px;
-          font-weight: normal;
+          padding: 0;
           cursor: pointer;
-          text-transform: normal;
+          overflow: hidden;
+          border-radius: 15px;
           border: none;
-          outline: none;
-          background: #292628;
-          border-radius: 15px; }
-          .en .windrops .win-token .token-header h1 .btn-bscdrops {
+          outline: none; }
+          .en .windrops .win-token .token-header h1 .btn-burned, .en .windrops .win-token .token-header h1 .btn-bscdrops {
             margin-left: 10px; }
-          .ar .windrops .win-token .token-header h1 .btn-bscdrops {
+          .ar .windrops .win-token .token-header h1 .btn-burned, .ar .windrops .win-token .token-header h1 .btn-bscdrops {
             margin-right: 10px; }
+          .windrops .win-token .token-header h1 .btn-burned .wnk-icon, .windrops .win-token .token-header h1 .btn-bscdrops .wnk-icon {
+            display: flex;
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            font-size: 16px; }
+          .windrops .win-token .token-header h1 .btn-burned .title, .windrops .win-token .token-header h1 .btn-bscdrops .title {
+            white-space: nowrap;
+            color: #FFF;
+            font-size: 13px;
+            font-weight: normal; }
+        .windrops .win-token .token-header h1 .btn-burned {
+          color: #FFF;
+          background: #D80027; }
+          .windrops .win-token .token-header h1 .btn-burned .title {
+            width: 105px;
+            min-width: 105px;
+            text-align: left; }
+          .windrops .win-token .token-header h1 .btn-burned:hover {
+            width: 135px;
+            transition: 0.3s width ease-in-out; }
+        .windrops .win-token .token-header h1 .btn-bscdrops {
+          color: #B0A26E;
+          background: #292628; }
           .windrops .win-token .token-header h1 .btn-bscdrops .wnk-icon {
-            font-size: 14px;
             color: #B0A26E; }
-            .en .windrops .win-token .token-header h1 .btn-bscdrops .wnk-icon {
-              margin-right: 6px; }
-            .ar .windrops .win-token .token-header h1 .btn-bscdrops .wnk-icon {
-              margin-left: 6px; }
+          .windrops .win-token .token-header h1 .btn-bscdrops .title {
+            width: 75px;
+            min-width: 75px;
+            text-align: left; }
+          .windrops .win-token .token-header h1 .btn-bscdrops:hover {
+            width: 105px;
+            transition: 0.3s width ease-in-out; }
       .windrops .win-token .token-header .countdown {
         width: 80px;
         font-size: 18px;
@@ -3645,6 +3684,14 @@
         width: calc(100% - 30px);
         border-top: 1px solid rgba(255, 255, 255, 0.3); } }
   @media screen and (max-width: 576px) {
+    .windrops .win-token .token-header h1 .btn-burned .title {
+      display: none; }
+    .windrops .win-token .token-header h1 .btn-burned:hover {
+      width: 30px; }
+    .windrops .win-token .token-header h1 .btn-bscdrops .title {
+      display: none; }
+    .windrops .win-token .token-header h1 .btn-bscdrops:hover {
+      width: 30px; }
     .windrops .win-token .drops .amounts .trx {
       font-size: 42px; }
       .windrops .win-token .drops .amounts .trx .wnk-icon {

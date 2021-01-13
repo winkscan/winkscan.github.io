@@ -208,10 +208,21 @@
 
             &.burn-body {
                 width: 100%;
-                padding: 0;
+                padding: 15px 0 0 0;
+
+                .title {
+                    margin: 0 0 10px 0;
+                    display: flex;
+                    justify-content: center;
+                    width: calc(100% - 30px);
+                    padding: 0 15px;
+                    font-weight: bold;
+                    font-size: $font-size-md;
+                    color: $orange-color;
+                }
 
                 .total-burned {
-                    margin-top: 15px;
+                    margin: 0 0 5px 0;
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
@@ -231,7 +242,10 @@
                     margin-bottom: 15px;
                     display: flex;
                     justify-content: center;
-                    width: 100%;
+                    align-items: center;
+                    text-align: center;
+                    width: calc(100% - 30px);
+                    padding: 0 15px;
                     font-weight: normal;
                     font-size: $font-size-xs;
                     color: $text-color; 
