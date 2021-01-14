@@ -232,6 +232,17 @@
                         font-size: $font-size-md;
                         color: $windrops-text-color;
                     }
+
+                    .winkscan {
+                        display: block;
+                        padding-top: 10px;
+    
+                        a {
+                            text-decoration: underline;
+                            font-weight: 600;
+                            color: $windrops-text-color;
+                        }
+                    }
                 }
             }
 

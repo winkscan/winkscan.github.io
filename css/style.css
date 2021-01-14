@@ -3238,6 +3238,13 @@
             font-weight: 600;
             font-size: 16px;
             color: #292628; }
+          .windrops .win-token .drops .amounts .you-will-receive .winkscan {
+            display: block;
+            padding-top: 10px; }
+            .windrops .win-token .drops .amounts .you-will-receive .winkscan a {
+              text-decoration: underline;
+              font-weight: 600;
+              color: #292628; }
       .windrops .win-token .drops .frozen {
         display: flex;
         flex-direction: column;
