@@ -1,0 +1,1065 @@
+.hi-lo-game {
+    position: relative;
+    z-index: 1;
+    margin: 0 15px 15px 15px;
+    width: calc(100% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 440px;
+    justify-content: center;
+    border-radius: 3px;
+    background-image: linear-gradient($btn-hover-color, $hilo-gradient-bg);
+
+    .game-rules {
+        position: absolute;
+        z-index: 6;
+        top: 10px;
+        display: flex;
+        height: 18px;
+        align-items: center;
+        color: $white-color;
+        cursor: pointer;
+        font-size: $font-size-xs;
+
+        .en & {
+            right: 15px;
+        }
+
+        .ar & {
+            left: 15px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            font-weight: 600;
+            font-size: $font-size-xs;
+            color: $sub-nav-bg;
+            border-radius: 9px;
+            font-style: normal;
+            background: $white-color;
+
+            .en & {
+                margin-right: 4px;
+            }
+
+            .ar & {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        content:'';
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        background: url('../img/poker-texture.svg') repeat;
+        background-size: auto auto;
+    }
+
+    .card-col, .game-history {
+        position: relative;
+        z-index: 3;
+        display: flex;
+    }
+
+    .card-col {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 320px;
+        height: 300px;
+        padding-top: 59px;
+
+        &.calculations {
+            height: 359px;
+            padding-top: 0;
+            justify-content: center;
+        }
+
+        .blank {
+            margin-top: 24px;
+
+            &.blank-ace {
+                display: none;
+            }
+
+            .card {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                width: 132px;
+                height: 176px;
+                padding-top: 20px;
+                justify-content: center;
+                align-items: flex-start;
+                font-size: 50px;
+                font-weight: 600;
+                position: relative;
+                border-radius: 6px;
+                color: rgba(255,255,255,0.5);
+                border: 2px solid rgba(255,255,255,0.5);
+
+                &:after {
+                    position: absolute;
+                    bottom: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: calc(50% - 12px);
+                    width: 24px;
+                    height: 24px;
+                    font-size: 20px;
+                    content: '\e832';
+                    font-weight: normal;
+                    font-family: 'fontello';       
+                }
+
+                &.low {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+    
+            .dd {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 4px 0;
+                text-align: center;
+                min-height: 24px;
+                color: rgba(255,255,255,0.5);
+                font-weight: 500;
+            }
+        }
+
+        .card-back {
+            position: relative;
+            display: flex;
+            margin-top: 24px;
+            width: 136px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            background: $white-color;
+            border-radius: 6px;
+            background-size: 125px auto;
+
+            &:after {
+                left: 5px;
+                top: 5px;
+                position: absolute;
+                display: block;
+                content:'';
+                width: 122px;
+                height: 186px;
+                border: 2px solid #585961;
+            }
+
+            &:before {
+                position: absolute;
+                left: 9px;
+                top: 9px;
+                width: 116px;
+                height: 180px;
+                border: 1px solid #585961;
+                content: '';
+                background: url('../img/card-bg.svg') no-repeat center;
+                background-size: auto 100%;
+            }
+
+            .logo {
+                position: relative;
+                width: 80px;
+                height: 80px;
+                background: $white-color;
+                transform: rotate(45deg);
+
+                &:after {
+                    position: absolute;
+                    content:'';
+                    display: block;
+                    top: 5px;
+                    left: 5px;
+                    width: 68px;
+                    height: 68px;
+                    border: 1px solid #585961;
+                }
+
+                &:before {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0;
+                    left: 0;
+                    width: 68px;
+                    height: 68px;
+                    color: #585961;
+                    font-size: 24px;
+                    line-height: 24px;
+                    font-family: 'fontello';
+                    content: '\e829';
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .skip {
+            position: relative;
+            display: flex;
+            width: 135px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+
+            label {
+                color: rgba(255,255,255,0.5);
+                font-weight: 500;
+            }
+
+            .btn-skip {
+                position: absolute;
+                z-index: 10;
+                top: 6px;
+                display: flex;
+                width: 36px;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 10px;
+                font-weight: 600;
+                color: $white-color;
+                background: $text-color;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 18px;
+
+                .en & {
+                    right: -18px;
+                }
+
+                .ar & {
+                    left: -18px;
+                }
+
+                &:after {
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    font-weight: normal;
+                    content: '\e82c';
+                    font-family: 'fontello';
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+
+                &:active {
+                    &:after {
+                        animation-name: skip-btn-rotate;
+                        animation-duration: 0.3s;
+                        transform: rotate(180deg);
+        
+                        @keyframes skip-btn-rotate {
+                            from {transform: rotate(0deg);}
+                            to {transform: rotate(180deg);}
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-deck {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            margin-top: 6px;
+            width: 136px;
+            height: 200px;
+            position: relative;
+            align-items: center;
+            background: $white-color;
+            border-radius: 6px;
+            box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+
+            &:after, &:before {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 136px;
+                height: 200px;
+                content: '';
+                align-items: center;
+                background: $white-color;
+                border-radius: 6px;
+                box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+            }
+
+            &:after {
+                top: -2px;
+                z-index: 2;
+            }
+
+            &:before {
+                top: -4px;
+                z-index: 3;
+            }
+        }
+
+        .flip-card {
+            position: absolute;
+            z-index: 4;
+            right: calc(50% - 68px);
+            top: 83px;
+            background-color: transparent;
+            width: 136px;
+            height: 200px;
+            perspective: 1000px;
+
+            &.win-card {
+                .flip-card-inner {
+                    margin-top: 0;
+                    box-shadow: 0px 0px 20px #36AA9F;
+                    animation-name: win-card-fly;
+                    animation-duration: 0.6s;
+            
+                    @keyframes win-card-fly {
+                        0% {box-shadow: none; margin-top: 0;}
+                        50% { margin-top: -6px;}
+                        100% {box-shadow: 0px 0px 20px #36AA9F;  margin-top: 0;}
+                    }
+                }
+            }
+
+            &.lose-card {
+                .flip-card-inner {
+                    margin-top: 0;
+                    box-shadow: 0px 0px 20px $red-color;
+                    animation-name: lose-card-fly;
+                    animation-duration: 0.6s;
+            
+                    @keyframes lose-card-fly {
+                        0% {box-shadow: none; margin-top: 0;}
+                        50% { margin-top: -6px;}
+                        100% {box-shadow: 0px 0px 20px $red-color;  margin-top: 0;}
+                    }
+                }
+            }
+
+            &.fly {
+                animation-name: flying-card;
+                animation-duration: 0.6s;
+                right: calc(100% + 92px);
+        
+                @keyframes flying-card {
+                    0% {right: calc(50% - 68px);}
+                    50% {
+                        -webkit-filter: blur(5px);
+                        -moz-filter: blur(5px);
+                        -o-filter: blur(5px);
+                        -ms-filter: blur(5px);
+                        filter: blur(5px);
+                    }
+
+                    100% {
+                        right: calc(100% + 92px);
+                        -webkit-filter: blur(0);
+                        -moz-filter: blur(0);
+                        -o-filter: blur(0);
+                        -ms-filter: blur(0);
+                        filter: blur(0);
+                    }
+                }
+                
+                .flip-card-inner {
+                    transform: rotateY(-180deg);
+                }
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                border-radius: 6px;
+                box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+
+                .flip-card-front, .flip-card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    border-radius: 6px;
+                }
+
+                .flip-card-front {
+                    z-index: 4;
+                    display: flex;
+                    height: calc(100% - 20px);
+                    padding-top: 20px;
+                    justify-content: center;
+                    align-items: flex-start;
+                    font-size: 50px;
+                    font-weight: 600;
+                    background: $white-color;
+
+                    &:after {
+                        position: absolute;
+                        left: calc(50% - 40px);
+                        top: 85px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 80px;
+                        height: 80px;
+                        font-family: 'fontello';
+                    }
+
+                    &.hearts {
+                        color: $red-color;
+                        
+                        &:after {
+                            content: '\e83c';
+                            color: $red-color;
+                            font-size: 66px;
+                        }
+                    }
+
+                    &.diamonds {
+                        color: $red-color;
+                        
+                        &:after {
+                            content: '\e839';
+                            color: $red-color;
+                            font-size: 76px;
+                        }
+                    }
+
+                    &.spades {
+                        color: $sub-nav-bg;
+                        
+                        &:after {
+                            content: '\e83a';
+                            color: $sub-nav-bg;
+                            font-size: 76px;
+                        }
+                    }
+
+                    &.clubs {
+                        color: $sub-nav-bg;
+                        
+                        &:after {
+                            content: '\e83b';
+                            color: $sub-nav-bg;
+                            font-size: 76px;
+                        }
+                    }
+                }
+                
+                .flip-card-back {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $white-color;
+                    background-size: 125px auto;
+                    transform: rotateY(180deg);
+
+                    &:after {
+                        left: 5px;
+                        top: 5px;
+                        position: absolute;
+                        display: block;
+                        content:'';
+                        width: 122px;
+                        height: 186px;
+                        border: 2px solid #585961;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        left: 9px;
+                        top: 9px;
+                        width: 116px;
+                        height: 180px;
+                        border: 1px solid #585961;
+                        content: '';
+                        background: url('../img/card-bg.svg') no-repeat center;
+                        background-size: auto 100%;
+                    }
+
+                    .logo {
+                        position: relative;
+                        width: 80px;
+                        height: 80px;
+                        background: $white-color;
+                        transform: rotate(45deg);
+
+                        &:after {
+                            position: absolute;
+                            content:'';
+                            display: block;
+                            top: 5px;
+                            left: 5px;
+                            width: 68px;
+                            height: 68px;
+                            border: 1px solid #585961;
+                        }
+
+                        &:before {
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            top: 0;
+                            left: 0;
+                            width: 68px;
+                            height: 68px;
+                            color: #585961;
+                            font-size: 24px;
+                            line-height: 24px;
+                            font-family: 'fontello';
+                            content: '\e829';
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .coef {
+            display: flex;
+            flex-wrap: wrap;
+
+            .amount {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                color: $white-color;
+                font-size: 50px;
+                line-height: 1;
+                letter-spacing: -1px;
+                font-weight: 600;
+            }
+
+            .dd {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                color: rgba(255,255,255,0.5);
+                font-size: $font-size-xs;
+            }
+        }
+
+        .result {
+            font-weight: 600;
+            animation-name: show-result;
+            animation-duration: 0.6s;
+            opacity: 1;
+            margin-top: 0;
+    
+            @keyframes show-result {
+                0% {opacity: 0; margin-top: -6px;}
+                100% {opacity: 1; margin-top: 0;}
+            }
+            
+            .win {
+                display: flex;
+                flex-wrap: wrap;
+                
+                label {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: $font-size-lg;
+                    color: $white-color;
+                    text-transform: uppercase;
+                }
+
+                .won-amount {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    color: $btn-green-color;
+                    font-size: 42px;
+                    line-height: 42px;
+                    letter-spacing: -1px;
+
+                    .currency {
+                        display: flex;
+                        align-items: flex-end;
+                        line-height: 26px;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        letter-spacing: 0;
+
+                        .en & {
+                            padding-left: 4px;
+                        }
+        
+                        .ar & {
+                            padding-right: 4px;
+                        }
+                    }
+                }
+
+                .winning-coef {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    color: rgba(255,255,255,0.5);
+                    font-size: $font-size-xs;
+                }
+            }
+
+            .lose {
+                display: flex;
+                justify-content: center;
+                font-size: $font-size-lg;
+                color: $red-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .game-history {
+        display: flex;
+        width: calc(100% - 30px);
+        height: 60px;
+        padding: 10px 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-top: 1px solid rgba(255,255,255,0.1);
+
+        .card {
+            z-index: 4;
+            position: relative;
+            display: flex;
+            width: 40px;
+            min-width: 40px;
+            height: 55px;
+            padding-top: 5px;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 18px;
+            font-weight: 600;
+            background: $white-color;
+            border-radius: 3px;
+            box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+
+            &:after {
+                position: absolute;
+                left: calc(50% - 12px);
+                top: 27px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                font-family: 'fontello';
+            }
+
+            &.hearts {
+                color: $red-color;
+                
+                &:after {
+                    content: '\e83c';
+                    color: $red-color;
+                    font-size: 20px;
+                }
+            }
+
+            &.diamonds {
+                color: $red-color;
+                
+                &:after {
+                    content: '\e839';
+                    color: $red-color;
+                    font-size: 24px;
+                }
+            }
+
+            &.spades {
+                color: $sub-nav-bg;
+                
+                &:after {
+                    content: '\e83a';
+                    color: $sub-nav-bg;
+                    font-size: 24px;
+                }
+            }
+
+            &.clubs {
+                color: $sub-nav-bg;
+                
+                &:after {
+                    content: '\e83b';
+                    color: $sub-nav-bg;
+                    font-size: 24px;
+                }
+            }
+
+            &.show-card {
+                animation-name: show-card;
+                animation-duration: 0.6s;
+                margin-top: 0;
+        
+                @keyframes show-card {
+                    from {margin-top: 80px;}
+                    to {margin-top: 0;}
+                }
+            }
+        }
+
+        .direction {
+            display: flex;
+            margin: 20px 5px;
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            background: $sub-nav-bg;
+            border-radius: 2px;
+
+            &:after {
+                content: '\e833';
+                font-family: 'fontello';
+                font-size: 8px;
+            }
+
+            &.up {
+                &:after {
+                    color: $green-color;
+                }
+            }
+
+            &.down {
+                transform: rotate(180deg);
+
+                &:after {
+                    color: $red-color;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1090px) {
+        .card-col {
+            width: 280px;
+
+            .flip-card {
+                &.fly {
+                    right: calc(100% + 72px);
+            
+                    @keyframes flying-card {
+                        0% {right: calc(50% - 68px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+                        100% {right: calc(100% + 72px);}
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 970px) {
+        .card-col {
+            &.center-col {
+                width: 172px;
+            }
+
+            &.left-col, &.right-col {
+                width: 220px;
+            }
+            
+            .flip-card {
+                &.fly {
+                    right: calc(100% + 42px);
+            
+                    @keyframes flying-card {
+                        0% {right: calc(50% - 68px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+                        100% {right: calc(100% + 42px);}
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        overflow: hidden;
+        min-height: 381px;
+        
+        .card-col {
+            padding-top: 0;
+            justify-content: center;
+
+            .card-back {
+                display: none;
+            }
+
+            &.left-col {
+                display: none;
+            }
+
+            &.calculations {
+                height: 300px;
+            }
+
+            &.right-col {
+                flex-direction: inherit;
+                width: calc(80% - 172px);
+
+                .blank {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 72px;
+                    margin: 0 15px;
+                    justify-content: center;
+
+                    &.blank-ace {
+                        display: flex;
+                    }
+        
+                    .card {
+                        width: 68px;
+                        height: 90px;
+                        padding-top: 10px;
+                        font-size: 36px;
+        
+                        &:after {
+                            bottom: 15px;
+                        }
+                    }
+
+                    .dd {
+                        width: 72px;
+                    }
+                }
+            }
+            
+            .flip-card {
+                top: 59px;
+                
+                &.fly {
+                    right: calc(100% + 68px);
+            
+                    @keyframes flying-card {
+                        0% {right: calc(50% - 68px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+                        100% {right: calc(100% + 68px);}
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .card-col {
+            &.right-col {
+                width: calc(100% - 172px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        min-height: 281px;
+
+        &:after {
+            background: url('../img/poker-texture.svg') repeat;
+            background-size: 100px 100px;
+        }
+        
+        .card-col {
+            height: 200px;
+
+            &.center-col {
+                width: 120px;
+                z-index: 10;
+            }
+
+            &.right-col {
+                width: calc(100% - 120px);
+
+                .blank {
+                    margin: 30px 15px 0 15px;
+                }
+            }
+
+            &.calculations {
+                height: 200px;
+            }
+
+            .result {
+                .win {
+                    .won-amount {
+                        font-size: 36px;
+                        line-height: 36px;
+                    }
+                }
+            }
+            
+            .flip-card {
+                position: absolute;
+                z-index: 4;
+                right: calc(50% - 45px);
+                top: 43px;
+                background-color: transparent;
+                width: 90px;
+                height: 132px;
+                perspective: 1000px;
+    
+                &.fly {
+                    animation-name: flying-card;
+                    animation-duration: 0.6s;
+                    right: 100%;
+            
+                    @keyframes flying-card {
+                        0% {right: calc(50% - 45px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+    
+                        100% {
+                            right: 100%;
+                            -webkit-filter: blur(0);
+                            -moz-filter: blur(0);
+                            -o-filter: blur(0);
+                            -ms-filter: blur(0);
+                            filter: blur(0);
+                        }
+                    }
+                    
+                    .flip-card-inner {
+                        transform: rotateY(-180deg);
+                    }
+                }
+    
+                .flip-card-inner {
+                    .flip-card-front {
+                        height: calc(100% - 15px);
+                        padding-top: 15px;
+                        font-size: 40px;
+    
+                        &:after {
+                            left: calc(50% - 20px);
+                            top: 70px;
+                            width: 40px;
+                            height: 40px;
+                        }
+    
+                        &.hearts, &.diamonds, &.spades, &.clubs {
+                            &:after {
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                    
+                    .flip-card-back {
+                        background-size: 90px auto;
+    
+                        &:after {
+                            width: 76px;
+                            height: 118px;
+                        }
+    
+                        &:before {
+                            width: 70px;
+                            height: 112px;
+                        }
+    
+                        .logo {
+                            width: 50px;
+                            height: 50px;
+    
+                            &:after {
+                                width: 38px;
+                                height: 38px;
+                            }
+    
+                            &:before {
+                                top: 3px;
+                                left: 3px;
+                                width: 38px;
+                                height: 38px;
+                                font-size: 14px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .skip {
+                width: 90px;
+            }
+
+            .card-deck {
+                width: 90px;
+                height: 132px;
+    
+                &:after, &:before {
+                    width: 90px;
+                    height: 132px;
+                }
+            }
+        }
+    }
+
+    /* width */
+    .game-history::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    
+    /* Track */
+    .game-history::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+    
+    /* Handle */
+    .game-history::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.5); 
+    }
+    
+    /* Handle on hover */
+    .game-history::-webkit-scrollbar-thumb:hover {
+        background: $white-color; 
+    }
+}

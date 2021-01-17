@@ -175,6 +175,115 @@
                 font-size: $font-size-md;
                 color: $white-color;
                 font-weight: 600;
+
+                .link {
+                    font-size: $font-size-md;
+                    color: $text-color;
+
+                    &:hover {
+                        color: $orange-color;
+                        transition: 0.3s color ease-in-out;
+                    }
+
+                    .en & {
+                        margin-right: 10px;
+                    }
+
+                    .ar & {
+                        margin-left: 10px;
+                    }
+
+                    &.active {
+                        color: $white-color;
+                    }
+                }
+            }
+
+            &.with-select {
+                label {
+                    width: calc(100% - 50px);
+                }
+
+                .page-count {
+                    position: relative;
+                    width: 48px;
+                    height: 34px;
+                    border: 1px solid $btn-hover-color;
+                    border-radius: 2px;
+
+                    .amount {
+                        position: relative;
+                        display: flex;
+                        width: 28px;
+                        height: 34px;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        align-items: center;
+                        justify-content: flex-start;
+                        font-size: $font-size-xs;
+                        font-weight: bold;
+                        color: $white-color;
+
+                        &:before {
+                            position: absolute;
+                            top: 15px;
+                            content: '';
+                            width: 0; 
+                            height: 0; 
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-top: 4px solid $white-color;
+
+                            .en & {
+                                right: 10px;
+                            }
+        
+                            .ar & {
+                                left: 10px;
+                            }
+                        }
+                    }
+
+                    .drop {
+                        position: absolute;
+                        z-index: 4;
+                        left: 0;
+                        top: 35px;
+                        display: none;
+                        width: 50px;
+                        background: $bg-color;
+                        border-radius: 3px;
+            
+                        li {
+                            a {
+                                position: relative;
+                                display: flex;
+                                width: calc(100% - 20px);
+                                align-items: center;
+                                height: 30px;
+                                padding: 0 10px;
+                                font-size: $font-size-xs;
+                                color: $text-color;
+
+                                &:hover {
+                                    color: $white-color;
+                                    cursor: pointer;
+                                    background: $bg-light-color;
+                                    transition: 0.3s all ease-in-out;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border-color: $text-color;
+                        transition: 0.3s all ease-in-out;
+                        
+                        .drop {
+                            display: block;
+                        }
+                    }
+                }
             }
 
             .balance-nav {
@@ -366,6 +475,14 @@
 
                             &.amount {
                                 color: $white-color;
+                            }
+
+                            &.win {
+                                color: $green-color;
+                            }
+
+                            &.lose {
+                                color: $red-color;
                             }
 
                             a {

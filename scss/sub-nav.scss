@@ -25,6 +25,8 @@
         width: 100%;
         align-items: center;
         padding: 0 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         label {
             display: flex;
@@ -70,6 +72,7 @@
             padding: 0 10px;
             align-items: center;
             height: 49px;
+            white-space: nowrap;
             color: $text-color;
             border-bottom: 1px solid rgba(0,0,0,0);
 
@@ -105,6 +108,12 @@
                 }
             }
         }
+    }
+
+    /* width */
+    .group::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
     }
 }
 
