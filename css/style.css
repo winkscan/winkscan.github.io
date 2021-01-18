@@ -784,6 +784,7 @@
         transition: 0.3s color ease-in-out; }
     .top-nav .useful-links .btn-announcement {
       display: flex;
+      position: relative;
       width: 36px;
       min-width: 36px;
       height: 36px;
@@ -803,6 +804,22 @@
         height: 20px;
         color: #FFF;
         font-size: 16px; }
+        .top-nav .useful-links .btn-announcement .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+          position: absolute;
+          top: 1px;
+          width: 6px;
+          height: 6px; }
+          .en .top-nav .useful-links .btn-announcement .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+            right: 1px; }
+          .ar .top-nav .useful-links .btn-announcement .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+            left: 1px; }
+          .top-nav .useful-links .btn-announcement .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) .ant-scroll-number {
+            display: flex;
+            width: 7px;
+            height: 7px;
+            border-radius: 4px;
+            background: #D80027;
+            border: 1px solid #FFF; }
   .top-nav .navigation {
     display: flex;
     justify-content: flex-end;
@@ -824,6 +841,22 @@
         height: 16px;
         color: #FFF;
         font-size: 16px; }
+        .top-nav .navigation .btn-notification .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+          position: absolute;
+          top: 1px;
+          width: 6px;
+          height: 6px; }
+          .en .top-nav .navigation .btn-notification .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+            right: 1px; }
+          .ar .top-nav .navigation .btn-notification .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+            left: 1px; }
+          .top-nav .navigation .btn-notification .wnk-icon .ant-badge-not-a-wrapper:not(.ant-badge-status) .ant-scroll-number {
+            display: flex;
+            width: 7px;
+            height: 7px;
+            border-radius: 4px;
+            background: #D80027;
+            border: 1px solid #FFF; }
     .top-nav .navigation .group {
       position: relative;
       display: flex; }
@@ -894,6 +927,10 @@
         cursor: pointer;
         outline: none;
         border-radius: 18px; }
+        .en .top-nav .navigation .group .btn-deposit {
+          margin-right: 10px; }
+        .ar .top-nav .navigation .group .btn-deposit {
+          margin-left: 10px; }
         .top-nav .navigation .group .btn-deposit .wnk-icon {
           width: 20px;
           height: 20px;
@@ -915,30 +952,10 @@
           left: 0; }
         .top-nav .navigation .group .dropdown .btn-back {
           display: none; }
-        .top-nav .navigation .group .dropdown:after {
-          position: absolute;
-          content: '';
-          top: -5px;
-          z-index: 2;
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-bottom: 5px solid #0A142E; }
-          .en .top-nav .navigation .group .dropdown:after {
-            right: 12px; }
-          .ar .top-nav .navigation .group .dropdown:after {
-            left: 12px; }
-        .top-nav .navigation .group .dropdown.tw-currency:after, .top-nav .navigation .group .dropdown.lw-currency:after {
-          left: calc(50% - 3px); }
         .en .top-nav .navigation .group .dropdown.withdraw-drop {
           right: 5px; }
         .ar .top-nav .navigation .group .dropdown.withdraw-drop {
           left: 5px; }
-        .en .top-nav .navigation .group .dropdown.withdraw-drop:after {
-          right: 35px; }
-        .ar .top-nav .navigation .group .dropdown.withdraw-drop:after {
-          left: 35px; }
         .top-nav .navigation .group .dropdown.show {
           display: flex;
           flex-wrap: wrap;

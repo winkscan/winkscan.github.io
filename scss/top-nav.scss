@@ -69,6 +69,7 @@
 
         .btn-announcement {
             display: flex;
+            position: relative;
             width: 36px;
             min-width: 36px;
             height: 36px;
@@ -89,6 +90,30 @@
                 height: 20px;
                 color: $white-color;
                 font-size: 16px;
+
+                .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+                    position: absolute;
+                    top: 1px;
+                    width: 6px;
+                    height: 6px;
+                    
+                    .en & {
+                        right: 1px;
+                    }
+        
+                    .ar & {
+                        left: 1px;
+                    }
+
+                    .ant-scroll-number {
+                        display: flex;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 4px;
+                        background: $red-color;
+                        border: 1px solid $white-color;
+                    }
+                }
             }
         }
     }
@@ -116,6 +141,30 @@
                 height: 16px;
                 color: $white-color;
                 font-size: 16px;
+
+                .ant-badge-not-a-wrapper:not(.ant-badge-status) {
+                    position: absolute;
+                    top: 1px;
+                    width: 6px;
+                    height: 6px;
+                    
+                    .en & {
+                        right: 1px;
+                    }
+        
+                    .ar & {
+                        left: 1px;
+                    }
+
+                    .ant-scroll-number {
+                        display: flex;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 4px;
+                        background: $red-color;
+                        border: 1px solid $white-color;
+                    }
+                }
             }
         }
 
@@ -219,6 +268,14 @@
                 outline: none;
                 border-radius: 18px;
 
+                .en & {
+                    margin-right: 10px;
+                }
+    
+                .ar & {
+                    margin-left: 10px;
+                }
+
                 .wnk-icon {
                     width: 20px;
                     height: 20px;
@@ -250,30 +307,6 @@
                     display: none;
                 }
 
-                &:after {
-                    position: absolute;
-                    content:'';
-                    top: -5px;
-                    z-index: 2;
-                    width: 0;
-                    height: 0;
-                    border-left: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                    border-bottom: 5px solid $bg-light-color;
-
-                    .en & {
-                        right: 12px;
-                    }
-        
-                    .ar & {
-                        left: 12px;
-                    }
-                }
-
-                &.tw-currency:after, &.lw-currency:after {
-                    left: calc(50% - 3px);
-                }
-
                 &.withdraw-drop {
                     .en & {
                         right: 5px;
@@ -281,16 +314,6 @@
 
                     .ar & {
                         left: 5px;
-                    }
-
-                    &:after {
-                        .en & {
-                            right: 35px;
-                        }
-    
-                        .ar & {
-                            left: 35px;
-                        }
                     }
                 }
 

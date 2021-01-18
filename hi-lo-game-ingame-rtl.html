@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINk - Best Blockchain Gambling Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body dir="rtl" class="ar">
+    <div class="popup-wrapper hilo-rules-popup">
+        <div class="popup">
+            <div class="popup-header">
+                Hi-Lo Game Rules<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <label>Rule Title</label>
+                    <p>Rule description text here.</p>
+                    <label>Rule Title</label>
+                    <p>Rule description text here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="mainpage.html" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn active">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="live-casino.html" class="btn">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="live-casino.html">Casino</a></li>
+                        <li><a href="sports-binarium.html">Sports</a></li>
+                        <li><a href="sports-binarium.html">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="https://blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <a href="https://winkonline.zendesk.com/hc/zh-tw/restricted?return_to=https%3A%2F%2Fwinkonline.zendesk.com%2Fhc%2Fzh-tw" target="_blank" class="zendesk"><i class="wnk-icon icon-info">&#xe801;</i></a>
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-nav">
+                <div class="group dice-platform">
+                    <label><i class="icon dice"></i>Dice</label>
+                    <a href="" class="link">Dice</a>
+                    <a href="" class="link">Moon</a>
+                    <a href="" class="link">Ring</a>
+                    <a href="" class="link">Duel</a>
+                    <a href="" class="link">Mine</a>
+                    <a href="" class="link active">Hi-Lo</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="currency-picker">
+                    <div class="currencies">
+                        <label>Currency</label>
+                        <ul class="currency-list">
+                            <li><a href="javascript:void(0);" class="link active"><i class="icon"><i class="wnk-icon icon-trx">&#xe819;</i></i>trx</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon"><i class="wnk-icon icon-usdt">&#xe81a;</i></i>usdt</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon icon-btc"></i>btc</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon icon-dice"></i>dice</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon icon-live"></i>live</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon"><i class="wnk-icon icon-trx">&#xe819;</i></i>wtrx</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon"><i class="wnk-icon icon-icon-just">&#xe827;</i></i>jst</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon icon-sun"></i>sun</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon"><i class="wnk-icon icon-icon-btt">&#xe82a;</i></i>wbtt</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon"><i class="wnk-icon icon-icon-btt">&#xe82a;</i></i>btt</a></li>
+                            <li><a href="javascript:void(0);" class="link"><i class="icon icon-win"></i>win</a></li>
+                        </ul>
+                    </div>
+                    <div class="game-nav">
+                        <span class="btn disabled"><i class="wnk-icon icon-tasks">&#xe830;</i></span>
+                        <span class="btn"><i class="wnk-icon icon-sound">&#xe838;</i></span>
+                    </div>
+                </div>
+                <div class="hi-lo-game">
+                    <span class="game-rules"><i class="info">?</i>Rules</span>
+                    <div class="card-col left-col">
+                        <div class="card-back">
+                            <span class="logo"></span>
+                        </div>
+                    </div>
+                    <div class="card-col center-col">
+                        <span class="skip">
+                            <label>Skip Card</label><span onclick="playAudio('img/card-flip.mp3')" class="btn-skip">20</span>
+                        </span>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front clubs">
+                                    10
+                                </div>
+                                <div class="flip-card-back">
+                                    <span class="logo"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-deck"></div>
+                    </div>
+                    <div class="card-col right-col calculations">
+                        <span class="coef">
+                            <span class="amount">1,500x</span>
+                            <span class="dd">Coefficient</span>
+                        </span>
+                        <!--
+                        <span class="result">
+                            <span class="win">
+                                <label>Win!</label>
+                                <span class="won-amount">15,000.00<span class="currency">trx</span></span>
+                                <span class="winning-coef">1,500x</span>
+                            </span>
+                            <span class="lose">
+                                Bad luck!
+                            </span>
+                        </span>
+                        -->
+                    </div>
+                    <div class="game-history">
+                        <span class="card clubs">A</span>
+                        <span class="direction up"></span>
+                        <span class="card diamonds">A</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">A</span>
+                        <span class="direction down"></span>
+                        <span class="card clubs">7</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">2</span>
+                        <span class="direction down"></span>
+                        <span class="card hearts">A</span>
+                        <span class="direction up"></span>
+                        <span class="card clubs show-card">10</span>
+                    </div>
+                </div>
+                <div class="game-bet-body hi-lo-game-bet">
+                    <div class="col">
+                        <label>Bet Amount</label>
+                        <span class="amount">
+                            <i class="currency"><i class="wnk-icon icon-trx">&#xe819;</i></i>
+                            <input type="text" value="10" />
+                            <span class="increase"><span class="btn-multiplier">1/2</span><span class="btn-multiplier">2x</span></span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-higher active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Higher 61.54%<span class="coef">1.5762x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-skip-card active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-swap">&#xe82c;</i></i><span class="title">Skip card (20)</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-lower active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Lower 46.15%<span class="coef">2.1017x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-place-bet">Cashout<span class="win-amount">1000 trx</span></div>
+                    </div>
+                </div>
+                <div class="game-bet-body hi-lo-game-bet">
+                    <div class="col">
+                        <label>Bet Amount</label>
+                        <span class="amount">
+                            <i class="currency"><i class="wnk-icon icon-trx">&#xe819;</i></i>
+                            <input type="text" value="10" />
+                            <span class="increase"><span class="btn-multiplier">1/2</span><span class="btn-multiplier">2x</span></span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-higher active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-equally">&#xe831;</i></i><span class="title">Same 7.54%<span class="coef">1.5762x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-skip-card active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-swap">&#xe82c;</i></i><span class="title">Skip card (15)</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-lower active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-equally">&#xe831;</i></i><span class="title">Same 46.15%<span class="coef">2.1017x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-place-bet">Cashout<span class="win-amount">1000 trx</span></div>
+                    </div>
+                </div>
+                <div class="polo-wallet">
+                    <div class="balances">
+                        <div class="balance-header with-select">
+                            <label><a href="" class="link active">All Bets</a><a href="" class="link">My Bets</a><a href="" class="link">High Rollers</a><a href="" class="link">Rare Wins</a></label>
+                            <div class="page-count">
+                                <span class="amount">10</span>
+                                <ul class="drop">
+                                    <li><a href="">10</a></li>
+                                    <li><a href="">20</a></li>
+                                    <li><a href="">50</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Player</th>
+                                        <th>Bet</th>
+                                        <th>Multiplier</th>
+                                        <th>Payout</th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="win">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="lose">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="win">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="lose">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="win">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="lose">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="win">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="lose">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="win">15 TRX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TKmcb...3UrJX</td>
+                                        <td>10 TRX</td>
+                                        <td>1.5x</td>
+                                        <td class="lose">15 TRX</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+        $('.btn-notification').click( function() {
+            $(".notofication-popup").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 0) {
+                $('.sub-nav').addClass('stick-to-top');
+            } else {
+                $('.sub-nav').removeClass('stick-to-top');
+            }
+        });
+
+        $('.btn-freeze').click( function() {
+            $(".freeze-popup").toggleClass("show");
+        } );
+        $('.burned').click( function() {
+            $(".live-burnt-log").toggleClass("show");
+        } );
+        $('.btn-bscdrops').click( function() {
+            $(".bscdrops-popup").toggleClass("show");
+        } );
+        $('.tab-dice').click( function() {
+            $(".tab-dice").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".dice-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-live').click( function() {
+            $(".tab-live").toggleClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".live-drops").toggleClass("active");
+            $(".dice-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-rake').click( function() {
+            $(".tab-rake").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".rake-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".dice-drops").removeClass("active");
+        } );
+
+        function playAudio(url) {
+            new Audio(url).play();
+        }
+        $('.btn-skip, .btn-skip-card, .btn-higher, .btn-lower').click( function() {
+            $(".flip-card").toggleClass("fly");
+        } );
+        $('.game-rules').click( function() {
+            $(".hilo-rules-popup").toggleClass("show");
+        } );
+        $('.currency-list').click( function() {
+            $(".currency-list").toggleClass("show-all");
+        } );
+    </script>
+
+</body>
+</html>
