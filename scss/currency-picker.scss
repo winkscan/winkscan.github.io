@@ -190,11 +190,18 @@
 
             .currency-list {
                 position: absolute;
-                left: 75px;
                 top: 0;
                 width: 66px;
                 height: 30px;
                 background: transparent;
+
+                .en & {
+                    left: 75px;
+                }
+        
+                .ar & {
+                    right: 75px;
+                }
 
                 li {
                     display: none;
@@ -214,12 +221,19 @@
                 }
                 
                 &.show-all {
-                    left: 0;
                     width: calc(100% + 75px);
                     height: 90px;
                     border-radius: 3px;
                     background: $bg-light-color;
                     transition: 0.3s all ease-in-out;
+
+                    .en & {
+                        left: 0;
+                    }
+            
+                    .ar & {
+                        right: 0;
+                    }
 
                     li {
                         display: block;

@@ -4461,11 +4461,14 @@
       position: relative; }
       .currency-picker .currencies .currency-list {
         position: absolute;
-        left: 75px;
         top: 0;
         width: 66px;
         height: 30px;
         background: transparent; }
+        .en .currency-picker .currencies .currency-list {
+          left: 75px; }
+        .ar .currency-picker .currencies .currency-list {
+          right: 75px; }
         .currency-picker .currencies .currency-list li {
           display: none;
           width: calc(20% - 4px);
@@ -4478,12 +4481,15 @@
             opacity: 1;
             width: calc(100% - 4px); }
         .currency-picker .currencies .currency-list.show-all {
-          left: 0;
           width: calc(100% + 75px);
           height: 90px;
           border-radius: 3px;
           background: #0A142E;
           transition: 0.3s all ease-in-out; }
+          .en .currency-picker .currencies .currency-list.show-all {
+            left: 0; }
+          .ar .currency-picker .currencies .currency-list.show-all {
+            right: 0; }
           .currency-picker .currencies .currency-list.show-all li {
             display: block;
             opacity: 1;
@@ -4760,12 +4766,15 @@
     .hi-lo-game .card-col .flip-card {
       position: absolute;
       z-index: 4;
-      right: calc(50% - 68px);
       top: 83px;
       background-color: transparent;
       width: 136px;
       height: 200px;
       perspective: 1000px; }
+      .en .hi-lo-game .card-col .flip-card {
+        right: calc(50% - 68px); }
+      .ar .hi-lo-game .card-col .flip-card {
+        left: calc(50% - 68px); }
       .hi-lo-game .card-col .flip-card.win-card .flip-card-inner {
         margin-top: 0;
         box-shadow: 0px 0px 20px #36AA9F;
@@ -4796,7 +4805,7 @@
   100% {
     box-shadow: 0px 0px 20px #D80027;
     margin-top: 0; } }
-      .hi-lo-game .card-col .flip-card.fly {
+      .en .hi-lo-game .card-col .flip-card.fly {
         animation-name: flying-card;
         animation-duration: 0.6s;
         right: calc(100% + 92px); }
@@ -4817,8 +4826,29 @@
     -o-filter: blur(0);
     -ms-filter: blur(0);
     filter: blur(0); } }
-        .hi-lo-game .card-col .flip-card.fly .flip-card-inner {
-          transform: rotateY(-180deg); }
+      .ar .hi-lo-game .card-col .flip-card.fly {
+        animation-name: flying-card-ar;
+        animation-duration: 0.6s;
+        left: calc(100% + 92px); }
+
+@keyframes flying-card-ar {
+  0% {
+    left: calc(50% - 68px); }
+  50% {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); }
+  100% {
+    left: calc(100% + 92px);
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0); } }
+      .hi-lo-game .card-col .flip-card.fly .flip-card-inner {
+        transform: rotateY(-180deg); }
       .hi-lo-game .card-col .flip-card .flip-card-inner {
         position: relative;
         width: 100%;
@@ -5098,7 +5128,7 @@
   @media screen and (max-width: 1090px) {
     .hi-lo-game .card-col {
       width: 280px; }
-      .hi-lo-game .card-col .flip-card.fly {
+      .en .hi-lo-game .card-col .flip-card.fly {
         right: calc(100% + 72px); }
     @keyframes flying-card {
       0% {
@@ -5110,13 +5140,26 @@
         -ms-filter: blur(5px);
         filter: blur(5px); }
       100% {
-        right: calc(100% + 72px); } } }
+        right: calc(100% + 72px); } }
+      .ar .hi-lo-game .card-col .flip-card.fly {
+        left: calc(100% + 72px); }
+    @keyframes flying-card-ar {
+      0% {
+        left: calc(50% - 68px); }
+      50% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px); }
+      100% {
+        left: calc(100% + 72px); } } }
   @media screen and (max-width: 970px) {
     .hi-lo-game .card-col.center-col {
       width: 172px; }
     .hi-lo-game .card-col.left-col, .hi-lo-game .card-col.right-col {
       width: 220px; }
-    .hi-lo-game .card-col .flip-card.fly {
+    .en .hi-lo-game .card-col .flip-card.fly {
       right: calc(100% + 42px); }
     @keyframes flying-card {
       0% {
@@ -5128,7 +5171,20 @@
         -ms-filter: blur(5px);
         filter: blur(5px); }
       100% {
-        right: calc(100% + 42px); } } }
+        right: calc(100% + 42px); } }
+    .ar .hi-lo-game .card-col .flip-card.fly {
+      left: calc(100% + 42px); }
+    @keyframes flying-card-ar {
+      0% {
+        left: calc(50% - 68px); }
+      50% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px); }
+      100% {
+        left: calc(100% + 42px); } } }
   @media screen and (max-width: 768px) {
     .hi-lo-game {
       overflow: hidden;
@@ -5164,7 +5220,7 @@
               width: 72px; }
         .hi-lo-game .card-col .flip-card {
           top: 59px; }
-          .hi-lo-game .card-col .flip-card.fly {
+          .en .hi-lo-game .card-col .flip-card.fly {
             right: calc(100% + 68px); }
     @keyframes flying-card {
       0% {
@@ -5176,7 +5232,20 @@
         -ms-filter: blur(5px);
         filter: blur(5px); }
       100% {
-        right: calc(100% + 68px); } } }
+        right: calc(100% + 68px); } }
+          .ar .hi-lo-game .card-col .flip-card.fly {
+            left: calc(100% + 68px); }
+    @keyframes flying-card-ar {
+      0% {
+        left: calc(50% - 68px); }
+      50% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px); }
+      100% {
+        left: calc(100% + 68px); } } }
   @media screen and (max-width: 700px) {
     .hi-lo-game .card-col.right-col {
       width: calc(100% - 172px); } }
@@ -5203,13 +5272,16 @@
         .hi-lo-game .card-col .flip-card {
           position: absolute;
           z-index: 4;
-          right: calc(50% - 45px);
           top: 43px;
           background-color: transparent;
           width: 90px;
           height: 132px;
           perspective: 1000px; }
-          .hi-lo-game .card-col .flip-card.fly {
+          .en .hi-lo-game .card-col .flip-card {
+            right: calc(50% - 45px); }
+          .ar .hi-lo-game .card-col .flip-card {
+            left: calc(50% - 45px); }
+          .en .hi-lo-game .card-col .flip-card.fly {
             animation-name: flying-card;
             animation-duration: 0.6s;
             right: 100%; }
@@ -5229,8 +5301,28 @@
         -o-filter: blur(0);
         -ms-filter: blur(0);
         filter: blur(0); } }
-            .hi-lo-game .card-col .flip-card.fly .flip-card-inner {
-              transform: rotateY(-180deg); }
+          .ar .hi-lo-game .card-col .flip-card.fly {
+            animation-name: flying-card-ar;
+            animation-duration: 0.6s;
+            left: 100%; }
+    @keyframes flying-card-ar {
+      0% {
+        left: calc(50% - 45px); }
+      50% {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px); }
+      100% {
+        left: 100%;
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -o-filter: blur(0);
+        -ms-filter: blur(0);
+        filter: blur(0); } }
+          .hi-lo-game .card-col .flip-card.fly .flip-card-inner {
+            transform: rotateY(-180deg); }
           .hi-lo-game .card-col .flip-card .flip-card-inner .flip-card-front {
             height: calc(100% - 15px);
             padding-top: 15px;

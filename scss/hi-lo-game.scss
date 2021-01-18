@@ -323,12 +323,19 @@
         .flip-card {
             position: absolute;
             z-index: 4;
-            right: calc(50% - 68px);
             top: 83px;
             background-color: transparent;
             width: 136px;
             height: 200px;
             perspective: 1000px;
+
+            .en & {
+                right: calc(50% - 68px);
+            }
+
+            .ar & {
+                left: calc(50% - 68px);
+            }
 
             &.win-card {
                 .flip-card-inner {
@@ -339,7 +346,7 @@
             
                     @keyframes win-card-fly {
                         0% {box-shadow: none; margin-top: 0;}
-                        50% { margin-top: -6px;}
+                        50% {margin-top: -6px;}
                         100% {box-shadow: 0px 0px 20px #36AA9F;  margin-top: 0;}
                     }
                 }
@@ -354,34 +361,62 @@
             
                     @keyframes lose-card-fly {
                         0% {box-shadow: none; margin-top: 0;}
-                        50% { margin-top: -6px;}
+                        50% {margin-top: -6px;}
                         100% {box-shadow: 0px 0px 20px $red-color;  margin-top: 0;}
                     }
                 }
             }
 
             &.fly {
-                animation-name: flying-card;
-                animation-duration: 0.6s;
-                right: calc(100% + 92px);
-        
-                @keyframes flying-card {
-                    0% {right: calc(50% - 68px);}
-                    50% {
-                        -webkit-filter: blur(5px);
-                        -moz-filter: blur(5px);
-                        -o-filter: blur(5px);
-                        -ms-filter: blur(5px);
-                        filter: blur(5px);
-                    }
+                .en & {
+                    animation-name: flying-card;
+                    animation-duration: 0.6s;
+                    right: calc(100% + 92px);
 
-                    100% {
-                        right: calc(100% + 92px);
-                        -webkit-filter: blur(0);
-                        -moz-filter: blur(0);
-                        -o-filter: blur(0);
-                        -ms-filter: blur(0);
-                        filter: blur(0);
+                    @keyframes flying-card {
+                        0% {right: calc(50% - 68px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+    
+                        100% {
+                            right: calc(100% + 92px);
+                            -webkit-filter: blur(0);
+                            -moz-filter: blur(0);
+                            -o-filter: blur(0);
+                            -ms-filter: blur(0);
+                            filter: blur(0);
+                        }
+                    }
+                }
+    
+                .ar & {
+                    animation-name: flying-card-ar;
+                    animation-duration: 0.6s;
+                    left: calc(100% + 92px);
+
+                    @keyframes flying-card-ar {
+                        0% {left: calc(50% - 68px);}
+                        50% {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            -o-filter: blur(5px);
+                            -ms-filter: blur(5px);
+                            filter: blur(5px);
+                        }
+    
+                        100% {
+                            left: calc(100% + 92px);
+                            -webkit-filter: blur(0);
+                            -moz-filter: blur(0);
+                            -o-filter: blur(0);
+                            -ms-filter: blur(0);
+                            filter: blur(0);
+                        }
                     }
                 }
                 
@@ -766,19 +801,38 @@
 
             .flip-card {
                 &.fly {
-                    right: calc(100% + 72px);
+                    .en & {
+                        right: calc(100% + 72px);
             
-                    @keyframes flying-card {
-                        0% {right: calc(50% - 68px);}
-                        50% {
-                            -webkit-filter: blur(5px);
-                            -moz-filter: blur(5px);
-                            -o-filter: blur(5px);
-                            -ms-filter: blur(5px);
-                            filter: blur(5px);
+                        @keyframes flying-card {
+                            0% {right: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {right: calc(100% + 72px);}
                         }
-                        100% {right: calc(100% + 72px);}
                     }
+
+                    .ar & {
+                        left: calc(100% + 72px);
+            
+                        @keyframes flying-card-ar {
+                            0% {left: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {left: calc(100% + 72px);}
+                        }
+                    }
+                    
                 }
             }
         }
@@ -796,18 +850,36 @@
             
             .flip-card {
                 &.fly {
-                    right: calc(100% + 42px);
+                    .en & {
+                        right: calc(100% + 42px);
             
-                    @keyframes flying-card {
-                        0% {right: calc(50% - 68px);}
-                        50% {
-                            -webkit-filter: blur(5px);
-                            -moz-filter: blur(5px);
-                            -o-filter: blur(5px);
-                            -ms-filter: blur(5px);
-                            filter: blur(5px);
+                        @keyframes flying-card {
+                            0% {right: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {right: calc(100% + 42px);}
                         }
-                        100% {right: calc(100% + 42px);}
+                    }
+
+                    .ar & {
+                        left: calc(100% + 42px);
+            
+                        @keyframes flying-card-ar {
+                            0% {left: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {left: calc(100% + 42px);}
+                        }
                     }
                 }
             }
@@ -870,18 +942,36 @@
                 top: 59px;
                 
                 &.fly {
-                    right: calc(100% + 68px);
+                    .en & {
+                        right: calc(100% + 68px);
             
-                    @keyframes flying-card {
-                        0% {right: calc(50% - 68px);}
-                        50% {
-                            -webkit-filter: blur(5px);
-                            -moz-filter: blur(5px);
-                            -o-filter: blur(5px);
-                            -ms-filter: blur(5px);
-                            filter: blur(5px);
+                        @keyframes flying-card {
+                            0% {right: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {right: calc(100% + 68px);}
                         }
-                        100% {right: calc(100% + 68px);}
+                    }
+                    
+                    .ar & {
+                        left: calc(100% + 68px);
+            
+                        @keyframes flying-card-ar {
+                            0% {left: calc(50% - 68px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+                            100% {left: calc(100% + 68px);}
+                        }
                     }
                 }
             }
@@ -936,35 +1026,70 @@
             .flip-card {
                 position: absolute;
                 z-index: 4;
-                right: calc(50% - 45px);
                 top: 43px;
                 background-color: transparent;
                 width: 90px;
                 height: 132px;
                 perspective: 1000px;
+
+                .en & {
+                    right: calc(50% - 45px);
+                }
+
+                .ar & {
+                    left: calc(50% - 45px);
+                }
     
                 &.fly {
-                    animation-name: flying-card;
-                    animation-duration: 0.6s;
-                    right: 100%;
-            
-                    @keyframes flying-card {
-                        0% {right: calc(50% - 45px);}
-                        50% {
-                            -webkit-filter: blur(5px);
-                            -moz-filter: blur(5px);
-                            -o-filter: blur(5px);
-                            -ms-filter: blur(5px);
-                            filter: blur(5px);
+                    .en & {
+                        animation-name: flying-card;
+                        animation-duration: 0.6s;
+                        right: 100%;
+                
+                        @keyframes flying-card {
+                            0% {right: calc(50% - 45px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+        
+                            100% {
+                                right: 100%;
+                                -webkit-filter: blur(0);
+                                -moz-filter: blur(0);
+                                -o-filter: blur(0);
+                                -ms-filter: blur(0);
+                                filter: blur(0);
+                            }
                         }
-    
-                        100% {
-                            right: 100%;
-                            -webkit-filter: blur(0);
-                            -moz-filter: blur(0);
-                            -o-filter: blur(0);
-                            -ms-filter: blur(0);
-                            filter: blur(0);
+                    }
+                    
+                    .ar & {
+                        animation-name: flying-card-ar;
+                        animation-duration: 0.6s;
+                        left: 100%;
+                
+                        @keyframes flying-card-ar {
+                            0% {left: calc(50% - 45px);}
+                            50% {
+                                -webkit-filter: blur(5px);
+                                -moz-filter: blur(5px);
+                                -o-filter: blur(5px);
+                                -ms-filter: blur(5px);
+                                filter: blur(5px);
+                            }
+        
+                            100% {
+                                left: 100%;
+                                -webkit-filter: blur(0);
+                                -moz-filter: blur(0);
+                                -o-filter: blur(0);
+                                -ms-filter: blur(0);
+                                filter: blur(0);
+                            }
                         }
                     }
                     
