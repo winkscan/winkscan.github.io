@@ -4322,7 +4322,7 @@
 
 .currency-picker {
   position: relative;
-  z-index: 11;
+  z-index: 3;
   display: flex;
   margin: 0 15px;
   width: calc(100% - 30px);
@@ -4692,6 +4692,8 @@
           left: -18px; }
         .hi-lo-game .card-col .skip .btn-skip:after {
           position: absolute;
+          left: 6px;
+          top: 6px;
           width: 24px;
           height: 24px;
           font-weight: normal;
