@@ -1,0 +1,326 @@
+.blk-blinkdrops {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 14px);
+    position: relative;
+    max-width: 1274px;
+    padding: 7px;
+
+    .blk-dropspool {
+        margin: 7px;
+        position: relative;
+        width: calc(100% - 14px);
+        min-height: 350px;
+        background-image: linear-gradient($sub-nav-bg, $bg-dark-color);
+        border-radius: 3px;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content:'';
+            background: url('../img/bnb-drops.svg') no-repeat center;
+            background-size: 80% auto;
+            border-radius: 3px;
+        }
+
+        .blk-drops-content {
+            position: relative;
+            z-index: 2;
+            width: calc(100% - 28px);
+            height: calc(100% - 28px);
+            padding: 14px;
+
+            .drops-header {
+                display: flex;
+
+                label, .countdown {
+                    display: flex;
+                    width: 50%;
+                    height: 30px;
+                    align-items: center;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                label {
+                    justify-content: flex-start;
+                    color: $white-color;
+                    text-transform: uppercase;
+                }
+
+                .countdown {
+                    justify-content: flex-end;
+                    color: $orange-color;
+                }
+            }
+
+            .drops {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px 0 40px 0;
+
+                .total, .at-blink, .amount, .receive {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .total {
+                    padding: 10px 0 30px 0;
+                    font-weight: 600;
+                    font-size: $font-size-xs;
+                    line-height: 15px;
+
+                    .bnb {
+                        padding: 0 4px;
+                        color: $orange-color;
+                    }
+                }
+
+                .at-blink {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: $white-color;
+                }
+
+                .amount {
+                    font-weight: 600;
+                    font-size: 52px;
+                    line-height: 62px;
+                    color: $orange-color;
+
+                    .wnk-icon {
+                        display: flex;
+                        margin-right: 10px;
+                        width: 36px;
+                        height: 36px;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 36px;
+                        color: $orange-color;
+                    }
+                }
+
+                .receive {
+                    font-size: $font-size-xs;
+                    line-height: 16px;
+                    
+                    .bnb {
+                        padding: 0 4px;
+                        color: $orange-color;
+                    }
+                }
+            }
+
+            .tokens {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+
+                .mined, .stage {
+                    display: flex;
+                    width: 50%;
+                    padding: 10px 0;
+                    font-size: $font-size-xs;
+                }
+
+                .stage {
+                    justify-content: flex-end;
+                    text-align: right;
+                }
+
+                .progress {
+                    display: flex;
+                    width: 100%;
+                    height: 10px;
+                    background: $sub-nav-bg;
+                    border-radius: 3px;
+
+                    .filled {
+                        display: flex;
+                        height: 10px;
+                        background-image: linear-gradient(to right, $orange-dark-color , $orange-color);
+                        border-radius: 3px;
+                    }
+                }
+
+                .frozen {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    padding: 10px 0;
+                    font-size: $font-size-xs;
+                    color: $white-color;
+
+                    .blk {
+                        padding: 0 4px;
+                        color: $orange-color;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .blk-token-col {
+        margin: 7px;
+        display: flex;
+        flex-direction: column;
+        width: calc(25% - 28px);
+        min-height: 90px;
+        padding: 20px 7px;
+        background: $blank-game-bg;
+        border-radius: 3px;
+
+        label, .amount {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: $font-size-xs;
+        }
+
+        .amount {
+            padding: 6px 0 12px 0;
+            font-weight: 600;
+            font-size: $font-size-md;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            overflow: hidden; 
+            white-space: nowrap;
+            color: $orange-color;
+
+            .token {
+                padding: 0 5px 0 0;
+                font-size: $font-size-md;
+                color: $white-color;
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+            width: 100px;
+            height: 30px;
+            font-size: $font-size-sm;
+            font-weight: 600;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &.btn-withdraw {
+                color: $bg-dark-color;
+                background: $white-color;
+            }
+
+            &.btn-freeze {
+                color: $bg-dark-color;
+                background: $orange-color;
+
+                &:hover {
+                    background: $orange-light-color;
+                    transition: 0.3s all ease-in-out;
+                }
+
+                &:active {
+                    background: $orange-dark-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+
+            &.btn-cancel {
+                width: 98px;
+                height: 28px;
+                color: $orange-color;
+                background: transparent;
+                border: 1px solid $orange-color;
+
+                &:hover {
+                    color: $bg-dark-color;
+                    background: $orange-color;
+                    transition: 0.3s all ease-in-out;
+                }
+
+                &:active {
+                    color: $bg-dark-color;
+                    background: $orange-dark-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+        }
+    }
+
+    .duration {
+        display: flex;
+        margin: 7px;
+        width: calc(100% - 14px);
+        justify-content: center;
+        font-size: $font-size-xs;
+        color: $white-color;
+
+        .h {
+            padding: 0 5px;
+            font-weight: 600;
+            color: $orange-color;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .blk-token-col {
+            width: calc(50% - 28px);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .blk-dropspool {
+            &:after {
+                background: url('../img/bnb-drops.svg') no-repeat center;
+                background-size: 120% auto;
+            }
+            
+            .blk-drops-content {
+                .drops {
+                    .amount {
+                        font-size: 42px;
+
+                        .wnk-icon {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .blk-dropspool {
+            .blk-drops-content {
+                .drops {
+                    .amount {
+                        font-size: 36px;
+
+                        .wnk-icon {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .blk-token-col {
+            width: calc(100% - 28px);
+        }
+    }
+}

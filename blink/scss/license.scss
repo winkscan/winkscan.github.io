@@ -1,0 +1,84 @@
+.blk-license {
+    margin: 0 auto;
+    width: calc(100% - 14px);
+    position: relative;
+    max-width: 1274px;
+    padding: 7px;
+
+    h2 {
+        display: flex;
+        width: calc(100% - 14px);
+        height: 40px;
+        padding: 0 7px;
+        align-items: center;
+        font-size: $font-size-md;
+        color: $white-color;
+
+        .wnk-icon {
+            display: flex;
+            margin-right: 10px;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: $orange-color;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+            margin: 7px;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(50% - 16px);
+            height: 188px;
+            border-radius: 3px;
+            border: 1px solid $blank-game-bg;
+
+            .curacao, .costa-rica {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                width: 100%;
+                height: 118px;
+            }
+
+            .curacao {
+                iframe {
+                    width: 120px;
+                    height: 50px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .costa-rica {
+                background: url('../img/license-costa-rica.png') no-repeat center bottom;
+                background-size: 63px 80px;
+            }
+
+            label {
+                display: flex;
+                width: 100%;
+                height: 70px;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-xs;
+                text-transform: uppercase;
+                color: $text-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        ul {
+            li {
+                width: calc(100% - 16px);
+            }
+        }
+    }
+}

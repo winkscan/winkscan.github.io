@@ -1,0 +1,171 @@
+.faq {
+    margin: 14px auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 28px);
+    padding: 0 14px;
+    max-width: 1260px;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0 30px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        color: $white-color;
+
+        .for-you {
+            padding-left: 4px;
+            color: $orange-color;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    .faq-nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .tab {
+            display: flex;
+            width: calc(25% - 14px);
+            min-height: 26px;
+            padding: 5px 7px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: $font-size-sm;
+            font-weight: 600;
+            color: $text-color;
+            cursor: pointer;
+            border-top: 2px solid transparent;
+
+            &.active {
+                color: $white-color;
+                border-color: $orange-color;
+                background: $sub-nav-bg;
+                transition: 0.3s all ease-in-out;
+                border-radius: 3px 3px 0 0;
+            }
+
+            &:hover {
+                color: $white-color;
+                border-color: $bg-dark-color;
+                background: $bg-dark-color;
+                transition: 0.3s all ease-in-out;
+                border-radius: 3px 3px 0 0;
+            }
+        }
+    }
+
+    .faq-content {
+        width: 100%;
+        background: $sub-nav-bg;
+        border-radius: 0 0 3px 3px;
+
+        .topic {
+            overflow: hidden;
+            border-bottom: 1px solid $bg-color;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .question {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: calc(100% - 45px);
+                padding: 5px 30px 5px 15px;
+                min-height: 26px;
+                color: $text-color;
+                cursor: pointer;
+
+                .arrow {
+                    position: absolute;
+                    display: flex;
+                    top: 14px;
+                    right: 10px;
+                    transform: rotate(-90deg);
+                    width: 6px;
+                    height: 8px;
+
+                    &:after, &:before {
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        width: 1px;
+                        height: 7px;
+                        content:'';
+                        background: $text-color;
+                    }
+
+                    &:after {
+                        right: 0;
+                        transform: rotate(45deg);
+                    }
+
+                    &:before {
+                        left: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                &:hover {
+                    color: $white-color;
+                    transition: 0.3s color ease-in-out;
+
+                    .arrow {
+                        &:after, &:before {
+                            background: $orange-color;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .faq-body {
+                display: none;
+                width: calc(100% - 30px);
+                padding: 0 15px 10px 15px;
+
+                p {
+                    display: block;
+                    padding: 5px 0;
+                    color: $text-color;
+
+                    a {
+                        text-decoration: underline;
+                        color: $text-color;
+
+                        &:hover {
+                            color: $orange-color;
+                            transition: 0.3s color ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            &.opened {
+                .question {
+                    color: $white-color;
+
+                    .arrow {
+                        transform: rotate(0deg);
+
+                        &:after, &:before {
+                            background: $orange-color;
+                        }
+                    }
+                }
+
+                .faq-body {
+                    display: block;
+                }
+            }
+        }
+    }
+}

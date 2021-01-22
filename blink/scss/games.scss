@@ -1,0 +1,149 @@
+.blk-games {
+    margin: 0 auto;
+    width: calc(100% - 14px);
+    position: relative;
+    max-width: 1274px;
+    padding: 0 7px;
+
+    h1 {
+        display: flex;
+        width: calc(100% - 14px);
+        height: 40px;
+        padding: 0 7px;
+        align-items: center;
+        font-size: $font-size-md;
+        color: $white-color;
+
+        .wnk-icon {
+            display: flex;
+            margin-right: 10px;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: $orange-color;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+            margin: 7px;
+            display: flex;
+            width: calc(33.33% - 14px);
+
+            .blk-game {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                height: 190px;
+                border-radius: 3px;
+
+                label {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: $font-size-lg;
+                    text-transform: uppercase;
+                    color: $text-color;
+                    font-weight: 600;
+                }
+
+                &.blank {
+                    align-items: center;
+                    background: $blank-game-bg;
+
+                    label {
+                        font-weight: 500;
+                    }
+                }
+
+                &.dice {
+                    overflow: hidden;
+                    flex-direction: column;
+                    align-items: center;
+                    background: $dice-game-bg;
+
+                    .icon {
+                        position: relative;
+                        z-index: 3;
+                        display: block;
+                        margin: 10px 0;
+                        width: 156px;
+                        height: 96px;
+                        background: url('../img/dice-banner.svg') no-repeat center;
+                        background-size: 156px 96px;
+                    }
+
+                    label {
+                        position: relative;
+                        z-index: 3;
+                        padding: 10px 0;
+                        color: $white-color;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        z-index: 1;
+                        top: calc(50% - 168px);
+                        left: calc(50% - 168px);
+                        width: 336px;
+                        height: 336px;
+                        content:'';
+                        border-radius: 50%;
+                        background: #2D2E39;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        z-index: 2;
+                        top: calc(50% - 119px);
+                        left: calc(50% - 119px);
+                        width: 238px;
+                        height: 238px;
+                        content:'';
+                        border-radius: 50%;
+                        background: #262731;
+                    }
+
+                    &:hover {
+                        background: #2D2E39;
+                        transition: 0.3s background-color ease-in-out;
+
+                        &:before {
+                            background: #262731;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+
+                        &:after {
+                            background: $blank-game-bg;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        ul {
+            li {
+                width: calc(50% - 14px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        ul {
+            li {
+                width: calc(100% - 14px);
+            }
+        }
+    }
+}

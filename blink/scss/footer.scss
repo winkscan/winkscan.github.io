@@ -1,0 +1,166 @@
+.blk-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    width: 100%;
+    padding: 5px 0 10px 0;
+    color: $text-color;
+    background: $bg-dark-color;
+
+    .blk-attention {
+        width: calc(100% - 28px);
+        padding: 0 14px;
+        border-bottom: 1px solid $bg-color;
+
+        .blk-content {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1260px;
+            padding: 10px 0;
+
+            label, p {
+                display: block;
+                text-align: center;
+                padding: 5px 0;
+            }
+
+            label {
+                font-size: $font-size-md;
+                color: $orange-color;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: $font-size-xs;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .blk-info {
+        width: 100%;
+
+        .blk-content {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 14px);
+            max-width: 1274px;
+            padding: 10px 7px;
+
+            .blk-licenses, .blk-gc, .blk-about, .blk-follow {
+                margin: 0 7px;
+                display: flex;
+                flex-wrap: wrap;
+
+                label, p {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    padding: 5px 0;
+                }
+    
+                label {
+                    font-size: $font-size-md;
+                    color: $white-color;
+                    font-weight: 600;
+                }
+    
+                p {
+                    font-size: $font-size-xs;
+                    line-height: 20px;
+
+                    .link {
+                        display: block;
+                        color: $text-color;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $orange-color;
+                            transition: 0.3s color ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .blk-licenses {
+                width: calc(33.33% - 14px);
+            }
+
+            .blk-gc {
+                width: calc(33.33% - 14px);
+                align-items: flex-end;
+
+                iframe {
+                    margin-bottom: 10px;
+                    width: 120px;
+                    height: 50px;
+                }
+            }
+
+            .blk-about, .blk-follow {
+                width: calc(16% - 14px);
+
+                .btn-social {
+                    margin-top: 5px;
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    padding: 7px;
+                    border-radius: 15px;
+                    background: $sub-nav-bg;
+    
+                    .wnk-icon {
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        color: $white-color;
+                        font-size: 16px;
+                    }
+    
+                    &:hover {
+                        background: $white-color;
+                        transition: 0.3s all ease-in-out;
+    
+                        .wnk-icon {
+                            color: $sub-nav-bg;
+                            transition: 0.3s all ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .blk-info {
+            .blk-content {
+                .blk-licenses {
+                    width: calc(100% - 14px);
+                }
+                
+                .blk-gc, .blk-about, .blk-follow {
+                    width: calc(33.33% - 14px);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .blk-info {
+            .blk-content {
+                .blk-licenses, .blk-gc, .blk-about, .blk-follow {
+                    width: calc(50% - 14px);
+                }
+
+                .blk-gc {
+                    align-items: center;
+    
+                    iframe {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

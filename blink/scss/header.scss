@@ -1,0 +1,319 @@
+.blk-header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    .burger {
+        display: none;
+    }
+
+    &.stick-to-top {
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+    }
+
+    .blk-top-nav {
+        display: flex;
+        width: calc(100% - 28px);
+        padding: 0 14px;
+        height: 60px;
+        background: $bg-dark-color;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            width: 70px;
+            height: 60px;
+
+            .blink {
+                display: block;
+                width: 50px;
+                height: 30px;
+                background: url('../img/blink-logo.svg') no-repeat;
+                background-size: 50px 30px;
+            }
+        }
+
+        .drop-nav {
+            width: calc(100% - 140px);
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 30px;
+                padding: 15px 0;
+
+                li {
+                    a {
+                        display: flex;
+                        margin-right: 20px;
+                        align-items: center;
+                        height: 30px;
+                        font-size: $font-size-xs;
+                        color: $text-color;
+
+                        .wnk-icon {
+                            display: flex;
+                            margin-right: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            width: 16px;
+                            height: 16px;
+                            font-size: 16px;
+                            color: $text-color;
+                        }
+
+                        &:hover, &.active {
+                            color: $white-color;
+                            transition: 0.3s color ease-in-out;
+
+                            .wnk-icon {
+                                color: $orange-color;
+                                transition: 0.3s color ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 70px;
+            height: 60px;
+
+            .btn-login {
+                width: 70px;
+                height: 30px;
+                font-size: $font-size-sm;
+                font-weight: 600;
+                color: $bg-dark-color;
+                background: $orange-color;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: $orange-light-color;
+                    transition: 0.3s all ease-in-out;
+                }
+
+                &:active {
+                    background: $orange-dark-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+        }
+    }
+
+    .blk-sub-nav {
+        display: flex;
+        width: calc(100% - 28px);
+        padding: 0 14px;
+        height: 40px;
+        background: $sub-nav-bg;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 150px);
+            height: 40px;
+
+            li {
+                a {
+                    display: flex;
+                    margin-right: 20px;
+                    align-items: center;
+                    height: 40px;
+                    font-size: $font-size-xs;
+                    color: $text-color;
+
+                    .wnk-icon {
+                        display: flex;
+                        margin-right: 10px;
+                        align-items: center;
+                        justify-content: center;
+                        width: 16px;
+                        height: 16px;
+                        font-size: 16px;
+                        color: $text-color;
+                    }
+
+                    &:hover, &.active {
+                        color: $white-color;
+                        transition: 0.3s color ease-in-out;
+
+                        .wnk-icon {
+                            color: $orange-color;
+                            transition: 0.3s color ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wink {
+            display: flex;
+            justify-content: flex-end;
+            width: 150px;
+            height: 40px;
+
+            .more-games {
+                display: flex;
+                height: 40px;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: $font-size-xs;
+                color: $text-color;
+
+                .wink-logo {
+                    margin-left: 6px;
+                    display: block;
+                    width: 36px;
+                    height: 24px;
+                    background: url('../img/wink-logo-dark.svg') no-repeat center;
+                    background-size: 36px 24px;
+                }
+
+                &:hover {
+                    color: $white-color;
+                    transition: 0.3s color ease-in-out;
+
+                    .wink-logo {
+                        transition: 0.3s all ease-in-out;
+                        background: url('../img/wink-logo.svg') no-repeat center;
+                        background-size: 36px 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .burger {
+            display: flex;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            width: 48px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            background: $bg-dark-color;
+
+            .bar {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-color;
+                border-radius: 1px;
+
+                &:after, &:before {
+                    position: absolute;
+                    content:'';
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: $white-color;
+                    border-radius: 1px;
+                }
+
+                &:after {
+                    top: -8px;
+                }
+
+                &:before {
+                    top: 8px;
+                }
+            }
+
+            &.expand {
+                .bar {
+                    transition: all 0.3s ease-in-out;
+                    background: rgba(255,255,255,0);
+                    
+                    &:before, &:after {
+                        top: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+        
+        .blk-top-nav {
+            .logo {
+                position: relative;
+                z-index: 10;
+                width: calc(100% - 104px);
+                background: $bg-dark-color;
+            }
+
+            .login {
+                position: relative;
+                z-index: 10;
+                background: $bg-dark-color;
+            }
+
+            .drop-nav {
+                position: fixed;
+                z-index: 9;
+                display: none;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 60px);
+                opacity: 0;
+                background: $bg-dark-color;
+
+                &.show {
+                    display: flex;
+                    top: 60px;
+                    opacity: 1;
+                    animation-name: slidedown;
+                    animation-duration: 1s;
+        
+                    @keyframes slidedown {
+                        from {top: -100%;}
+                        to {top: 60px;}
+                    }
+                }
+
+                ul {
+                    flex-direction: column;
+                    height: inherit;
+                    padding: 0;
+
+                    li {
+                        width: 100%;
+
+                        a {
+                            width: calc(100% - 28px);
+                            padding: 0 14px;
+                            
+                            &.active, &:hover {
+                                background: $sub-nav-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
