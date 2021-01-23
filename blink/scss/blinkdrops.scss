@@ -269,7 +269,7 @@
                 }
             }
 
-            &.disabled {
+            &[disabled] {
                 cursor: default;
                 color: $bg-dark-color;
                 background: $text-color;

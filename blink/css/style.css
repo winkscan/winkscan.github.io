@@ -621,6 +621,7 @@
           color: #FFF; }
       .popup-wrapper .popup .popup-body .form {
         display: flex;
+        position: relative;
         flex-wrap: wrap;
         width: 100%;
         padding: 7px 0; }
@@ -631,8 +632,30 @@
           color: #FFF;
           font-size: 13px;
           font-weight: 600; }
+        .popup-wrapper .popup .popup-body .form .max {
+          top: 33px;
+          right: 103px;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 24px;
+          font-size: 13px;
+          color: #FFF;
+          font-weight: 600;
+          background: #24252E;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 3px; }
+          .popup-wrapper .popup .popup-body .form .max:hover {
+            color: #0D0E11;
+            background: #FBC509;
+            transition: 0.3s all ease-in-out; }
         .popup-wrapper .popup .popup-body .form input {
           margin: 7px;
+          display: flex;
           width: calc(100% - 128px);
           height: 30px;
           padding: 0 10px;
@@ -902,12 +925,12 @@
           color: #0D0E11;
           background: #FB9B09;
           transition: 0.3s all ease-in-out; }
-      .blk-blinkdrops .blk-token-col .btn.disabled {
+      .blk-blinkdrops .blk-token-col .btn[disabled] {
         cursor: default;
         color: #0D0E11;
         background: #5C5D68;
         border-color: #5C5D68; }
-        .blk-blinkdrops .blk-token-col .btn.disabled:hover, .blk-blinkdrops .blk-token-col .btn.disabled:active {
+        .blk-blinkdrops .blk-token-col .btn[disabled]:hover, .blk-blinkdrops .blk-token-col .btn[disabled]:active {
           color: #0D0E11;
           background: #5C5D68; }
   .blk-blinkdrops .duration {
@@ -1089,15 +1112,15 @@
   padding: 7px 7px 0 7px; }
   .blk-dice .blk-dice-game {
     margin: 7px 7px 4px 7px;
-    width: calc(100% - 682px);
+    width: calc(72% - 14px);
     height: calc(100% - 11px); }
     .blk-dice .blk-dice-game .dice-bg {
       position: relative;
       display: flex;
       justify-content: center;
-      width: calc(100% - 28px);
+      width: calc(100% - 120px);
       min-height: 300px;
-      padding: 70px 14px 70px 14px;
+      padding: 70px 60px;
       background-image: linear-gradient(to right, #0D0E11, #1B1C23);
       border-radius: 3px; }
       .blk-dice .blk-dice-game .dice-bg:after {
@@ -1117,11 +1140,11 @@
         display: flex;
         z-index: 1;
         right: 14px;
-        bottom: 14px;
+        bottom: 0;
         width: 106px;
-        height: 106px;
+        height: 86px;
         content: '';
-        background: url("../img/blured-dice2.svg") no-repeat center;
+        background: url("../img/blured-dice2.svg") no-repeat center top;
         background-size: 120% auto;
         border-radius: 3px; }
       .blk-dice .blk-dice-game .dice-bg .dice-content {
@@ -1280,10 +1303,21 @@
           .blk-dice .blk-dice-game .dice-bg .dice-content .bet-range .to {
             justify-content: flex-end;
             text-align: right; }
+  @media screen and (max-width: 2000px) {
+    .blk-dice .blk-dice-game {
+      width: calc(66% - 14px); } }
+  @media screen and (max-width: 1600px) {
+    .blk-dice .blk-dice-game {
+      width: calc(62% - 14px); } }
+  @media screen and (max-width: 1366px) {
+    .blk-dice .blk-dice-game .dice-bg {
+      width: calc(100% - 80px);
+      padding: 50px 40px; } }
 
 .blk-top-rank {
   margin: 7px 7px 4px 7px;
-  width: 320px;
+  width: calc(14% - 14px);
+  max-width: 320px;
   height: calc(100% - 11px);
   background: #1B1C23;
   border-radius: 3px; }
@@ -1324,6 +1358,7 @@
       border-radius: 3px;
       border: none;
       outline: none;
+      line-height: 12px;
       cursor: pointer;
       color: #5C5D68;
       background: transparent;
@@ -1375,10 +1410,17 @@
           font-size: 14px;
           font-weight: 600;
           color: #FFF; }
+  @media screen and (max-width: 2000px) {
+    .blk-top-rank {
+      width: calc(17% - 14px); } }
+  @media screen and (max-width: 1600px) {
+    .blk-top-rank {
+      width: calc(19% - 14px); } }
 
 .blk-chat {
   margin: 7px 7px 4px 7px;
-  width: 320px;
+  width: calc(14% - 14px);
+  max-width: 320px;
   height: calc(100% - 11px);
   background: #1B1C23;
   border-radius: 3px; }
@@ -1502,6 +1544,12 @@
         .blk-chat .send-message .btn.btn-send:active {
           background: #FB9B09;
           transition: 0.3s all ease-in-out; }
+  @media screen and (max-width: 2000px) {
+    .blk-chat {
+      width: calc(17% - 14px); } }
+  @media screen and (max-width: 1600px) {
+    .blk-chat {
+      width: calc(19% - 14px); } }
 
 .blk-game-bet {
   margin: 14px auto;
@@ -1517,15 +1565,13 @@
     display: flex;
     flex-wrap: wrap;
     width: calc(25% - 28px);
-    padding: 7px;
-    background: red; }
+    padding: 7px; }
     .blk-game-bet .col label {
       display: block;
       width: 100%;
       height: 24px;
       color: #FBC509;
-      font-size: 13px;
-      background: orange; }
+      font-size: 13px; }
     .blk-game-bet .col .payout {
       display: flex;
       width: 100%;
@@ -1616,6 +1662,23 @@
           .blk-game-bet .col .auto .auto-picker.on:after {
             right: 8px;
             background: #0D0E11; }
+    .blk-game-bet .col .btn-confirm {
+      width: calc(100% - 84px);
+      height: 60px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0D0E11;
+      background: #FBC509;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+      .blk-game-bet .col .btn-confirm:hover {
+        background: #FFCD1E;
+        transition: 0.3s all ease-in-out; }
+      .blk-game-bet .col .btn-confirm:active {
+        background: #FB9B09;
+        transition: 0.3s all ease-in-out; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

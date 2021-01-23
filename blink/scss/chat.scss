@@ -1,6 +1,7 @@
 .blk-chat {
     margin: 7px 7px 4px 7px;
-    width: 320px;
+    width: calc(14% - 14px);
+    max-width: 320px;
     height: calc(100% - 11px);
     background: $sub-nav-bg;
     border-radius: 3px;
@@ -165,5 +166,13 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 2000px) {
+        width: calc(17% - 14px);
+    }
+
+    @media screen and (max-width: 1600px) {
+        width: calc(19% - 14px);
     }
 }

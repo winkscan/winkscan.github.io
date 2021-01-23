@@ -6,16 +6,16 @@
 
     .blk-dice-game {
         margin: 7px 7px 4px 7px;
-        width: calc(100% - 682px);
+        width: calc(72% - 14px);
         height: calc(100% - 11px);
         
         .dice-bg {
             position: relative;
             display: flex;
             justify-content: center;
-            width: calc(100% - 28px);
+            width: calc(100% - 120px);
             min-height: 300px;
-            padding: 70px 14px 70px 14px;
+            padding: 70px 60px;
             background-image: linear-gradient(to right, $bg-dark-color , $sub-nav-bg);
             border-radius: 3px;
 
@@ -38,11 +38,11 @@
                 display: flex;
                 z-index: 1;
                 right: 14px;
-                bottom: 14px;
+                bottom: 0;
                 width: 106px;
-                height: 106px;
+                height: 86px;
                 content:'';
-                background: url('../img/blured-dice2.svg') no-repeat center;
+                background: url('../img/blured-dice2.svg') no-repeat center top;
                 background-size: 120% auto;
                 border-radius: 3px;
             }
@@ -264,6 +264,27 @@
                         text-align: right;
                     }
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 2000px) {
+        .blk-dice-game {
+            width: calc(66% - 14px);
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        .blk-dice-game {
+            width: calc(62% - 14px);
+        }
+    }
+
+    @media screen and (max-width: 1366px) {
+        .blk-dice-game {
+            .dice-bg {
+                width: calc(100% - 80px);
+                padding: 50px 40px;
             }
         }
     }

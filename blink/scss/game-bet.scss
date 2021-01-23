@@ -14,15 +14,13 @@
         flex-wrap: wrap;
         width: calc(25% - 28px);
         padding: 7px;
-        background: red;
-
+        
         label {
             display: block;
             width: 100%;
             height: 24px;
             color: $orange-color;
             font-size: $font-size-xs;
-            background: orange;
         }
 
         .payout {
@@ -140,6 +138,29 @@
                         background: $bg-dark-color;
                     }
                 }
+            }
+        }
+
+        .btn-confirm {
+            width: calc(100% - 84px);
+            height: 60px;
+            font-size: $font-size-md;
+            font-weight: 600;
+            color: $bg-dark-color;
+            background: $orange-color;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background: $orange-light-color;
+                transition: 0.3s all ease-in-out;
+            }
+
+            &:active {
+                background: $orange-dark-color;
+                transition: 0.3s all ease-in-out;
             }
         }
     }

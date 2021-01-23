@@ -96,6 +96,7 @@
 
             .form {
                 display: flex;
+                position: relative;
                 flex-wrap: wrap;
                 width: 100%;
                 padding: 7px 0;
@@ -109,8 +110,34 @@
                     font-weight: 600;
                 }
 
+                .max {
+                    top: 33px;
+                    right: 103px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 24px;
+                    font-size: $font-size-xs;
+                    color: $white-color;
+                    font-weight: 600;
+                    background: $grid-row-bg;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 3px;
+
+                    &:hover {
+                        color: $bg-dark-color;
+                        background: $orange-color;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+
                 input {
                     margin: 7px;
+                    display: flex;
                     width: calc(100% - 128px);
                     height: 30px;
                     padding: 0 10px;
