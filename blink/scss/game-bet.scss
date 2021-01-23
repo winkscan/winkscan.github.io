@@ -1,0 +1,52 @@
+.blk-game-bet {
+    margin: 14px auto;
+    max-width: 1260px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 14px);
+    padding: 7px;
+    background: $sub-nav-bg;
+    border-radius: 3px;
+
+    .col {
+        margin: 7px;
+        width: calc(25% - 28px);
+        padding: 7px;
+        background: red;
+
+        label {
+            display: block;
+            width: 100%;
+            height: 24px;
+            color: $orange-color;
+            font-size: $font-size-xs;
+            background: orange;
+        }
+
+        .payout {
+            display: flex;
+            width: 100%;
+            height: 36px;
+            align-items: center;
+            background: $bg-dark-color;
+            border-radius: 3px;
+
+            .amount {
+                font-size: $font-size-xs;
+                font-weight: 600;
+                color: $white-color;
+            }
+
+            .wnk-icon {
+                display: flex;
+                width: 36px;
+                min-width: 36px;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: $orange-color;
+            }
+        }
+    }
+}

@@ -14,8 +14,8 @@
             display: flex;
             justify-content: center;
             width: calc(100% - 28px);
-            min-height: 412px;
-            padding: 14px;
+            min-height: 300px;
+            padding: 70px 14px 70px 14px;
             background-image: linear-gradient(to right, $bg-dark-color , $sub-nav-bg);
             border-radius: 3px;
 
@@ -54,7 +54,6 @@
                 flex-wrap: wrap;
                 width: 100%;
                 max-width: 770px;
-                background: orange;
 
                 .number {
                     display: flex;
@@ -63,7 +62,6 @@
                     height: 110px;
                     padding: 25px 0;
                     flex-direction: column;
-                    background: red;
 
                     .nr, label {
                         display: flex;
@@ -78,14 +76,20 @@
                         font-size: 80px;
                         color: $white-color;
                         line-height: 80px;
-                        background: green;
+
+                        &.win {
+                            color: $green-color;
+                        }
+
+                        &.lose {
+                            color: $red-color;
+                        }
                     }
 
                     label {
                         height: 30px;
                         font-size: $font-size-md;
                         color: $text-color;
-                        background: orange;
                     }
                 }
 
@@ -96,7 +100,6 @@
                     align-items: center;
                     width: calc(100% - 320px);
                     height: 160px;
-                    background: yellow;
 
                     .icon-dice {
                         display: flex;
@@ -156,17 +159,110 @@
 
                 .multiplier, .win-chance {
                     display: flex;
+                    align-items: center;
                     width: calc(50% - 160px);
                     padding: 30px 0;
                     height: 50px;
+
+                    .group {
+                        width: 100px;
+                        height: 40px;
+
+                        label, .coef {
+                            display: block;
+                            font-weight: 600;
+                        }
+
+                        label {
+                            font-size: $font-size-xs;
+                            color: $text-color;
+                        }
+
+                        .coef {
+                            font-size: $font-size-md;
+                            color: $white-color;
+                        }
+                    }
                 }
 
                 .multiplier {
-                    background: grey;
+                    justify-content: flex-end;
+
+                    .group {
+                        label, .coef {
+                            text-align: left;
+                        }
+                    }
                 }
 
                 .win-chance {
-                    background: blue;
+                    justify-content: flex-start;
+
+                    .group {
+                        label, .coef {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .bet-range {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 34px;
+
+                    .slider {
+                        width: 100%;
+                        height: 10px;
+                        border-radius: 3px;
+                        background: $green-color;
+
+                        .filled {
+                            position: relative;
+                            display: flex;
+                            height: 10px;
+                            border-radius: 3px;
+                            background: $red-color;
+
+                            .scroll {
+                                position: absolute;
+                                top: -13px;
+                                right: -18px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 36px;
+                                height: 36px;
+                                font-size: 18px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                font-weight: 600;
+                                color: $bg-dark-color;
+                                background: $white-color;
+                                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+                                &:hover {
+                                    transition: 0.3s all ease-in-out;
+                                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                                }
+                            }
+                        }
+                    }
+
+                    .from, .to {
+                        display: flex;
+                        width: 50%;
+                        height: 24px;
+                        align-items: center;
+                        font-size: $font-size-xs;
+                        font-weight: 600;
+                        color: $white-color;
+                    }
+
+                    .to {
+                        justify-content: flex-end;
+                        text-align: right;
+                    }
                 }
             }
         }

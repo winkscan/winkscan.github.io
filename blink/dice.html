@@ -200,7 +200,9 @@
                         <div class="rolling-dice"><i class="icon-dice"></i></div>
                         <!-- Spin Dice icon when we wait result <div class="rolling-dice"><i class="icon-dice spin-dice"></i></div> -->
                         <div class="number">
-                            <span class="nr">50</span>
+                            <!-- If WIN add class .win <span class="nr win">50</span> -->
+                            <!-- If LOSE add class .lose <span class="nr lose">50</span> -->
+                            <span class="nr win">50</span>
                             <label>Lucky Number</label>
                         </div>
                         <div class="action-button">
@@ -208,12 +210,16 @@
                             <div class="btn roll-under-active">Roll Under</div>
                         </div>
                         <div class="multiplier">
-                            <label>Multiplier</label>
-                            <span class="coef">x1.8942</span>
+                            <div class="group">
+                                <label>Multiplier</label>
+                                <span class="coef">x1.8942</span>
+                            </div>
                         </div>
                         <div class="win-chance">
-                            <label>Win Chance</label>
-                            <span class="coef">52%</span>
+                            <div class="group">
+                                <label>Win Chance</label>
+                                <span class="coef">52%</span>
+                            </div>
                         </div>
                         <div class="action-button">
                             <!-- Selected button <div class="btn roll-over-active">Roll Over</div>-->
@@ -221,7 +227,81 @@
                         </div>
                         <div class="bet-range">
                             <div class="slider"><span class="filled" style="width: 50%"><span class="scroll">50</span></span></div>
-                            <span class="from">4</span><span class="from">98</span>
+                            <span class="from">4</span><span class="to">98</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-game-bet">
+                    <div class="col">
+                        <label>Bet Amount</label>
+                        <span class="payout">
+                            <i class="wnk-icon icon-bnb">&#xe82b;</i>
+                            <input type="text" value="" />
+                            <span class="btn-group">
+                                <button class="btn">Min</button>
+                                <button class="btn">1/2</button>
+                                <button class="btn">x2</button>
+                                <button class="btn">Max</button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <label>Payout on Win</label>
+                        <span class="payout"><i class="wnk-icon icon-bnb">&#xe82b;</i><span class="amount">10</span></span>
+                    </div>
+                    <div class="col">
+                        <label>Balance</label>
+                        <span class="payout"><i class="wnk-icon icon-bnb">&#xe82b;</i><span class="amount">100</span></span>
+                    </div>
+                    <div class="col">
+                        <div class="auto">
+                            <label>Auto</label>
+                            <span class="auto-picker off">OFF</span>
+                            <!-- <span class="auto-picker on">ON</span> -->
+                        </div>
+                        <button class="btn-confirm">Rolling</button>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="dice-bg">
+                    <div class="dice-content">
+                        <div class="number">
+                            <span class="nr">50</span>
+                            <label>Prediction</label>
+                        </div>
+                        <div class="rolling-dice"><i class="icon-dice spin-dice"></i></div>
+                        <!-- Spin Dice icon when we wait result <div class="rolling-dice"><i class="icon-dice spin-dice"></i></div> -->
+                        <div class="number">
+                            <!-- If WIN add class .win <span class="nr win">50</span> -->
+                            <!-- If LOSE add class .lose <span class="nr lose">50</span> -->
+                            <span class="nr lose">50</span>
+                            <label>Lucky Number</label>
+                        </div>
+                        <div class="action-button">
+                            <!-- Selected button <div class="btn roll-under-active">Roll Under</div>-->
+                            <div class="btn">Roll Under</div>
+                        </div>
+                        <div class="multiplier">
+                            <div class="group">
+                                <label>Multiplier</label>
+                                <span class="coef">x1.8942</span>
+                            </div>
+                        </div>
+                        <div class="win-chance">
+                            <div class="group">
+                                <label>Win Chance</label>
+                                <span class="coef">52%</span>
+                            </div>
+                        </div>
+                        <div class="action-button">
+                            <!-- Not selected button <div class="btn">Roll Over</div>-->
+                            <div class="btn roll-over-active">Roll Over</div>
+                        </div>
+                        <div class="bet-range">
+                            <div class="slider"><span class="filled" style="width: 70%"><span class="scroll">70</span></span></div>
+                            <span class="from">4</span><span class="to">98</span>
                         </div>
                     </div>
                 </div>
