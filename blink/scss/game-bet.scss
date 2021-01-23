@@ -10,6 +10,8 @@
 
     .col {
         margin: 7px;
+        display: flex;
+        flex-wrap: wrap;
         width: calc(25% - 28px);
         padding: 7px;
         background: red;
@@ -46,6 +48,98 @@
                 justify-content: center;
                 font-size: 16px;
                 color: $orange-color;
+            }
+
+            input {
+                width: calc(100% - 174px);
+                height: 36px;
+                padding: 0 10px 0 0;
+                font-size: $font-size-xs;
+                font-weight: 600;
+                color: $white-color;
+                border: none;
+                outline: none;
+                background: transparent;
+            }
+
+            .btn-group {
+                display: flex;
+                width: 160px;
+                height: 30px;
+                padding: 3px 2px;
+
+                .btn {
+                    margin: 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 26px;
+                    font-size: $font-size-xs;
+                    color: $white-color;
+                    font-weight: 600;
+                    background: $grid-row-bg;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 3px;
+
+                    &:hover {
+                        color: $bg-dark-color;
+                        background: $orange-color;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .auto {
+            width: 70px;
+            padding-right: 14px;
+
+            .auto-picker {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: 34px;
+                height: 36px;
+                font-weight: 600;
+                font-size: $font-size-xs;
+                text-transform: uppercase;
+                border-radius: 18px;
+
+                &:after {
+                    position: absolute;
+                    display: block;
+                    top: 8px;
+                    width: 20px;
+                    height: 20px;
+                    content:'';
+                    border-radius: 10px;
+                }
+
+                &.off {
+                    padding: 0 8px 0 28px;
+                    color: $text-color;
+                    background: $bg-dark-color;
+
+                    &:after {
+                        left: 8px;
+                        background: $text-color;
+                    }
+                }
+
+                &.on {
+                    padding: 0 28px 0 8px;
+                    color: $bg-dark-color;
+                    background: $orange-color;
+
+                    &:after {
+                        right: 8px;
+                        background: $bg-dark-color;
+                    }
+                }
             }
         }
     }

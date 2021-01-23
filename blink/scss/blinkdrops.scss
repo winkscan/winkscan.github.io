@@ -193,7 +193,7 @@
             font-size: $font-size-xs;
         }
 
-        .timer {
+        .countdown {
             position: absolute;
             right: 14px;
             top: 10px;
@@ -266,6 +266,18 @@
                     color: $bg-dark-color;
                     background: $orange-dark-color;
                     transition: 0.3s all ease-in-out;
+                }
+            }
+
+            &.disabled {
+                cursor: default;
+                color: $bg-dark-color;
+                background: $text-color;
+                border-color: $text-color;
+
+                &:hover, &:active {
+                    color: $bg-dark-color;
+                    background: $text-color;
                 }
             }
         }
