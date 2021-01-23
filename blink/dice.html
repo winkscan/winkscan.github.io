@@ -28,6 +28,24 @@
             </div>
         </div>
     </div>
+    <div class="popup-wrapper rules-popup">
+        <div class="popup">
+            <div class="popup-header">
+                Roll your way to riches!<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <p>Click on 'roll' and start your path to fame. Each roll will be recorded on the BNB network to maximize transparency and fairness. In the odd case that the roll fails, BNB will be deducted from the account first then after the transaction has failed the BNB will then be returned to your wallet.</p>
+                    <p>Due to BNB network logic, roughly 0.02BNB will be deducted for bandwidth allocation for each bet.</p>
+                    <p>To ensure transparency you can check your transaction at https://bscscan.com</p>
+                    <h4>Auto-Roll</h4>
+                    <p>We have now added the long-awaited Auto Roll function. Now you can mine BLINK tokens 24/7!.</p>
+                    <p>Auto function will slow down if you switch to another tab in your browser. To overcome this, you can open http://blink.wink.org in a separate stand-alone window.</p>
+                    <p>(Note: please use the auto function under your own discretion.)</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="blk-body">
         <div class="blk-header">
             <div class="burger"><i class="bar"></i></div>
@@ -54,10 +72,9 @@
             </div>
         </div>
         <div class="blk-dice">
-            <div class="blk-dice-mob-nav"></div>
             <div class="blk-top-rank">
                 <div class="rank-header">
-                    <label>Top Winners</label><i class="wnk-icon icon-blk-trophy">&#xe844;</i>
+                    <label>Top Winners</label><i class="wnk-icon icon-blk-trophy">&#xe844;</i><span class="close-rank"></span>
                 </div>
                 <div class="btn-group">
                     <button class="btn active">Win Rank</button>
@@ -192,20 +209,25 @@
             </div>
             <div class="blk-dice-game">
                 <div class="dice-bg">
+                    <div class="blk-dice-mob-nav">
+                        <div class="tab tab-trophy"><i class="wnk-icon icon-blk-trophy">&#xe844;</i></div>
+                        <div class="tab tab-chat"><i class="wnk-icon icon-blk-messenger">&#xe840;</i></div>
+                    </div>
+                    <a href="javascript:void(0);" class="btn-rules"><i class="question">?</i>Rules</a>
                     <div class="dice-content">
-                        <div class="number">
+                        <div class="number prediction">
                             <span class="nr">50</span>
                             <label>Prediction</label>
                         </div>
                         <div class="rolling-dice"><i class="icon-dice"></i></div>
                         <!-- Spin Dice icon when we wait result <div class="rolling-dice"><i class="icon-dice spin-dice"></i></div> -->
-                        <div class="number">
+                        <div class="number lucky-number">
                             <!-- If WIN add class .win <span class="nr win">50</span> -->
                             <!-- If LOSE add class .lose <span class="nr lose">50</span> -->
                             <span class="nr win">50</span>
                             <label>Lucky Number</label>
                         </div>
-                        <div class="action-button">
+                        <div class="action-button under-col">
                             <!-- Not selected button <div class="btn">Roll Under</div>-->
                             <div class="btn roll-under-active">Roll Under</div>
                         </div>
@@ -221,7 +243,7 @@
                                 <span class="coef">52%</span>
                             </div>
                         </div>
-                        <div class="action-button">
+                        <div class="action-button over-col">
                             <!-- Selected button <div class="btn roll-over-active">Roll Over</div>-->
                             <div class="btn">Roll Over</div>
                         </div>
@@ -232,7 +254,7 @@
                     </div>
                 </div>
                 <div class="blk-game-bet">
-                    <div class="col">
+                    <div class="col bet-amount">
                         <label>Bet Amount</label>
                         <span class="payout">
                             <i class="wnk-icon icon-bnb">&#xe82b;</i>
@@ -245,15 +267,15 @@
                             </span>
                         </span>
                     </div>
-                    <div class="col">
+                    <div class="col payout-on-win">
                         <label>Payout on Win</label>
                         <span class="payout"><i class="wnk-icon icon-bnb">&#xe82b;</i><span class="amount">10</span></span>
                     </div>
-                    <div class="col">
+                    <div class="col balance">
                         <label>Balance</label>
                         <span class="payout"><i class="wnk-icon icon-bnb">&#xe82b;</i><span class="amount">100</span></span>
                     </div>
-                    <div class="col">
+                    <div class="col make-bet">
                         <div class="auto">
                             <label>Auto</label>
                             <span class="auto-picker off">OFF</span>
@@ -265,7 +287,7 @@
             </div>
             <div class="blk-chat">
                 <div class="rank-header">
-                    <label>Chat</label><i class="wnk-icon icon-blk-messenger">&#xe840;</i>
+                    <label>Chat</label><i class="wnk-icon icon-blk-messenger">&#xe840;</i><span class="close-chat"></span>
                 </div>
                 <div class="chat-body">
                     <div class="message">
@@ -336,6 +358,23 @@
                 $('.blk-header').removeClass('stick-to-top');
             }
         });
+
+        $('.btn-rules').click( function() {
+            $(".rules-popup").toggleClass("show");
+        } );
+        $('.tab-chat').click( function() {
+            $(".blk-chat").toggleClass("show");
+        } );
+        $('.close-chat').click( function() {
+            $(".blk-chat").removeClass("show");
+        } );
+
+        $('.tab-trophy').click( function() {
+            $(".blk-top-rank").toggleClass("show");
+        } );
+        $('.close-rank').click( function() {
+            $(".blk-top-rank").removeClass("show");
+        } );
     </script>
 
 </body>

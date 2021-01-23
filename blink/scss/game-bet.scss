@@ -12,8 +12,8 @@
         margin: 7px;
         display: flex;
         flex-wrap: wrap;
-        width: calc(25% - 28px);
-        padding: 7px;
+        width: calc(25% - 14px);
+        padding: 7px 0;
         
         label {
             display: block;
@@ -161,6 +161,21 @@
             &:active {
                 background: $orange-dark-color;
                 transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        .col {
+            margin: 0 7px;
+            width: calc(50% - 14px);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .col {
+            &.bet-amount, &.make-bet {
+                width: calc(100% - 14px);
             }
         }
     }

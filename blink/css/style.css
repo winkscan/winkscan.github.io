@@ -5,12 +5,6 @@
   height: 100px; }
   .blk-header .burger {
     display: none; }
-  .blk-header.stick-to-top {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
   .blk-header .blk-top-nav {
     display: flex;
     width: calc(100% - 28px);
@@ -141,6 +135,12 @@
             background: url("../img/wink-logo.svg") no-repeat center;
             background-size: 36px 24px; }
   @media screen and (max-width: 576px) {
+    .blk-header.stick-to-top {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
     .blk-header .burger {
       display: flex;
       position: fixed;
@@ -1106,7 +1106,9 @@
         display: block; }
 
 .blk-dice {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   width: calc(100% - 14px);
   height: calc(100% - 107px);
   padding: 7px 7px 0 7px; }
@@ -1123,6 +1125,28 @@
       padding: 70px 60px;
       background-image: linear-gradient(to right, #0D0E11, #1B1C23);
       border-radius: 3px; }
+      .blk-dice .blk-dice-game .dice-bg .blk-dice-mob-nav {
+        display: none; }
+      .blk-dice .blk-dice-game .dice-bg .btn-rules {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        font-size: 13px; }
+        .blk-dice .blk-dice-game .dice-bg .btn-rules .question {
+          display: flex;
+          margin-right: 4px;
+          align-items: center;
+          justify-content: center;
+          color: #0D0E11;
+          width: 16px;
+          height: 16px;
+          border-radius: 8px;
+          font-style: normal;
+          font-weight: 600;
+          background: #FFF; }
       .blk-dice .blk-dice-game .dice-bg:after {
         position: absolute;
         display: flex;
@@ -1211,7 +1235,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 156px;
+            width: calc(100% - 4px);
             height: 46px;
             color: #5C5D68;
             font-weight: 600;
@@ -1309,16 +1333,125 @@
   @media screen and (max-width: 1600px) {
     .blk-dice .blk-dice-game {
       width: calc(62% - 14px); } }
+  @media screen and (max-width: 1400px) {
+    .blk-dice .blk-dice-game {
+      width: calc(58% - 14px); } }
   @media screen and (max-width: 1366px) {
     .blk-dice .blk-dice-game .dice-bg {
       width: calc(100% - 80px);
       padding: 50px 40px; } }
+  @media screen and (max-width: 1200px) {
+    .blk-dice .blk-dice-game {
+      width: calc(100% - 14px); }
+      .blk-dice .blk-dice-game .dice-bg .blk-dice-mob-nav {
+        position: absolute;
+        left: 7px;
+        top: 0;
+        z-index: 4;
+        display: flex;
+        width: 100px;
+        height: 36px;
+        justify-content: flex-start; }
+        .blk-dice .blk-dice-game .dice-bg .blk-dice-mob-nav .tab {
+          display: flex;
+          margin: 0 7px;
+          width: 36px;
+          height: 36px;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          border-radius: 0 0 3px 3px;
+          background: #0D0E11; }
+          .blk-dice .blk-dice-game .dice-bg .blk-dice-mob-nav .tab .wnk-icon {
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            color: #FBC509; } }
+  @media screen and (max-width: 700px) {
+    .blk-dice .blk-dice-game .dice-bg {
+      width: calc(100% - 40px);
+      padding: 50px 20px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .number {
+        width: 120px;
+        height: 90px;
+        padding: 15px 0; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .number .nr {
+          height: 60px;
+          font-size: 60px;
+          line-height: 60px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice {
+        width: calc(100% - 240px);
+        height: 120px; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice .icon-dice {
+          width: 120px;
+          height: 120px;
+          background: url("../img/rolling-dice.svg") no-repeat center #262731;
+          background-size: 70% auto; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .action-button {
+        width: 120px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance {
+        width: calc(50% - 120px); } }
+  @media screen and (max-width: 576px) {
+    .blk-dice .blk-dice-game .dice-bg {
+      min-height: inherit;
+      padding: 50px 20px 20px 20px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .prediction {
+        order: 1; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice {
+        order: 2; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .lucky-number {
+        order: 3; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .action-button {
+        order: 5;
+        padding-top: 0;
+        width: calc(50% - 7px); }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .action-button.under-col {
+          padding-right: 7px; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .action-button.over-col {
+          padding-left: 7px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance {
+        order: 4;
+        width: calc(50% - 7px);
+        padding: 15px 0; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier .group, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance .group {
+          display: flex;
+          width: 100%;
+          flex-wrap: nowrap;
+          align-items: center; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier .group label, .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier .group .coef, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance .group label, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance .group .coef {
+            width: 50%; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier .group label, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance .group label {
+            justify-content: flex-start;
+            text-align: left; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier .group .coef, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance .group .coef {
+            justify-content: flex-end;
+            text-align: right; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier {
+        padding-right: 7px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance {
+        padding-left: 7px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .bet-range {
+        order: 6; } }
+  @media screen and (max-width: 480px) {
+    .blk-dice .blk-dice-game .dice-bg .dice-content .number {
+      width: 100px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .number label {
+        font-size: 13px; }
+    .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice {
+      width: calc(100% - 200px);
+      height: 100px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice .icon-dice {
+        width: 100px;
+        height: 100px; } }
+  @media screen and (max-width: 375px) {
+    .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice .icon-dice {
+      min-width: 70px;
+      width: 70px;
+      height: 70px; } }
 
 .blk-top-rank {
   margin: 7px 7px 4px 7px;
   width: calc(14% - 14px);
-  max-width: 320px;
-  height: calc(100% - 11px);
   background: #1B1C23;
   border-radius: 3px; }
   .blk-top-rank .rank-header {
@@ -1334,6 +1467,8 @@
       color: #FFF;
       font-weight: 600;
       font-size: 13px; }
+    .blk-top-rank .rank-header .close-rank {
+      display: none; }
     .blk-top-rank .rank-header .wnk-icon {
       position: absolute;
       top: 12px;
@@ -1416,12 +1551,62 @@
   @media screen and (max-width: 1600px) {
     .blk-top-rank {
       width: calc(19% - 14px); } }
+  @media screen and (max-width: 1400px) {
+    .blk-top-rank {
+      width: calc(21% - 14px); } }
+  @media screen and (max-width: 1200px) {
+    .blk-top-rank {
+      position: absolute;
+      left: -306px;
+      top: 14px;
+      display: block;
+      z-index: 5;
+      margin: 0;
+      width: 306px;
+      max-width: 306px;
+      height: calc(100% - 14px);
+      border-radius: 0 3px 3px 0; }
+      .blk-top-rank.show {
+        left: 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        animation-name: showchat;
+        animation-duration: 0.3s; }
+    @keyframes showchat {
+      from {
+        left: -306px; }
+      to {
+        left: 0; } }
+      .blk-top-rank .rank-header .wnk-icon {
+        display: none; }
+      .blk-top-rank .rank-header .close-rank {
+        position: absolute;
+        display: block;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer; }
+        .blk-top-rank .rank-header .close-rank:after, .blk-top-rank .rank-header .close-rank:before {
+          position: absolute;
+          top: 5px;
+          display: block;
+          content: '';
+          width: 2px;
+          height: 20px;
+          background: #5C5D68; }
+        .blk-top-rank .rank-header .close-rank:after {
+          left: 14px;
+          transform: rotate(45deg); }
+        .blk-top-rank .rank-header .close-rank:before {
+          right: 14px;
+          transform: rotate(-45deg); }
+        .blk-top-rank .rank-header .close-rank:hover:after, .blk-top-rank .rank-header .close-rank:hover:before {
+          background: #FFF;
+          transition: 0.3s background-color ease-in-out; } }
 
 .blk-chat {
   margin: 7px 7px 4px 7px;
   width: calc(14% - 14px);
-  max-width: 320px;
-  height: calc(100% - 11px);
   background: #1B1C23;
   border-radius: 3px; }
   .blk-chat .rank-header {
@@ -1437,6 +1622,8 @@
       color: #FFF;
       font-weight: 600;
       font-size: 13px; }
+    .blk-chat .rank-header .close-chat {
+      display: none; }
     .blk-chat .rank-header .wnk-icon {
       position: absolute;
       top: 12px;
@@ -1550,6 +1737,58 @@
   @media screen and (max-width: 1600px) {
     .blk-chat {
       width: calc(19% - 14px); } }
+  @media screen and (max-width: 1400px) {
+    .blk-chat {
+      width: calc(21% - 14px); } }
+  @media screen and (max-width: 1200px) {
+    .blk-chat {
+      position: absolute;
+      left: -306px;
+      top: 14px;
+      display: block;
+      z-index: 5;
+      margin: 0;
+      width: 306px;
+      height: calc(100% - 14px);
+      max-width: 306px;
+      border-radius: 0 3px 3px 0; }
+      .blk-chat.show {
+        left: 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        animation-name: showchat;
+        animation-duration: 0.3s; }
+    @keyframes showchat {
+      from {
+        left: -306px; }
+      to {
+        left: 0; } }
+      .blk-chat .rank-header .wnk-icon {
+        display: none; }
+      .blk-chat .rank-header .close-chat {
+        position: absolute;
+        display: block;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer; }
+        .blk-chat .rank-header .close-chat:after, .blk-chat .rank-header .close-chat:before {
+          position: absolute;
+          top: 5px;
+          display: block;
+          content: '';
+          width: 2px;
+          height: 20px;
+          background: #5C5D68; }
+        .blk-chat .rank-header .close-chat:after {
+          left: 14px;
+          transform: rotate(45deg); }
+        .blk-chat .rank-header .close-chat:before {
+          right: 14px;
+          transform: rotate(-45deg); }
+        .blk-chat .rank-header .close-chat:hover:after, .blk-chat .rank-header .close-chat:hover:before {
+          background: #FFF;
+          transition: 0.3s background-color ease-in-out; } }
 
 .blk-game-bet {
   margin: 14px auto;
@@ -1564,8 +1803,8 @@
     margin: 7px;
     display: flex;
     flex-wrap: wrap;
-    width: calc(25% - 28px);
-    padding: 7px; }
+    width: calc(25% - 14px);
+    padding: 7px 0; }
     .blk-game-bet .col label {
       display: block;
       width: 100%;
@@ -1679,6 +1918,13 @@
       .blk-game-bet .col .btn-confirm:active {
         background: #FB9B09;
         transition: 0.3s all ease-in-out; }
+  @media screen and (max-width: 1600px) {
+    .blk-game-bet .col {
+      margin: 0 7px;
+      width: calc(50% - 14px); } }
+  @media screen and (max-width: 576px) {
+    .blk-game-bet .col.bet-amount, .blk-game-bet .col.make-bet {
+      width: calc(100% - 14px); } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

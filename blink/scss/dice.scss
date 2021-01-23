@@ -1,5 +1,7 @@
 .blk-dice {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
     width: calc(100% - 14px);
     height: calc(100% - 107px);
     padding: 7px 7px 0 7px;
@@ -18,6 +20,34 @@
             padding: 70px 60px;
             background-image: linear-gradient(to right, $bg-dark-color , $sub-nav-bg);
             border-radius: 3px;
+
+            .blk-dice-mob-nav {
+                display: none;
+            }
+
+            .btn-rules {
+                position: absolute;
+                top: 10px;
+                right: 14px;
+                display: flex;
+                align-items: center;
+                color: $white-color;
+                font-size: $font-size-xs;
+
+                .question {
+                    display: flex;
+                    margin-right: 4px;
+                    align-items: center;
+                    justify-content: center;
+                    color: $bg-dark-color;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 8px;
+                    font-style: normal;
+                    font-weight: 600;
+                    background: $white-color;
+                }
+            }
 
             &:after {
                 position: absolute;
@@ -130,7 +160,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 156px;
+                        width: calc(100% - 4px);
                         height: 46px;
                         color: $text-color;
                         font-weight: 600;
@@ -280,11 +310,216 @@
         }
     }
 
+    @media screen and (max-width: 1400px) {
+        .blk-dice-game {
+            width: calc(58% - 14px);
+        }
+    }
+
     @media screen and (max-width: 1366px) {
         .blk-dice-game {
             .dice-bg {
                 width: calc(100% - 80px);
                 padding: 50px 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .blk-dice-game {
+            width: calc(100% - 14px);
+
+            .dice-bg {
+                .blk-dice-mob-nav {
+                    position: absolute;
+                    left: 7px;
+                    top: 0;
+                    z-index: 4;
+                    display: flex;
+                    width: 100px;
+                    height: 36px;
+                    justify-content: flex-start;
+        
+                    .tab {
+                        display: flex;
+                        margin: 0 7px;
+                        width: 36px;
+                        height: 36px;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        border-radius: 0 0 3px 3px;
+                        background: $bg-dark-color;
+        
+                        .wnk-icon {
+                            width: 16px;
+                            height: 16px;
+                            font-size: 16px;
+                            color: $orange-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .blk-dice-game {
+            .dice-bg {
+                width: calc(100% - 40px);
+                padding: 50px 20px;
+
+                .dice-content {
+                    .number {
+                        width: 120px;
+                        height: 90px;
+                        padding: 15px 0;
+    
+                        .nr {
+                            height: 60px;
+                            font-size: 60px;
+                            line-height: 60px;
+                        }
+                    }
+    
+                    .rolling-dice {
+                        width: calc(100% - 240px);
+                        height: 120px;
+                        
+                        .icon-dice {
+                            width: 120px;
+                            height: 120px;
+                            background: url('../img/rolling-dice.svg') no-repeat center #262731;
+                            background-size: 70% auto;
+                        }
+                    }
+
+                    .action-button {
+                        width: 120px;                        
+                    }
+    
+                    .multiplier, .win-chance {
+                        width: calc(50% - 120px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .blk-dice-game {
+            .dice-bg {
+                min-height: inherit;
+                padding: 50px 20px 20px 20px;
+                
+                .dice-content {
+                    .prediction {
+                        order: 1;
+                    }
+    
+                    .rolling-dice {
+                        order: 2;
+                    }
+
+                    .lucky-number {
+                        order: 3;
+                    }
+
+                    .action-button {
+                        order: 5;
+                        padding-top: 0;
+                        width: calc(50% - 7px);
+
+                        &.under-col {
+                            padding-right: 7px;
+                        }
+
+                        &.over-col {
+                            padding-left: 7px;
+                        }
+                    }
+    
+                    .multiplier, .win-chance {
+                        order: 4;
+                        width: calc(50% - 7px);
+                        padding: 15px 0;
+
+                        .group {
+                            display: flex;
+                            width: 100%;
+                            flex-wrap: nowrap;
+                            align-items: center;
+
+                            label, .coef {
+                                width: 50%;
+                            }
+
+                            label {
+                                justify-content: flex-start;
+                                text-align: left;
+                            }
+
+                            .coef {
+                                justify-content: flex-end;
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    .multiplier {
+                        padding-right: 7px;
+                    }
+
+                    .win-chance {
+                        padding-left: 7px;
+                    }
+
+                    .bet-range {
+                        order: 6;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .blk-dice-game {
+            .dice-bg {
+                .dice-content {
+                    .number {
+                        width: 100px;
+                        
+                        label {
+                            font-size: $font-size-xs;
+                        }
+                    }
+    
+                    .rolling-dice {
+                        width: calc(100% - 200px);
+                        height: 100px;
+                        
+                        .icon-dice {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .blk-dice-game {
+            .dice-bg {
+                .dice-content {
+                    .rolling-dice {
+                        .icon-dice {
+                            min-width: 70px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                }
             }
         }
     }
