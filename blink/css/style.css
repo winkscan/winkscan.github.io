@@ -1035,6 +1035,29 @@
             .faq .faq-content .topic .faq-body p a:hover {
               color: #FBC509;
               transition: 0.3s color ease-in-out; }
+        .faq .faq-content .topic .faq-body .responsive-table {
+          width: 100%;
+          overflow: auto; }
+          .faq .faq-content .topic .faq-body .responsive-table table {
+            width: 100%;
+            text-align: left;
+            border-spacing: 0;
+            border-left: 1px solid #0D0E11;
+            border-top: 1px solid #0D0E11; }
+            .faq .faq-content .topic .faq-body .responsive-table table thead tr th {
+              padding: 5px 10px;
+              color: #FFF;
+              font-weight: 600;
+              vertical-align: middle;
+              background: #0D0E11;
+              border-right: 1px solid #0D0E11;
+              border-bottom: 1px solid #0D0E11; }
+            .faq .faq-content .topic .faq-body .responsive-table table tbody tr td {
+              padding: 5px 10px;
+              vertical-align: middle;
+              color: #FBC509;
+              border-right: 1px solid #0D0E11;
+              border-bottom: 1px solid #0D0E11; }
       .faq .faq-content .topic.opened .question {
         color: #FFF; }
         .faq .faq-content .topic.opened .question .arrow {
@@ -1043,6 +1066,365 @@
             background: #FBC509; }
       .faq .faq-content .topic.opened .faq-body {
         display: block; }
+
+.blk-dice {
+  display: flex;
+  width: calc(100% - 14px);
+  height: calc(100% - 107px);
+  padding: 7px 7px 0 7px; }
+  .blk-dice .blk-dice-game {
+    margin: 7px 7px 4px 7px;
+    width: calc(100% - 682px);
+    height: calc(100% - 11px); }
+    .blk-dice .blk-dice-game .dice-bg {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: calc(100% - 28px);
+      min-height: 412px;
+      padding: 14px;
+      background-image: linear-gradient(to right, #0D0E11, #1B1C23);
+      border-radius: 3px; }
+      .blk-dice .blk-dice-game .dice-bg:after {
+        position: absolute;
+        display: flex;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 120px;
+        content: '';
+        background: url("../img/blured-dice1.svg") no-repeat -40px bottom;
+        background-size: 240px;
+        border-radius: 3px; }
+      .blk-dice .blk-dice-game .dice-bg:before {
+        position: absolute;
+        display: flex;
+        z-index: 1;
+        right: 14px;
+        bottom: 14px;
+        width: 106px;
+        height: 106px;
+        content: '';
+        background: url("../img/blured-dice2.svg") no-repeat center;
+        background-size: 120% auto;
+        border-radius: 3px; }
+      .blk-dice .blk-dice-game .dice-bg .dice-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 770px;
+        background: orange; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .number {
+          display: flex;
+          flex-wrap: wrap;
+          width: 160px;
+          height: 110px;
+          padding: 25px 0;
+          flex-direction: column;
+          background: red; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .number .nr, .blk-dice .blk-dice-game .dice-bg .dice-content .number label {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .number .nr {
+            height: 80px;
+            font-size: 80px;
+            color: #FFF;
+            line-height: 80px;
+            background: green; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .number label {
+            height: 30px;
+            font-size: 16px;
+            color: #5C5D68;
+            background: orange; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: calc(100% - 320px);
+          height: 160px;
+          background: yellow; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice .icon-dice {
+            display: flex;
+            width: 160px;
+            height: 160px;
+            background: url("../img/rolling-dice.svg") no-repeat center #262731;
+            background-size: 70% auto;
+            border-radius: 50%; }
+            .blk-dice .blk-dice-game .dice-bg .dice-content .rolling-dice .icon-dice.spin-dice {
+              transform: rotate(0deg);
+              animation: spin-dice 2s infinite linear; }
+
+@keyframes spin-dice {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .action-button {
+          width: 160px;
+          height: 50px;
+          padding: 30px 0; }
+          .blk-dice .blk-dice-game .dice-bg .dice-content .action-button .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 156px;
+            height: 46px;
+            color: #5C5D68;
+            font-weight: 600;
+            font-size: 16px;
+            background: transparent;
+            border: 2px solid #5C5D68;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer; }
+            .blk-dice .blk-dice-game .dice-bg .dice-content .action-button .btn.roll-under-active {
+              background: #D80027;
+              border-color: #D80027;
+              color: #FFF;
+              transition: 0.3s all ease-in-out; }
+            .blk-dice .blk-dice-game .dice-bg .dice-content .action-button .btn.roll-over-active {
+              background: #26A141;
+              border-color: #26A141;
+              color: #FFF;
+              transition: 0.3s all ease-in-out; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier, .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance {
+          display: flex;
+          width: calc(50% - 160px);
+          padding: 30px 0;
+          height: 50px; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .multiplier {
+          background: grey; }
+        .blk-dice .blk-dice-game .dice-bg .dice-content .win-chance {
+          background: blue; }
+
+.blk-top-rank {
+  margin: 7px 7px 4px 7px;
+  width: 320px;
+  height: calc(100% - 11px);
+  background: #1B1C23;
+  border-radius: 3px; }
+  .blk-top-rank .rank-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: calc(100% - 48px);
+    height: 40px;
+    padding: 0 34px 0 14px;
+    background: #0D0E11;
+    border-radius: 3px 3px 0 0; }
+    .blk-top-rank .rank-header label {
+      color: #FFF;
+      font-weight: 600;
+      font-size: 13px; }
+    .blk-top-rank .rank-header .wnk-icon {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      color: #FBC509; }
+  .blk-top-rank .btn-group {
+    display: flex;
+    width: calc(100% - 14px);
+    padding: 7px; }
+    .blk-top-rank .btn-group .btn {
+      margin: 7px;
+      width: calc(50% - 16px);
+      height: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #5C5D68;
+      background: transparent;
+      border: 1px solid #5C5D68; }
+      .blk-top-rank .btn-group .btn:hover {
+        color: #0D0E11;
+        background: #FFF;
+        border-color: #FFF;
+        transition: 0.3s all ease-in-out; }
+      .blk-top-rank .btn-group .btn.active {
+        color: #0D0E11;
+        background: #FBC509;
+        border-color: #FBC509; }
+        .blk-top-rank .btn-group .btn.active:hover {
+          background: #FFCD1E;
+          border-color: #FFCD1E;
+          transition: 0.3s all ease-in-out; }
+        .blk-top-rank .btn-group .btn.active:active {
+          background: #FB9B09;
+          border-color: #FB9B09;
+          transition: 0.3s all ease-in-out; }
+  .blk-top-rank .responsive-table {
+    width: 100%;
+    height: calc(100% - 96px);
+    overflow: auto;
+    border-radius: 0 0 3px 3px; }
+    .blk-top-rank .responsive-table table {
+      width: 100%;
+      text-align: left;
+      border-spacing: 0; }
+      .blk-top-rank .responsive-table table tbody tr:nth-child(even) {
+        background: #24252E; }
+      .blk-top-rank .responsive-table table tbody tr td {
+        height: 40px;
+        font-weight: normal;
+        vertical-align: middle;
+        padding-left: 14px;
+        font-size: 13px; }
+        .blk-top-rank .responsive-table table tbody tr td.amount {
+          text-align: right;
+          padding-left: 0;
+          padding-right: 14px;
+          color: #FBC509; }
+        .blk-top-rank .responsive-table table tbody tr td.avatar img {
+          width: 24px;
+          height: 24px;
+          border-radius: 2px; }
+        .blk-top-rank .responsive-table table tbody tr td.nr {
+          font-size: 14px;
+          font-weight: 600;
+          color: #FFF; }
+
+.blk-chat {
+  margin: 7px 7px 4px 7px;
+  width: 320px;
+  height: calc(100% - 11px);
+  background: #1B1C23;
+  border-radius: 3px; }
+  .blk-chat .rank-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: calc(100% - 48px);
+    height: 40px;
+    padding: 0 34px 0 14px;
+    background: #0D0E11;
+    border-radius: 3px 3px 0 0; }
+    .blk-chat .rank-header label {
+      color: #FFF;
+      font-weight: 600;
+      font-size: 13px; }
+    .blk-chat .rank-header .wnk-icon {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      color: #FBC509; }
+  .blk-chat .chat-body {
+    width: calc(100% - 14px);
+    height: calc(100% - 112px);
+    overflow: auto;
+    padding: 7px; }
+    .blk-chat .chat-body .message {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% - 14px);
+      padding: 7px; }
+      .blk-chat .chat-body .message .user {
+        display: flex;
+        width: calc(100% - 34px);
+        padding: 0 0 7px 34px;
+        font-size: 12px;
+        color: #5C5D68; }
+      .blk-chat .chat-body .message .avatar {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: #24252E;
+        border-radius: 2px; }
+        .blk-chat .chat-body .message .avatar img {
+          width: 24px;
+          height: 24px; }
+      .blk-chat .chat-body .message .message-body {
+        margin-left: 10px;
+        width: calc(100% - 54px);
+        min-height: 16px;
+        padding: 4px 10px;
+        line-height: 16px;
+        color: #FFF;
+        font-size: 13px;
+        background: #24252E;
+        border-radius: 0 3px 3px 3px; }
+  .blk-chat .send-message {
+    display: flex;
+    width: calc(100% - 14px);
+    height: 44px;
+    padding: 7px; }
+    .blk-chat .send-message input {
+      margin: 7px;
+      display: flex;
+      width: calc(100% - 102px);
+      height: 30px;
+      padding: 0 10px;
+      font-size: 13px;
+      color: #5C5D68;
+      background: #0D0E11;
+      border-radius: 3px;
+      border: none;
+      outline: none; }
+      .blk-chat .send-message input:focus {
+        color: #FFF; }
+    .blk-chat .send-message .btn {
+      margin: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      border: 1px solid; }
+      .blk-chat .send-message .btn .wnk-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        font-size: 16px; }
+      .blk-chat .send-message .btn.btn-emoji {
+        background: transparent;
+        border: 1px solid #5C5D68; }
+        .blk-chat .send-message .btn.btn-emoji .wnk-icon {
+          color: #5C5D68; }
+        .blk-chat .send-message .btn.btn-emoji:hover {
+          color: #0D0E11;
+          background: #FFF;
+          border-color: #FFF;
+          transition: 0.3s all ease-in-out; }
+      .blk-chat .send-message .btn.btn-send {
+        background: #FBC509;
+        border: 1px solid #FBC509; }
+        .blk-chat .send-message .btn.btn-send .wnk-icon {
+          color: #0D0E11; }
+        .blk-chat .send-message .btn.btn-send:hover {
+          background: #FFCD1E;
+          transition: 0.3s all ease-in-out; }
+        .blk-chat .send-message .btn.btn-send:active {
+          background: #FB9B09;
+          transition: 0.3s all ease-in-out; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

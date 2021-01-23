@@ -1,0 +1,174 @@
+.blk-dice {
+    display: flex;
+    width: calc(100% - 14px);
+    height: calc(100% - 107px);
+    padding: 7px 7px 0 7px;
+
+    .blk-dice-game {
+        margin: 7px 7px 4px 7px;
+        width: calc(100% - 682px);
+        height: calc(100% - 11px);
+        
+        .dice-bg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: calc(100% - 28px);
+            min-height: 412px;
+            padding: 14px;
+            background-image: linear-gradient(to right, $bg-dark-color , $sub-nav-bg);
+            border-radius: 3px;
+
+            &:after {
+                position: absolute;
+                display: flex;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 120px;
+                content:'';
+                background: url('../img/blured-dice1.svg') no-repeat -40px bottom;
+                background-size: 240px;
+                border-radius: 3px;
+            }
+
+            &:before {
+                position: absolute;
+                display: flex;
+                z-index: 1;
+                right: 14px;
+                bottom: 14px;
+                width: 106px;
+                height: 106px;
+                content:'';
+                background: url('../img/blured-dice2.svg') no-repeat center;
+                background-size: 120% auto;
+                border-radius: 3px;
+            }
+
+            .dice-content {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 770px;
+                background: orange;
+
+                .number {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 160px;
+                    height: 110px;
+                    padding: 25px 0;
+                    flex-direction: column;
+                    background: red;
+
+                    .nr, label {
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                    }
+
+                    .nr {
+                        height: 80px;
+                        font-size: 80px;
+                        color: $white-color;
+                        line-height: 80px;
+                        background: green;
+                    }
+
+                    label {
+                        height: 30px;
+                        font-size: $font-size-md;
+                        color: $text-color;
+                        background: orange;
+                    }
+                }
+
+                .rolling-dice {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% - 320px);
+                    height: 160px;
+                    background: yellow;
+
+                    .icon-dice {
+                        display: flex;
+                        width: 160px;
+                        height: 160px;
+                        background: url('../img/rolling-dice.svg') no-repeat center #262731;
+                        background-size: 70% auto;
+                        border-radius: 50%;
+
+                        &.spin-dice {
+                            transform: rotate(0deg);
+                            animation: spin-dice 2s infinite linear;
+                
+                            @keyframes spin-dice {
+                                0% {transform: rotate(0deg);}
+                                100% {transform: rotate(360deg);}
+                            }
+                        }
+                    }
+                }
+
+                .action-button {
+                    width: 160px;
+                    height: 50px;
+                    padding: 30px 0;
+
+                    .btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 156px;
+                        height: 46px;
+                        color: $text-color;
+                        font-weight: 600;
+                        font-size: $font-size-md;
+                        background: transparent;
+                        border: 2px solid $text-color;
+                        border-radius: 3px;
+                        outline: none;
+                        cursor: pointer;
+
+                        &.roll-under-active {
+                            background: $red-color;
+                            border-color: $red-color;
+                            color: $white-color;
+                            transition: 0.3s all ease-in-out;
+                        }
+
+                        &.roll-over-active {
+                            background: $green-color;
+                            border-color: $green-color;
+                            color: $white-color;
+                            transition: 0.3s all ease-in-out;
+                        }
+                    }
+                }
+
+                .multiplier, .win-chance {
+                    display: flex;
+                    width: calc(50% - 160px);
+                    padding: 30px 0;
+                    height: 50px;
+                }
+
+                .multiplier {
+                    background: grey;
+                }
+
+                .win-chance {
+                    background: blue;
+                }
+            }
+        }
+    }
+}

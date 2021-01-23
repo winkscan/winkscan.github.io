@@ -1,0 +1,133 @@
+.blk-top-rank {
+    margin: 7px 7px 4px 7px;
+    width: 320px;
+    height: calc(100% - 11px);
+    background: $sub-nav-bg;
+    border-radius: 3px;
+
+    .rank-header {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: calc(100% - 48px);
+        height: 40px;
+        padding: 0 34px 0 14px;
+        background: $bg-dark-color;
+        border-radius: 3px 3px 0 0;
+
+        label {
+            color: $white-color;
+            font-weight: 600;
+            font-size: $font-size-xs;
+        }
+
+        .wnk-icon {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            color: $orange-color;
+        }
+    }
+
+    .btn-group {
+        display: flex;
+        width: calc(100% - 14px);
+        padding: 7px;
+
+        .btn {
+            margin: 7px;
+            width: calc(50% - 16px);
+            height: 28px;
+            font-size: $font-size-sm;
+            font-weight: 600;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: $text-color;
+            background: transparent;
+            border: 1px solid $text-color;
+
+            &:hover {
+                color: $bg-dark-color;
+                background: $white-color;
+                border-color: $white-color;
+                transition: 0.3s all ease-in-out;
+            }
+
+            &.active {
+                color: $bg-dark-color;
+                background: $orange-color;
+                border-color: $orange-color;
+
+                &:hover {
+                    background: $orange-light-color;
+                    border-color: $orange-light-color;
+                    transition: 0.3s all ease-in-out;
+                }
+    
+                &:active {
+                    background: $orange-dark-color;
+                    border-color: $orange-dark-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+        }
+    }
+
+    .responsive-table {
+        width: 100%;
+        height: calc(100% - 96px);
+        overflow: auto;
+        border-radius: 0 0 3px 3px;
+
+        table {
+            width: 100%;
+            text-align: left;
+            border-spacing: 0;
+
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        background: $grid-row-bg;
+                    }
+
+                    td {
+                        height: 40px;
+                        font-weight: normal;
+                        vertical-align: middle;
+                        padding-left: 14px;
+                        font-size: $font-size-xs;
+
+                        &.amount {
+                            text-align: right;
+                            padding-left: 0;
+                            padding-right: 14px;
+                            color: $orange-color;
+                        }
+
+                        &.avatar {
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        &.nr {
+                            font-size: $font-size-sm;
+                            font-weight: 600;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

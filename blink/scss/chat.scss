@@ -1,0 +1,169 @@
+.blk-chat {
+    margin: 7px 7px 4px 7px;
+    width: 320px;
+    height: calc(100% - 11px);
+    background: $sub-nav-bg;
+    border-radius: 3px;
+
+    .rank-header {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: calc(100% - 48px);
+        height: 40px;
+        padding: 0 34px 0 14px;
+        background: $bg-dark-color;
+        border-radius: 3px 3px 0 0;
+
+        label {
+            color: $white-color;
+            font-weight: 600;
+            font-size: $font-size-xs;
+        }
+
+        .wnk-icon {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            color: $orange-color;
+        }
+    }
+
+    .chat-body {
+        width: calc(100% - 14px);
+        height: calc(100% - 112px);
+        overflow: auto;
+        padding: 7px;
+        
+        .message {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 14px);
+            padding: 7px;
+
+            .user {
+                display: flex;
+                width: calc(100% - 34px);
+                padding: 0 0 7px 34px;
+                font-size: 12px;
+                color: $text-color;
+            }
+
+            .avatar {
+                display: flex;
+                width: 24px;
+                height: 24px;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                background: $grid-row-bg;
+                border-radius: 2px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .message-body {
+                margin-left: 10px;
+                width: calc(100% - 54px);
+                min-height: 16px;
+                padding: 4px 10px;
+                line-height: 16px;
+                color: $white-color;
+                font-size: $font-size-xs;
+                background: $grid-row-bg;
+                border-radius: 0 3px 3px 3px;
+            }
+        }
+    }
+
+    .send-message {
+        display: flex;
+        width: calc(100% - 14px);
+        height: 44px;
+        padding: 7px;
+
+        input {
+            margin: 7px;
+            display: flex;
+            width: calc(100% - 102px);
+            height: 30px;
+            padding: 0 10px;
+            font-size: $font-size-xs;
+            color: $text-color;
+            background: $bg-dark-color;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+
+            &:focus {
+                color: $white-color;
+            }
+        }
+
+        .btn {
+            margin: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+            border: 1px solid;
+
+            .wnk-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 16px;
+                font-size: 16px;
+            }
+
+            &.btn-emoji {
+                background: transparent;
+                border: 1px solid $text-color;
+
+                .wnk-icon {
+                    color: $text-color;
+                }
+
+                &:hover {
+                    color: $bg-dark-color;
+                    background: $white-color;
+                    border-color: $white-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+
+            &.btn-send {
+                background: $orange-color;
+                border: 1px solid $orange-color;
+
+                .wnk-icon {
+                    color: $bg-dark-color;
+                }
+
+                &:hover {
+                    background: $orange-light-color;
+                    transition: 0.3s all ease-in-out;
+                }
+    
+                &:active {
+                    background: $orange-dark-color;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+        }
+    }
+}
