@@ -89,7 +89,15 @@
 
             .blk-gc {
                 width: calc(33.33% - 14px);
-                align-items: flex-end;
+                align-items: center;
+
+                .curacao {
+                    display: block;
+                    width: 55px;
+                    height: 40px;
+                    background: url('../img/license-curacao.png') no-repeat center;
+                    background-size: auto 40px;
+                }
 
                 iframe {
                     margin-bottom: 10px;
@@ -149,7 +157,15 @@
     @media screen and (max-width: 480px) {
         .blk-info {
             .blk-content {
-                .blk-licenses, .blk-gc, .blk-about, .blk-follow {
+                .blk-licenses {
+                    width: calc(70% - 14px);
+                }
+
+                .blk-gc {
+                    width: calc(30% - 14px);
+                }
+
+                .blk-about, .blk-follow {
                     width: calc(50% - 14px);
                 }
 
