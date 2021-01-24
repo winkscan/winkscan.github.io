@@ -255,6 +255,7 @@
                             background: $red-color;
 
                             .scroll {
+                                user-select: none;
                                 position: absolute;
                                 top: -13px;
                                 right: -18px;

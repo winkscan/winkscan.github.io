@@ -1320,6 +1320,7 @@
               border-radius: 3px;
               background: #D80027; }
               .blk-dice .blk-dice-game .dice-bg .dice-content .bet-range .slider .filled .scroll {
+                user-select: none;
                 position: absolute;
                 top: -13px;
                 right: -18px;
