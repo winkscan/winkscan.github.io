@@ -33,7 +33,7 @@
       padding: 47px 0 0 0;
       text-align: center;
       font-size: 13px;
-      color: #344E72;
+      color: #48658C;
       border-radius: 3px; }
       .side-nav .btn-group .btn .wnk-icon {
         position: absolute;
@@ -81,7 +81,7 @@
           padding: 5px 10px;
           min-height: 20px;
           font-size: 13px;
-          color: #344E72;
+          color: #48658C;
           background: #0A142E; }
           .side-nav .btn-group ul li a:first-child {
             border: 3px 3px 0 0; }
@@ -231,11 +231,11 @@
         height: 50px; }
       .footer .ft-content .col p, .footer .ft-content .col a {
         line-height: 24px;
-        color: #344E72; }
+        color: #48658C; }
       .footer .ft-content .col p {
         margin-bottom: 24px; }
       .footer .ft-content .col ul li {
-        color: #344E72; }
+        color: #48658C; }
         .footer .ft-content .col ul li a {
           text-decoration: underline; }
           .footer .ft-content .col ul li a:hover {
@@ -247,7 +247,7 @@
         height: 16px;
         padding: 7px;
         border-radius: 15px;
-        background: #344E72; }
+        background: #48658C; }
         .en .footer .ft-content .col .btn-social {
           margin: 0 10px 10px 0; }
         .ar .footer .ft-content .col .btn-social {
@@ -384,9 +384,9 @@
       padding: 0 24px;
       color: #FFF;
       border-radius: 18px;
-      border: 1px solid #344E72; }
+      border: 1px solid #48658C; }
       .windrops-bar .btn .btn-show:hover {
-        background: #344E72;
+        background: #48658C;
         transition: 0.3s background-color ease-in-out; }
   @media screen and (max-width: 576px) {
     .windrops-bar h1 {
@@ -423,7 +423,7 @@
     text-transform: uppercase; }
     .slots h2 .games, .slots h3 .games, .slots h4 .games {
       font-weight: normal;
-      color: #344E72;
+      color: #48658C;
       font-size: 16px; }
       .en .slots h2 .games, .en .slots h3 .games, .en .slots h4 .games {
         padding-left: 4px; }
@@ -458,9 +458,9 @@
       color: #FFF;
       border-radius: 18px;
       cursor: pointer;
-      border: 1px solid #344E72; }
+      border: 1px solid #48658C; }
       .slots .btn .btn-show:hover {
-        background: #344E72;
+        background: #48658C;
         transition: 0.3s background-color ease-in-out; }
       .slots .btn .btn-show.hide {
         display: none; }
@@ -511,7 +511,7 @@
       height: 30px;
       justify-content: center;
       align-items: center;
-      color: #344E72; }
+      color: #48658C; }
     .slots .slot.new .pic:after {
       position: absolute;
       z-index: 3;
@@ -572,7 +572,7 @@
     text-transform: uppercase; }
     .license h5 .games {
       font-weight: normal;
-      color: #344E72;
+      color: #48658C;
       font-size: 16px; }
       .en .license h5 .games {
         padding-left: 4px; }
@@ -624,7 +624,7 @@
       height: 40px;
       justify-content: center;
       align-items: center;
-      color: #344E72; }
+      color: #48658C; }
   .license .attention {
     margin: 10px;
     display: flex;
@@ -644,7 +644,7 @@
     .license .attention p {
       display: block;
       line-height: 22px;
-      color: #344E72; }
+      color: #48658C; }
   @media screen and (max-width: 992px) {
     .license .license {
       width: calc(50% - 20px); }
@@ -669,7 +669,7 @@
     align-items: center;
     justify-content: center;
     width: 16.66%;
-    color: #344E72; }
+    color: #48658C; }
     .suppliers li .wnk-icon {
       font-size: 30px; }
       .suppliers li .wnk-icon.icon-supplier-gameart {
@@ -763,7 +763,7 @@
       align-items: center;
       font-size: 16px;
       font-weight: 600;
-      color: #344E72; }
+      color: #48658C; }
       .en .top-nav .useful-links .link {
         margin-right: 15px; }
       .ar .top-nav .useful-links .link {
@@ -795,7 +795,7 @@
       outline: none;
       border-radius: 18px;
       cursor: pointer;
-      border: 1px solid #344E72; }
+      border: 1px solid #48658C; }
       .top-nav .useful-links .btn-announcement .wnk-icon {
         display: flex;
         justify-content: center;
@@ -835,7 +835,7 @@
       outline: none;
       border-radius: 18px;
       cursor: pointer;
-      border: 1px solid #344E72; }
+      border: 1px solid #48658C; }
       .top-nav .navigation .btn-notification .wnk-icon {
         width: 16px;
         height: 16px;
@@ -878,7 +878,7 @@
           padding: 2px 0;
           overflow: hidden;
           white-space: nowrap;
-          color: #344E72;
+          color: #48658C;
           text-overflow: ellipsis; }
           .top-nav .navigation .group .wallet .title .arrow {
             position: relative;
@@ -896,7 +896,7 @@
               width: 1px;
               height: 7px;
               content: '';
-              background: #344E72; }
+              background: #48658C; }
             .top-nav .navigation .group .wallet .title .arrow:after {
               right: 0;
               transform: rotate(45deg); }
@@ -967,7 +967,7 @@
           width: 190px;
           height: 30px;
           padding: 0 10px;
-          color: #344E72;
+          color: #48658C;
           border-radius: 3px; }
           .top-nav .navigation .group .dropdown.tw-currency ul li .currency .amount, .top-nav .navigation .group .dropdown.lw-currency ul li .currency .amount {
             padding-right: 6px; }
@@ -990,7 +990,7 @@
           .top-nav .navigation .group .dropdown.deposit-to-tronwallet p, .top-nav .navigation .group .dropdown.logout p {
             padding: 9px 0;
             line-height: 16px;
-            color: #344E72; }
+            color: #48658C; }
           .top-nav .navigation .group .dropdown.deposit-to-tronwallet .qr, .top-nav .navigation .group .dropdown.logout .qr {
             margin: 10px auto;
             width: 80px;
@@ -1031,9 +1031,9 @@
             background: none;
             outline: none;
             cursor: pointer;
-            border: 1px solid #344E72; }
+            border: 1px solid #48658C; }
             .top-nav .navigation .group .dropdown.deposit-to-tronwallet .sign-out:hover, .top-nav .navigation .group .dropdown.logout .sign-out:hover {
-              background: #344E72;
+              background: #48658C;
               transition: 0.3s background-color ease-in-out; }
             .top-nav .navigation .group .dropdown.deposit-to-tronwallet .sign-out.hide, .top-nav .navigation .group .dropdown.logout .sign-out.hide {
               display: none; }
@@ -1052,7 +1052,7 @@
             height: 24px;
             white-space: nowrap;
             align-items: center;
-            color: #344E72; }
+            color: #48658C; }
         .top-nav .navigation .group .dropdown.deposit-to-live-wallet .token, .top-nav .navigation .group .dropdown.deposit-to-live-wallet .btn-col, .top-nav .navigation .group .dropdown.withdraw-drop .token, .top-nav .navigation .group .dropdown.withdraw-drop .btn-col {
           width: 80px; }
           .top-nav .navigation .group .dropdown.deposit-to-live-wallet .token .btn, .top-nav .navigation .group .dropdown.deposit-to-live-wallet .btn-col .btn, .top-nav .navigation .group .dropdown.withdraw-drop .token .btn, .top-nav .navigation .group .dropdown.withdraw-drop .btn-col .btn {
@@ -1062,7 +1062,7 @@
             width: 36px;
             height: 36px;
             cursor: pointer;
-            background: #344E72;
+            background: #48658C;
             border-radius: 3px; }
             .top-nav .navigation .group .dropdown.deposit-to-live-wallet .token .btn.active.trx, .top-nav .navigation .group .dropdown.deposit-to-live-wallet .btn-col .btn.active.trx, .top-nav .navigation .group .dropdown.withdraw-drop .token .btn.active.trx, .top-nav .navigation .group .dropdown.withdraw-drop .btn-col .btn.active.trx {
               background: #D80027; }
@@ -1128,7 +1128,7 @@
           position: relative;
           width: calc(100% - 30px);
           font-style: italic;
-          color: #344E72; }
+          color: #48658C; }
           .en .top-nav .navigation .group .dropdown.deposit-to-live-wallet .note, .en .top-nav .navigation .group .dropdown.withdraw-drop .note {
             padding: 4px 0 5px 30px; }
           .ar .top-nav .navigation .group .dropdown.deposit-to-live-wallet .note, .ar .top-nav .navigation .group .dropdown.withdraw-drop .note {
@@ -1150,7 +1150,7 @@
             position: relative;
             width: 64px;
             height: 30px;
-            color: #344E72;
+            color: #48658C;
             border-radius: 3px; }
             .en .top-nav .navigation .group .dropdown.language .set-lng {
               padding: 0 10px 0 36px; }
@@ -1184,7 +1184,7 @@
                 color: #FBC509;
                 transition: 0.3s color ease-in-out; }
       .top-nav .navigation .group.tronlink .btn-deposit {
-        background: #344E72; }
+        background: #48658C; }
         .top-nav .navigation .group.tronlink .btn-deposit:hover {
           background: #FFCF29;
           transition: 0.3s background-color ease-in-out; }
@@ -1221,7 +1221,7 @@
         height: 34px;
         justify-content: center;
         align-items: center;
-        border: 1px solid #344E72;
+        border: 1px solid #48658C;
         border-radius: 18px;
         cursor: pointer; }
         .top-nav .navigation .group .avatar .wnk-icon, .top-nav .navigation .group .flag .wnk-icon {
@@ -1252,7 +1252,7 @@
         border-radius: 0;
         border: none; }
         .top-nav .useful-links .btn-announcement .wnk-icon {
-          color: #344E72;
+          color: #48658C;
           font-size: 20px; }
     .top-nav .navigation {
       width: calc(100% - 80px); } }
@@ -1312,7 +1312,7 @@
           width: 36px;
           min-width: 36px;
           border-radius: 18px;
-          border: 1px solid #344E72; }
+          border: 1px solid #48658C; }
           .top-nav .useful-links .btn-announcement .wnk-icon {
             color: #FFF;
             font-size: 16px; }
@@ -1480,7 +1480,7 @@
       align-items: center;
       height: 49px;
       white-space: nowrap;
-      color: #344E72;
+      color: #48658C;
       border-bottom: 1px solid rgba(0, 0, 0, 0); }
       .sub-nav .group .link.active, .sub-nav .group .link:hover {
         color: #FFF;
@@ -1544,7 +1544,7 @@
       height: 39px;
       justify-content: center;
       cursor: pointer;
-      color: #344E72;
+      color: #48658C;
       align-items: center;
       border-bottom: 1px solid #060E22; }
       .slots-filter .btn-group .btn.active, .slots-filter .btn-group .btn:hover {
@@ -1554,7 +1554,7 @@
     .slots-filter .btn-group .title {
       width: 100%;
       padding: 5px 0;
-      color: #344E72; }
+      color: #48658C; }
     .slots-filter .btn-group .select {
       display: flex;
       position: relative;
@@ -1604,7 +1604,7 @@
         flex: 1;
         margin: 3px;
         font-size: 13px;
-        color: #344E72;
+        color: #48658C;
         background: transparent;
         border: none;
         outline: none; }
@@ -1659,7 +1659,7 @@
         height: 30px;
         padding: 0 10px;
         font-size: 13px;
-        color: #344E72; }
+        color: #48658C; }
         .slots-filter .btn-group .suppliers-list .supplier:hover, .slots-filter .btn-group .suppliers-list .supplier.selected {
           color: #FFF;
           cursor: pointer;
@@ -1748,7 +1748,7 @@
           content: '';
           width: 2px;
           height: 20px;
-          background: #344E72; }
+          background: #48658C; }
         .popup-wrapper .popup .popup-header .close-popup:after {
           left: 14px;
           transform: rotate(45deg); }
@@ -1763,7 +1763,7 @@
       flex-wrap: wrap;
       width: calc(100% - 20px);
       padding: 10px;
-      color: #344E72; }
+      color: #48658C; }
       .popup-wrapper .popup .popup-body .sign-col {
         margin: 30px 0;
         display: flex;
@@ -1796,9 +1796,9 @@
           border-radius: 18px;
           cursor: pointer;
           background: transparent;
-          border: 1px solid #344E72; }
+          border: 1px solid #48658C; }
           .popup-wrapper .popup .popup-body .sign-col .btn-sign:hover {
-            background: #344E72;
+            background: #48658C;
             transition: 0.3s background-color ease-in-out; }
           .popup-wrapper .popup .popup-body .sign-col .btn-sign.hide {
             display: none; }
@@ -1807,7 +1807,7 @@
           line-height: 16px; }
           .popup-wrapper .popup .popup-body .sign-col p .link {
             text-decoration: underline;
-            color: #344E72; }
+            color: #48658C; }
             .popup-wrapper .popup .popup-body .sign-col p .link:hover {
               color: #FBC509;
               transition: 0.3s color ease-in-out; }
@@ -1877,7 +1877,7 @@
           padding: 0 15px;
           font-weight: normal;
           font-size: 13px;
-          color: #344E72; }
+          color: #48658C; }
         .popup-wrapper .popup .popup-body.burn-body .table-responsive {
           width: 100%;
           max-height: 300px;
@@ -1976,7 +1976,7 @@
             display: block;
             height: 6px;
             border-radius: 0 3px 3px 0;
-            background: linear-gradient(90deg, #101E41 0%, #344E72 100%); }
+            background: linear-gradient(90deg, #101E41 0%, #48658C 100%); }
         .popup-wrapper .popup .popup-body .countdown .note {
           width: 100%;
           line-height: 1.2;
@@ -2017,7 +2017,7 @@
             color: #FFF; }
             .popup-wrapper .popup .popup-body .drops-col .drops-header label .share {
               font-weight: normal;
-              color: #344E72; }
+              color: #48658C; }
               .en .popup-wrapper .popup .popup-body .drops-col .drops-header label .share {
                 padding-left: 6px; }
               .ar .popup-wrapper .popup .popup-body .drops-col .drops-header label .share {
@@ -2099,7 +2099,7 @@
         border: none;
         outline: none;
         font-size: 13px;
-        color: #344E72;
+        color: #48658C;
         border: none;
         outline: none; }
         .popup-wrapper.freeze-popup .popup .popup-body .freeze-body .input:focus {
@@ -2112,7 +2112,7 @@
         height: 36px;
         color: #FFF;
         text-transform: uppercase;
-        background: #344E72;
+        background: #48658C;
         border-radius: 3px; }
         .en .popup-wrapper.freeze-popup .popup .popup-body .freeze-body .max {
           margin-left: 4px; }
@@ -2161,7 +2161,7 @@
     color: #FFF;
     outline: none;
     cursor: pointer;
-    background: #344E72;
+    background: #48658C;
     border: none; }
     .popup-wrapper.forbidden-popup .popup .popup-body .btn-sign-out:hover {
       background: #446492;
@@ -2238,7 +2238,7 @@
       outline: none;
       cursor: pointer;
       border-radius: 18px;
-      background: #344E72; }
+      background: #48658C; }
       .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-block .btn-swap .wnk-icon {
         color: #FFF;
         font-size: 20px; }
@@ -2271,7 +2271,7 @@
       border: none;
       outline: none;
       font-size: 13px;
-      color: #344E72;
+      color: #48658C;
       border: none;
       outline: none; }
       .popup-wrapper.transfer-funds-popup .popup .popup-body .transfer-amount .input:focus {
@@ -2286,7 +2286,7 @@
       color: #FFF;
       font-size: 13px;
       text-transform: uppercase;
-      background: #344E72;
+      background: #48658C;
       cursor: pointer;
       outline: none;
       border-radius: 3px;
@@ -2460,7 +2460,7 @@
         height: 30px;
         line-height: 1.2;
         align-items: center;
-        color: #344E72;
+        color: #48658C;
         justify-content: center;
         text-decoration: underline; }
         .help-center .videos .video .link:hover {
@@ -2487,7 +2487,7 @@
         align-items: center;
         font-size: 14px;
         font-weight: 600;
-        color: #344E72;
+        color: #48658C;
         cursor: pointer; }
         .en .help-center .faq .faq-nav .tab {
           padding-left: 13px;
@@ -2523,7 +2523,7 @@
           align-items: center;
           width: calc(100% - 45px);
           min-height: 26px;
-          color: #344E72;
+          color: #48658C;
           cursor: pointer; }
           .en .help-center .faq .faq-content .topic .question {
             padding: 5px 30px 5px 15px; }
@@ -2547,7 +2547,7 @@
               width: 1px;
               height: 7px;
               content: '';
-              background: #344E72; }
+              background: #48658C; }
             .help-center .faq .faq-content .topic .question .arrow:after {
               right: 0;
               transform: rotate(45deg); }
@@ -2567,10 +2567,10 @@
           .help-center .faq .faq-content .topic .faq-body p {
             display: block;
             padding: 5px 0;
-            color: #344E72; }
+            color: #48658C; }
             .help-center .faq .faq-content .topic .faq-body p a {
               text-decoration: underline;
-              color: #344E72; }
+              color: #48658C; }
               .help-center .faq .faq-content .topic .faq-body p a:hover {
                 color: #FBC509;
                 transition: 0.3s color ease-in-out; }
@@ -2618,7 +2618,7 @@
   padding: 5px;
   overflow: hidden;
   position: relative;
-  color: #344E72; }
+  color: #48658C; }
   .slot-game .slot-body {
     margin: 10px;
     width: calc(100% - 340px);
@@ -2749,7 +2749,7 @@
           align-items: center;
           height: 56px;
           padding: 0 15px;
-          color: #344E72;
+          color: #48658C;
           cursor: pointer; }
           .slot-game .slot-body .slot-footer .slot-sub-nav .link.active, .slot-game .slot-body .slot-footer .slot-sub-nav .link:hover {
             color: #FFF;
@@ -2770,7 +2770,7 @@
             z-index: 1;
             width: calc(100% - 30px);
             font-size: 13px;
-            color: #344E72;
+            color: #48658C;
             background: transparent;
             border: none;
             outline: none; }
@@ -2889,7 +2889,7 @@
         font-size: 13px;
         font-weight: 600;
         height: 35px;
-        color: #344E72;
+        color: #48658C;
         border: none;
         outline: none;
         background: transparent;
@@ -2964,9 +2964,9 @@
             border-radius: 18px;
             cursor: pointer;
             background: transparent;
-            border: 1px solid #344E72; }
+            border: 1px solid #48658C; }
             .slot-game .side-col .side-col-body .rankings .btn-group .btn:hover {
-              background: #344E72;
+              background: #48658C;
               transition: 0.3s background-color ease-in-out; }
             .slot-game .side-col .side-col-body .rankings .btn-group .btn.active {
               color: #060E22;
@@ -3383,13 +3383,13 @@
           font-size: 16px; }
           .windrops .sub-tokens-group .sub-token .sub-header label .drops {
             padding-left: 6px;
-            color: #344E72;
+            color: #48658C;
             text-transform: initial;
             font-weight: normal; }
         .windrops .sub-tokens-group .sub-token .sub-header .countdown {
           width: 54px;
           white-space: nowrap;
-          color: #344E72; }
+          color: #48658C; }
       .windrops .sub-tokens-group .sub-token .current-drops {
         width: 100%;
         min-height: 300px;
@@ -3405,7 +3405,7 @@
           .windrops .sub-tokens-group .sub-token .current-drops .row .current {
             display: flex;
             width: 60%;
-            color: #344E72; }
+            color: #48658C; }
             .windrops .sub-tokens-group .sub-token .current-drops .row .current .icon {
               display: flex;
               align-items: center;
@@ -3482,7 +3482,7 @@
             font-size: 16px; }
         .windrops .sub-tokens-group .sub-token .frozen .title {
           height: 17px;
-          color: #344E72; }
+          color: #48658C; }
         .windrops .sub-tokens-group .sub-token .frozen .total {
           width: 100%;
           height: 27px;
@@ -3508,7 +3508,7 @@
           width: 100%;
           height: 35px;
           line-height: 1;
-          color: #344E72; }
+          color: #48658C; }
       .windrops .sub-tokens-group .sub-token .btn-group {
         display: flex;
         flex-direction: column;
@@ -3525,7 +3525,7 @@
           border-top: 1px solid #101E41; }
           .windrops .sub-tokens-group .sub-token .btn-group .token-nav .info-col {
             width: calc(100% - 170px);
-            color: #344E72; }
+            color: #48658C; }
             .en .windrops .sub-tokens-group .sub-token .btn-group .token-nav .info-col {
               padding: 0 90px 0 0;
               text-align: left; }
@@ -3545,7 +3545,7 @@
             align-items: center;
             justify-content: flex-end;
             white-space: nowrap;
-            color: #344E72; }
+            color: #48658C; }
             .en .windrops .sub-tokens-group .sub-token .btn-group .token-nav .timer {
               right: 105px; }
             .ar .windrops .sub-tokens-group .sub-token .btn-group .token-nav .timer {
@@ -3562,9 +3562,9 @@
             cursor: pointer;
             outline: none;
             background: transparent;
-            border: 1px solid #344E72; }
+            border: 1px solid #48658C; }
             .windrops .sub-tokens-group .sub-token .btn-group .token-nav .btn:hover {
-              background: #344E72;
+              background: #48658C;
               transition: 0.3s background-color ease-in-out; }
             .windrops .sub-tokens-group .sub-token .btn-group .token-nav .btn.btn-freeze {
               color: #060E22;
@@ -3652,7 +3652,7 @@
               font-size: 16px; }
               .windrops .sub-tokens-group .sub-token-mob-nav .tab.active label .drops {
                 padding-top: 3px;
-                color: #344E72;
+                color: #48658C;
                 font-weight: normal; }
                 .en .windrops .sub-tokens-group .sub-token-mob-nav .tab.active label .drops {
                   padding-left: 6px; }
@@ -3661,7 +3661,7 @@
             .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
               width: 85px;
               justify-content: flex-end;
-              color: #344E72; }
+              color: #48658C; }
               .en .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
                 padding-right: 15px; }
               .ar .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
@@ -3901,7 +3901,7 @@
       font-weight: 600; }
       .polo-wallet .balances .balance-header label .link {
         font-size: 16px;
-        color: #344E72; }
+        color: #48658C; }
         .polo-wallet .balances .balance-header label .link:hover {
           color: #FBC509;
           transition: 0.3s color ease-in-out; }
@@ -3961,14 +3961,14 @@
           height: 30px;
           padding: 0 10px;
           font-size: 13px;
-          color: #344E72; }
+          color: #48658C; }
           .polo-wallet .balances .balance-header.with-select .page-count .drop li a:hover {
             color: #FFF;
             cursor: pointer;
             background: #0A142E;
             transition: 0.3s all ease-in-out; }
       .polo-wallet .balances .balance-header.with-select .page-count:hover {
-        border-color: #344E72;
+        border-color: #48658C;
         transition: 0.3s all ease-in-out; }
         .polo-wallet .balances .balance-header.with-select .page-count:hover .drop {
           display: block; }
@@ -3991,7 +3991,7 @@
           width: calc(100% - 40px);
           height: 36px;
           font-size: 13px;
-          color: #344E72;
+          color: #48658C;
           background: transparent;
           border: none;
           outline: none; }
@@ -4041,7 +4041,7 @@
         color: #FFF;
         outline: none;
         cursor: pointer;
-        background: #344E72;
+        background: #48658C;
         border: none; }
         .en .polo-wallet .balances .balance-header .balance-nav .btn-refresh {
           margin-left: 10px; }
@@ -4054,7 +4054,7 @@
     width: 100%;
     overflow: auto;
     border-radius: 0 0 3px 3px;
-    color: #344E72; }
+    color: #48658C; }
     .polo-wallet .balances .table-responsive table {
       width: 100%;
       border-spacing: 0; }
@@ -4104,7 +4104,7 @@
           align-items: center;
           height: 36px;
           position: relative;
-          color: #344E72; }
+          color: #48658C; }
           .polo-wallet .balances .table-responsive table tbody tr td a .arrow {
             position: absolute;
             display: flex;
@@ -4123,7 +4123,7 @@
               width: 1px;
               height: 7px;
               content: '';
-              background: #344E72; }
+              background: #48658C; }
             .polo-wallet .balances .table-responsive table tbody tr td a .arrow:after {
               transform: rotate(45deg); }
               .en .polo-wallet .balances .table-responsive table tbody tr td a .arrow:after {
@@ -4160,13 +4160,13 @@
             cursor: pointer;
             background: transparent;
             outline: none;
-            border: 1px solid #344E72; }
+            border: 1px solid #48658C; }
             .en .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn {
               margin-left: 10px; }
             .ar .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn {
               margin-right: 10px; }
             .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn:hover {
-              background: #344E72;
+              background: #48658C;
               transition: 0.3s background-color ease-in-out; }
             .polo-wallet .balances .table-responsive table tbody tr td.nav-col .btn.hide {
               display: none; }
@@ -4373,7 +4373,7 @@
           padding: 0 4px;
           align-items: center;
           justify-content: center;
-          color: #344E72;
+          color: #48658C;
           border-radius: 2px;
           font-size: 13px;
           text-transform: uppercase; }
@@ -4448,7 +4448,7 @@
       height: 18px;
       cursor: pointer; }
       .currency-picker .game-nav .btn.disabled .wnk-icon {
-        color: #344E72; }
+        color: #48658C; }
       .en .currency-picker .game-nav .btn {
         margin-left: 10px; }
       .ar .currency-picker .game-nav .btn {
@@ -4706,7 +4706,7 @@
         font-size: 10px;
         font-weight: 600;
         color: #FFF;
-        background: #344E72;
+        background: #48658C;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 18px; }
         .en .hi-lo-game .card-col .skip .btn-skip {
@@ -5388,7 +5388,7 @@
       width: 100%;
       height: 24px;
       align-items: center;
-      color: #344E72;
+      color: #48658C;
       font-size: 13px;
       font-weight: normal; }
     .game-bet-body .col .amount {
@@ -5442,7 +5442,7 @@
           font-size: 13px;
           font-weight: 600;
           text-transform: uppercase;
-          color: #344E72;
+          color: #48658C;
           cursor: pointer;
           background: #101E41;
           border-radius: 3px; }
@@ -5465,7 +5465,7 @@
       font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
-      color: #344E72;
+      color: #48658C;
       cursor: pointer;
       background: #101E41;
       border: 1px solid #101E41;
@@ -5479,9 +5479,9 @@
         color: #FFF; }
       .game-bet-body .col .btn.disabled {
         cursor: default;
-        color: #344E72; }
+        color: #48658C; }
         .game-bet-body .col .btn.disabled:hover {
-          color: #344E72;
+          color: #48658C;
           background: #101E41;
           border-color: #101E41; }
       .game-bet-body .col .btn.btn-place-bet {
@@ -5611,7 +5611,7 @@ body, html {
   body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
     background: #101E41; }
   body ::-webkit-scrollbar-thumb:hover, html ::-webkit-scrollbar-thumb:hover {
-    background: #344E72; }
+    background: #48658C; }
 
 @font-face {
   font-family: 'fontello';
