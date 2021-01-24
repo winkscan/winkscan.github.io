@@ -23,7 +23,7 @@
         background: url("../img/blink-logo.svg") no-repeat;
         background-size: 50px 30px; }
     .blk-header .blk-top-nav .drop-nav {
-      width: calc(100% - 140px); }
+      width: calc(100% - 250px); }
       .blk-header .blk-top-nav .drop-nav ul {
         display: flex;
         flex-wrap: wrap;
@@ -56,8 +56,30 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 70px;
+      width: 180px;
       height: 60px; }
+      .blk-header .blk-top-nav .login .balance {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 110px;
+        height: 34px; }
+        .blk-header .blk-top-nav .login .balance label {
+          display: flex;
+          width: 100%;
+          color: #5C5D68; }
+        .blk-header .blk-top-nav .login .balance .amount {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          color: #FFF;
+          font-weight: 600;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap; }
+          .blk-header .blk-top-nav .login .balance .amount .wnk-icon {
+            margin-right: 4px;
+            color: #FBC509; }
       .blk-header .blk-top-nav .login .btn-login {
         width: 70px;
         height: 30px;
@@ -184,7 +206,7 @@
     .blk-header .blk-top-nav .logo {
       position: relative;
       z-index: 10;
-      width: calc(100% - 104px);
+      width: calc(100% - 214px);
       background: #0D0E11; }
     .blk-header .blk-top-nav .login {
       position: relative;

@@ -30,7 +30,7 @@
         }
 
         .drop-nav {
-            width: calc(100% - 140px);
+            width: calc(100% - 250px);
 
             ul {
                 display: flex;
@@ -77,8 +77,38 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            width: 70px;
+            width: 180px;
             height: 60px;
+
+            .balance {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 110px;
+                height: 34px;
+
+                label {
+                    display: flex;
+                    width: 100%;
+                    color: $text-color;
+                }
+
+                .amount {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    color: $white-color;
+                    font-weight: 600;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    .wnk-icon {
+                        margin-right: 4px;
+                        color: $orange-color;
+                    }
+                }
+            }
 
             .btn-login {
                 width: 70px;
@@ -261,7 +291,7 @@
             .logo {
                 position: relative;
                 z-index: 10;
-                width: calc(100% - 104px);
+                width: calc(100% - 214px);
                 background: $bg-dark-color;
             }
 
