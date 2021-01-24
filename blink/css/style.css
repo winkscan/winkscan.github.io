@@ -1901,7 +1901,8 @@
         font-weight: 600;
         font-size: 13px;
         text-transform: uppercase;
-        border-radius: 18px; }
+        border-radius: 18px;
+        cursor: pointer; }
         .blk-game-bet .col .auto .auto-picker:after {
           position: absolute;
           display: block;
