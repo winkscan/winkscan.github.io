@@ -1954,6 +1954,10 @@
       .blk-game-bet .col .btn-confirm:active {
         background: #FB9B09;
         transition: 0.3s all ease-in-out; }
+    .blk-game-bet .col .btn-confirm[disabled] {
+      color: #FFF;
+      cursor: default;
+      background: #5C5D68; }
   @media screen and (max-width: 1600px) {
     .blk-game-bet .col {
       margin: 0 7px;

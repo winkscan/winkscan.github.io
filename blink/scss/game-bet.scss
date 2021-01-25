@@ -182,6 +182,12 @@
                 transition: 0.3s all ease-in-out;
             }
         }
+
+        .btn-confirm[disabled] {
+            color: $white-color;
+            cursor: default;
+            background: $text-color;
+        }
     }
 
     @media screen and (max-width: 1600px) {
