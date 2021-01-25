@@ -1835,6 +1835,7 @@
       color: #FBC509;
       font-size: 13px; }
     .blk-game-bet .col .payout {
+      position: relative;
       display: flex;
       width: 100%;
       height: 36px;
@@ -1888,6 +1889,17 @@
             color: #0D0E11;
             background: #FBC509;
             transition: 0.3s all ease-in-out; }
+      .blk-game-bet .col .payout .win-money {
+        position: absolute;
+        right: 0;
+        bottom: 36px;
+        height: 24px;
+        display: flex;
+        align-items: flex-start; }
+        .blk-game-bet .col .payout .win-money.win {
+          color: #26A141; }
+        .blk-game-bet .col .payout .win-money.lose {
+          color: #D80027; }
     .blk-game-bet .col .auto {
       width: 70px;
       padding-right: 14px; }
