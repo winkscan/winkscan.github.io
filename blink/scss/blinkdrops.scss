@@ -216,6 +216,14 @@
                 font-size: $font-size-md;
                 color: $white-color;
             }
+
+            &.zero {
+                color: $text-color;
+
+                .token {
+                    color: $text-color;
+                }
+            }
         }
 
         .btn {
