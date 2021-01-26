@@ -157,93 +157,93 @@
             background: url("../img/wink-logo.svg") no-repeat center;
             background-size: 36px 24px; }
   @media screen and (max-width: 576px) {
-    .blk-header.stick-to-top {
+    .blk-header {
       position: fixed;
       z-index: 5;
       top: 0;
       left: 0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
-    .blk-header .burger {
-      display: flex;
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      right: 0;
-      width: 48px;
-      height: 60px;
-      align-items: center;
-      justify-content: center;
-      background: #0D0E11; }
-      .blk-header .burger .bar {
-        position: relative;
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #FFF;
-        border-radius: 1px; }
-        .blk-header .burger .bar:after, .blk-header .burger .bar:before {
-          position: absolute;
-          content: '';
+      .blk-header .burger {
+        display: flex;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        background: #0D0E11; }
+        .blk-header .burger .bar {
+          position: relative;
           display: block;
           width: 20px;
           height: 2px;
           background: #FFF;
           border-radius: 1px; }
-        .blk-header .burger .bar:after {
-          top: -8px; }
-        .blk-header .burger .bar:before {
-          top: 8px; }
-      .blk-header .burger.expand .bar {
-        transition: all 0.3s ease-in-out;
-        background: rgba(255, 255, 255, 0); }
-        .blk-header .burger.expand .bar:before, .blk-header .burger.expand .bar:after {
-          top: 0;
-          transition: all 0.3s ease-in-out; }
-        .blk-header .burger.expand .bar:before {
-          transform: rotate(-45deg); }
-        .blk-header .burger.expand .bar:after {
-          transform: rotate(45deg); }
-    .blk-header .blk-top-nav .logo {
-      position: relative;
-      z-index: 10;
-      width: calc(100% - 214px);
-      background: #0D0E11; }
-    .blk-header .blk-top-nav .login {
-      position: relative;
-      z-index: 10;
-      background: #0D0E11; }
-    .blk-header .blk-top-nav .drop-nav {
-      position: fixed;
-      z-index: 9;
-      display: none;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 60px);
-      opacity: 0;
-      background: #0D0E11; }
-      .blk-header .blk-top-nav .drop-nav.show {
-        display: flex;
-        top: 60px;
-        opacity: 1;
-        animation-name: slidedown;
-        animation-duration: 1s; }
+          .blk-header .burger .bar:after, .blk-header .burger .bar:before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #FFF;
+            border-radius: 1px; }
+          .blk-header .burger .bar:after {
+            top: -8px; }
+          .blk-header .burger .bar:before {
+            top: 8px; }
+        .blk-header .burger.expand .bar {
+          transition: all 0.3s ease-in-out;
+          background: rgba(255, 255, 255, 0); }
+          .blk-header .burger.expand .bar:before, .blk-header .burger.expand .bar:after {
+            top: 0;
+            transition: all 0.3s ease-in-out; }
+          .blk-header .burger.expand .bar:before {
+            transform: rotate(-45deg); }
+          .blk-header .burger.expand .bar:after {
+            transform: rotate(45deg); }
+      .blk-header .blk-top-nav .logo {
+        position: relative;
+        z-index: 10;
+        width: calc(100% - 214px);
+        background: #0D0E11; }
+      .blk-header .blk-top-nav .login {
+        position: relative;
+        z-index: 10;
+        background: #0D0E11; }
+      .blk-header .blk-top-nav .drop-nav {
+        position: fixed;
+        z-index: 9;
+        display: none;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        opacity: 0;
+        background: #0D0E11; }
+        .blk-header .blk-top-nav .drop-nav.show {
+          display: flex;
+          top: 60px;
+          opacity: 1;
+          animation-name: slidedown;
+          animation-duration: 1s; }
     @keyframes slidedown {
       from {
         top: -100%; }
       to {
         top: 60px; } }
-      .blk-header .blk-top-nav .drop-nav ul {
-        flex-direction: column;
-        height: inherit;
-        padding: 0; }
-        .blk-header .blk-top-nav .drop-nav ul li {
-          width: 100%; }
-          .blk-header .blk-top-nav .drop-nav ul li a {
-            width: calc(100% - 28px);
-            padding: 0 14px; }
-            .blk-header .blk-top-nav .drop-nav ul li a.active, .blk-header .blk-top-nav .drop-nav ul li a:hover {
-              background: #1B1C23; } }
+        .blk-header .blk-top-nav .drop-nav ul {
+          flex-direction: column;
+          height: inherit;
+          padding: 0; }
+          .blk-header .blk-top-nav .drop-nav ul li {
+            width: 100%; }
+            .blk-header .blk-top-nav .drop-nav ul li a {
+              width: calc(100% - 28px);
+              padding: 0 14px; }
+              .blk-header .blk-top-nav .drop-nav ul li a.active, .blk-header .blk-top-nav .drop-nav ul li a:hover {
+                background: #1B1C23; } }
 
 .blk-footer {
   display: flex;
@@ -2007,6 +2007,9 @@ body, html {
     width: 100%;
     color: #5C5D68;
     padding-bottom: 10px; }
+    @media screen and (max-width: 576px) {
+      body .blk-body, html .blk-body {
+        padding-top: 100px; } }
 
 @font-face {
   font-family: 'fontello';

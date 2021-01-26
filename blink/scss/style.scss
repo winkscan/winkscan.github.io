@@ -60,6 +60,10 @@ body, html {
         width: 100%;
         color: $text-color;
         padding-bottom: 10px;
+
+        @media screen and (max-width: 576px) {
+            padding-top: 100px;
+        }
     }
 }
 
