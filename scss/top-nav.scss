@@ -324,7 +324,7 @@
                     transition: 0.3s opacity ease-in-out;
                 }
 
-                &.tw-currency, &.lw-currency {
+                &.wallet-currency {
                     ul {
                         li {
                             .currency {
@@ -648,12 +648,12 @@
                             }
                         }
 
-                        &.us:after {
+                        &.en:after {
                             background: url('../img/flag-us.svg') no-repeat;
                             background-size: 16px;
                         }
 
-                        &.uae:after {
+                        &.ar:after {
                             background: url('../img/flag-uae.svg') no-repeat;
                             background-size: 16px;
                         }
@@ -751,12 +751,12 @@
             }
 
             .flag {
-                &.us {
+                &.en {
                     background: url('../img/flag-us.svg') no-repeat center;
                     background-size: 18px;
                 }
 
-                &.uae {
+                &.ar {
                     background: url('../img/flag-uae.svg') no-repeat center;
                     background-size: 18px;
                 }
