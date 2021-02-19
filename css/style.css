@@ -84,9 +84,9 @@
           color: #48658C;
           background: #0A142E; }
           .side-nav .btn-group ul li a:first-child {
-            border: 3px 3px 0 0; }
+            border-radius: 3px 3px 0 0; }
           .side-nav .btn-group ul li a:last-child {
-            border: 0 0 3px 3px; }
+            border-radius: 0 0 3px 3px; }
           .side-nav .btn-group ul li a:hover {
             color: #FFF;
             background: #101E41;
@@ -109,8 +109,9 @@
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-right: 5px solid #0A142E; }
-    .side-nav .btn-group:hover ul {
-      display: flex; }
+    @media screen and (min-width: 577px) {
+      .side-nav .btn-group:hover ul {
+        display: flex; } }
   .side-nav .burger {
     display: none; }
   @media screen and (max-width: 576px) {
@@ -150,15 +151,15 @@
               width: 24px;
               height: 24px;
               font-size: 24px; }
-          .side-nav .group-nav .btn-group:active ul {
+          .side-nav .group-nav .btn-group.active ul {
             display: block;
             top: 60px;
             left: 15px;
             width: calc(100% - 30px);
             padding: 10px 0 0 0; }
-            .side-nav .group-nav .btn-group:active ul li a {
+            .side-nav .group-nav .btn-group.active ul li a {
               justify-content: center; }
-            .side-nav .group-nav .btn-group:active ul:after {
+            .side-nav .group-nav .btn-group.active ul:after {
               left: calc(50% - 5px);
               top: 0;
               border-left: 5px solid transparent;
@@ -961,7 +962,7 @@
           flex-wrap: wrap;
           opacity: 1;
           transition: 0.3s opacity ease-in-out; }
-        .top-nav .navigation .group .dropdown.tw-currency ul li .currency, .top-nav .navigation .group .dropdown.lw-currency ul li .currency {
+        .top-nav .navigation .group .dropdown.wallet-currency ul li .currency {
           display: flex;
           align-items: center;
           width: 190px;
@@ -969,14 +970,14 @@
           padding: 0 10px;
           color: #48658C;
           border-radius: 3px; }
-          .top-nav .navigation .group .dropdown.tw-currency ul li .currency .amount, .top-nav .navigation .group .dropdown.lw-currency ul li .currency .amount {
+          .top-nav .navigation .group .dropdown.wallet-currency ul li .currency .amount {
             padding-right: 6px; }
-          .top-nav .navigation .group .dropdown.tw-currency ul li .currency:hover, .top-nav .navigation .group .dropdown.lw-currency ul li .currency:hover {
+          .top-nav .navigation .group .dropdown.wallet-currency ul li .currency:hover {
             color: #FFF;
             background: #101E41;
             transition: 0.3s ease-in-out;
             transition-property: color, background-color; }
-            .top-nav .navigation .group .dropdown.tw-currency ul li .currency:hover .amount, .top-nav .navigation .group .dropdown.lw-currency ul li .currency:hover .amount {
+            .top-nav .navigation .group .dropdown.wallet-currency ul li .currency:hover .amount {
               color: #FBC509;
               transition: 0.3s color ease-in-out; }
         .top-nav .navigation .group .dropdown.deposit-to-tronwallet, .top-nav .navigation .group .dropdown.logout {
@@ -1167,10 +1168,10 @@
                 left: 10px; }
               .ar .top-nav .navigation .group .dropdown.language .set-lng:after {
                 right: 10px; }
-            .top-nav .navigation .group .dropdown.language .set-lng.us:after {
+            .top-nav .navigation .group .dropdown.language .set-lng.en:after {
               background: url("../img/flag-us.svg") no-repeat;
               background-size: 16px; }
-            .top-nav .navigation .group .dropdown.language .set-lng.uae:after {
+            .top-nav .navigation .group .dropdown.language .set-lng.ar:after {
               background: url("../img/flag-uae.svg") no-repeat;
               background-size: 16px; }
             .top-nav .navigation .group .dropdown.language .set-lng .amount {
@@ -1228,10 +1229,10 @@
           font-size: 18px;
           color: #FBC509;
           cursor: pointer; }
-      .top-nav .navigation .group .flag.us {
+      .top-nav .navigation .group .flag.en {
         background: url("../img/flag-us.svg") no-repeat center;
         background-size: 18px; }
-      .top-nav .navigation .group .flag.uae {
+      .top-nav .navigation .group .flag.ar {
         background: url("../img/flag-uae.svg") no-repeat center;
         background-size: 18px; }
   @media screen and (max-width: 992px) {
@@ -5378,11 +5379,28 @@
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 50px);
-  padding: 10px;
+  padding: 34px 10px 10px 10px;
   background: #0A142E;
   border-radius: 3px; }
   .game-bet-body .col {
     margin: 5px; }
+    .game-bet-body .col .wallet-balance {
+      margin-top: -24px;
+      width: 100%;
+      display: flex;
+      height: 23px;
+      align-items: center;
+      border-bottom: 1px solid #060E22; }
+      .game-bet-body .col .wallet-balance label {
+        width: 50%;
+        color: #48658C; }
+      .game-bet-body .col .wallet-balance .currency-amount {
+        display: flex;
+        width: calc(50% - 5px);
+        padding-right: 5px;
+        justify-content: flex-end;
+        color: #FFF;
+        font-weight: 600; }
     .game-bet-body .col label {
       display: flex;
       width: 100%;
