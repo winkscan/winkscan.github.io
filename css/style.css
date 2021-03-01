@@ -1843,6 +1843,9 @@
             text-decoration: underline; }
             .popup-wrapper .popup .popup-body .notification p a:hover {
               color: #FBC509; }
+        .popup-wrapper .popup .popup-body .notification .responsive-table {
+          width: 100%;
+          overflow: auto; }
       .popup-wrapper .popup .popup-body.burn-body {
         width: 100%;
         padding: 15px 0 0 0; }
@@ -2054,6 +2057,31 @@
             .popup-wrapper .popup .popup-body .drops-col .amount .icon .wnk-icon {
               font-size: 12px;
               color: #FBC509; }
+      .popup-wrapper .popup .popup-body .table-responsive {
+        width: 100%;
+        overflow: auto; }
+        .popup-wrapper .popup .popup-body .table-responsive table {
+          width: 100%;
+          text-align: left;
+          border-spacing: 0;
+          border-left: 1px solid #030814;
+          border-top: 1px solid #030814; }
+          .popup-wrapper .popup .popup-body .table-responsive table thead tr th {
+            padding: 5px 10px;
+            color: #FFF;
+            font-weight: 600;
+            vertical-align: middle;
+            text-align: center;
+            background: #030814;
+            border-right: 1px solid #030814;
+            border-bottom: 1px solid #030814; }
+          .popup-wrapper .popup .popup-body .table-responsive table tbody tr td {
+            padding: 5px 10px;
+            text-align: center;
+            vertical-align: middle;
+            color: #48658C;
+            border-right: 1px solid #030814;
+            border-bottom: 1px solid #030814; }
     @media screen and (max-width: 730px) {
       .popup-wrapper .popup {
         margin: 15px 15px auto 15px;
@@ -5601,6 +5629,160 @@
         width: calc(100% - 28px);
         letter-spacing: -1px;
         font-size: 14px; } }
+
+.daily-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 10px);
+  padding: 0 5px; }
+  .daily-tasks h1, .daily-tasks h2 {
+    display: flex;
+    width: calc(100% - 10px);
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 24px; }
+    .daily-tasks h1 .highlight, .daily-tasks h2 .highlight {
+      color: #FBC509;
+      padding: 0 6px;
+      font-size: 24px; }
+  .daily-tasks .game-task {
+    margin: 0 10px 20px 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(50% - 20px);
+    background: #0A142E;
+    border-radius: 3px; }
+    .daily-tasks .game-task .game-header {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 30px);
+      height: 50px;
+      padding: 0 15px;
+      border-radius: 3px 3px 0 0;
+      background: #040916; }
+      .daily-tasks .game-task .game-header label {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 80px);
+        font-size: 16px;
+        color: #FFF;
+        font-weight: 600; }
+        .daily-tasks .game-task .game-header label .game-icon {
+          display: flex;
+          width: 36px;
+          height: 36px; }
+          .en .daily-tasks .game-task .game-header label .game-icon {
+            margin-right: 10px; }
+          .ar .daily-tasks .game-task .game-header label .game-icon {
+            margin-left: 10px; }
+          .daily-tasks .game-task .game-header label .game-icon.dice-game {
+            background: url("../img/dice-game.svg") no-repeat center;
+            background-size: 36px auto; }
+          .daily-tasks .game-task .game-header label .game-icon.moon-game {
+            background: url("../img/moon-game.svg") no-repeat center;
+            background-size: 36px auto; }
+          .daily-tasks .game-task .game-header label .game-icon.ring-game {
+            background: url("../img/ring-game.svg") no-repeat center;
+            background-size: 36px auto; }
+          .daily-tasks .game-task .game-header label .game-icon.hilo-game {
+            background: url("../img/hilo-game.svg") no-repeat center;
+            background-size: 36px auto; }
+      .daily-tasks .game-task .game-header .min-bet {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80px;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 13px;
+        color: #48658C; }
+        .daily-tasks .game-task .game-header .min-bet .amount {
+          width: 100%;
+          text-align: right; }
+    .daily-tasks .game-task .table-responsive {
+      width: 100%;
+      border-radius: 0 0 3px 3px;
+      color: #48658C; }
+      .daily-tasks .game-task .table-responsive table {
+        width: 100%;
+        border-spacing: 0; }
+        .en .daily-tasks .game-task .table-responsive table {
+          text-align: left; }
+        .ar .daily-tasks .game-task .table-responsive table {
+          text-align: right; }
+        .daily-tasks .game-task .table-responsive table thead th {
+          height: 36px;
+          font-weight: normal;
+          vertical-align: middle;
+          border-bottom: 2px solid #101E41; }
+          .en .daily-tasks .game-task .table-responsive table thead th {
+            padding-left: 15px; }
+          .ar .daily-tasks .game-task .table-responsive table thead th {
+            padding-right: 15px; }
+        .daily-tasks .game-task .table-responsive table tbody tr:nth-child(even) {
+          background: #101E41; }
+        .daily-tasks .game-task .table-responsive table tbody tr td {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          min-height: 40px;
+          font-weight: normal;
+          vertical-align: middle; }
+          .en .daily-tasks .game-task .table-responsive table tbody tr td {
+            padding-left: 15px; }
+          .ar .daily-tasks .game-task .table-responsive table tbody tr td {
+            padding-right: 15px; }
+          .daily-tasks .game-task .table-responsive table tbody tr td.task {
+            width: calc(50% - 95px); }
+          .daily-tasks .game-task .table-responsive table tbody tr td.progress, .daily-tasks .game-task .table-responsive table tbody tr td.reward {
+            width: 15%; }
+          .daily-tasks .game-task .table-responsive table tbody tr td.btn {
+            width: 80px;
+            text-align: right; }
+            .en .daily-tasks .game-task .table-responsive table tbody tr td.btn {
+              padding-right: 15px; }
+            .ar .daily-tasks .game-task .table-responsive table tbody tr td.btn {
+              padding-left: 15px; }
+            .daily-tasks .game-task .table-responsive table tbody tr td.btn .btn-claim {
+              width: 80px;
+              height: 30px;
+              align-items: center;
+              justify-content: center;
+              padding: 0;
+              color: #FFF;
+              border-radius: 15px;
+              font-size: 13px;
+              cursor: default;
+              background: #48658C;
+              outline: none;
+              border: none; }
+              .en .daily-tasks .game-task .table-responsive table tbody tr td.btn .btn-claim {
+                margin-left: 10px; }
+              .ar .daily-tasks .game-task .table-responsive table tbody tr td.btn .btn-claim {
+                margin-right: 10px; }
+              .daily-tasks .game-task .table-responsive table tbody tr td.btn .btn-claim:hover {
+                background: #48658C;
+                transition: 0.3s background-color ease-in-out; }
+              .daily-tasks .game-task .table-responsive table tbody tr td.btn .btn-claim.hide {
+                display: none; }
+        .daily-tasks .game-task .table-responsive table tbody tr.activated td {
+          color: #FFF; }
+          .daily-tasks .game-task .table-responsive table tbody tr.activated td.reward {
+            color: #FBC509; }
+          .daily-tasks .game-task .table-responsive table tbody tr.activated td.btn .btn-claim {
+            color: #FFF;
+            cursor: pointer;
+            background: #D80027; }
+      .daily-tasks .game-task .table-responsive.my-balances table tbody tr td {
+        height: 50px; }
+  @media screen and (max-width: 1080px) {
+    .daily-tasks .game-task {
+      width: calc(100% - 20px); } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

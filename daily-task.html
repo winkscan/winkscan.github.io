@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINk - Best Blockchain Gambling Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body class="en">
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="mainpage.html" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="live-casino.html" class="btn">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="live-casino.html">Casino</a></li>
+                        <li><a href="sports-binarium.html">Sports</a></li>
+                        <li><a href="sports-binarium.html">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="https://blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" onclick="toogleHamburger()" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <a href="https://winkonline.zendesk.com/hc/zh-tw/restricted?return_to=https%3A%2F%2Fwinkonline.zendesk.com%2Fhc%2Fzh-tw" target="_blank" class="zendesk"><i class="wnk-icon icon-info">&#xe801;</i></a>
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="daily-tasks">
+                    <h1><span class="highlight">Earn Rewards</span> by Completing Daily Tasks <span class="highlight">≥LV.3</span></h1>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon dice-game"></i>Dice</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr class="activated">
+                                        <td class="task">Win 40 times in Dice</td>
+                                        <td class="progress">0/40</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 20 times in Dice Roll under ≤ 50%</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 20 times in Dice Roll over ≥ 50%</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win in Dice with the same Lucky Number continually</td>
+                                        <td class="progress">0/2</td>
+                                        <td class="reward">30 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon moon-game"></i>Moon</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Win 50 times in Moon with ≥ x1.1</td>
+                                        <td class="progress">0/50</td>
+                                        <td class="reward">20 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 15 times in Moon with auto stop ≥ x2</td>
+                                        <td class="progress">0/15</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 10 times in Moon with ≥ x5</td>
+                                        <td class="progress">0/10</td>
+                                        <td class="reward">25 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 5 times in Moon with ≥ x10</td>
+                                        <td class="progress">0/5</td>
+                                        <td class="reward">40 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon ring-game"></i>Ring</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Play 40 times in Ring on x2</td>
+                                        <td class="progress">0/40</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Play 30 times in Ring on x3</td>
+                                        <td class="progress">0/30</td>
+                                        <td class="reward">20 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Play 25 times in Ring on x5</td>
+                                        <td class="progress">0/25</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Play 20 times in Ring on x50</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">30 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon hilo-game"></i>Hi-Lo</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Win 1 times in Low with the same card in 1 game!</td>
+                                        <td class="progress">0/1</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 1 times in High with the same card in 1 game!</td>
+                                        <td class="progress">0/1</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 40 times in Hi-Lo</td>
+                                        <td class="progress">0/40</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 20 times in Keno with even numbers only!</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">20 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h2><span class="highlight">≥Lv.12</span></h2>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon dice-game"></i>Dice</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Win 30 times in DICE</td>
+                                        <td class="progress">0/30</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 20 times in DICE wyhen win chance is ≤ 50%</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Roll DICE, get the same lucky number 2 times consecutively</td>
+                                        <td class="progress">0/2</td>
+                                        <td class="reward">30 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon moon-game"></i>Moon</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Win 30 times in MOON</td>
+                                        <td class="progress">0/30</td>
+                                        <td class="reward">10 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 20 times in MOON by stopping at ≥ 2X</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 5 times in MOON by stopping at ≥ 5X</td>
+                                        <td class="progress">0/5</td>
+                                        <td class="reward">30 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-task">
+                        <div class="game-header">
+                            <label><i class="game-icon ring-game"></i>Ring</label>
+                            <span class="min-bet">Min. bet<span class="amount">10 TRX</span></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Reward</th>
+                                        <th></th>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="task">Win 20 times in RING</td>
+                                        <td class="progress">0/20</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 10 times in RING by choosing red, blue or yellow</td>
+                                        <td class="progress">0/10</td>
+                                        <td class="reward">15 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="task">Win 5 times in RING by choosing blue or yellow</td>
+                                        <td class="progress">0/5</td>
+                                        <td class="reward">25 TRX</td>
+                                        <td class="btn"><button class="btn-claim">Claim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+        $('.btn-notification').click( function() {
+            $(".notofication-popup").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 0) {
+                $('.sub-nav').addClass('stick-to-top');
+            } else {
+                $('.sub-nav').removeClass('stick-to-top');
+            }
+        });
+
+        $('.btn-freeze').click( function() {
+            $(".freeze-popup").toggleClass("show");
+        } );
+        $('.burned').click( function() {
+            $(".live-burnt-log").toggleClass("show");
+        } );
+        $('.btn-bscdrops').click( function() {
+            $(".bscdrops-popup").toggleClass("show");
+        } );
+        $('.tab-dice').click( function() {
+            $(".tab-dice").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".dice-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-live').click( function() {
+            $(".tab-live").toggleClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".live-drops").toggleClass("active");
+            $(".dice-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-rake').click( function() {
+            $(".tab-rake").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".rake-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".dice-drops").removeClass("active");
+        } );
+        $('.btn-deposit-polo').click( function() {
+            $(".forbidden-popup").toggleClass("show");
+        } );
+        $('.btn-transfer').click( function() {
+            $(".transfer-funds-popup").toggleClass("show");
+        } );
+    </script>
+
+</body>
+</html>
