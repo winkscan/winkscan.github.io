@@ -1843,6 +1843,8 @@
             text-decoration: underline; }
             .popup-wrapper .popup .popup-body .notification p a:hover {
               color: #FBC509; }
+          .popup-wrapper .popup .popup-body .notification p b {
+            font-weight: 600; }
         .popup-wrapper .popup .popup-body .notification .responsive-table {
           width: 100%;
           overflow: auto; }
