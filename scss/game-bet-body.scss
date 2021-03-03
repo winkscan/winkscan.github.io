@@ -67,6 +67,18 @@
                     &.icon-trx {
                         color: $red-color;
                     }
+
+                    &.icon-btt {
+                        color: $white-color;
+                    }
+                }
+
+                .icon-wink {
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    background: url('../img/wink-logo.svg') no-repeat center;
+                    background-size: 16px auto;
                 }
                 
                 .en & {

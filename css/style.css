@@ -1762,6 +1762,8 @@
     .popup-wrapper .popup .popup-body {
       display: flex;
       flex-wrap: wrap;
+      max-height: 400px;
+      overflow-y: auto;
       width: calc(100% - 20px);
       padding: 10px;
       color: #48658C; }
@@ -1830,6 +1832,7 @@
               margin: 17px 0 0 7px;
               font-size: 130px; }
       .popup-wrapper .popup .popup-body .notification {
+        width: calc(100% - 10px);
         padding: 5px; }
         .popup-wrapper .popup .popup-body .notification label {
           display: block;
@@ -1845,6 +1848,29 @@
               color: #FBC509; }
           .popup-wrapper .popup .popup-body .notification p b {
             font-weight: 600; }
+        .popup-wrapper .popup .popup-body .notification .lower-higher-card, .popup-wrapper .popup .popup-body .notification .ace, .popup-wrapper .popup .popup-body .notification .king {
+          display: flex;
+          width: 100%;
+          height: 80px; }
+        .popup-wrapper .popup .popup-body .notification .lower-higher, .popup-wrapper .popup .popup-body .notification .swap {
+          display: flex;
+          width: 100%;
+          height: 40px; }
+        .popup-wrapper .popup .popup-body .notification .lower-higher-card {
+          background: url("../img/lower-higher-card.svg") no-repeat center;
+          background-size: auto 80px; }
+        .popup-wrapper .popup .popup-body .notification .ace {
+          background: url("../img/ace.svg") no-repeat center;
+          background-size: auto 80px; }
+        .popup-wrapper .popup .popup-body .notification .king {
+          background: url("../img/king.svg") no-repeat center;
+          background-size: auto 80px; }
+        .popup-wrapper .popup .popup-body .notification .lower-higher {
+          background: url("../img/lower-higher.svg") no-repeat center;
+          background-size: auto 40px; }
+        .popup-wrapper .popup .popup-body .notification .swap {
+          background: url("../img/swap-card.svg") no-repeat center;
+          background-size: auto 40px; }
         .popup-wrapper .popup .popup-body .notification .responsive-table {
           width: 100%;
           overflow: auto; }
@@ -4215,6 +4241,8 @@
     flex-wrap: wrap; }
     .polo-wallet .balances .balance-header label {
       margin-bottom: 10px; }
+      .polo-wallet .balances .balance-header label .link {
+        font-size: 13px; }
     .polo-wallet .balances .balance-header .balance-nav {
       width: 100%;
       min-width: 100%; }
@@ -5459,6 +5487,14 @@
           color: #FFF; }
           .game-bet-body .col .amount .currency .wnk-icon.icon-trx {
             color: #D80027; }
+          .game-bet-body .col .amount .currency .wnk-icon.icon-btt {
+            color: #FFF; }
+        .game-bet-body .col .amount .currency .icon-wink {
+          display: flex;
+          width: 16px;
+          height: 16px;
+          background: url("../img/wink-logo.svg") no-repeat center;
+          background-size: 16px auto; }
         .en .game-bet-body .col .amount .currency {
           left: 10px; }
         .ar .game-bet-body .col .amount .currency {

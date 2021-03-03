@@ -639,6 +639,10 @@
 
                 label {
                     margin-bottom: 10px;
+
+                    .link {
+                        font-size: $font-size-xs;
+                    }
                 }
                 
                 .balance-nav {
