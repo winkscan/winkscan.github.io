@@ -67,6 +67,29 @@
             }
         }
 
+        &.user-system {
+            label {
+                width: 150px;
+
+                .wnk-icon {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: $orange-color;
+    
+                    .en & {
+                        margin-right: 6px;
+                    }
+            
+                    .ar & {
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+
         .link {
             display: flex;
             padding: 0 10px;
@@ -104,6 +127,15 @@
             .link {
                 &.active, &:hover {
                     border-color: $rake-color;
+                    transition: 0.3s all ease-in-out ;
+                }
+            }
+        }
+
+        &.user-system {
+            .link {
+                &.active, &:hover {
+                    border-color: $orange-color;
                     transition: 0.3s all ease-in-out ;
                 }
             }

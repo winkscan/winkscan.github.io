@@ -1475,6 +1475,19 @@
         .sub-nav .group label .icon.rake {
           background: url("../img/icon-rake.svg") no-repeat;
           background-size: 16px; }
+    .sub-nav .group.user-system label {
+      width: 150px; }
+      .sub-nav .group.user-system label .wnk-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        line-height: 16px;
+        color: #FBC509; }
+        .en .sub-nav .group.user-system label .wnk-icon {
+          margin-right: 6px; }
+        .ar .sub-nav .group.user-system label .wnk-icon {
+          margin-left: 6px; }
     .sub-nav .group .link {
       display: flex;
       padding: 0 10px;
@@ -1494,6 +1507,9 @@
       transition: 0.3s all ease-in-out; }
     .sub-nav .group.rake-platform .link.active, .sub-nav .group.rake-platform .link:hover {
       border-color: #0099FF;
+      transition: 0.3s all ease-in-out; }
+    .sub-nav .group.user-system .link.active, .sub-nav .group.user-system .link:hover {
+      border-color: #FBC509;
       transition: 0.3s all ease-in-out; }
   .sub-nav .group::-webkit-scrollbar {
     width: 5px;
@@ -5821,6 +5837,873 @@
   @media screen and (max-width: 1080px) {
     .daily-tasks .game-task {
       width: calc(100% - 20px); } }
+
+.ranks {
+  margin: 0 auto;
+  display: flex;
+  width: 1280px; }
+  .ranks .my-rank, .ranks .rank-slider {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; }
+    .ranks .my-rank label, .ranks .rank-slider label {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 20px);
+      margin-bottom: 15px;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 16px;
+      color: #FFF;
+      font-weight: 600; }
+    .ranks .my-rank .rank-content, .ranks .rank-slider .rank-content {
+      margin: 0 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      padding: 15px;
+      border-radius: 3px;
+      background: grey; }
+      .ranks .my-rank .rank-content .username, .ranks .rank-slider .rank-content .username {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        height: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #FFF; }
+      .ranks .my-rank .rank-content .lv, .ranks .rank-slider .rank-content .lv {
+        position: absolute;
+        top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #040916; }
+        .en .ranks .my-rank .rank-content .lv, .en .ranks .rank-slider .rank-content .lv {
+          right: 0;
+          border-radius: 3px 0 0 3px; }
+        .ar .ranks .my-rank .rank-content .lv, .ar .ranks .rank-slider .rank-content .lv {
+          left: 0;
+          border-radius: 0 3px 3px 0; }
+      .ranks .my-rank .rank-content .rank-preview, .ranks .rank-slider .rank-content .rank-preview {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        height: 120px; }
+        .ranks .my-rank .rank-content .rank-preview .frame, .ranks .rank-slider .rank-content .rank-preview .frame {
+          position: relative;
+          width: 120px;
+          height: 120px; }
+          .ranks .my-rank .rank-content .rank-preview .frame:after, .ranks .rank-slider .rank-content .rank-preview .frame:after {
+            position: absolute;
+            z-index: 2;
+            width: 120px;
+            height: 120px;
+            content: ''; }
+          .ranks .my-rank .rank-content .rank-preview .frame:before, .ranks .rank-slider .rank-content .rank-preview .frame:before {
+            position: absolute;
+            z-index: 3;
+            left: calc(50% - 13px);
+            bottom: -20px;
+            display: block;
+            width: 26px;
+            height: 36px;
+            content: ''; }
+      .ranks .my-rank .rank-content .wagered, .ranks .rank-slider .rank-content .wagered {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        color: #FFF;
+        font-weight: 600; }
+      .ranks .my-rank .rank-content .cumulative, .ranks .rank-slider .rank-content .cumulative {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5); }
+      .ranks .my-rank .rank-content .row, .ranks .rank-slider .rank-content .row {
+        display: flex;
+        position: relative;
+        width: calc(100% - 50px);
+        height: 29px;
+        padding: 0 25px;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .ranks .my-rank .rank-content .row.included, .ranks .rank-slider .rank-content .row.included {
+          color: #FFF; }
+        .ranks .my-rank .rank-content .row.included:before, .ranks .rank-slider .rank-content .row.included:before {
+          position: absolute;
+          left: 0;
+          top: 7px;
+          width: 16px;
+          height: 16px;
+          font-size: 16px;
+          line-height: 16px;
+          content: '\e836';
+          font-family: 'fontello';
+          color: #26A17B; }
+        .ranks .my-rank .rank-content .row.disabled, .ranks .rank-slider .rank-content .row.disabled {
+          color: rgba(255, 255, 255, 0.5); }
+        .ranks .my-rank .rank-content .row.disabled:before, .ranks .rank-slider .rank-content .row.disabled:before {
+          position: absolute;
+          left: 0;
+          top: 7px;
+          width: 16px;
+          height: 16px;
+          font-size: 16px;
+          line-height: 16px;
+          content: '\e835';
+          font-family: 'fontello';
+          color: #D80027; }
+      .ranks .my-rank .rank-content.lv1, .ranks .my-rank .rank-content.lv2, .ranks .my-rank .rank-content.lv3, .ranks .rank-slider .rank-content.lv1, .ranks .rank-slider .rank-content.lv2, .ranks .rank-slider .rank-content.lv3 {
+        background-image: linear-gradient(#101E41, #48658C); }
+        .ranks .my-rank .rank-content.lv1 .lv, .ranks .my-rank .rank-content.lv2 .lv, .ranks .my-rank .rank-content.lv3 .lv, .ranks .rank-slider .rank-content.lv1 .lv, .ranks .rank-slider .rank-content.lv2 .lv, .ranks .rank-slider .rank-content.lv3 .lv {
+          background: #48658C; }
+        .ranks .my-rank .rank-content.lv1 .rank-preview .frame, .ranks .my-rank .rank-content.lv2 .rank-preview .frame, .ranks .my-rank .rank-content.lv3 .rank-preview .frame, .ranks .rank-slider .rank-content.lv1 .rank-preview .frame, .ranks .rank-slider .rank-content.lv2 .rank-preview .frame, .ranks .rank-slider .rank-content.lv3 .rank-preview .frame {
+          width: 116px;
+          height: 116px;
+          border: 2px solid #48658C;
+          border-radius: 60px; }
+          .ranks .my-rank .rank-content.lv1 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv2 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv3 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv1 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv2 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv3 .rank-preview .frame:after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 116px;
+            height: 116px;
+            font-size: 60px;
+            font-family: 'fontello';
+            content: '\e81c';
+            color: #FBC509; }
+      .ranks .my-rank .rank-content.lv3, .ranks .my-rank .rank-content.lv4, .ranks .my-rank .rank-content.lv5, .ranks .rank-slider .rank-content.lv3, .ranks .rank-slider .rank-content.lv4, .ranks .rank-slider .rank-content.lv5 {
+        background-image: linear-gradient(#101E41, #983C20); }
+        .ranks .my-rank .rank-content.lv3 .username, .ranks .my-rank .rank-content.lv4 .username, .ranks .my-rank .rank-content.lv5 .username, .ranks .rank-slider .rank-content.lv3 .username, .ranks .rank-slider .rank-content.lv4 .username, .ranks .rank-slider .rank-content.lv5 .username {
+          background: linear-gradient(180deg, #E78A54, #9D3F21);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .ranks .my-rank .rank-content.lv3 .lv, .ranks .my-rank .rank-content.lv4 .lv, .ranks .my-rank .rank-content.lv5 .lv, .ranks .rank-slider .rank-content.lv3 .lv, .ranks .rank-slider .rank-content.lv4 .lv, .ranks .rank-slider .rank-content.lv5 .lv {
+          background: #E78B54; }
+        .ranks .my-rank .rank-content.lv3 .rank-preview .frame, .ranks .my-rank .rank-content.lv4 .rank-preview .frame, .ranks .my-rank .rank-content.lv5 .rank-preview .frame, .ranks .rank-slider .rank-content.lv3 .rank-preview .frame, .ranks .rank-slider .rank-content.lv4 .rank-preview .frame, .ranks .rank-slider .rank-content.lv5 .rank-preview .frame {
+          border: 2px solid #E78B54; }
+      .ranks .my-rank .rank-content.lv3 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv3 .rank-preview .frame:before {
+        background: url("../img/user-system/badge-lv3.svg") no-repeat center;
+        background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv4 .rank-preview .frame, .ranks .rank-slider .rank-content.lv4 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv4.png") no-repeat center;
+        background-size: 120px; }
+        .ranks .my-rank .rank-content.lv4 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv4 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv4.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv5 .rank-preview .frame, .ranks .rank-slider .rank-content.lv5 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv5.png") no-repeat center;
+        background-size: 120px; }
+        .ranks .my-rank .rank-content.lv5 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv5 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv5.svg") no-repeat center;
+          background-size: 26px 36px; }
+        .ranks .my-rank .rank-content.lv5 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv5 .rank-preview .frame:after {
+          background: url("../img/user-system/frame-lv5.svg") no-repeat center;
+          background-size: 120px; }
+      .ranks .my-rank .rank-content.lv6, .ranks .my-rank .rank-content.lv7, .ranks .my-rank .rank-content.lv8, .ranks .rank-slider .rank-content.lv6, .ranks .rank-slider .rank-content.lv7, .ranks .rank-slider .rank-content.lv8 {
+        background-image: linear-gradient(#101E41, #6E858E); }
+        .ranks .my-rank .rank-content.lv6 .username, .ranks .my-rank .rank-content.lv7 .username, .ranks .my-rank .rank-content.lv8 .username, .ranks .rank-slider .rank-content.lv6 .username, .ranks .rank-slider .rank-content.lv7 .username, .ranks .rank-slider .rank-content.lv8 .username {
+          background: linear-gradient(180deg, #BDCDD9, #708790);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .ranks .my-rank .rank-content.lv6 .lv, .ranks .my-rank .rank-content.lv7 .lv, .ranks .my-rank .rank-content.lv8 .lv, .ranks .rank-slider .rank-content.lv6 .lv, .ranks .rank-slider .rank-content.lv7 .lv, .ranks .rank-slider .rank-content.lv8 .lv {
+          background: #6E858E; }
+        .ranks .my-rank .rank-content.lv6 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv7 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv8 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv6 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv7 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv8 .rank-preview .frame:after {
+          background: url("../img/user-system/frame-lv6.svg") no-repeat center;
+          background-size: 120px; }
+      .ranks .my-rank .rank-content.lv6 .rank-preview .frame, .ranks .rank-slider .rank-content.lv6 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv6.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv6 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv6 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv6.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv7 .rank-preview .frame, .ranks .rank-slider .rank-content.lv7 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv7.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv7 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv7 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv7.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv8 .rank-preview .frame, .ranks .rank-slider .rank-content.lv8 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv8.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv8 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv8 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv8.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv9, .ranks .my-rank .rank-content.lv10, .ranks .my-rank .rank-content.lv11, .ranks .rank-slider .rank-content.lv9, .ranks .rank-slider .rank-content.lv10, .ranks .rank-slider .rank-content.lv11 {
+        background-image: linear-gradient(#101E41, #E68C2E); }
+        .ranks .my-rank .rank-content.lv9 .username, .ranks .my-rank .rank-content.lv10 .username, .ranks .my-rank .rank-content.lv11 .username, .ranks .rank-slider .rank-content.lv9 .username, .ranks .rank-slider .rank-content.lv10 .username, .ranks .rank-slider .rank-content.lv11 .username {
+          background: linear-gradient(180deg, #F7BD2B, #E68C2E);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .ranks .my-rank .rank-content.lv9 .lv, .ranks .my-rank .rank-content.lv10 .lv, .ranks .my-rank .rank-content.lv11 .lv, .ranks .rank-slider .rank-content.lv9 .lv, .ranks .rank-slider .rank-content.lv10 .lv, .ranks .rank-slider .rank-content.lv11 .lv {
+          background: #F7BD2B; }
+        .ranks .my-rank .rank-content.lv9 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv10 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv11 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv9 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv10 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv11 .rank-preview .frame:after {
+          background: url("../img/user-system/frame-lv9.svg") no-repeat center;
+          background-size: auto 120px; }
+      .ranks .my-rank .rank-content.lv9 .rank-preview .frame, .ranks .rank-slider .rank-content.lv9 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv9.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv9 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv9 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv9.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv10 .rank-preview .frame, .ranks .rank-slider .rank-content.lv10 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv10.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv10 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv10 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv10.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv11 .rank-preview .frame, .ranks .rank-slider .rank-content.lv11 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv11.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv11 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv11 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv11.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv12, .ranks .my-rank .rank-content.lv13, .ranks .my-rank .rank-content.lv14, .ranks .rank-slider .rank-content.lv12, .ranks .rank-slider .rank-content.lv13, .ranks .rank-slider .rank-content.lv14 {
+        background-image: linear-gradient(#101E41, #0A9698); }
+        .ranks .my-rank .rank-content.lv12 .username, .ranks .my-rank .rank-content.lv13 .username, .ranks .my-rank .rank-content.lv14 .username, .ranks .rank-slider .rank-content.lv12 .username, .ranks .rank-slider .rank-content.lv13 .username, .ranks .rank-slider .rank-content.lv14 .username {
+          background: linear-gradient(180deg, #10EEF3, #0CCFD3);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .ranks .my-rank .rank-content.lv12 .lv, .ranks .my-rank .rank-content.lv13 .lv, .ranks .my-rank .rank-content.lv14 .lv, .ranks .rank-slider .rank-content.lv12 .lv, .ranks .rank-slider .rank-content.lv13 .lv, .ranks .rank-slider .rank-content.lv14 .lv {
+          background: #10EEF3; }
+        .ranks .my-rank .rank-content.lv12 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv13 .rank-preview .frame:after, .ranks .my-rank .rank-content.lv14 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv12 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv13 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv14 .rank-preview .frame:after {
+          background: url("../img/user-system/frame-lv12.svg") no-repeat center;
+          background-size: auto 120px; }
+      .ranks .my-rank .rank-content.lv12 .rank-preview .frame, .ranks .rank-slider .rank-content.lv12 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv12.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv12 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv12 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv12.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv13 .rank-preview .frame, .ranks .rank-slider .rank-content.lv13 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv13.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv13 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv13 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv13.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv14 .rank-preview .frame, .ranks .rank-slider .rank-content.lv14 .rank-preview .frame {
+        width: 120px;
+        height: 120px;
+        border: none;
+        background: url("../img/user-system/sticker-lv14.png") no-repeat center;
+        background-size: 110px; }
+        .ranks .my-rank .rank-content.lv14 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv14 .rank-preview .frame:before {
+          background: url("../img/user-system/badge-lv14.svg") no-repeat center;
+          background-size: 26px 36px; }
+      .ranks .my-rank .rank-content.lv15, .ranks .rank-slider .rank-content.lv15 {
+        background-image: linear-gradient(#101E41, #F02750); }
+        .ranks .my-rank .rank-content.lv15 .username, .ranks .rank-slider .rank-content.lv15 .username {
+          background: linear-gradient(180deg, #F02850, #D41140);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .ranks .my-rank .rank-content.lv15 .lv, .ranks .rank-slider .rank-content.lv15 .lv {
+          background: #F02750; }
+        .ranks .my-rank .rank-content.lv15 .rank-preview .frame, .ranks .rank-slider .rank-content.lv15 .rank-preview .frame {
+          width: 120px;
+          height: 120px;
+          border: none;
+          background: url("../img/user-system/sticker-lv15.png") no-repeat center;
+          background-size: 110px; }
+          .ranks .my-rank .rank-content.lv15 .rank-preview .frame:before, .ranks .rank-slider .rank-content.lv15 .rank-preview .frame:before {
+            background: url("../img/user-system/badge-lv15.svg") no-repeat center;
+            background-size: 26px 36px; }
+          .ranks .my-rank .rank-content.lv15 .rank-preview .frame:after, .ranks .rank-slider .rank-content.lv15 .rank-preview .frame:after {
+            background: url("../img/user-system/frame-lv15.svg") no-repeat center;
+            background-size: auto 120px; }
+  .ranks .my-rank {
+    width: 25%; }
+    .ranks .my-rank label {
+      justify-content: flex-start; }
+    .ranks .my-rank .rank-content {
+      width: calc(100% - 50px); }
+  .ranks .rank-slider {
+    width: 75%;
+    overflow: hidden; }
+    .ranks .rank-slider label {
+      justify-content: flex-end; }
+    .ranks .rank-slider .arrow {
+      position: absolute;
+      display: flex;
+      z-index: 2;
+      top: 270px;
+      width: 23px;
+      height: 13px; }
+      .ranks .rank-slider .arrow:before {
+        display: block;
+        width: 23px;
+        height: 13px;
+        font-size: 13px;
+        line-height: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        content: '\e833';
+        font-family: 'fontello'; }
+      .ranks .rank-slider .arrow.slide-left {
+        left: 20px;
+        transform: rotate(-90deg); }
+      .ranks .rank-slider .arrow.slide-right {
+        transform: rotate(90deg);
+        right: 20px; }
+      .ranks .rank-slider .arrow:hover:before {
+        color: white;
+        transition: 0.3s all ease-in-out; }
+    .ranks .rank-slider .rank-content {
+      width: calc(33.33% - 50px); }
+
+.how-work {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  padding: 40px 0; }
+  .how-work h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 600; }
+  .how-work .dd {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 15px 0;
+    width: 100%;
+    font-size: 13px;
+    color: #48658C; }
+  .how-work .steps {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    .how-work .steps .step {
+      margin: 10px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: calc(25% - 125px);
+      min-height: 60px; }
+      .en .how-work .steps .step {
+        padding: 15px 15px 15px 90px; }
+      .ar .how-work .steps .step {
+        padding: 15px 90px 15px 15px; }
+      .how-work .steps .step .icon {
+        position: absolute;
+        top: 15px;
+        display: flex;
+        width: 60px;
+        height: 60px; }
+        .how-work .steps .step .icon.icon-trx {
+          overflow: hidden;
+          background: #D80027;
+          border-radius: 30px; }
+          .how-work .steps .step .icon.icon-trx:before {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 65px;
+            height: 65px;
+            font-size: 65px;
+            line-height: 65px;
+            color: #FFF;
+            content: '\e819';
+            font-family: 'fontello'; }
+        .how-work .steps .step .icon.icon-dice {
+          display: flex;
+          width: 60px;
+          height: 60px;
+          background: url("../img/dice-game.svg") no-repeat center;
+          background-size: 60px auto; }
+        .how-work .steps .step .icon.icon-badge {
+          display: flex;
+          width: 60px;
+          height: 60px;
+          background: url("../img/user-system/badge-lv15.svg") no-repeat center;
+          background-size: auto 60px; }
+        .en .how-work .steps .step .icon {
+          left: 15px; }
+        .ar .how-work .steps .step .icon {
+          right: 15px; }
+      .how-work .steps .step label {
+        width: 100%;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 600; }
+      .how-work .steps .step .dd {
+        width: 100%;
+        font-size: 12px; }
+    .how-work .steps .btn {
+      margin: 10px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: calc(25% - 50px);
+      min-height: 60px;
+      padding: 15px 15px 15px 15px; }
+      .how-work .steps .btn .btn-play {
+        display: flex;
+        width: 160px;
+        height: 36px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-weight: 600;
+        outline: none;
+        color: #040916;
+        background: #FBC509;
+        cursor: pointer; }
+        .how-work .steps .btn .btn-play:hover {
+          background: #FFCF29;
+          transition: 0.3s background-color ease-in-out; }
+
+.packages {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px; }
+  .packages label {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600; }
+    .packages label .pts {
+      font-size: 16px;
+      color: #FBC509; }
+      .en .packages label .pts {
+        padding-left: 4px; }
+      .ar .packages label .pts {
+        padding-right: 4px; }
+    .packages label.prop {
+      margin-bottom: 0;
+      height: 20px;
+      padding: 15px 10px 0 10px; }
+  .packages .dd {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #48658C; }
+  .packages .turntable {
+    margin: 0 10px 10px 10px;
+    position: relative;
+    width: calc(33.33% - 50px);
+    padding: 15px;
+    height: 230px;
+    background: linear-gradient(0deg, #6E858E 0%, #101E41 100%);
+    border-radius: 3px; }
+    .packages .turntable .title {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      height: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFF; }
+    .packages .turntable .pts {
+      position: absolute;
+      z-index: 3;
+      top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #040916;
+      background: #ACC0CD; }
+      .en .packages .turntable .pts {
+        right: 0;
+        border-radius: 3px 0 0 3px; }
+      .ar .packages .turntable .pts {
+        left: 0;
+        border-radius: 0 3px 3px 0; }
+    .packages .turntable .card-name {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFF; }
+    .packages .turntable .win-container {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170px; }
+      .packages .turntable .win-container .btn-play {
+        display: flex;
+        width: 160px;
+        height: 36px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-weight: 600;
+        outline: none;
+        color: #FFF;
+        background: #D80027;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); }
+        .packages .turntable .win-container .btn-play:hover {
+          background: #FF002E;
+          transition: 0.3s background-color ease-in-out; }
+    .packages .turntable.disabled:before {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(4, 9, 22, 0.6);
+      border-radius: 3px; }
+    .packages .turntable.disabled .win-container .btn-play {
+      color: #48658C;
+      background: #040916;
+      cursor: default; }
+      .packages .turntable.disabled .win-container .btn-play:hover {
+        background: #040916;
+        transition: 0.3s background-color ease-in-out; }
+    .packages .turntable.show-win:before {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url("../img/user-system/turntable-win-bg.svg") no-repeat center;
+      background-size: cover;
+      animation-name: fadein;
+      animation-duration: 1s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+    .packages .turntable.show-win .win-container .card-body {
+      display: flex;
+      margin-top: -10px;
+      width: 76px;
+      height: 100px;
+      background: url("../img/user-system/card-bg.svg") no-repeat center;
+      background-size: 76px auto;
+      animation-name: spinin;
+      animation-duration: 1s;
+      transform: scale(1);
+      opacity: 1;
+      animation-timing-function: linear; }
+      .packages .turntable.show-win .win-container .card-body .number {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 72px;
+        left: -7px;
+        width: 90px;
+        height: 50px;
+        font-size: 42px;
+        color: #FFF;
+        font-weight: 700;
+        white-space: nowrap;
+        letter-spacing: -2px;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        transform: rotate(-4deg); }
+      .packages .turntable.show-win .win-container .card-body.thanks:before {
+        position: absolute;
+        left: -4px;
+        top: 8px;
+        width: 84px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-thanks.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.renaming:before {
+        position: absolute;
+        left: -4px;
+        top: 8px;
+        width: 84px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-renaming.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.points-x3:before {
+        position: absolute;
+        left: -2px;
+        top: 6px;
+        width: 78px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-points-x3.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.points-x15:before {
+        position: absolute;
+        left: -2px;
+        top: 6px;
+        width: 78px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-points-x15.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.points-x150:before {
+        position: absolute;
+        left: -2px;
+        top: 6px;
+        width: 78px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-points-x150.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.prize-trx:before {
+        position: absolute;
+        left: -2px;
+        top: 0;
+        width: 78px;
+        height: 86px;
+        content: '';
+        background: url("../img/user-system/card-trx.svg") no-repeat left top;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.mining-card-x15:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 76px;
+        height: 100px;
+        content: '';
+        background: url("../img/user-system/diamond-golden.svg") no-repeat left 4px;
+        background-size: 100% auto; }
+      .packages .turntable.show-win .win-container .card-body.mining-card-x2:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 76px;
+        height: 100px;
+        content: '';
+        background: url("../img/user-system/diamond-green.svg") no-repeat left 4px;
+        background-size: 100% auto; }
+
+@keyframes spinin {
+  0% {
+    transform: scale(0.75);
+    opacity: 0; }
+  50% {
+    transform: scale(0.75);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+  .packages .my-cards {
+    display: flex;
+    flex-wrap: wrap; }
+    .packages .my-cards .card-container {
+      margin: 0 10px 20px 10px;
+      display: flex;
+      flex-direction: column;
+      width: 122px;
+      height: 230px;
+      border-radius: 3px;
+      background: #0A142E; }
+      .packages .my-cards .card-container .card-name {
+        display: flex;
+        height: 30px;
+        margin-bottom: 5px;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 600;
+        color: #48658C; }
+      .packages .my-cards .card-container .card-body {
+        position: relative;
+        display: flex;
+        margin: 0 auto 15px;
+        width: 76px;
+        height: 100px;
+        background: url("../img/user-system/card-bg.svg") no-repeat center;
+        background-size: 76px auto; }
+        .packages .my-cards .card-container .card-body .number {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 72px;
+          left: -7px;
+          width: 90px;
+          height: 50px;
+          font-size: 42px;
+          color: #FFF;
+          font-weight: 700;
+          white-space: nowrap;
+          letter-spacing: -2px;
+          text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+          transform: rotate(-4deg); }
+        .packages .my-cards .card-container .card-body.thanks:before {
+          position: absolute;
+          left: -4px;
+          top: 8px;
+          width: 84px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-thanks.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.renaming:before {
+          position: absolute;
+          left: -4px;
+          top: 8px;
+          width: 84px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-renaming.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.points-x3:before {
+          position: absolute;
+          left: -2px;
+          top: 6px;
+          width: 78px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-points-x3.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.points-x15:before {
+          position: absolute;
+          left: -2px;
+          top: 6px;
+          width: 78px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-points-x15.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.points-x150:before {
+          position: absolute;
+          left: -2px;
+          top: 6px;
+          width: 78px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-points-x150.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.prize-trx:before {
+          position: absolute;
+          left: -2px;
+          top: 0;
+          width: 78px;
+          height: 86px;
+          content: '';
+          background: url("../img/user-system/card-trx.svg") no-repeat left top;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.mining-card-x15:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 76px;
+          height: 100px;
+          content: '';
+          background: url("../img/user-system/diamond-golden.svg") no-repeat left 4px;
+          background-size: 100% auto; }
+        .packages .my-cards .card-container .card-body.mining-card-x2:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 76px;
+          height: 100px;
+          content: '';
+          background: url("../img/user-system/diamond-green.svg") no-repeat left 4px;
+          background-size: 100% auto; }
+      .packages .my-cards .card-container .cards {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+        color: #48658C; }
+        .packages .my-cards .card-container .cards .amount {
+          font-weight: 600;
+          color: #FFF; }
+          .en .packages .my-cards .card-container .cards .amount {
+            padding-left: 4px; }
+          .ar .packages .my-cards .card-container .cards .amount {
+            padding-right: 4px; }
+      .packages .my-cards .card-container .btn-use {
+        margin: 0 auto;
+        display: flex;
+        width: 80px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-weight: 600;
+        outline: none;
+        color: #040916;
+        background: #FBC509;
+        cursor: pointer;
+        border: none; }
+        .packages .my-cards .card-container .btn-use:hover {
+          background: #FFCF29;
+          transition: 0.3s background-color ease-in-out; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;

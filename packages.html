@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINk - Best Blockchain Gambling Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body class="en">
+    <div class="wrap">
+        <div class="side-nav">
+            <a href="wink.org" class="wink-logo"></a>
+            <div class="group-nav">
+                <div class="btn-group all">
+                    <a href="mainpage.html" class="btn">
+                        <i class="wnk-icon icon-casino">&#xe81f;</i>All
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-dice">&#xe800;</i>Dice
+                    </a>
+                    <ul>
+                        <li><a href="/">Dice</a></li>
+                        <li><a href="/">Moon</a></li>
+                        <li><a href="/">Ring</a></li>
+                        <li><a href="/">Duel</a></li>
+                        <li><a href="/">Mine</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="live-casino.html" class="btn">
+                        <i class="wnk-icon icon-live">&#xe806;</i>Live
+                    </a>
+                    <ul>
+                        <li><a href="live-casino.html">Casino</a></li>
+                        <li><a href="sports-binarium.html">Sports</a></li>
+                        <li><a href="sports-binarium.html">Binarium</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="" class="btn">
+                        <i class="wnk-icon icon-rake">&#xe805;</i>Rake
+                    </a>
+                    <ul>
+                        <li><a href="">Poker</a></li>
+                        <li><a href="">Poker Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group blink">
+                <a href="https://blink.wink.org" class="btn">
+                    <i class="wnk-icon icon-blink-logo">&#xe81e;</i>Switch to
+                </a>
+            </div>
+            <div id="hamburger" class="burger"><i class="bar"></i></div>
+        </div>
+        <div class="container">
+            <a href="https://winkonline.zendesk.com/hc/zh-tw/restricted?return_to=https%3A%2F%2Fwinkonline.zendesk.com%2Fhc%2Fzh-tw" target="_blank" class="zendesk"><i class="wnk-icon icon-info">&#xe801;</i></a>
+            <div class="top-nav">
+                <div class="useful-links">
+                    <a href="/" class="link"><i class="wnk-icon icon-windrops">&#xe81b;</i><span class="title">Windrops</span></a>
+                    <a href="/" class="link"><i class="wnk-icon icon-info">&#xe801;</i><span class="title">Help Center</span></a>
+                </div>
+                <div class="navigation">
+                    <button class="btn-notification"><i class="wnk-icon icon-notification">&#xe804;</i></button>
+                    <div class="group tronlink">
+                        <div id="tw" class="wallet">
+                            <span class="title">Tron Wallet<i class="arrow"></i></span>
+                            <span class="amount">12,973,34.00 TRX</span>
+                        </div>
+                        <button id="tw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-tronwallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit TRX</span>
+                            <p>This address supports transferring to TRX and its token.</p>
+                            <span class="qr">qr code square size 80x80px img</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                        </div>
+                        <div class="dropdown tw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group live-wallet">
+                        <div id="lw" class="wallet">
+                            <span class="title">Live Wallet<i class="arrow"></i></span>
+                            <span class="amount">0 TRX</span>
+                        </div>
+                        <button id="lw-deposit" class="btn-deposit"><i class="wnk-icon icon-deposit">&#xe824;</i></button>
+                        <div class="dropdown deposit-to-live-wallet">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Deposit to Live Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx active"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Tron Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Deposit amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-deposit">Deposit</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Live Wallet.
+                            </div>
+                        </div>
+                        <div class="dropdown lw-currency">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <ul>
+                                <li><a href="/" class="currency"><span class="amount">10</span> TRX</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> USDT</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Bitcoin</a></li>
+                                <li><a href="/" class="currency"><span class="amount">10</span> Litecoin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group withdraw">
+                        <button class="btn-withdraw">Withdraw</button>
+                        <div class="dropdown withdraw-drop">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <span class="title">Withdraw to Tron Wallet</span>
+                            <div class="col token">
+                                <label>Select Token</label>
+                                <span class="btn trx"><i class="wnk-icon icon-trx">&#xe819;</i></span>
+                                <span class="btn usdt active"><i class="wnk-icon icon-usdt">&#xe81a;</i></span>
+                            </div>
+                            <div class="col balance">
+                                <label>Live Wallet Balance</label>
+                                <span class="amount">12,000,999.00 TRX</span>    
+                            </div>
+                            <div class="col amount-col">
+                                <label>Withdraw amount</label>
+                                <input type="text" value="0" />
+                            </div>
+                            <div class="col btn-col">
+                                <button class="btn btn-withdraw">Withdraw</button>
+                            </div>
+                            <div class="note">
+                                <i class="wnk-icon icon-alert">&#xe81d;</i>
+                                It will take 2 minutes to withdraw, after which the asset will enter your Tron Wallet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group user">
+                        <span class="avatar"><i class="wnk-icon icon-w-wink">&#xe81c;</i></span>
+                        <div class="dropdown logout">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <p>Login by Tron Wallet</p>
+                            <span class="title">Wallet Name Here</span>
+                            <span class="copy-addr">TNirpZPp36q...mknX1y8Vq<i class="wnk-icon icon-copy">&#xe820;</i></span>
+                            <button class="btn sign-out">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="group set-language">
+                        <i class="flag us"></i>
+                        <div class="dropdown language">
+                            <span class="btn-back"><i class="arrow"></i></span>
+                            <a href="" class="set-lng us">English</a>
+                            <a href="" class="set-lng uae">العربية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-nav">
+                <div class="group user-system">
+                    <label><i class="wnk-icon icon-user-system">&#xe834;</i>User System</label>
+                    <a href="" class="link">Ranks</a>
+                    <a href="" class="link active">Packages</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="packages">
+                    <label>My points:<span class="pts">75</span></label>
+                    <div class="turntable">
+                        <span class="title">Turntable</span>
+                        <span class="pts">5 Points</span>
+                        <span class="win-container"><button class="btn-play">Play to win</button></span>
+                        <span class="card-name"></span>
+                    </div>
+                    <div class="turntable show-win">
+                        <span class="title">Turntable</span>
+                        <span class="pts">50 Points</span>
+                        <span class="win-container">
+                            <span class="card-body mining-card-x2"><span class="number">x2</span></span>
+                        </span>
+                        <span class="card-name">Prize Card</span>
+                    </div>
+                    <div class="turntable disabled">
+                        <span class="title">Turntable</span>
+                        <span class="pts">100 Points</span>
+                        <span class="win-container"><button class="btn-play">Play to win</button></span>
+                        <span class="card-name"></span>
+                    </div>
+                    <label class="prop">My prop:<span class="pts">11</span></label>
+                    <span class="dd">One card can be used only once</span>
+                    <div class="my-cards">
+                        <div class="card-container">
+                            <span class="card-name">Thanks</span>
+                            <span class="card-body thanks"></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Renaming card</span>
+                            <span class="card-body renaming"></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Points x3</span>
+                            <span class="card-body points-x3"><span class="number">x3</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Points x15</span>
+                            <span class="card-body points-x15"><span class="number">x15</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Points x150</span>
+                            <span class="card-body points-x150"><span class="number">x150</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 5</span>
+                            <span class="card-body prize-trx"><span class="number">5</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 10</span>
+                            <span class="card-body prize-trx"><span class="number">10</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 20</span>
+                            <span class="card-body prize-trx"><span class="number">20</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 50</span>
+                            <span class="card-body prize-trx"><span class="number">50</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 100</span>
+                            <span class="card-body prize-trx"><span class="number">100</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 200</span>
+                            <span class="card-body prize-trx"><span class="number">200</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 500</span>
+                            <span class="card-body prize-trx"><span class="number">500</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 1,000</span>
+                            <span class="card-body prize-trx"><span class="number">1k</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 5,000</span>
+                            <span class="card-body prize-trx"><span class="number">5k</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">TRX 10,000</span>
+                            <span class="card-body prize-trx"><span class="number">10k</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Mining Card X1.5</span>
+                            <span class="card-body mining-card-x15"><span class="number">x1.5</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                        <div class="card-container">
+                            <span class="card-name">Mining Card X2</span>
+                            <span class="card-body mining-card-x2"><span class="number">x2</span></span>
+                            <span class="cards">Cards: <span class="amount">x1</span></span>
+                            <a href="" class="btn-use">Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#tw').click( function() {
+            $(".tw-currency").toggleClass("show");
+            $("#tw").toggleClass("show");
+        } );
+        $('#tw-deposit').click( function() {
+            $(".deposit-to-tronwallet").toggleClass("show");
+        } );
+        $('#lw').click( function() {
+            $(".lw-currency").toggleClass("show");
+            $("#lw").toggleClass("show");
+        } );
+        $('#lw-deposit').click( function() {
+            $(".deposit-to-live-wallet").toggleClass("show");
+        } );
+        $('.btn-withdraw').click( function() {
+            $(".withdraw-drop").toggleClass("show");
+        } );
+        $('.flag').click( function() {
+            $(".language").toggleClass("show");
+        } );
+        $('.avatar').click( function() {
+            $(".logout").toggleClass("show");
+        } );
+        $('.burger').click( function() {
+            $(".top-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+        $('.btn-back').click( function() {
+            $(".dropdown").removeClass("show");
+        } );
+        $('.btn-notification').click( function() {
+            $(".notofication-popup").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 0) {
+                $('.sub-nav').addClass('stick-to-top');
+            } else {
+                $('.sub-nav').removeClass('stick-to-top');
+            }
+        });
+
+        $('.btn-freeze').click( function() {
+            $(".freeze-popup").toggleClass("show");
+        } );
+        $('.burned').click( function() {
+            $(".live-burnt-log").toggleClass("show");
+        } );
+        $('.btn-bscdrops').click( function() {
+            $(".bscdrops-popup").toggleClass("show");
+        } );
+        $('.tab-dice').click( function() {
+            $(".tab-dice").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".dice-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-live').click( function() {
+            $(".tab-live").toggleClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".tab-rake").removeClass("active");
+            $(".live-drops").toggleClass("active");
+            $(".dice-drops").removeClass("active");
+            $(".rake-drops").removeClass("active");
+        } );
+        $('.tab-rake').click( function() {
+            $(".tab-rake").toggleClass("active");
+            $(".tab-live").removeClass("active");
+            $(".tab-dice").removeClass("active");
+            $(".rake-drops").toggleClass("active");
+            $(".live-drops").removeClass("active");
+            $(".dice-drops").removeClass("active");
+        } );
+
+        function playAudio(url) {
+            new Audio(url).play();
+        }
+        $('.btn-skip, .btn-skip-card, .btn-higher, .btn-lower').click( function() {
+            $(".flip-card").toggleClass("fly");
+        } );
+        $('.game-rules').click( function() {
+            $(".hilo-rules-popup").toggleClass("show");
+        } );
+        $('.currency-list').click( function() {
+            $(".currency-list").toggleClass("show-all");
+        } );
+    </script>
+
+</body>
+</html>
