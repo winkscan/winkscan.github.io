@@ -601,8 +601,9 @@
 
     .dd {
         display: flex;
+        width: calc(100% - 20px);
         justify-content: center;
-        padding: 5px 0 15px 0;
+        padding: 5px 10px 15px 10px;
         width: 100%;
         font-size: $font-size-xs;
         color: $text-color;
@@ -683,6 +684,8 @@
             }
 
             label {
+                display: flex;
+                justify-content: flex-start;
                 width: 100%;
                 color: $white-color;
                 font-size: $font-size-md;
@@ -690,8 +693,12 @@
             }
 
             .dd {
+                display: flex;
                 width: 100%;
                 font-size: 12px;
+                padding: 15px 0;
+                align-items: flex-start;
+                justify-content: flex-start;
             }
         }
 
@@ -723,6 +730,97 @@
                     background: $orange-light-color;
                     transition: 0.3s background-color ease-in-out;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .ranks, .how-work {
+        margin: 0 5px;
+        width: calc(100% - 10px);
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .ranks {
+        .my-rank {
+            width: 33.33%;
+        }
+
+        .rank-slider {
+            flex-wrap: nowrap;
+            width: 66.66%;
+            padding-top: 45px;
+            overflow: hidden;
+
+            label {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .rank-content {
+                min-width: calc(50% - 50px);
+            }
+        }
+    }
+
+    .how-work {
+        .steps {
+            .step {
+                width: calc(33.33% - 125px);
+            }
+    
+            .btn {
+                width: calc(100% - 50px);
+                min-height: 30px;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .ranks {
+        .my-rank {
+            width: 50%;
+        }
+
+        .rank-slider {
+            width: 50%;
+            
+            .rank-content {
+                min-width: calc(100% - 50px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .how-work {
+        .steps {
+            .step {
+                width: calc(100% - 125px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ranks {
+        flex-wrap: wrap;
+        
+        .my-rank {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .rank-slider {
+            width: 100%;
+
+            label {
+                justify-content: flex-start;
             }
         }
     }
