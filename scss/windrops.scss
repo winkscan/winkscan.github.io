@@ -397,7 +397,7 @@
                 }
 
                 label {
-                    width: calc(100% - 82px);
+                    width: calc(100% - 152px);
                     padding: 0 6px;
                     color: $white-color;
                     text-transform: uppercase;
@@ -413,9 +413,14 @@
                 }
 
                 .countdown {
-                    width: 54px;
+                    width: 124px;
+                    text-align: right;
                     white-space: nowrap;
                     color: $text-color;
+
+                    .current-pool {
+                        font-weight: 600;
+                    }
                 }
             }
 
@@ -844,9 +849,17 @@
                         }
 
                         .countdown {
+                            flex-wrap: wrap;
                             width: 85px;
                             justify-content: flex-end;
                             color: $text-color;
+
+                            .current-pool {
+                                display: flex;
+                                width: 100%;
+                                font-weight: 600;
+                                justify-content: flex-end;
+                            }
 
                             .en & {
                                 padding-right: 15px;

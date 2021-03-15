@@ -3634,7 +3634,7 @@
           height: 16px;
           border-radius: 8px; }
         .windrops .sub-tokens-group .sub-token .sub-header label {
-          width: calc(100% - 82px);
+          width: calc(100% - 152px);
           padding: 0 6px;
           color: #FFF;
           text-transform: uppercase;
@@ -3646,9 +3646,12 @@
             text-transform: initial;
             font-weight: normal; }
         .windrops .sub-tokens-group .sub-token .sub-header .countdown {
-          width: 54px;
+          width: 124px;
+          text-align: right;
           white-space: nowrap;
           color: #48658C; }
+          .windrops .sub-tokens-group .sub-token .sub-header .countdown .current-pool {
+            font-weight: 600; }
       .windrops .sub-tokens-group .sub-token .current-drops {
         width: 100%;
         min-height: 300px;
@@ -3918,9 +3921,15 @@
                 .ar .windrops .sub-tokens-group .sub-token-mob-nav .tab.active label .drops {
                   padding-right: 6px; }
             .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
+              flex-wrap: wrap;
               width: 85px;
               justify-content: flex-end;
               color: #48658C; }
+              .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown .current-pool {
+                display: flex;
+                width: 100%;
+                font-weight: 600;
+                justify-content: flex-end; }
               .en .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
                 padding-right: 15px; }
               .ar .windrops .sub-tokens-group .sub-token-mob-nav .tab.active .countdown {
