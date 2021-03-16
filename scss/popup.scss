@@ -751,6 +751,50 @@
                             transition: 0.3s all ease-in-out;
                         }
                     }
+
+                    .note {
+                        position: relative;
+                        display: flex;
+                        width: calc(100% - 26px);
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        font-size: 12px;
+                        font-style: italic;
+
+                        .en & {
+                            padding-left: 26px;
+                        }
+
+                        .ar & {
+                            padding-right: 26px;
+                        }
+
+                        .icon-alert {
+                            position: absolute;
+                            top: 8px;
+                            width: 16px;
+                            height: 16px;
+                            font-style: normal;
+
+                            &:before {
+                                display: flex;
+                                width: 16px;
+                                height: 16px;
+                                font-family: 'fontello';
+                                content: '\e81d';
+                                font-size: 16px;
+                                color: $red-color;
+                            }
+
+                            .en & {
+                                left: 0;
+                            }
+    
+                            .ar & {
+                                right: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
