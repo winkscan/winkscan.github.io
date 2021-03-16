@@ -105,6 +105,20 @@
             }
         }
 
+        .rules {
+            display: flex;
+            margin-left: auto;
+            padding: 0;
+            align-items: center;
+            height: 49px;
+            color: $text-color;
+
+            &:hover {
+                color: $white-color;
+                transition: 0.3s all ease-in-out ;
+            }
+        }
+
         &.dice-platform {
             .link {
                 &.active, &:hover {

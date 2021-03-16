@@ -1685,6 +1685,16 @@
       .sub-nav .group .link.active, .sub-nav .group .link:hover {
         color: #FFF;
         transition: 0.3s all ease-in-out; }
+    .sub-nav .group .rules {
+      display: flex;
+      margin-left: auto;
+      padding: 0;
+      align-items: center;
+      height: 49px;
+      color: #48658C; }
+      .sub-nav .group .rules:hover {
+        color: #FFF;
+        transition: 0.3s all ease-in-out; }
     .sub-nav .group.dice-platform .link.active, .sub-nav .group.dice-platform .link:hover {
       border-color: #26A17B;
       transition: 0.3s all ease-in-out; }
