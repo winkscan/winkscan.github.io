@@ -3103,6 +3103,165 @@
     .blk-hilo-game {
       width: calc(100% - 14px); } }
 
+.game-history .balances {
+  margin: 0 15px 20px 15px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 30px);
+  background: #1B1C23;
+  border-radius: 3px; }
+  .game-history .balances .balance-header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 3px 3px 0 0;
+    background: #24252E; }
+    .game-history .balances .balance-header label {
+      width: 100%;
+      font-size: 16px;
+      color: #FFF;
+      font-weight: 600; }
+      .game-history .balances .balance-header label .link {
+        font-size: 16px;
+        color: #5C5D68;
+        margin-right: 10px; }
+        .game-history .balances .balance-header label .link:hover {
+          color: #FBC509;
+          transition: 0.3s color ease-in-out; }
+        .game-history .balances .balance-header label .link.active {
+          color: #FFF; }
+    .game-history .balances .balance-header.with-select label {
+      width: calc(100% - 50px); }
+    .game-history .balances .balance-header.with-select .page-count {
+      position: relative;
+      width: 48px;
+      height: 34px;
+      border: 1px solid #5C5D68;
+      border-radius: 2px; }
+      .game-history .balances .balance-header.with-select .page-count .amount {
+        position: relative;
+        display: flex;
+        width: 28px;
+        height: 34px;
+        padding: 0 10px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 13px;
+        font-weight: bold;
+        color: #FFF; }
+        .game-history .balances .balance-header.with-select .page-count .amount:before {
+          position: absolute;
+          top: 15px;
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid #5C5D68;
+          right: 10px; }
+      .game-history .balances .balance-header.with-select .page-count .drop {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 35px;
+        display: none;
+        width: 50px;
+        background: #14151A;
+        border-radius: 3px; }
+        .game-history .balances .balance-header.with-select .page-count .drop li a {
+          position: relative;
+          display: flex;
+          width: calc(100% - 20px);
+          align-items: center;
+          height: 30px;
+          padding: 0 10px;
+          font-size: 13px;
+          color: #5C5D68; }
+          .game-history .balances .balance-header.with-select .page-count .drop li a:hover {
+            color: #FFF;
+            cursor: pointer;
+            background: #5C5D68;
+            transition: 0.3s all ease-in-out; }
+      .game-history .balances .balance-header.with-select .page-count:hover {
+        border-color: #5C5D68;
+        transition: 0.3s all ease-in-out; }
+        .game-history .balances .balance-header.with-select .page-count:hover .drop {
+          display: block; }
+  .game-history .balances .table-responsive {
+    width: 100%;
+    overflow: auto;
+    border-radius: 0 0 3px 3px;
+    color: #5C5D68; }
+    .game-history .balances .table-responsive table {
+      width: 100%;
+      border-spacing: 0;
+      text-align: left; }
+      .game-history .balances .table-responsive table thead th {
+        height: 36px;
+        font-weight: normal;
+        vertical-align: middle;
+        border-bottom: 2px solid #24252E;
+        padding-left: 15px; }
+      .game-history .balances .table-responsive table tbody tr:nth-child(even) {
+        background: #24252E; }
+      .game-history .balances .table-responsive table tbody tr td {
+        height: 36px;
+        font-weight: normal;
+        white-space: nowrap;
+        vertical-align: middle;
+        padding-left: 15px; }
+        .game-history .balances .table-responsive table tbody tr td .title {
+          display: block;
+          font-weight: 600;
+          color: #FFF; }
+        .game-history .balances .table-responsive table tbody tr td.asset {
+          width: 60px;
+          font-weight: 600; }
+        .game-history .balances .table-responsive table tbody tr td.amount {
+          color: #FFF; }
+        .game-history .balances .table-responsive table tbody tr td.win {
+          color: #FBC509; }
+        .game-history .balances .table-responsive table tbody tr td.lose {
+          color: #D80027; }
+    .game-history .balances .table-responsive.my-balances table tbody tr td {
+      height: 50px; }
+
+@media screen and (max-width: 576px) {
+  .game-history .estimated-value .value .trx {
+    font-size: 42px; }
+    .game-history .estimated-value .value .trx .wnk-icon {
+      margin-top: 10px; }
+  .game-history .balances .balance-header {
+    padding: 15px;
+    height: auto;
+    flex-wrap: wrap; }
+    .game-history .balances .balance-header label {
+      margin-bottom: 10px; }
+      .game-history .balances .balance-header label .link {
+        font-size: 13px; }
+    .game-history .balances .balance-header .balance-nav {
+      width: 100%;
+      min-width: 100%; }
+      .game-history .balances .balance-header .balance-nav .select {
+        width: calc(100% - 140px); } }
+
+@media screen and (max-width: 420px) {
+  .game-history .estimated-value .value .trx {
+    font-size: 36px; }
+    .game-history .estimated-value .value .trx .wnk-icon {
+      margin-top: 4px; } }
+
+@media screen and (max-width: 375px) {
+  .game-history .estimated-value .value .trx {
+    font-size: 24px; }
+    .game-history .estimated-value .value .trx .wnk-icon {
+      margin-top: 0;
+      font-size: 18px; } }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
