@@ -3104,7 +3104,7 @@
       width: calc(100% - 14px); } }
 
 .game-history .balances {
-  margin: 0 0 20px 0;
+  margin: 0;
   position: relative;
   display: flex;
   flex-wrap: wrap;
