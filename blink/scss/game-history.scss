@@ -1,10 +1,10 @@
 .game-history {
     .balances {
-        margin: 0 15px 20px 15px;
+        margin: 0 0 20px 0;
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        width: calc(100% - 30px);
+        width: 100%;
         background: $sub-nav-bg;
         border-radius: 3px;
 
