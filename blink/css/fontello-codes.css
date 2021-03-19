@@ -51,6 +51,10 @@
 .icon-equally:before { content: '\e831'; } /* '' */
 .icon-arrow-direction:before { content: '\e832'; } /* '' */
 .icon-arrow-up:before { content: '\e833'; } /* '' */
+.icon-user-system:before { content: '\e834'; } /* '' */
+.icon-error:before { content: '\e835'; } /* '' */
+.icon-check-mark:before { content: '\e836'; } /* '' */
+.icon-youtube:before { content: '\e837'; } /* '' */
 .icon-sound:before { content: '\e838'; } /* '' */
 .icon-card-diamonds:before { content: '\e839'; } /* '' */
 .icon-card-spades:before { content: '\e83a'; } /* '' */
@@ -58,6 +62,7 @@
 .icon-card-hearts:before { content: '\e83c'; } /* '' */
 .icon-blk-console:before { content: '\e83d'; } /* '' */
 .icon-blk-dice:before { content: '\e83e'; } /* '' */
+.icon-playing-cards:before { content: '\e83f'; } /* '' */
 .icon-blk-messenger:before { content: '\e840'; } /* '' */
 .icon-blk-quality:before { content: '\e841'; } /* '' */
 .icon-blk-smile:before { content: '\e842'; } /* '' */

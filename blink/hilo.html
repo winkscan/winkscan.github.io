@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLINk - Blockchain casino on Binance Smart Chain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="popup-wrapper hilo-rules-popup">
+        <div class="popup">
+            <div class="popup-header">
+                Hi-Lo Game Rules<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <p>1. You must choose <b>higher</b> or <b>lower</b> of the current card.</p>
+                    <span class="lower-higher-card"></span>
+                    <p>2. <b>"Ace"</b> being the <b>lowest card</b> in the deck.</p>
+                    <span class="ace"></span>
+                    <p>3. <b>"King"</b> being the <b>highest card</b> in the deck.</p>
+                    <span class="king"></span>
+                    <p>4. In case of "Ace" or "King", you must choose <b>same</b> or <b>lower/higher.</b></p>
+                    <span class="lower-higher"></span>
+                    <p>5. You can open <b>unlimited</b> amount of cards.</p>
+                    <p>6. All multipliers are summarized.</p>
+                    <p>7. You can skip up to <b>20</b> cards.</p>
+                    <span class="swap"></span>
+                    <p>8. You can play with such currencies as: BNB</p>
+                    <p>9. Bet and profit limits</p>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Min Bet</th>
+                                <th>Max Bet</th>
+                                <th>Profit Limit</th>
+                            </tr>    
+                        </thead>    
+                        <tbody>
+                            <tr>
+                                <td>BNB</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-wrapper referral">
+        <div class="popup">
+            <div class="popup-header">
+                Referral<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <h4>Get rewarded just by referring your friends</h4>
+                    <p>Enjoy lifetime rewards just by referring your friends! Receive <span class="percent">0.2%</span> of all their winnings. All rewards are sent out automatically through our smart contracts. Just copy the link below and share it to all your friends! Please stake BNB in your account to guarantee a successful generation of this referral link.</p>
+                    <div class="form">
+                        <label>Referral Link</label>
+                        <input type="text" /><button class="btn-generate">Generate</button>
+                        <span class="error">Error message.</span>
+                        <span class="note">*Note: Once confirmed it cannot be changed.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-wrapper rules-popup">
+        <div class="popup">
+            <div class="popup-header">
+                Roll your way to riches!<span class="close-popup"></span>
+            </div>
+            <div class="popup-body">
+                <div class="notification">
+                    <p>Click on 'roll' and start your path to fame. Each roll will be recorded on the BNB network to maximize transparency and fairness. In the odd case that the roll fails, BNB will be deducted from the account first then after the transaction has failed the BNB will then be returned to your wallet.</p>
+                    <p>Due to BNB network logic, roughly 0.02BNB will be deducted for bandwidth allocation for each bet.</p>
+                    <p>To ensure transparency you can check your transaction at https://bscscan.com</p>
+                    <h4>Auto-Roll</h4>
+                    <p>We have now added the long-awaited Auto Roll function. Now you can mine BLINK tokens 24/7!.</p>
+                    <p>Auto function will slow down if you switch to another tab in your browser. To overcome this, you can open http://blink.wink.org in a separate stand-alone window.</p>
+                    <p>(Note: please use the auto function under your own discretion.)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blk-body">
+        <div class="blk-header">
+            <div class="burger"><i class="bar"></i></div>
+            <div class="blk-top-nav">
+                <div class="logo"><a href="/" class="blink"></a></div>
+                <div class="drop-nav">
+                    <ul>
+                        <li><a href="blinkdrops.html" class="link"><i class="wnk-icon icon-blk-wallet">&#xe846;</i>Drops</a></li>
+                        <li><a href="javascript:void(0);" class="link btn-referral"><i class="wnk-icon icon-blk-user">&#xe845;</i>Referral</a></li>
+                        <li><a href="faq.html" class="link"><i class="wnk-icon icon-blk-question">&#xe847;</i>FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <button class="btn-login">Login</button>
+                </div>
+            </div>
+            <div class="blk-sub-nav">
+                <ul>
+                    <li><a href="dice.html" class="link"><i class="wnk-icon icon-blk-dice">&#xe83e;</i>Dice</a></li>
+                    <li><a href="hilo.html" class="active link"><i class="wnk-icon icon-playing-cards">&#xe83f;</i>HiLo</a></li>
+                </ul>
+                <div class="wink">
+                    <a href="https://wink.org/" target="_blank" class="more-games">More games at<i class="wink-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="blk-dice">
+            <div class="blk-top-rank">
+                <div class="rank-header">
+                    <label>Top Winners</label><i class="wnk-icon icon-blk-trophy">&#xe844;</i><span class="close-rank"></span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn active">Win Rank</button>
+                    <button class="btn">Amount Rank</button>
+                </div>
+                <div class="responsive-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="nr">1</td>
+                                <td class="avatar"><!-- Avatar image size 24x24px --></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">2</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">3</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">4</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">5</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">6</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">7</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">8</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">9</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">10</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">11</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">12</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">13</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">14</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">15</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">16</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">17</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">18</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">19</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                            <tr>
+                                <td class="nr">20</td>
+                                <td class="avatar"></td>
+                                <td class="player">0xD7c9...9e06</td>
+                                <td class="amount">10852.648400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="blk-hilo-game">
+                <div class="hi-lo-game">
+                    <div class="blk-dice-mob-nav">
+                        <div class="tab tab-trophy"><i class="wnk-icon icon-blk-trophy">&#xe844;</i></div>
+                        <div class="tab tab-chat"><i class="wnk-icon icon-blk-messenger">&#xe840;</i></div>
+                    </div>
+                    <span class="game-rules"><i class="info">?</i>Rules</span>
+                    <div class="card-col left-col">
+                        <span class="blank">
+                            <span class="card low">A</span>
+                            <span class="dd">Ace being the lowest</span>
+                        </span>
+                    </div>
+                    <div class="card-col center-col">
+                        <span class="skip">
+                            <label>Skip Card</label><span onclick="playAudio('img/card-flip.mp3')" class="btn-skip"><!-- Show skip amount only when game in play 20--></span>
+                        </span>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front clubs">
+                                    A
+                                </div>
+                                <div class="flip-card-back">
+                                    <span class="logo"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-deck"></div>
+                    </div>
+                    <div class="card-col right-col">
+                        <span class="blank blank-ace">
+                            <span class="card low">A</span>
+                            <span class="dd">Ace being the lowest</span>
+                        </span>
+                        <span class="blank">
+                            <span class="card high">K</span>
+                            <span class="dd">King being the highest</span>
+                        </span>
+                    </div>
+                    <div class="game-history">
+                        <span class="card clubs show-card">A</span>
+                        <span class="direction up"></span>
+                        <span class="card diamonds">A</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">A</span>
+                        <span class="direction down"></span>
+                        <span class="card clubs">7</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">2</span>
+                        <span class="direction down"></span>
+                        <span class="card hearts">A</span>
+                        <span class="direction up"></span>
+                        <span class="card clubs show-card">10</span>
+                    </div>
+                </div>
+                <div class="hi-lo-game">
+                    <div class="blk-dice-mob-nav">
+                        <div class="tab tab-trophy"><i class="wnk-icon icon-blk-trophy">&#xe844;</i></div>
+                        <div class="tab tab-chat"><i class="wnk-icon icon-blk-messenger">&#xe840;</i></div>
+                    </div>
+                    <span class="game-rules"><i class="info">?</i>Rules</span>
+                    <div class="card-col left-col">
+                        <div class="card-back">
+                            <span class="logo"></span>
+                        </div>
+                    </div>
+                    <div class="card-col center-col">
+                        <span class="skip">
+                            <label>Skip Card</label><span onclick="playAudio('img/card-flip.mp3')" class="btn-skip">20</span>
+                        </span>
+                        <div class="flip-card win-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front clubs">
+                                    10
+                                </div>
+                                <div class="flip-card-back">
+                                    <span class="logo"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-deck"></div>
+                    </div>
+                    <div class="card-col right-col calculations">
+                        <!--
+                        <span class="coef">
+                            <span class="amount">1,500x</span>
+                            <span class="dd">Coefficient</span>
+                        </span>-->
+                        <span class="result">
+                            <span class="win">
+                                <label>Win!</label>
+                                <span class="won-amount">15,000.00<span class="currency">trx</span></span>
+                                <span class="winning-coef">1,500x</span>
+                            </span>
+                            <!--<span class="lose">
+                                Bad luck!
+                            </span>-->
+                        </span>
+                    </div>
+                    <div class="game-history">
+                        <span class="card clubs">A</span>
+                        <span class="direction up"></span>
+                        <span class="card diamonds">A</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">A</span>
+                        <span class="direction down"></span>
+                        <span class="card clubs">7</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">2</span>
+                        <span class="direction down"></span>
+                        <span class="card hearts">A</span>
+                        <span class="direction up"></span>
+                        <span class="card clubs show-card">10</span>
+                    </div>
+                </div>
+                <div class="hi-lo-game">
+                    <div class="blk-dice-mob-nav">
+                        <div class="tab tab-trophy"><i class="wnk-icon icon-blk-trophy">&#xe844;</i></div>
+                        <div class="tab tab-chat"><i class="wnk-icon icon-blk-messenger">&#xe840;</i></div>
+                    </div>
+                    <span class="game-rules"><i class="info">?</i>Rules</span>
+                    <div class="card-col left-col">
+                        <div class="card-back">
+                            <span class="logo"></span>
+                        </div>
+                    </div>
+                    <div class="card-col center-col">
+                        <span class="skip">
+                            <label>Skip Card</label><span onclick="playAudio('img/card-flip.mp3')" class="btn-skip">20</span>
+                        </span>
+                        <div class="flip-card lose-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front clubs">
+                                    10
+                                </div>
+                                <div class="flip-card-back">
+                                    <span class="logo"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-deck"></div>
+                    </div>
+                    <div class="card-col right-col calculations">
+                        <!--
+                        <span class="coef">
+                            <span class="amount">1,500x</span>
+                            <span class="dd">Coefficient</span>
+                        </span>-->
+                        <span class="result">
+                            <!--<span class="win">
+                                <label>Win!</label>
+                                <span class="won-amount">15,000.00<span class="currency">trx</span></span>
+                                <span class="winning-coef">1,500x</span>
+                            </span>-->
+                            <span class="lose">
+                                Bad luck!
+                            </span>
+                        </span>
+                    </div>
+                    <div class="game-history">
+                        <span class="card clubs">A</span>
+                        <span class="direction up"></span>
+                        <span class="card diamonds">A</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">A</span>
+                        <span class="direction down"></span>
+                        <span class="card clubs">7</span>
+                        <span class="direction up"></span>
+                        <span class="card spades">2</span>
+                        <span class="direction down"></span>
+                        <span class="card hearts">A</span>
+                        <span class="direction up"></span>
+                        <span class="card clubs show-card">10</span>
+                    </div>
+                </div>
+                <div class="game-bet-body hi-lo-game-bet">
+                    <div class="col">
+                        <div class="wallet-balance">
+                            <label>Balance</label><span class="currency-amount">100 TRX</span>
+                        </div>
+                        <label>Bet Amount</label>
+                        <span class="amount">
+                            <i class="currency">
+                                <i class="wnk-icon icon-bnb">&#xe82b;</i>
+                            </i>
+                            <input type="text" value="10" />
+                            <span class="increase"><span class="btn-multiplier">1/2</span><span class="btn-multiplier">2x</span></span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-higher disabled" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Higher or same</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-skip-card active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-swap">&#xe82c;</i></i><span class="title">Skip card</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-lower disabled" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Lower or same</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-place-bet">Place Bet</div>
+                    </div>
+                </div>
+
+
+                <div class="game-bet-body hi-lo-game-bet">
+                    <div class="col">
+                        <div class="wallet-balance">
+                            <label>Balance</label><span class="currency-amount">100 TRX</span>
+                        </div>
+                        <label>Bet Amount</label>
+                        <span class="amount">
+                            <i class="currency">
+                                <i class="wnk-icon icon-bnb">&#xe82b;</i>
+                            </i>
+                            <input type="text" value="10" />
+                            <span class="increase"><span class="btn-multiplier">1/2</span><span class="btn-multiplier">2x</span></span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-higher active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Higher 61.54%<span class="coef">1.5762x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-skip-card active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-swap">&#xe82c;</i></i><span class="title">Skip card (20)</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-lower active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-arrow-direction">&#xe832;</i></i><span class="title">Lower 46.15%<span class="coef">2.1017x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-place-bet">Cashout<span class="win-amount">1000 trx</span></div>
+                    </div>
+                </div>
+                <div class="game-bet-body hi-lo-game-bet">
+                    <div class="col">
+                        <div class="wallet-balance">
+                            <label>Balance</label><span class="currency-amount">100 TRX</span>
+                        </div>
+                        <label>Bet Amount</label>
+                        <span class="amount">
+                            <i class="currency">
+                                <i class="wnk-icon icon-bnb">&#xe82b;</i>
+                            </i>
+                            <input type="text" value="10" />
+                            <span class="increase"><span class="btn-multiplier">1/2</span><span class="btn-multiplier">2x</span></span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-higher active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-equally">&#xe831;</i></i><span class="title">Same 7.54%<span class="coef">1.5762x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-skip-card active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-swap">&#xe82c;</i></i><span class="title">Skip card (15)</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-lower active" onclick="playAudio('img/card-flip.mp3')"><i class="icon"><i class="wnk-icon icon-equally">&#xe831;</i></i><span class="title">Same 46.15%<span class="coef">2.1017x</span></span></div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-place-bet">Cashout<span class="win-amount">1000 trx</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="blk-chat">
+                <div class="rank-header">
+                    <label>Chat</label><i class="wnk-icon icon-blk-messenger">&#xe840;</i><span class="close-chat"></span>
+                </div>
+                <div class="chat-body">
+                    <div class="message">
+                        <span class="user">0xD7c9...9e06</span>
+                        <span class="avatar"><!-- Avatar image size 24x24px --></span>
+                        <span class="message-body">Hi! I’m new here!</span>
+                    </div>
+                    <div class="message">
+                        <span class="user">0xD7c9...9e06</span>
+                        <span class="avatar"><!-- Avatar image size 24x24px --></span>
+                        <span class="message-body">Welcome to BLINk!</span>
+                    </div>
+                </div>
+                <div class="send-message">
+                    <input type="text" value="Message" /><button class="btn btn-emoji"><i class="wnk-icon icon-blk-smile">&#xe842;</i></button><button class="btn btn-send"><i class="wnk-icon icon-blk-telegram">&#xe843;</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blk-footer">
+        <div class="blk-attention">
+            <div class="blk-content">
+                <label>Attention</label>
+                <p>Blink only provides service for adult users who are over 21 years old and we strictly conform to the local laws and regulations. Please make sure that you play our games with consent from your local laws and regulations. For users in China, Japan and France, we don't offer relevant service temporarily, please keep eyes on subsequent website notice. Thank you.</p>
+            </div>
+        </div>
+        <div class="blk-info">
+            <div class="blk-content">
+                <div class="blk-licenses">
+                    <label>License</label>
+                    <p>Copyright © 2020 WINk.org is operated by Windfall Win N.V., a company registered and established under the laws of Curaçao.</p>
+                </div>
+                <div class="blk-gc">
+                    <span class="curacao"></span>
+                    <!--<iframe src="https://licensing.gaming-curacao.com/validator/?lh=3b97f6e54cd417faa51050e959f5f65f&template=tseal" width={150} height={50}></iframe>-->
+                </div>
+                <div class="blk-about">
+                    <label>About Us</label>
+                    <p>
+                        <a href="https://blink.wink.org/blink.pdf" target="_blank" class="link">Whitepaper</a>
+                        <a href="https://blink.wink.org/operation2.pdf" target="_blank" class="link">Operation</a>
+                    </p>
+                </div>
+                <div class="blk-follow">
+                    <label>Follow Us</label>
+                    <a href="https://t.me/blinkwinkorg" target="_blank" class="btn-social"><i class="wnk-icon icon-social-telegram">&#xe808;</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.btn-referral').click( function() {
+            $(".referral").toggleClass("show");
+        } );
+        $('.close-popup').click( function() {
+            $(".popup-wrapper").removeClass("show");
+        } );
+
+        $('.burger').click( function() {
+            $(".drop-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+
+        $('.btn-rules').click( function() {
+            $(".rules-popup").toggleClass("show");
+        } );
+        $('.tab-chat').click( function() {
+            $(".blk-chat").toggleClass("show");
+        } );
+        $('.close-chat').click( function() {
+            $(".blk-chat").removeClass("show");
+        } );
+
+        $('.tab-trophy').click( function() {
+            $(".blk-top-rank").toggleClass("show");
+        } );
+        $('.close-rank').click( function() {
+            $(".blk-top-rank").removeClass("show");
+        } );
+
+
+        function playAudio(url) {
+            new Audio(url).play();
+        }
+        $('.btn-skip, .btn-skip-card, .btn-higher, .btn-lower').click( function() {
+            $(".flip-card").toggleClass("fly");
+        } );
+        $('.game-rules').click( function() {
+            $(".hilo-rules-popup").toggleClass("show");
+        } );
+        $('.currency-list').click( function() {
+            $(".currency-list").toggleClass("show-all");
+        } );
+    </script>
+
+</body>
+</html>

@@ -127,6 +127,70 @@
                         }
                     }
                 }
+
+                &.hilo {
+                    overflow: hidden;
+                    flex-direction: column;
+                    align-items: center;
+                    background: $dice-game-bg;
+
+                    .icon {
+                        position: relative;
+                        z-index: 3;
+                        display: block;
+                        margin: 10px 0;
+                        width: 156px;
+                        height: 96px;
+                        background: url('../img/hilo-banner.svg') no-repeat center;
+                        background-size: auto 100%;
+                    }
+
+                    label {
+                        position: relative;
+                        z-index: 3;
+                        padding: 10px 0;
+                        color: $white-color;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        z-index: 1;
+                        top: calc(50% - 168px);
+                        left: calc(50% - 168px);
+                        width: 336px;
+                        height: 336px;
+                        content:'';
+                        border-radius: 50%;
+                        background: #2D2E39;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        z-index: 2;
+                        top: calc(50% - 119px);
+                        left: calc(50% - 119px);
+                        width: 238px;
+                        height: 238px;
+                        content:'';
+                        border-radius: 50%;
+                        background: #262731;
+                    }
+
+                    &:hover {
+                        background: #2D2E39;
+                        transition: 0.3s background-color ease-in-out;
+
+                        &:before {
+                            background: #262731;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+
+                        &:after {
+                            background: $blank-game-bg;
+                            transition: 0.3s background-color ease-in-out;
+                        }
+                    }
+                }
             }
         }
     }

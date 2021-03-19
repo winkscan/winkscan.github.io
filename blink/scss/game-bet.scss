@@ -205,3 +205,347 @@
         }
     }
 }
+
+.game-bet-body {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    padding: 34px 10px 10px 10px;
+    background: $sub-nav-bg;
+    border-radius: 3px;
+
+    .col {
+        margin: 5px;
+
+        .wallet-balance {
+            margin-top: -24px;
+            width: 100%;
+            display: flex;
+            height: 23px;
+            align-items: center;
+            border-bottom: 1px solid $bg-color;
+            
+            label {
+                width: 50%;
+                color: $orange-color;
+            }
+    
+            .currency-amount {
+                display: flex;
+                width: calc(50% - 5px);
+                padding-right: 5px;
+                justify-content: flex-end;
+                color: $white-color;
+                font-weight: 600;
+            }
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+            height: 24px;
+            align-items: center;
+            color: $orange-color;
+            font-size: $font-size-xs;
+            font-weight: normal;
+        }
+
+        .amount {
+            display: flex;
+            position: relative;
+            width: calc(100% - 10px);
+            height: 26px;
+            padding: 5px;
+            background: $bg-dark-color;
+
+            .currency {
+                position: absolute;
+                display: flex;
+                top: 10px;
+                justify-content: center;
+                align-items: center;
+                width: 16px;
+                height: 16px;
+                left: 10px;
+
+                .wnk-icon {
+                    font-size: 16px;
+                    color: $white-color;
+
+                    &.icon-trx {
+                        color: $red-color;
+                    }
+
+                    &.icon-btt {
+                        color: $white-color;
+                    }
+
+                    &.icon-bnb {
+                        color: $orange-color;
+                    }
+                }
+            }
+
+            input {
+                width: calc(100% - 107px);
+                height: 26px;
+                border: none;
+                outline: none;
+                font-weight: 600;
+                font-size: $font-size-xs;
+                color: $white-color;
+                background: transparent;
+                padding-left: 25px;
+
+                &:active {
+                    color: $white-color;
+                }
+            }
+
+            .increase {
+                display: flex;
+                width: 82px;
+
+                .btn-multiplier {
+                    display: flex;
+                    width: 36px;
+                    height: 26px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: $font-size-xs;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $white-color;
+                    cursor: pointer;
+                    background: $grid-row-bg;
+                    border-radius: 3px;
+                    margin-left: 5px;
+
+                    &:hover {
+                        color: $bg-dark-color;
+                        background: $orange-color;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 32px);
+            height: 38px;
+            padding: 10px 15px;
+            align-items: center;
+            justify-content: center;
+            font-size: $font-size-md;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $text-color;
+            cursor: pointer;
+            background: $grid-row-bg;
+            border: 1px solid $grid-row-bg;
+            border-radius: 3px;
+
+            &:hover {
+                color: $white-color;
+                background: $grid-row-bg;
+                border-color: $grid-row-bg;
+                transition: 0.3s all ease-in-out;
+            }
+
+            &.active {
+                color: $white-color;
+            }
+
+            &.disabled {
+                cursor: default;
+                color: $text-color;
+
+                &:hover {
+                    color: $text-color;
+                    background: $grid-row-bg;
+                    border-color: $grid-row-bg;
+                }
+            }
+
+            &.btn-place-bet {
+                color: $bg-dark-color;
+                background: $orange-color;
+                border: 1px solid $orange-color;
+
+                .win-amount {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: $font-size-xs;
+                }
+
+                &:hover {
+                    background: $orange-light-color;
+                    border-color: $orange-light-color;
+                }
+            }
+        }
+    }
+
+    &.hi-lo-game-bet {
+        .col {
+            width: calc(20% - 10px);
+
+            .btn {
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 24px;
+                    min-width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+
+                    .wnk-icon {
+                        font-size: 20px;
+
+                        &.icon-equally {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .title {
+                    display: flex;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    width: calc(100% - 34px);
+                    font-size: $font-size-md;
+                    justify-content: center;
+
+                    .coef {
+                        display: flex;
+                        width: 100%;
+                        font-size: $font-size-xs;
+                        color: $white-color;
+                    }
+                }
+
+                &.btn-higher {
+                    &.active {
+                        color: $orange-color;
+                        border-color: $orange-color;
+
+                        .title {
+                            justify-content: flex-start;
+                        }
+
+                        &:hover {
+                            background: $orange-light-color;
+                            color: $bg-dark-color;
+                        }
+                    }
+                }
+
+                &.btn-lower {
+                    .icon {
+                        transform: rotate(180deg);
+                    }
+
+                    &.active {
+                        color: $red-color;
+                        border-color: $red-color;
+
+                        .title {
+                            justify-content: flex-start;
+                        }
+
+                        &:hover {
+                            background: $red-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1560px) {
+        &.hi-lo-game-bet {            
+            .col {
+                &:nth-child(1) {
+                    order: 1;
+                    width: calc(33.33% - 10px);
+                }
+
+                &:nth-child(2) {
+                    order: 2;
+                    width: calc(33.33% - 10px);
+                }
+
+                &:nth-child(3) {
+                    order: 4;
+                    width: calc(50% - 10px);
+                }
+
+                &:nth-child(4) {
+                    order: 3;
+                    width: calc(33.33% - 10px);
+                }
+
+                &:nth-child(5) {
+                    order: 5;
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        &.hi-lo-game-bet {
+            .col {
+                &:nth-child(1) {
+                    width: calc(100% - 10px);
+                }
+
+                &:nth-child(2) {
+                    width: calc(50% - 10px);
+                }
+
+                &:nth-child(4) {
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        &.hi-lo-game-bet {
+            .col {
+                .btn {
+                    width: calc(100% - 22px);
+                    height: 38px;
+                    padding: 5px 10px;
+                    
+                    .icon {
+                        width: 18px;
+                        min-width: 18px;
+                        height: 18px;
+    
+                        .wnk-icon {
+                            font-size: 14px;
+    
+                            &.icon-equally {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+    
+                    .title {
+                        width: calc(100% - 28px);
+                        letter-spacing: -1px;
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }
+    }
+}
