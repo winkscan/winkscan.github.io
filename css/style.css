@@ -2086,6 +2086,129 @@
         .popup-wrapper .popup .popup-body .notification .responsive-table {
           width: 100%;
           overflow: auto; }
+      .popup-wrapper .popup .popup-body .referrals {
+        display: flex;
+        flex-wrap: wrap; }
+        .popup-wrapper .popup .popup-body .referrals .ref-col {
+          width: 100%;
+          margin-bottom: 14px; }
+          .popup-wrapper .popup .popup-body .referrals .ref-col h4 {
+            display: block;
+            width: 100%;
+            padding: 7px 0;
+            text-align: left;
+            font-weight: 600;
+            color: #FBC509;
+            font-size: 16px; }
+          .popup-wrapper .popup .popup-body .referrals .ref-col p {
+            display: block;
+            width: 100%;
+            padding: 7px 0;
+            line-height: 16px;
+            font-size: 13px; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col p .percent {
+              color: #FFF; }
+          .popup-wrapper .popup .popup-body .referrals .ref-col .form {
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col .form label {
+              display: block;
+              width: 100%;
+              padding: 0;
+              color: #FFF;
+              font-size: 13px;
+              font-weight: 600; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col .form .url {
+              margin: 7px 0;
+              display: flex;
+              width: calc(100% - 114px);
+              height: 30px;
+              padding: 0 10px;
+              align-items: center;
+              font-size: 13px;
+              text-decoration: underline;
+              color: #FFF;
+              background: #030814;
+              border-radius: 3px;
+              border: none;
+              outline: none; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col .form .btn-generate {
+              width: 80px;
+              height: 30px;
+              font-size: 14px;
+              font-weight: 600;
+              color: #030814;
+              background: #FBC509;
+              border-radius: 3px;
+              border: none;
+              outline: none;
+              cursor: pointer; }
+              .en .popup-wrapper .popup .popup-body .referrals .ref-col .form .btn-generate {
+                margin: 7px 0 7px 14px; }
+              .ar .popup-wrapper .popup .popup-body .referrals .ref-col .form .btn-generate {
+                margin: 7px 14px 7px 0; }
+              .popup-wrapper .popup .popup-body .referrals .ref-col .form .btn-generate:hover {
+                background: #FFCF29;
+                transition: 0.3s all ease-in-out; }
+              .popup-wrapper .popup .popup-body .referrals .ref-col .form .btn-generate:active {
+                background: #FB6009;
+                transition: 0.3s all ease-in-out; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col .form .note {
+              display: block;
+              width: 100%;
+              padding: 0;
+              font-size: 13px; }
+            .popup-wrapper .popup .popup-body .referrals .ref-col .form .error {
+              display: block;
+              width: 100%;
+              padding: 0 0 7px 0;
+              font-size: 13px;
+              color: #D80027; }
+        .popup-wrapper .popup .popup-body .referrals .reward-col {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: calc(100% - 14px);
+          padding: 7px;
+          border-radius: 3px;
+          overflow: hidden;
+          background: #101E41; }
+          .popup-wrapper .popup .popup-body .referrals .reward-col h4 {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #48658C;
+            font-size: 13px; }
+          .popup-wrapper .popup .popup-body .referrals .reward-col .wnk-icon {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: -100px;
+            font-size: 200px;
+            color: #D80027; }
+          .popup-wrapper .popup .popup-body .referrals .reward-col .reward {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            height: calc(100% - 30px);
+            color: #FFF;
+            font-size: 36px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 600; }
       .popup-wrapper .popup .popup-body.burn-body {
         width: 100%;
         padding: 15px 0 0 0; }
