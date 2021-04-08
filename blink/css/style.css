@@ -2093,6 +2093,13 @@
         justify-content: center;
         font-size: 16px;
         color: #FBC509; }
+      .blk-game-bet .col .payout .blink-icon {
+        display: flex;
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        background: url("../img/blink-logo.svg") no-repeat center;
+        background-size: 16px auto; }
       .blk-game-bet .col .payout input {
         width: calc(100% - 174px);
         height: 36px;
@@ -2264,6 +2271,13 @@
             color: #FFF; }
           .game-bet-body .col .amount .currency .wnk-icon.icon-bnb {
             color: #FBC509; }
+        .game-bet-body .col .amount .currency .blink-icon {
+          display: flex;
+          width: 16px;
+          min-width: 16px;
+          height: 16px;
+          background: url("../img/blink-logo.svg") no-repeat center;
+          background-size: 16px auto; }
       .game-bet-body .col .amount input {
         width: calc(100% - 107px);
         height: 26px;

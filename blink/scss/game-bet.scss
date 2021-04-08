@@ -49,6 +49,15 @@
                 color: $orange-color;
             }
 
+            .blink-icon {
+                display: flex;
+                width: 36px;
+                min-width: 36px;
+                height: 36px;
+                background: url('../img/blink-logo.svg') no-repeat center;
+                background-size: 16px auto;
+            }
+
             input {
                 width: calc(100% - 174px);
                 height: 36px;
@@ -284,6 +293,15 @@
                     &.icon-bnb {
                         color: $orange-color;
                     }
+                }
+
+                .blink-icon {
+                    display: flex;
+                    width: 16px;
+                    min-width: 16px;
+                    height: 16px;
+                    background: url('../img/blink-logo.svg') no-repeat center;
+                    background-size: 16px auto;
                 }
             }
 
