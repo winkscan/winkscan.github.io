@@ -1,11 +1,12 @@
 .currency-picker {
     position: relative;
-    z-index: 3;
+    z-index: 10;
     display: flex;
     margin: 0;
     width: 100%;
     padding: 3px 0;
     background: $bg-dark-color;
+    border-radius: 3px 3px 0 0;
 
     .currencies {
         display: flex;
@@ -78,6 +79,14 @@
 
                         &.icon-win {
                             background: url('../img/wink-logo.svg') no-repeat center;
+                            background-size: 16px auto;
+                        }
+
+                        .blink-icon {
+                            display: flex;
+                            width: 16px;
+                            height: 16px;
+                            background: url('../img/blink-logo.svg') center no-repeat;
                             background-size: 16px auto;
                         }
 

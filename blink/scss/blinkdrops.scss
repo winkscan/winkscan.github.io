@@ -52,6 +52,56 @@
                     justify-content: flex-start;
                     color: $white-color;
                     text-transform: uppercase;
+
+                    .btn-burned {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 30px;
+                        min-width: 30px;
+                        height: 30px;
+                        padding: 0;
+                        cursor: pointer;
+                        overflow: hidden;
+                        border-radius: 15px;
+                        border: none;
+                        outline: none;
+                        margin-left: 10px;
+    
+                        .wnk-icon {
+                            display: flex;
+                            width: 30px;
+                            min-width: 30px;
+                            height: 30px;
+                            justify-content: center;
+                            align-items: center;
+                            color: $white-color;
+                            font-size: 16px;
+                        }
+    
+                        .title {
+                            white-space: nowrap;
+                            color: $white-color;
+                            font-size: $font-size-xs;
+                            font-weight: normal;
+                        }
+                    }
+    
+                    .btn-burned {
+                        color: $white-color;
+                        background: linear-gradient($orange-dark-color, $red-color);
+    
+                        .title {
+                            width: 115px;
+                            min-width: 115px;
+                            text-align: left;
+                        }
+    
+                        &:hover {
+                            width: 145px;
+                            transition: 0.3s width ease-in-out;
+                        }
+                    }
                 }
 
                 .countdown {
@@ -66,7 +116,7 @@
                 width: 100%;
                 padding: 20px 0 40px 0;
 
-                .total, .at-blink, .amount, .receive {
+                .total, .at-blink, .amount, .receive, .blk-amount {
                     display: flex;
                     width: 100%;
                     align-items: center;
@@ -107,6 +157,23 @@
                         justify-content: center;
                         font-size: 36px;
                         color: $orange-color;
+                    }
+                }
+
+                .blk-amount {
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 36px;
+                    padding-bottom: 10px;
+                    color: $orange-color;
+
+                    .icon-blk {
+                        display: flex;
+                        margin-right: 10px;
+                        width: 40px;
+                        height: 30px;
+                        background: url('../img/blink-logo.svg') no-repeat;
+                        background-size: 40px 30px;
                     }
                 }
 
@@ -327,6 +394,10 @@
                         .wnk-icon {
                             font-size: 32px;
                         }
+                    }
+
+                    .blk-amount {
+                        font-size: 24px;
                     }
                 }
             }
