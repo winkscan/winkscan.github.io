@@ -475,6 +475,10 @@
 
                             &.amount {
                                 color: $white-color;
+
+                                .currency {
+                                    color: $orange-color;
+                                }
                             }
 
                             &.win {

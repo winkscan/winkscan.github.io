@@ -4526,6 +4526,8 @@
           font-weight: 600; }
         .polo-wallet .balances .table-responsive table tbody tr td.amount {
           color: #FFF; }
+          .polo-wallet .balances .table-responsive table tbody tr td.amount .currency {
+            color: #FBC509; }
         .polo-wallet .balances .table-responsive table tbody tr td.win {
           color: #26A17B; }
         .polo-wallet .balances .table-responsive table tbody tr td.lose {
@@ -7145,6 +7147,189 @@
   @media screen and (max-width: 375px) {
     .packages .my-cards .card-container {
       width: calc(50% - 20px); } }
+
+.referrals {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 14px);
+  position: relative;
+  max-width: 1274px;
+  padding: 30px 7px; }
+  .referrals .ref-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 16px);
+    padding: 0 8px;
+    margin-bottom: 30px; }
+    .referrals .ref-header .invite, .referrals .ref-header .generate {
+      width: calc(50% - 15px); }
+    .referrals .ref-header .invite {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 15px; }
+      .referrals .ref-header .invite h1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 52px;
+        color: #FBC509;
+        line-height: 1; }
+        .referrals .ref-header .invite h1 .friends {
+          display: flex;
+          width: 100%;
+          font-size: 52px;
+          line-height: 1;
+          color: #FFF; }
+      .referrals .ref-header .invite p {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: #48658C;
+        font-size: 13px; }
+        .referrals .ref-header .invite p .percent {
+          padding: 0 4px;
+          color: #FFF; }
+      .referrals .ref-header .invite .total-earned {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% - 30px);
+        padding: 15px;
+        background: #0A142E;
+        border-radius: 3px; }
+        .referrals .ref-header .invite .total-earned .ref-col {
+          width: calc(50% - 15px);
+          padding-right: 15px; }
+          .referrals .ref-header .invite .total-earned .ref-col label {
+            display: block;
+            padding-bottom: 3px;
+            font-size: 13px;
+            color: #48658C;
+            font-weight: 600; }
+          .referrals .ref-header .invite .total-earned .ref-col .dd {
+            display: block;
+            padding-top: 3px;
+            font-size: 16px;
+            color: #FFF;
+            font-weight: 600; }
+            .referrals .ref-header .invite .total-earned .ref-col .dd .currency {
+              color: #D80027;
+              font-size: 16px; }
+    .referrals .ref-header .generate {
+      margin-left: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(50% - 31px);
+      padding: 8px;
+      background: #0A142E;
+      border-radius: 3px; }
+      .referrals .ref-header .generate h4 {
+        display: block;
+        width: calc(100% - 14px);
+        padding: 7px;
+        text-align: left;
+        font-weight: 600;
+        color: #FBC509;
+        font-size: 16px; }
+      .referrals .ref-header .generate p {
+        display: block;
+        width: calc(100% - 14px);
+        padding: 7px;
+        line-height: 16px;
+        font-size: 13px;
+        color: #48658C; }
+        .referrals .ref-header .generate p .percent {
+          color: #FFF; }
+      .referrals .ref-header .generate .form {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 7px 0; }
+        .referrals .ref-header .generate .form label {
+          display: block;
+          width: calc(100% - 14px);
+          padding: 0 7px;
+          color: #FFF;
+          font-size: 13px;
+          font-weight: 600; }
+        .referrals .ref-header .generate .form .max {
+          top: 33px;
+          right: 103px;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 24px;
+          font-size: 13px;
+          color: #FFF;
+          font-weight: 600;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 3px; }
+          .referrals .ref-header .generate .form .max:hover {
+            color: #030814;
+            background: #FBC509;
+            transition: 0.3s all ease-in-out; }
+        .referrals .ref-header .generate .form .url {
+          margin: 7px;
+          display: flex;
+          width: calc(100% - 128px);
+          height: 30px;
+          padding: 0 10px;
+          align-items: center;
+          font-size: 13px;
+          color: #48658C;
+          text-decoration: underline;
+          background: #030814;
+          border-radius: 3px;
+          border: none;
+          outline: none; }
+        .referrals .ref-header .generate .form .btn-generate {
+          margin: 7px;
+          width: 80px;
+          height: 30px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #030814;
+          background: #FBC509;
+          border-radius: 3px;
+          border: none;
+          outline: none;
+          cursor: pointer; }
+          .referrals .ref-header .generate .form .btn-generate:hover {
+            background: #FFCF29;
+            transition: 0.3s all ease-in-out; }
+          .referrals .ref-header .generate .form .btn-generate:active {
+            background: #FB6009;
+            transition: 0.3s all ease-in-out; }
+        .referrals .ref-header .generate .form .note {
+          display: block;
+          width: calc(100% - 14px);
+          padding: 0 7px;
+          font-size: 13px; }
+        .referrals .ref-header .generate .form .error {
+          display: block;
+          width: calc(100% - 14px);
+          padding: 0 7px 7px 7px;
+          font-size: 13px;
+          color: #D80027; }
+  .referrals .polo-wallet {
+    width: 100%;
+    margin: 0; }
+    .referrals .polo-wallet .balances {
+      margin: 0 7px 20px 7px;
+      width: calc(100% - 14px); }
+  @media screen and (max-width: 768px) {
+    .referrals .ref-header .invite {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 15px; }
+    .referrals .ref-header .generate {
+      width: 100%;
+      margin-left: 0; } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
