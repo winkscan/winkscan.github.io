@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+.win-header {
+  background: red; }
+
+.win-footer {
+  background: orange; }
+
+.win-promo {
+  margin: 0 auto;
+  max-width: 1260px;
+  display: flex;
+  padding: 80px 0;
+  flex-direction: column;
+  background: url("../img/promo-bg.svg") no-repeat center right;
+  background-size: 66.66% auto; }
+  .win-promo .h1 {
+    width: 33.33%;
+    margin-bottom: 80px;
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 600;
+    color: #FBC509; }
+    .win-promo .h1 .win {
+      font-size: 72px;
+      color: #FFF; }
+  .win-promo .dd {
+    width: 33.33%;
+    font-size: 46px;
+    line-height: 1;
+    color: #FFF; }
+  .win-promo .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.33%;
+    padding-top: 90px; }
+    .win-promo .btn-group .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(50% - 10px);
+      height: 50px;
+      padding: 0 10px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      outline: none; }
+      .win-promo .btn-group .btn.btn-orange {
+        margin-right: 10px;
+        color: #060E22;
+        background: #FBC509; }
+        .win-promo .btn-group .btn.btn-orange:hover {
+          background: #FFCF29;
+          transition: 0.3s all ease-in-out; }
+      .win-promo .btn-group .btn.btn-red {
+        margin-left: 10px;
+        color: #FFF;
+        background: #D80027; }
+        .win-promo .btn-group .btn.btn-red:hover {
+          background: #FF002E;
+          transition: 0.3s all ease-in-out; }
+
+.win-about {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #0A142E, #060E22); }
+  .win-about .content {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap; }
+    .win-about .content .h3 {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 80px;
+      font-size: 24px;
+      line-height: 46px;
+      font-weight: 600;
+      color: #FFF; }
+      .win-about .content .h3:before {
+        position: absolute;
+        left: calc(50% - 20px);
+        bottom: 0;
+        width: 40px;
+        height: 4px;
+        content: '';
+        background: #FBC509;
+        border-radius: 2px; }
+    .win-about .content .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px;
+      width: calc(33.33% - 100px);
+      padding: 40px;
+      background: linear-gradient(180deg, #FBC509, #FFCF29);
+      border-radius: 15px; }
+      .win-about .content .container .icon {
+        position: absolute;
+        left: calc(50% - 40px);
+        top: -40px;
+        width: 80px;
+        height: 80px;
+        font-style: normal;
+        border-radius: 40px;
+        background: #FFF; }
+        .win-about .content .container .icon:after {
+          display: flex;
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          width: 40px;
+          height: 40px;
+          font-size: 40px;
+          line-height: 1;
+          color: #060E22;
+          font-family: 'fontello'; }
+        .win-about .content .container .icon.icon-defi:after {
+          content: '\e84a'; }
+        .win-about .content .container .icon.icon-trust:after {
+          content: '\e848'; }
+        .win-about .content .container .icon.icon-ecosystem:after {
+          content: '\e853'; }
+      .win-about .content .container .title {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 16px;
+        color: #FFF;
+        font-weight: 600;
+        line-height: 24px;
+        text-shadow: 0px 1px 0px #FCB609; }
+      .win-about .content .container .dd {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        color: #060E22;
+        line-height: 16px; }
+
+.win-get-started {
+  padding: 0 0 80px 0; }
+  .win-get-started .content {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap; }
+    .win-get-started .content .h4 {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 46px;
+      font-weight: 600;
+      color: #FFF; }
+      .win-get-started .content .h4:before {
+        position: absolute;
+        left: calc(50% - 20px);
+        bottom: 0;
+        width: 40px;
+        height: 4px;
+        content: '';
+        background: #D80027;
+        border-radius: 2px; }
+    .win-get-started .content .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px;
+      width: calc(50% - 300px);
+      padding: 160px 140px 40px 140px;
+      border-radius: 15px; }
+      .win-get-started .content .container.node {
+        background: url("../img/build-node.svg") no-repeat center top #0A142E;
+        background-size: auto 160px; }
+      .win-get-started .content .container.value {
+        background: url("../img/value-service.svg") no-repeat center top #0A142E;
+        background-size: auto 160px; }
+      .win-get-started .content .container .title {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 16px;
+        color: #D80027;
+        font-weight: 600;
+        line-height: 24px; }
+      .win-get-started .content .container .dd {
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #48658C;
+        line-height: 16px; }
+      .win-get-started .content .container .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 10px);
+        height: 36px;
+        padding: 0 10px;
+        font-size: 13px;
+        line-height: 1;
+        color: #060E22;
+        border-radius: 18px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: #FFF; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font-family: 'Roboto', Helvetica, Arial, Verdana;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 13px; }
+
+body, html {
+  min-width: 320px;
+  height: 100%;
+  background: #060E22;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    width: 10px; }
+  body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+    background: #040916; }
+  body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+    background: #101E41; }
+  body ::-webkit-scrollbar-thumb:hover, html ::-webkit-scrollbar-thumb:hover {
+    background: #48658C; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?68628374");
+  src: url("../font/fontello.eot?68628374#iefix") format("embedded-opentype"), url("../font/fontello.woff?68628374") format("woff"), url("../font/fontello.ttf?68628374") format("truetype"), url("../font/fontello.svg?68628374#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.wnk-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  line-height: 1;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*# sourceMappingURL=style.css.map */

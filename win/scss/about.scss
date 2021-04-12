@@ -1,0 +1,108 @@
+.win-about {
+    padding: 80px 0;
+    background: linear-gradient(180deg, $bg-light-color, $bg-color);
+
+    .content {
+        margin: 0 auto;
+        max-width: 1280px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .h3 {
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 80px;
+            font-size: $font-size-lg;
+            line-height: 46px;
+            font-weight: 600;
+            color: $white-color;
+    
+            &:before {
+                position: absolute;
+                left: calc(50% - 20px);
+                bottom: 0;
+                width: 40px;
+                height: 4px;
+                content:'';
+                background: $orange-color;
+                border-radius: 2px;
+            }
+        }
+    
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            width: calc(33.33% - 100px);
+            padding: 40px;
+            background: linear-gradient(180deg, $orange-color, $orange-light-color);
+            border-radius: 15px;
+
+            .icon {
+                position: absolute;
+                left: calc(50% - 40px);
+                top: -40px;
+                width: 80px;
+                height: 80px;
+                font-style: normal;
+                border-radius: 40px;
+                background: $white-color;
+
+                &:after {
+                    display: flex;
+                    position: absolute;
+                    left: 20px;
+                    top: 20px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 40px;
+                    line-height: 1;
+                    color: $bg-color;
+                    font-family: 'fontello';
+                }
+
+                &.icon-defi {
+                    &:after {
+                        content: '\e84a';
+                    }
+                }
+
+                &.icon-trust {
+                    &:after {
+                        content: '\e848';
+                    }
+                }
+
+                &.icon-ecosystem {
+                    &:after {
+                        content: '\e853';
+                    }
+                }
+            }
+
+            .title {
+                display: block;
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                font-size: $font-size-md;
+                color: $white-color;
+                font-weight: 600;
+                line-height: 24px;
+                text-shadow: 0px 1px 0px #FCB609;
+            }
+
+            .dd {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: $font-size-xs;
+                color: $bg-color;
+                line-height: 16px;
+            }
+        }
+    }
+}
