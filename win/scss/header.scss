@@ -1,3 +1,345 @@
 .win-header {
-    background: red;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    max-width: 1260px;
+    height: 36px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    .wink-logo {
+        width: 90px;
+        height: 36px;
+        background: url('../img/wink-logo.svg') no-repeat left center;
+        background-size: auto 36px;
+    }
+
+    ul {
+        display: flex;
+        width: calc(100% - 162px);
+
+        li {
+            padding-right: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                font-size: $font-size-md;
+                color: $text-color;
+                font-weight: 600;
+                text-decoration: none;
+
+                .icon {
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    font-style: normal;
+                    font-weight: normal;
+                    margin-right: 10px;
+
+                    &:before {
+                        display: flex;
+                        width: 16px;
+                        height: 16px;
+                        line-height: 16px;
+                        font-size: 16px;
+                        font-family: 'fontello';
+                    }
+
+                    &.icon-solution {
+                        &:before {
+                            content: '\e850';
+                        }
+                    }
+
+                    &.icon-dev {
+                        &:before {
+                            content: '\e852';
+                        }
+                    }
+
+                    &.icon-whitepaper {
+                        &:before {
+                            content: '\e84f';
+                        }
+                    }
+
+                    &.icon-doc {
+                        &:before {
+                            content: '\e851';
+                        }
+                    }
+                }
+
+                &:hover, &.active {
+                    color: $white-color;
+                    transition: 0.3s all ease-in-out;
+
+                    .icon {
+                        color: $orange-color;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-group {
+        display: flex;
+        width: 72px;
+        height: 36px;
+        justify-content: flex-end;
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+
+            &:before {
+                display: flex;
+                width: 16px;
+                height: 16px;
+                line-height: 16px;
+                font-size: 16px;
+                color: $white-color;
+                font-family: 'fontello';
+                content: '\e808';
+            }
+        }
+
+        .set-language {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+
+            .flag {
+                display: flex;
+                width: 34px;
+                height: 34px;
+                border-radius: 18px;
+                border: 1px solid $btn-hover-color;
+                cursor: pointer;
+
+                &.us {
+                    background: url('../img/flag-us.svg') no-repeat center;
+                    background-size: 18px;
+                }
+
+                &.ch {
+                    background: url('../img/flag-ch.svg') no-repeat center;
+                    background-size: 18px;
+                }
+            }
+
+            .dropdown {
+                display: none;
+            }
+
+            &:hover {
+                .dropdown {
+                    position: absolute;
+                    right: 0;
+                    top: 36px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 102px;
+                    padding: 6px;
+                    background: $bg-light-color;
+                    border-radius: 3px;
+
+                    .set-lng {
+                        display: flex;
+                        width: 66px;
+                        height: 18px;
+                        padding: 6px 6px 6px 36px;
+                        color: $text-color;
+                        font-size: $font-size-xs;
+                        border-radius: 3px;
+
+                        &.us {
+                            background: url('../img/flag-us.svg') no-repeat 6px 6px;
+                            background-size: 18px;
+                        }
+        
+                        &.ch {
+                            background: url('../img/flag-ch.svg') no-repeat 6px 6px;
+                            background-size: 18px;
+                        }
+
+                        &:hover {
+                            color: $white-color;
+                            transition: 0.3s all ease-in-out;
+
+                            &.us {
+                                background: url('../img/flag-us.svg') no-repeat 6px 6px $btn-hover-color;
+                                background-size: 18px;
+                            }
+            
+                            &.ch {
+                                background: url('../img/flag-ch.svg') no-repeat 6px 6px $btn-hover-color;
+                                background-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    @media screen and (max-width: 1290px) {
+        width: calc(100% - 30px);
+        padding: 27px 15px;
+        background: $bg-color;
+    }
+
+    @media screen and (max-width: 767px) {
+        ul {
+            li {
+                padding-right: 10px;
+    
+                a {
+                    font-size: $font-size-sm;
+
+                    .icon {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .wink-logo {
+            width: 75px;
+        }
+        
+        ul {
+            width: calc(100% - 147px);
+            
+            li {
+                a {
+                    font-size: $font-size-xs;
+
+                    .icon {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        padding: 15px;
+        background: $bg-color;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        
+        .btn-group {
+            width: calc(100% - 126px);
+        }
+        
+        .burger {
+            display: flex;
+            margin-left: 15px;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+
+            .bar {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-color;
+                border-radius: 1px;
+
+                &:after, &:before {
+                    position: absolute;
+                    content:'';
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: $white-color;
+                    border-radius: 1px;
+                }
+
+                &:after {
+                    top: -8px;
+                }
+
+                &:before {
+                    top: 8px;
+                }
+            }
+
+            &.expand {
+                .bar {
+                    transition: all 0.3s ease-in-out;
+                    background: rgba(255,255,255,0);
+                    
+                    &:before, &:after {
+                        top: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .top-nav {
+            display: none;
+            top: 51px;
+            left: -100%;
+
+            &.show {
+                position: fixed;
+                z-index: 10;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 30px);
+                height: calc(100% - 66px);
+                padding: 15px;
+                background: $bg-color;
+                animation-name: slidedown;
+                animation-duration: 1s;
+
+                @keyframes slidedown {
+                    from {left: -100%;}
+                    to {left: 0;}
+                }
+
+                li {
+                    a {
+                        font-size: $font-size-md;
+    
+                        .icon {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

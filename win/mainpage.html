@@ -10,13 +10,66 @@
 </head>
 <body>
     
-    <div class="win-header">z</div>
+    <div class="win-header">
+        <a href="/" class="wink-logo"></a>
+        <ul class="top-nav">
+            <li><a href="/"><i class="icon icon-solution"></i>Solutions</a></li>
+            <li><a href="/"><i class="icon icon-dev"></i>Developer</a></li>
+            <li><a href="/"><i class="icon icon-whitepaper"></i>Whitepaper</a></li>
+            <li><a href="/"><i class="icon icon-doc"></i>Documentation</a></li>
+        </ul>
+        <div class="btn-group">
+            <a href="/" class="social"><i class="icon-telegram"></i></a>
+            <div class="set-language">
+                <i class="flag us"></i>
+                <div class="dropdown">
+                    <a href="" class="set-lng us">English</a>
+                    <a href="" class="set-lng ch">中文</a>
+                </div>
+            </div>
+        </div>
+        <div class="burger"><i class="bar"></i></div>
+    </div>
     <div class="win-promo">
         <h1 class="h1">Wink<span class="win">Win</span></h1>
         <p class="dd">The Real</p>
         <p class="dd">and the Virtual</p>
         <div class="btn-group">
             <button class="btn btn-orange">Price Value Service</button><button class="btn btn-red">Build a node</button>
+        </div>
+    </div>
+    <div class="win-scheme">
+        <div class="content">
+            <h2 class="h2">Why do blockchains and the real world need oracle?</h2>
+            <div class="scheme">
+                <div class="side world">
+                    <div class="container">
+                        <label><i class="icon icon-bank"></i>Bank</label>
+                        <label><i class="icon icon-weather"></i>Weather</label>
+                        <label><i class="icon icon-internet"></i>Internet</label>
+                    </div>
+                    <span class="icon-socket"></span>
+                </div>
+                <div class="middle">
+                    <span class="wink-logo"></span>
+                    <label>WinkWin <span class="oracle">Oracle</span></label>
+                </div>
+                <div class="side blockchain">
+                    <div class="container">
+                        <label><i class="icon icon-trx"></i>TRON Network</label>
+                        <label><i class="icon icon-jst"></i>JST</label>
+                    </div>
+                    <span class="icon-socket"></span>
+                </div>
+                <div class="disconnected">
+                    <div class="node">
+                        <i class="icon-socket"></i>
+                        <i class="icon icon-broken-link"></i>
+                        <i class="icon-socket"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="dd">Blockchains are excellent storage systems, where data are tamper-proofing, encrypted and verifiable. However, blockchains cannot access external information, nor decide whether the information is authentic and credible. WinkWin solves the problem of connecting real world data through smart contracts, and ensures the reliability of data through a decentralized mechanism.</p>
         </div>
     </div>
     <div class="win-about">
@@ -54,22 +107,43 @@
             </div>
         </div>
     </div>
-    <div class="win-footer">z</div>
+    <div class="win-footer">
+        <div class="content">
+            <div class="container">
+                <label class="title">Developers</label>
+                <ul>
+                    <li><a href="/">White Paper</a></li>
+                    <li><a href="/">Documentation</a></li>
+                    <li><a href="/">GitHub</a></li>
+                    <li><a href="/">Build a Node</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <label class="title">Solutions</label>
+                <ul>
+                    <li><a href="/">Price Value Service</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <label class="title">Contact</label>
+                <ul>
+                    <li><a href="mailto:service@wink.win">service@wink.win</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <label class="title">Subscribe</label>
+                <div class="btn-group"><a href="/" class="social telegram"></a></div>
+                <span class="copyrights">© 2020 WinkWin All Rights Reserved</span>
+            </div>
+        </div>
+    </div>
 
-    <!--
     <script>
-        $('.btn-referral').click( function() {
-            $(".referral").toggleClass("show");
-        } );
-        $('.close-popup').click( function() {
-            $(".popup-wrapper").removeClass("show");
-        } );
-
         $('.burger').click( function() {
-            $(".drop-nav").toggleClass("show");
+            $(".top-nav").toggleClass("show");
             $(".burger").toggleClass("expand");
         } );
     </script>
-    -->
+
 </body>
 </html>

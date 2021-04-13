@@ -1,9 +1,308 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 .win-header {
-  background: red; }
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  max-width: 1260px;
+  height: 36px;
+  padding-top: 27px;
+  padding-bottom: 27px; }
+  .win-header .wink-logo {
+    width: 90px;
+    height: 36px;
+    background: url("../img/wink-logo.svg") no-repeat left center;
+    background-size: auto 36px; }
+  .win-header ul {
+    display: flex;
+    width: calc(100% - 162px); }
+    .win-header ul li {
+      padding-right: 20px; }
+      .win-header ul li a {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        font-size: 16px;
+        color: #48658C;
+        font-weight: 600;
+        text-decoration: none; }
+        .win-header ul li a .icon {
+          display: flex;
+          width: 16px;
+          height: 16px;
+          font-style: normal;
+          font-weight: normal;
+          margin-right: 10px; }
+          .win-header ul li a .icon:before {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 16px;
+            font-family: 'fontello'; }
+          .win-header ul li a .icon.icon-solution:before {
+            content: '\e850'; }
+          .win-header ul li a .icon.icon-dev:before {
+            content: '\e852'; }
+          .win-header ul li a .icon.icon-whitepaper:before {
+            content: '\e84f'; }
+          .win-header ul li a .icon.icon-doc:before {
+            content: '\e851'; }
+        .win-header ul li a:hover, .win-header ul li a.active {
+          color: #FFF;
+          transition: 0.3s all ease-in-out; }
+          .win-header ul li a:hover .icon, .win-header ul li a.active .icon {
+            color: #FBC509;
+            transition: 0.3s all ease-in-out; }
+  .win-header .btn-group {
+    display: flex;
+    width: 72px;
+    height: 36px;
+    justify-content: flex-end; }
+    .win-header .btn-group .social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px; }
+      .win-header .btn-group .social:before {
+        display: flex;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 16px;
+        color: #FFF;
+        font-family: 'fontello';
+        content: '\e808'; }
+    .win-header .btn-group .set-language {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px; }
+      .win-header .btn-group .set-language .flag {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        border-radius: 18px;
+        border: 1px solid #101E41;
+        cursor: pointer; }
+        .win-header .btn-group .set-language .flag.us {
+          background: url("../img/flag-us.svg") no-repeat center;
+          background-size: 18px; }
+        .win-header .btn-group .set-language .flag.ch {
+          background: url("../img/flag-ch.svg") no-repeat center;
+          background-size: 18px; }
+      .win-header .btn-group .set-language .dropdown {
+        display: none; }
+      .win-header .btn-group .set-language:hover .dropdown {
+        position: absolute;
+        right: 0;
+        top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 102px;
+        padding: 6px;
+        background: #0A142E;
+        border-radius: 3px; }
+        .win-header .btn-group .set-language:hover .dropdown .set-lng {
+          display: flex;
+          width: 66px;
+          height: 18px;
+          padding: 6px 6px 6px 36px;
+          color: #48658C;
+          font-size: 13px;
+          border-radius: 3px; }
+          .win-header .btn-group .set-language:hover .dropdown .set-lng.us {
+            background: url("../img/flag-us.svg") no-repeat 6px 6px;
+            background-size: 18px; }
+          .win-header .btn-group .set-language:hover .dropdown .set-lng.ch {
+            background: url("../img/flag-ch.svg") no-repeat 6px 6px;
+            background-size: 18px; }
+          .win-header .btn-group .set-language:hover .dropdown .set-lng:hover {
+            color: #FFF;
+            transition: 0.3s all ease-in-out; }
+            .win-header .btn-group .set-language:hover .dropdown .set-lng:hover.us {
+              background: url("../img/flag-us.svg") no-repeat 6px 6px #101E41;
+              background-size: 18px; }
+            .win-header .btn-group .set-language:hover .dropdown .set-lng:hover.ch {
+              background: url("../img/flag-ch.svg") no-repeat 6px 6px #101E41;
+              background-size: 18px; }
+  .win-header .burger {
+    display: none; }
+  @media screen and (max-width: 1290px) {
+    .win-header {
+      width: calc(100% - 30px);
+      padding: 27px 15px;
+      background: #060E22; } }
+  @media screen and (max-width: 767px) {
+    .win-header ul li {
+      padding-right: 10px; }
+      .win-header ul li a {
+        font-size: 14px; }
+        .win-header ul li a .icon {
+          margin-right: 5px; } }
+  @media screen and (max-width: 640px) {
+    .win-header .wink-logo {
+      width: 75px; }
+    .win-header ul {
+      width: calc(100% - 147px); }
+      .win-header ul li a {
+        font-size: 13px; }
+        .win-header ul li a .icon {
+          margin-right: 5px; } }
+  @media screen and (max-width: 576px) {
+    .win-header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9;
+      padding: 15px;
+      background: #060E22;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+      .win-header .btn-group {
+        width: calc(100% - 126px); }
+      .win-header .burger {
+        display: flex;
+        margin-left: 15px;
+        width: 36px;
+        height: 36px;
+        align-items: center;
+        justify-content: center; }
+        .win-header .burger .bar {
+          position: relative;
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: #FFF;
+          border-radius: 1px; }
+          .win-header .burger .bar:after, .win-header .burger .bar:before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #FFF;
+            border-radius: 1px; }
+          .win-header .burger .bar:after {
+            top: -8px; }
+          .win-header .burger .bar:before {
+            top: 8px; }
+        .win-header .burger.expand .bar {
+          transition: all 0.3s ease-in-out;
+          background: rgba(255, 255, 255, 0); }
+          .win-header .burger.expand .bar:before, .win-header .burger.expand .bar:after {
+            top: 0;
+            transition: all 0.3s ease-in-out; }
+          .win-header .burger.expand .bar:before {
+            transform: rotate(-45deg); }
+          .win-header .burger.expand .bar:after {
+            transform: rotate(45deg); }
+      .win-header .top-nav {
+        display: none;
+        top: 51px;
+        left: -100%; }
+        .win-header .top-nav.show {
+          position: fixed;
+          z-index: 10;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          width: calc(100% - 30px);
+          height: calc(100% - 66px);
+          padding: 15px;
+          background: #060E22;
+          animation-name: slidedown;
+          animation-duration: 1s; }
+    @keyframes slidedown {
+      from {
+        left: -100%; }
+      to {
+        left: 0; } }
+          .win-header .top-nav.show li a {
+            font-size: 16px; }
+            .win-header .top-nav.show li a .icon {
+              margin-right: 10px; } }
 
 .win-footer {
-  background: orange; }
+  min-height: 130px;
+  padding: 30px 0;
+  background: #030814; }
+  .win-footer .content {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap; }
+    .win-footer .content .container {
+      margin: 0 10px;
+      width: calc(25% - 20px); }
+      .win-footer .content .container .title {
+        display: block;
+        margin-bottom: 10px;
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600; }
+      .win-footer .content .container ul li {
+        line-height: 24px; }
+        .win-footer .content .container ul li a {
+          font-size: 13px;
+          color: #48658C;
+          text-decoration: underline; }
+          .win-footer .content .container ul li a:hover {
+            color: #FBC509;
+            transition: 0.3s all ease-in-out; }
+      .win-footer .content .container .btn-group {
+        display: flex;
+        flex-wrap: wrap; }
+        .win-footer .content .container .btn-group .social {
+          display: flex;
+          margin: 0 4px 4px 0;
+          width: 30px;
+          height: 30px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px;
+          color: #FFF;
+          background: #48658C; }
+          .win-footer .content .container .btn-group .social:before {
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 14px;
+            font-family: 'fontello';
+            content: '\e843'; }
+          .win-footer .content .container .btn-group .social:hover {
+            color: #060E22;
+            background: #FFF;
+            transition: 0.3s all ease-in-out; }
+      .win-footer .content .container .copyrights {
+        display: block;
+        padding-top: 38px;
+        font-size: 13px;
+        line-height: 24px;
+        color: #48658C; }
+  @media screen and (max-width: 1290px) {
+    .win-footer {
+      padding: 30px 5px; } }
+  @media screen and (max-width: 768px) {
+    .win-footer {
+      padding: 15px 5px; }
+      .win-footer .content .container {
+        margin: 15px 10px;
+        width: calc(50% - 20px); }
+        .win-footer .content .container:nth-child(1) {
+          order: 3; }
+        .win-footer .content .container:nth-child(2) {
+          order: 1; }
+        .win-footer .content .container:nth-child(3) {
+          order: 2; }
+        .win-footer .content .container:nth-child(4) {
+          order: 4; } }
+  @media screen and (max-width: 375px) {
+    .win-footer .content .container .copyrights {
+      padding-top: 14px; } }
 
 .win-promo {
   margin: 0 auto;
@@ -61,6 +360,76 @@
         .win-promo .btn-group .btn.btn-red:hover {
           background: #FF002E;
           transition: 0.3s all ease-in-out; }
+  @media screen and (max-width: 1290px) {
+    .win-promo {
+      width: calc(100% - 30px);
+      padding: 80px 15px; } }
+  @media screen and (max-width: 1060px) {
+    .win-promo .h1, .win-promo .btn-group, .win-promo .dd {
+      width: 40%; } }
+  @media screen and (max-width: 992px) {
+    .win-promo {
+      padding: 40px 15px;
+      background-size: 60% auto; }
+      .win-promo .h1, .win-promo .dd {
+        width: 100%; }
+      .win-promo .btn-group {
+        width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .win-promo {
+      padding: 66px 15px 40px 15px;
+      background: url("../img/promo-bg.svg") no-repeat center 260px;
+      background-size: 100% auto; }
+      .win-promo .h1 {
+        margin-bottom: 0;
+        text-align: center; }
+      .win-promo .dd {
+        text-align: center; }
+      .win-promo .btn-group {
+        margin: 0 auto;
+        width: 60%;
+        padding-top: 400px; } }
+  @media screen and (max-width: 700px) {
+    .win-promo {
+      background: url("../img/promo-bg.svg") no-repeat center 260px;
+      background-size: 100% auto; }
+      .win-promo .btn-group {
+        width: 60%;
+        padding-top: 360px; } }
+  @media screen and (max-width: 620px) {
+    .win-promo {
+      background: url("../img/promo-bg.svg") no-repeat center 280px;
+      background-size: 100% auto; } }
+  @media screen and (max-width: 568px) {
+    .win-promo {
+      background: url("../img/promo-bg.svg") no-repeat center 260px;
+      background-size: 100% auto; }
+      .win-promo .btn-group {
+        width: 80%;
+        padding-top: 300px; } }
+  @media screen and (max-width: 475px) {
+    .win-promo {
+      background: url("../img/promo-bg.svg") no-repeat center 200px;
+      background-size: 100% auto; }
+      .win-promo .h1 {
+        font-size: 52px; }
+        .win-promo .h1 .win {
+          font-size: 52px; }
+      .win-promo .dd {
+        font-size: 30px; }
+      .win-promo .btn-group {
+        width: 80%;
+        padding-top: 240px; } }
+  @media screen and (max-width: 400px) {
+    .win-promo {
+      background: url("../img/promo-bg.svg") no-repeat center 200px;
+      background-size: 100% auto; }
+      .win-promo .btn-group {
+        width: 100%;
+        padding-top: 240px; } }
+  @media screen and (max-width: 375px) {
+    .win-promo .btn-group {
+      padding-top: 200px; } }
 
 .win-about {
   padding: 80px 0;
@@ -141,6 +510,22 @@
         font-size: 13px;
         color: #060E22;
         line-height: 16px; }
+      .win-about .content .container:hover .icon {
+        transform: scale(1.05);
+        transition: 0.3s all ease-in-out; }
+  @media screen and (max-width: 1290px) {
+    .win-about {
+      width: calc(100% - 10px);
+      padding: 80px 5px; } }
+  @media screen and (max-width: 992px) {
+    .win-about {
+      padding: 40px 5px; } }
+  @media screen and (max-width: 768px) {
+    .win-about .content .h3 {
+      margin-bottom: 20px; }
+    .win-about .content .container {
+      margin-top: 60px;
+      width: calc(100% - 20px); } }
 
 .win-get-started {
   padding: 0 0 80px 0; }
@@ -179,9 +564,17 @@
       .win-get-started .content .container.node {
         background: url("../img/build-node.svg") no-repeat center top #0A142E;
         background-size: auto 160px; }
+        .win-get-started .content .container.node:hover {
+          background: url("../img/build-node.svg") no-repeat center top #101E41;
+          background-size: auto 160px;
+          transition: 0.3s all ease-in-out; }
       .win-get-started .content .container.value {
         background: url("../img/value-service.svg") no-repeat center top #0A142E;
         background-size: auto 160px; }
+        .win-get-started .content .container.value:hover {
+          background: url("../img/value-service.svg") no-repeat center top #101E41;
+          background-size: auto 160px;
+          transition: 0.3s all ease-in-out; }
       .win-get-started .content .container .title {
         display: block;
         width: 100%;
@@ -214,6 +607,314 @@
         border: none;
         outline: none;
         background: #FFF; }
+  @media screen and (max-width: 1290px) {
+    .win-get-started {
+      width: calc(100% - 10px);
+      padding: 0 5px 80px 5px; } }
+  @media screen and (max-width: 1200px) {
+    .win-get-started .content .container {
+      width: calc(50% - 100px);
+      padding: 160px 40px 40px 40px;
+      border-radius: 15px; } }
+  @media screen and (max-width: 992px) {
+    .win-get-started {
+      padding: 0 5px 40px 5px; }
+      .win-get-started .content .h4 {
+        margin-bottom: 30px; } }
+  @media screen and (max-width: 768px) {
+    .win-get-started .content .container {
+      width: calc(100% - 300px);
+      padding: 160px 140px 40px 140px; } }
+  @media screen and (max-width: 576px) {
+    .win-get-started .content .container {
+      width: calc(100% - 100px);
+      padding: 160px 40px 40px 40px; } }
+
+.win-scheme {
+  padding: 80px 0; }
+  .win-scheme .content {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .win-scheme .content .h2 {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 46px;
+      font-weight: 600;
+      color: #FFF; }
+      .win-scheme .content .h2:before {
+        position: absolute;
+        left: calc(50% - 20px);
+        bottom: 0;
+        width: 40px;
+        height: 4px;
+        content: '';
+        background: #FBC509;
+        border-radius: 2px; }
+    .win-scheme .content .scheme {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 800px; }
+      .win-scheme .content .scheme .side {
+        position: relative;
+        display: flex;
+        width: 305px;
+        height: 140px; }
+        .win-scheme .content .scheme .side:before {
+          position: absolute;
+          z-index: 1;
+          top: 69px;
+          width: 100%;
+          height: 2px;
+          content: '';
+          background: #48658C; }
+        .win-scheme .content .scheme .side .container {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          width: 146px;
+          height: 106px;
+          padding: 15px 0 15px 40px;
+          border-radius: 15px;
+          background: #060E22;
+          border: 2px solid #48658C; }
+          .win-scheme .content .scheme .side .container label {
+            display: flex;
+            margin: 8px 0;
+            width: 100%;
+            font-size: 14px;
+            color: #FFF;
+            font-weight: 600;
+            line-height: 20px; }
+            .win-scheme .content .scheme .side .container label .icon {
+              display: flex;
+              margin-right: 10px;
+              width: 20px;
+              height: 20px;
+              font-weight: normal;
+              font-style: normal; }
+              .win-scheme .content .scheme .side .container label .icon:before {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 20px;
+                font-family: 'fontello'; }
+              .win-scheme .content .scheme .side .container label .icon.icon-bank:before {
+                content: '\e84d'; }
+              .win-scheme .content .scheme .side .container label .icon.icon-weather:before {
+                content: '\e84c'; }
+              .win-scheme .content .scheme .side .container label .icon.icon-internet:before {
+                content: '\e84b'; }
+        .win-scheme .content .scheme .side .icon-socket {
+          position: absolute;
+          z-index: 3;
+          display: block;
+          top: 60px;
+          width: 14px;
+          height: 20px;
+          background: #48658C;
+          border-radius: 10px 0 0 10px; }
+          .win-scheme .content .scheme .side .icon-socket:before {
+            position: absolute;
+            right: -6px;
+            width: 6px;
+            height: 8px;
+            top: 4px;
+            content: '';
+            background: #060E22;
+            border-top: 2px solid #48658C;
+            border-bottom: 2px solid #48658C; }
+        .win-scheme .content .scheme .side.world {
+          justify-content: flex-start; }
+          .win-scheme .content .scheme .side.world .icon-socket {
+            right: 6px; }
+        .win-scheme .content .scheme .side.blockchain {
+          justify-content: flex-end; }
+          .win-scheme .content .scheme .side.blockchain .icon-socket {
+            left: 6px;
+            transform: rotate(180deg); }
+          .win-scheme .content .scheme .side.blockchain .container label .icon {
+            border-radius: 10px;
+            background: #48658C; }
+            .win-scheme .content .scheme .side.blockchain .container label .icon.icon-trx:before {
+              content: '\e819';
+              font-size: 12px; }
+            .win-scheme .content .scheme .side.blockchain .container label .icon.icon-jst:before {
+              content: '\e827';
+              font-size: 12px; }
+      .win-scheme .content .scheme:hover .side:before, .win-scheme .content .scheme:hover .side:after {
+        background: #FBC509;
+        transition: 0.3s all ease-in-out; }
+      .win-scheme .content .scheme:hover .side .container {
+        border-color: #FBC509;
+        transition: 0.3s all ease-in-out; }
+      .win-scheme .content .scheme:hover .side .icon-socket {
+        background: #FBC509;
+        transition: 0.3s all ease-in-out; }
+        .win-scheme .content .scheme:hover .side .icon-socket:before {
+          border-color: #FBC509;
+          transition: 0.3s all ease-in-out; }
+      .win-scheme .content .scheme .middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 186px;
+        height: 120px;
+        padding-top: 16px;
+        border-radius: 15px;
+        border: 2px solid #FBC509; }
+        .win-scheme .content .scheme .middle .wink-logo {
+          display: block;
+          width: 90px;
+          height: 60px;
+          background: url("../img/wink-logo.svg") no-repeat center;
+          background-size: 100% auto; }
+        .win-scheme .content .scheme .middle label {
+          font-size: 16px;
+          color: #FFF;
+          font-weight: 600;
+          line-height: 60px; }
+          .win-scheme .content .scheme .middle label .oracle {
+            font-size: 16px;
+            color: #FBC509; }
+      .win-scheme .content .scheme .disconnected {
+        position: relative;
+        width: 610px;
+        height: 38px;
+        border: 2px solid #48658C;
+        border-top: none; }
+        .win-scheme .content .scheme .disconnected .node {
+          position: absolute;
+          left: calc(50% - 44px);
+          bottom: -9px;
+          display: flex;
+          width: 88px;
+          height: 20px;
+          background: #060E22; }
+          .win-scheme .content .scheme .disconnected .node .icon-socket {
+            position: relative;
+            display: block;
+            width: 14px;
+            height: 20px;
+            background: #48658C;
+            border-radius: 10px 0 0 10px; }
+            .win-scheme .content .scheme .disconnected .node .icon-socket:last-child {
+              transform: rotate(180deg); }
+            .win-scheme .content .scheme .disconnected .node .icon-socket:before {
+              position: absolute;
+              right: -6px;
+              width: 6px;
+              height: 8px;
+              top: 4px;
+              content: '';
+              background: #060E22;
+              border-top: 2px solid #48658C;
+              border-bottom: 2px solid #48658C; }
+          .win-scheme .content .scheme .disconnected .node .icon-broken-link {
+            margin-top: -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 30px;
+            color: #48658C; }
+            .win-scheme .content .scheme .disconnected .node .icon-broken-link:before {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+              line-height: 30px;
+              font-size: 30px;
+              font-family: 'fontello';
+              content: '\e84e'; }
+    .win-scheme .content .dd {
+      display: flex;
+      width: 100%;
+      margin-top: 40px;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+      color: #48658C; }
+  @media screen and (max-width: 992px) {
+    .win-scheme {
+      padding: 40px 0; }
+      .win-scheme .content {
+        width: calc(100% - 30px);
+        padding: 0 15px; }
+        .win-scheme .content .h2 {
+          line-height: 1; }
+          .win-scheme .content .h2:before {
+            bottom: -10px; }
+        .win-scheme .content .scheme {
+          position: relative;
+          margin: 0 auto;
+          width: 190px; }
+          .win-scheme .content .scheme .side {
+            width: 190px;
+            height: 140px; }
+            .win-scheme .content .scheme .side:before {
+              display: none; }
+            .win-scheme .content .scheme .side:after {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 94px;
+              width: 2px;
+              height: 100%;
+              content: '';
+              background: #48658C; }
+            .win-scheme .content .scheme .side .icon-socket {
+              position: absolute;
+              z-index: 3;
+              display: block;
+              top: 60px;
+              width: 20px;
+              height: 14px;
+              border-radius: 10px 10px 0 0; }
+              .win-scheme .content .scheme .side .icon-socket:before {
+                position: absolute;
+                right: 4px;
+                width: 8px;
+                height: 6px;
+                top: 14px;
+                content: '';
+                background: #060E22;
+                border-top: none;
+                border-bottom: none;
+                border-left: 2px solid #48658C;
+                border-right: 2px solid #48658C; }
+            .win-scheme .content .scheme .side.world {
+              padding-bottom: 50px; }
+              .win-scheme .content .scheme .side.world .icon-socket {
+                right: 85px;
+                top: 170px; }
+            .win-scheme .content .scheme .side.blockchain {
+              padding-top: 50px; }
+              .win-scheme .content .scheme .side.blockchain .icon-socket {
+                left: 85px;
+                top: 6px; }
+          .win-scheme .content .scheme .disconnected {
+            position: absolute;
+            width: 380px;
+            left: 18px;
+            top: 242px;
+            transform: rotate(-90deg); }
+            .win-scheme .content .scheme .disconnected .node {
+              bottom: -11px; } }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
