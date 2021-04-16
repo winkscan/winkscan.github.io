@@ -1,0 +1,177 @@
+.win-supernode {
+    margin: 0 auto 20px auto;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1280px;
+    padding: 40px 10px;
+
+    .h2 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+        font-size: $font-size-lg;
+        line-height: 46px;
+        font-weight: 600;
+        color: $white-color;
+
+        &:before {
+            position: absolute;
+            left: calc(50% - 20px);
+            bottom: 0;
+            width: 40px;
+            height: 4px;
+            content:'';
+            background: $orange-color;
+            border-radius: 2px;
+        }
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10px;
+        width: calc(33.33% - 140px);
+        padding: 20px 20px 20px 100px;
+        background: $bg-light-color;
+        border-radius: 15px;
+
+        .icon {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            width: 70px;
+            height: 70px;
+            font-style: normal;
+            border-radius: 35px;
+            overflow: hidden;
+            background: $text-color;
+
+            &:after {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 70px;
+                height: 70px;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+                color: $white-color;
+                font-family: 'fontello';
+            }
+
+            &.icon-trx {
+                &:after {
+                    left: 20px;
+                    top: 25px;
+                    content: '\e819';
+                    font-size: 90px;
+                }
+            }
+
+            &.icon-justswap {
+                &:after {
+                    font-size: 52px;
+                    content: '\e85c';
+                }
+            }
+
+            &.icon-poloniex {
+                &:after {
+                    font-size: 40px;
+                    content: '\e858';
+                }
+            }
+
+            &.icon-polonidex {
+                &:after {
+                    font-size: 24px;
+                    content: '\e85a';
+                }
+            }
+
+            &.icon-trongrid {
+                &:after {
+                    font-size: 48px;
+                    content: '\e85b';
+                }
+            }
+            
+            &.icon-btt {
+                &:after {
+                    font-size: 48px;
+                    content: '\e82a';
+                }
+            }
+
+            &.icon-utorrent {
+                &:after {
+                    left: 11px;
+                    top: 11px;
+                    align-items: flex-start;
+                    width: 44px;
+                    height: 44px;
+                    font-size: 48px;
+                    content: '\e859';
+                    border: 2px solid $white-color;
+                    border-radius: 24px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            width: 100%;
+            max-height: 36px;
+            padding: 0;
+            text-align: left;
+            font-size: $font-size-md;
+            color: $white-color;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        .dd {
+            display: flex;
+            width: 100%;
+            text-align: left;
+            align-items: flex-start;
+            font-size: $font-size-xs;
+            color: $text-color;
+            line-height: 16px;
+        }
+
+        &:hover {
+            .icon {
+                transform: scale(1.05);
+                transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .container {
+            width: calc(50% - 140px);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        padding: 20px 10px;
+
+        .h2 {
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            width: calc(100% - 140px);
+        }
+    }
+}

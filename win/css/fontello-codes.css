@@ -72,6 +72,7 @@
 .icon-blk-wallet:before { content: '\e846'; } /* '' */
 .icon-blk-question:before { content: '\e847'; } /* '' */
 .icon-shield:before { content: '\e848'; } /* '' */
+.icon-list:before { content: '\e849'; } /* '' */
 .icon-analytics:before { content: '\e84a'; } /* '' */
 .icon-earth-grid:before { content: '\e84b'; } /* '' */
 .icon-cloudy:before { content: '\e84c'; } /* '' */
@@ -85,3 +86,9 @@
 .icon-user:before { content: '\e854'; } /* '' */
 .icon-certificate:before { content: '\e855'; } /* '' */
 .icon-database:before { content: '\e856'; } /* '' */
+.icon-certificate-1:before { content: '\e857'; } /* '' */
+.icon-poloniex:before { content: '\e858'; } /* '' */
+.icon-utrnt:before { content: '\e859'; } /* '' */
+.icon-polonidex:before { content: '\e85a'; } /* '' */
+.icon-trongrid:before { content: '\e85b'; } /* '' */
+.icon-justswap:before { content: '\e85c'; } /* '' */

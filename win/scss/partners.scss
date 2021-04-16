@@ -1,0 +1,201 @@
+.win-partners {
+    margin: 0 auto 40px auto;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    padding: 10px;
+
+    .h2 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+        font-size: $font-size-lg;
+        line-height: 46px;
+        font-weight: 600;
+        color: $white-color;
+
+        &:before {
+            position: absolute;
+            left: calc(50% - 20px);
+            bottom: 0;
+            width: 40px;
+            height: 4px;
+            content:'';
+            background: $red-color;
+            border-radius: 2px;
+        }
+    }
+
+    .partner-list {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .partner {
+            margin: 10px;
+            width: calc(25% - 20px);
+            height: 70px;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+                transition: 0.3s all ease-in-out;
+            }
+
+            &.bitfinex {
+                background: url('../img/logo-bitfinex.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.tether {
+                background: url('../img/logo-tether.svg') no-repeat center;
+                background-size: auto 38px;
+            }
+
+            &.poloniex {
+                background: url('../img/logo-poloniex.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.polonidex {
+                background: url('../img/logo-polonidex.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.tronlink {
+                background: url('../img/logo-tronlink.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.trongrid {
+                background: url('../img/logo-trongrid.svg') no-repeat center;
+                background-size: auto 48px;
+            }
+
+            &.bittorrent {
+                background: url('../img/logo-bittorrent.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.utorrent {
+                background: url('../img/logo-utorrent.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.sun {
+                background: url('../img/logo-sun.svg') no-repeat center;
+                background-size: auto 48px;
+            }
+
+            &.dlive {
+                background: url('../img/logo-dlive.svg') no-repeat center;
+                background-size: auto 48px;
+            }
+
+            &.steemit {
+                background: url('../img/logo-steemit.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+
+            &.steem {
+                background: url('../img/logo-steem.svg') no-repeat center;
+                background-size: auto 48px;
+            }
+
+            &.justswap {
+                background: url('../img/logo-justswap.svg') no-repeat center;
+                background-size: 170px auto;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .partner-list {
+            .partner {
+                width: calc(33.33% - 20px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .h2 {
+            margin-bottom: 20px;
+        }
+        
+        .partner-list {
+            .partner {
+                width: calc(50% - 20px);
+                height: 24px;
+
+                &.bitfinex {
+                    background: url('../img/logo-bitfinex.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.tether {
+                    background: url('../img/logo-tether.svg') no-repeat center;
+                    background-size: auto 20px;
+                }
+    
+                &.poloniex {
+                    background: url('../img/logo-poloniex.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.polonidex {
+                    background: url('../img/logo-polonidex.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.tronlink {
+                    background: url('../img/logo-tronlink.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.trongrid {
+                    background: url('../img/logo-trongrid.svg') no-repeat center;
+                    background-size: auto 24px;
+                }
+    
+                &.bittorrent {
+                    background: url('../img/logo-bittorrent.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.utorrent {
+                    background: url('../img/logo-utorrent.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.sun {
+                    background: url('../img/logo-sun.svg') no-repeat center;
+                    background-size: auto 24px;
+                }
+    
+                &.dlive {
+                    background: url('../img/logo-dlive.svg') no-repeat center;
+                    background-size: auto 24px;
+                }
+    
+                &.steemit {
+                    background: url('../img/logo-steemit.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+    
+                &.steem {
+                    background: url('../img/logo-steem.svg') no-repeat center;
+                    background-size: auto 24px;
+                }
+    
+                &.justswap {
+                    background: url('../img/logo-justswap.svg') no-repeat center;
+                    background-size: 80px auto;
+                }
+            }
+        }
+    }
+}
